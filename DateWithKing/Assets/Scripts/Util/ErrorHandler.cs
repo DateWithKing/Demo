@@ -15,4 +15,13 @@ public static class ErrorHandler
     {
         Debug.LogError(error.ToString());
     }
+
+    /// <summary>
+    /// 경고 로그를 출력.
+    /// </summary>
+    /// <param name="error"> enum Warning에서 정의한 경고 </param>
+    public static void PrintWarning(Define.Warning warning)
+    {
+        Debug.LogWarning(warning.ToString());
+    }
 }
