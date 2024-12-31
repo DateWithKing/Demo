@@ -7,5 +7,8 @@ using System.Collections.Generic;
 /// </summary>
 public class Define
 {
-    
+    public enum Error
+    {
+        
+    }
 }
