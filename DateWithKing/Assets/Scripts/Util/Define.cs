@@ -11,4 +11,9 @@ public class Define
     {
         
     }
+
+    public enum Warning
+    {
+        
+    }
 }
