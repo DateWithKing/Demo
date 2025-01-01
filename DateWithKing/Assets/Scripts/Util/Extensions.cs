@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,5 +8,13 @@ using System.Collections.Generic;
 ///</summary>
 public static class Extensions
 {
-    
+    /// <summary>
+    /// enum 값을 소문자 string으로 반환
+    /// </summary>
+    /// <param name="input">enum 값</param>
+    /// <returns></returns>
+    public static string ToLowerString(this Enum input)
+    {
+        return input.ToString().ToLower();
+    }
 }
