@@ -14,7 +14,7 @@ public static class ErrorHandler
     /// <param name="comment"> 에러와 함께 같이 출력될 코멘트(default 빈 문자열) </param>
     public static void PrintError(Define.Error error, string comment = "")
     {
-        Debug.LogError(error.ToString() + comment);
+        Debug.LogError(error.ToString() + '\n' + comment);
     }
 
     /// <summary>
@@ -25,6 +25,6 @@ public static class ErrorHandler
 
     public static void PrintWarning(Define.Warning warning, string comment = "")
     {
-        Debug.LogWarning(warning.ToString() + comment);
+        Debug.LogWarning(warning.ToString() + '\n' + comment);
     }
 }
