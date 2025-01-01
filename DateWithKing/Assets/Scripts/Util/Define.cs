@@ -16,4 +16,9 @@ public class Define
     {
         
     }
+
+    public enum DynamicData
+    {
+        
+    }
 }
