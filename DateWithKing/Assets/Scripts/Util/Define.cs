@@ -14,7 +14,7 @@ public class Define
 
     public enum Warning
     {
-        
+        인덱스_범위를_넘어서는_접근을_시도,
     }
 
     public enum DynamicData
