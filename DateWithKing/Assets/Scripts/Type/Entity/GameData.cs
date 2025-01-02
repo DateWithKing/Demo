@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class GameData : Entity
 {
-    public string name { get; private set; }
+    public string name;
 
     public void SetCustomizingData(CustomizingDTO customizingDto)
     {
