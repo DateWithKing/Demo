@@ -22,3 +22,11 @@ using System.Collections.Generic;
         Save2 = 2,
         Save3 = 3,
     }
+
+    public enum Week
+    {
+        Intro,
+        Day,
+        Night,
+        NightBehaviour,
+    }
