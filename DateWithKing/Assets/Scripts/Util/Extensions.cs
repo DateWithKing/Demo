@@ -17,4 +17,18 @@ public static class Extensions
     {
         return input.ToString().ToLower();
     }
+
+    /// <summary>
+    /// int를 1 증가시키는 과정에서 값 limit를 넘는 것을 방지하고, 제약 값을 넘었을 시 limitValue로 값을 변경 <br/>
+    /// 변수의 값을 제한하고 제한 값을 벗어날 시 원점으로 회귀해야 할 때 사용<br/>
+    /// 만약 값 증가와 무관하게 범위 제약만 하고 싶을 경우 Math.Clamp()를 사용할 것
+    /// </summary>
+    /// <param name="number"> 1 증가시킬 변수</param>
+    /// <param name="limit"> number의 상한값 </param>
+    /// <param name="limitValue"> limit을 넘겼을 시 회귀할 값(default 0) </param>
+    public static void LimitIncrement(ref this int number, int limit, int limitValue = 0)
+    {
+        number++;
+        if (number >= limit) number = 0;
+    }
 }
