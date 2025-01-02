@@ -12,7 +12,10 @@ public class Entity
 }
 
 /// <summary>
-/// 동적/정적 데이터를 Read/Write 함
+/// 동적/정적 데이터를 Read/Write 함 <br/>
+/// 데이터를 Read/Write 할 오브젝트 내 변수는 모두 public 변수여야 함(프라퍼티 X) <br/>
+/// 당연하지만 모든 Read 기능은 불러올 데이터가 없거나, 오브젝트 - 데이터 사이의 필드가 일치하지 않으면 에러 남 <br/>
+/// (01-02 기준) 시간이 없어서 안 만들었는데 필요하다면 오브젝트에 상응하는 Json 데이터 형식을 생성하는 생산성 기능을 제작하겠음... (Call 강승연)
 /// </summary>
 public static class DataLoader
 {
@@ -43,7 +46,7 @@ public static class DataLoader
     /// <returns></returns>
     public static T ReadData<T>(Define.DynamicData name)
     {
-        string jsonData = File.ReadAllText(DynamicDataPath + name + ".json"); 
+        string jsonData = File.ReadAllText(DynamicDataPath + name + ".json");
         T data = JsonConvert.DeserializeObject<T>(jsonData);
         return data;
     }
