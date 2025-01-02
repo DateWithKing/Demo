@@ -21,6 +21,6 @@ public class CustomizingPresenter : Presenter
     private void GameStart()
     {
         GameManager.Instance.InitData(view.GetCustomizingData());
-        screen.HideScreen();
+        screen.MoveScene("Game");
     }
 }
