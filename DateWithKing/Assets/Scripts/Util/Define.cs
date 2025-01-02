@@ -19,6 +19,10 @@ public class Define
 
     public enum DynamicData
     {
-        
+        Save1,
+        Save2,
+        Save3,
     }
+    
+    
 }
