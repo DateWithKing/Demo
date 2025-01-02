@@ -36,6 +36,12 @@ public class ScreenToggle : MonoBehaviour
         {
             screen.HideScreen();
         }
+
         group[screenNum].ShowScreen();
+    }
+
+    public int ScreenCount()
+    {
+        return group.Count;
     }
 }
