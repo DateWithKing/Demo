@@ -28,7 +28,7 @@ public class ScreenToggle : MonoBehaviour
     {
         if (screenNum >= group.Count)
         {
-            ErrorHandler.PrintWarning(Define.Warning.인덱스_범위를_넘어서는_접근을_시도, 
+            ErrorHandler.PrintWarning(Warning.인덱스_범위를_넘어서는_접근을_시도, 
                 "Screen Toggle Group의 Screen 개수를 넘어서는 Screen Number이 매개변수로 들어왔습니다. ");
             return;
         }

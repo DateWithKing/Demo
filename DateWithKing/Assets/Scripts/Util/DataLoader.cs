@@ -44,7 +44,7 @@ public static class DataLoader
     /// enum DynamicData에 정의 후 사용 가능</param>
     /// <typeparam name="T">읽어올 오브젝트의 클래스</typeparam>
     /// <returns></returns>
-    public static T ReadData<T>(Define.DynamicData name)
+    public static T ReadData<T>(DynamicData name)
     {
         string jsonData = File.ReadAllText(DynamicDataPath + name + ".json");
         T data = JsonConvert.DeserializeObject<T>(jsonData);
@@ -57,7 +57,7 @@ public static class DataLoader
     /// <param name="name">데이터 저장명 </param>
     /// <param name="data">저장할 오브젝트 </param>
     /// <typeparam name="T">저장할 오브젝트의 클래스</typeparam>
-    public static void WriteData<T>(Define.DynamicData name, T data)
+    public static void WriteData<T>(DynamicData name, T data)
     {
         string jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);
         File.WriteAllText(DynamicDataPath + name + ".json", jsonData);
