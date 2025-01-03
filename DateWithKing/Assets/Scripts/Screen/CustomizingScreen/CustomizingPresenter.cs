@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CustomizingPresenter : Presenter
 {
-    private CustomizingView view;
+    private ICustomizingView view;
     private Screen screen;
     void Awake()
     {
-        view = GetComponent<CustomizingView>();
+        view = GetComponent<ICustomizingView>();
         screen = GetComponent<Screen>();
     }
 

@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class CustomizingView : View
+public class CustomizingView : View, ICustomizingView
 {
     [SerializeField] private TMP_InputField nameField;
     [SerializeField] private Button startButton;
