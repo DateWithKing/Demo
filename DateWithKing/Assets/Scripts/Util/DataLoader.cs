@@ -24,11 +24,14 @@ public static class DataLoader
 
     /// <summary>
     /// 정적 데이터를 T 오브젝트로 반환. <br/>
-    /// 해당 데이터는 Resources/StaticData/에 클래스명으로 존재해야 함
+    /// 해당 데이터는 Resources/StaticData/에 클래스명(Ex. ItemTable)으로 존재해야 함 <br/>
+    /// Ex.Resources/StaticData/ItemTable.json
     /// </summary>
     /// <typeparam name="T">읽어올 오브젝트의 클래스 <br/>
     /// Entity 클래스를 상속받은 클래스만 읽어올 수 있음
     /// </typeparam>
+    /// <param name="query"> 필요에 따라 읽어올 데이터에 저장명을 추가 <br/>
+    /// 이 경우 클래스명query(Ex. 클래스명 = ItemTable, query = SinAsan면 ItemTableSinAsan이 파일명인 데이터를 읽어옴</param>
     /// <returns></returns>
     public static T ReadData<T>(string query = "") where T : Entity
     {
@@ -40,7 +43,7 @@ public static class DataLoader
     /// <summary>
     /// 동적 데이터를 T 오브젝트로 반환. <br/>
     /// </summary>
-    /// <param name="name">데이터 저장명. <br/>
+    /// <param name="name">읽어올 파일명<br/>
     /// enum DynamicData에 정의 후 사용 가능</param>
     /// <typeparam name="T">읽어올 오브젝트의 클래스</typeparam>
     /// <returns></returns>
@@ -54,7 +57,7 @@ public static class DataLoader
     /// <summary>
     /// 동적 데이터를 저장합니다.
     /// </summary>
-    /// <param name="name">데이터 저장명 </param>
+    /// <param name="name">저장할 파일명 </param>
     /// <param name="data">저장할 오브젝트 </param>
     /// <typeparam name="T">저장할 오브젝트의 클래스</typeparam>
     public static void WriteData<T>(DynamicData name, T data)
