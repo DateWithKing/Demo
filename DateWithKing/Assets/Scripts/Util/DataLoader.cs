@@ -30,9 +30,9 @@ public static class DataLoader
     /// Entity 클래스를 상속받은 클래스만 읽어올 수 있음
     /// </typeparam>
     /// <returns></returns>
-    public static T ReadData<T>() where T : Entity
+    public static T ReadData<T>(string query = "") where T : Entity
     {
-        TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name);
+        TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + query);
         T data = JsonConvert.DeserializeObject<T>(jsonData.text);
         return data;
     }
