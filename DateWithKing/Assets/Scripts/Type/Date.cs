@@ -11,11 +11,11 @@ public class Date
     private const int EndWeek = 4;
 
     [JsonProperty]
-    private int currentMonth;
+    private int currentMonth = BeginMonth;
     [JsonProperty]
-    private int currentWeek;
+    private int currentWeek = BeginWeek;
     [JsonProperty]
-    private Days currentDays;
+    private Days currentDays = Days.월;
     [JsonProperty]
     private int countPassedDate = 1; //주차가 몇 번 지났는지
     

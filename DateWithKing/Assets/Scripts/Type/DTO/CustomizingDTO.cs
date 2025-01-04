@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CustomizingDTO
 {
-    public string name;
+    public string name = "손서희";
 
     public CustomizingDTO(string name)
     {
         this.name = name;
+    }
+
+    public CustomizingDTO()
+    {
+        
     }
 }
