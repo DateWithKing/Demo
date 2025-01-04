@@ -29,3 +29,14 @@ using System.Collections.Generic;
         Day,
         Night,
     }
+    
+    /// <summary>
+    /// 요일을 나타내는 enum
+    /// </summary>
+    public enum Days{
+        월,
+        화,
+        수,
+        목,
+        금
+    }
