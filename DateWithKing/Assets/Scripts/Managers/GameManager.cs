@@ -26,7 +26,8 @@ public class GameManager : Singleton<GameManager>
     }
     
     /// <summary>
-    /// 세이브 데이터 로드 <br/>
+    /// 세이브 데이터를 로드하여 GameManager.Instance.data를 교체 <br/>
+    /// 즉, 현재 게임 상태를 덮어씀
     /// </summary>
     /// <param name="slot">세이브 데이터 슬롯 번호</param>
     public void LoadData(int slot)
@@ -35,7 +36,8 @@ public class GameManager : Singleton<GameManager>
     }
 
     /// <summary>
-    /// 세이브 데이터 저장
+    /// 현재 GameManager.Instance.data를 세이브 데이터로 저장
+    /// 즉, 현재 게임 상태를 세이브 데이터에 저장함
     /// </summary>
     /// <param name="slot"> 세이브 데이터 슬롯 번호</param>
     public void SaveData(int slot)
