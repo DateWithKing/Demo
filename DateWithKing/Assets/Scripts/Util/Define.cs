@@ -23,10 +23,9 @@ using System.Collections.Generic;
         Save3 = 3,
     }
 
-    public enum Week
+    public enum WeekCycle
     {
         Intro,
         Day,
         Night,
-        NightBehaviour,
     }
