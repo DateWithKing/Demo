@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1382560302255629217
+--- !u!1 &1557746958711589383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1895496287703083318}
-  - component: {fileID: 6369590980545296505}
-  - component: {fileID: 2662989502758031334}
-  - component: {fileID: 739418802593737914}
+  - component: {fileID: 1060403988245829815}
+  - component: {fileID: 8746680383029050734}
+  - component: {fileID: 6786659504300588238}
+  - component: {fileID: 5714604868221167571}
+  - component: {fileID: 1510331642059715580}
   m_Layer: 5
-  m_Name: BaseCanvas
+  m_Name: DialogueCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1895496287703083318
+--- !u!224 &1060403988245829815
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382560302255629217}
+  m_GameObject: {fileID: 1557746958711589383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8998220062574476258}
+  - {fileID: 870060549640712397}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -39,13 +40,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!223 &6369590980545296505
+--- !u!223 &8746680383029050734
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382560302255629217}
+  m_GameObject: {fileID: 1557746958711589383}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
@@ -60,15 +61,15 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!114 &2662989502758031334
+--- !u!114 &6786659504300588238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382560302255629217}
+  m_GameObject: {fileID: 1557746958711589383}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -85,13 +86,13 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &739418802593737914
+--- !u!114 &5714604868221167571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382560302255629217}
+  m_GameObject: {fileID: 1557746958711589383}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -102,17 +103,29 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1001 &2102602102126005208
+--- !u!114 &1510331642059715580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557746958711589383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a072ca8c219734c4c9748c8f88eee887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7917041678850244855
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1895496287703083318}
+    m_TransformParent: {fileID: 1060403988245829815}
     m_Modifications:
     - target: {fileID: 4907115897162738270, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_Name
-      value: DialogueScreen
+      value: DialogueScreen Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7047544079168483386, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_Pivot.x
@@ -199,8 +212,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95092bf522409c248a426904d8f79996, type: 3}
---- !u!224 &8998220062574476258 stripped
+--- !u!224 &870060549640712397 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7047544079168483386, guid: 95092bf522409c248a426904d8f79996, type: 3}
-  m_PrefabInstance: {fileID: 2102602102126005208}
+  m_PrefabInstance: {fileID: 7917041678850244855}
   m_PrefabAsset: {fileID: 0}
