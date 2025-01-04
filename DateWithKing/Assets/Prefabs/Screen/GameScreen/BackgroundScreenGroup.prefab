@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1940541736530398282}
   - component: {fileID: 1691078322183699811}
   - component: {fileID: 8993503092043071419}
-  - component: {fileID: 4653082250000551844}
   m_Layer: 5
   m_Name: BackgroundScreenGroup
   m_TagString: Untagged
@@ -69,18 +68,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e493cb8a8df4649b580544f5b328fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4653082250000551844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733980624093796299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2200e4c0e1049ee8c87244c90563a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2501927607964855109
