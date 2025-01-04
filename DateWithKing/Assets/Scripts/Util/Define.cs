@@ -23,10 +23,20 @@ using System.Collections.Generic;
         Save3 = 3,
     }
 
-    public enum Week
+    public enum WeekCycle
     {
         Intro,
         Day,
         Night,
-        NightBehaviour,
+    }
+    
+    /// <summary>
+    /// 요일을 나타내는 enum
+    /// </summary>
+    public enum Days{
+        월,
+        화,
+        수,
+        목,
+        금
     }

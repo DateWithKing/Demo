@@ -19,7 +19,7 @@ public class ScreenCycle : MonoBehaviour
     /// </summary>
     public void NextScreen()
     {
-        currentScreen.LimitIncrement(screenToggle.ScreenCount());
+        currentScreen.LimitIncrement(screenToggle.ScreenCount() - 1);
         screenToggle.ShowScreen(currentScreen);
     }
 
