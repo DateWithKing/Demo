@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8746680383029050734}
   - component: {fileID: 6786659504300588238}
   - component: {fileID: 5714604868221167571}
-  - component: {fileID: 1510331642059715580}
   m_Layer: 5
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -103,18 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1510331642059715580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557746958711589383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a072ca8c219734c4c9748c8f88eee887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7917041678850244855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,6 +113,10 @@ PrefabInstance:
     - target: {fileID: 4907115897162738270, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_Name
       value: DialogueScreen Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908569609161656678, guid: 95092bf522409c248a426904d8f79996, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7047544079168483386, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_Pivot.x

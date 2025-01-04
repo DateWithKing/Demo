@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 6407663728417087041}
   - component: {fileID: 6099139833676570341}
   - component: {fileID: 696682782192897198}
-  - component: {fileID: 7932200498021310530}
   m_Layer: 5
   m_Name: BackgroundCanvas
   m_TagString: Untagged
@@ -178,15 +177,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7932200498021310530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9133919510392758675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a072ca8c219734c4c9748c8f88eee887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
