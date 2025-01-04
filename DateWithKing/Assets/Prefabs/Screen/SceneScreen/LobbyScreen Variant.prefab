@@ -592,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162424877777472838, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -218
+      objectReference: {fileID: 0}
     - target: {fileID: 5098255286684916771, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
       propertyPath: group.Array.size
       value: 1
@@ -704,6 +708,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3647642534229254227, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
     - {fileID: 6497774147274967512, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
+    - {fileID: 7252029103447849808, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
+    - {fileID: 157405225593985768, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 389ec59e84dec9a4f96cee1768195c41, type: 3}
