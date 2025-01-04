@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameData data { get; set; }
+    public GameData data { get; set; } = new GameData();
 
     /// <summary>
     /// 최초 게임 데이터 세팅 <br/>
