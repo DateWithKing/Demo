@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1921760122795851253, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_Name
-      value: GameScreen
+      value: SemesterScreen
       objectReference: {fileID: 0}
     - target: {fileID: 2554679006334576461, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
