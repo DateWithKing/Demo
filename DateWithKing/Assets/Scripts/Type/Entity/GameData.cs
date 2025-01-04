@@ -8,10 +8,11 @@ using UnityEngine;
 public class GameData : Entity
 {
     public string name;
+    public CustomizingDTO customizing;
 
     public void SetCustomizingData(CustomizingDTO customizingDto)
     {
-        name = customizingDto.name;
+        customizing = customizingDto;
     }
     
     public GameData(CustomizingDTO customizingDto)
