@@ -129,9 +129,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5360309006417353047}
-  - component: {fileID: 7402352374734810025}
+  - component: {fileID: 6020894557130058737}
   m_Layer: 5
-  m_Name: ChooseBar
+  m_Name: ChooseStatBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 430, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7402352374734810025
+--- !u!114 &6020894557130058737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,12 +169,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3082765428151780065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da02d6af72581524ca3a2874b9119b53, type: 3}
+  m_Script: {fileID: 11500000, guid: 21c9b0d7033256c4b868463b5ad08c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attribute: []
-  attributeName: 
-  optionText: {fileID: 8477058761323219054}
+  lowerStatLimit: 0
+  statName: 
+  statAmount: {fileID: 8477058761323219054}
   leftButton: {fileID: 3191489737810360097}
   rightButton: {fileID: 8550276667284522585}
 --- !u!1 &4000097248963530244
