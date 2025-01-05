@@ -8,12 +8,15 @@ using System.Collections.Generic;
 
     public enum Error
     {
-        
+
     }
 
     public enum Warning
     {
         인덱스_범위를_넘어서는_접근을_시도,
+        
+        //SceneSingleton
+        SceneSingleton을_사용하지_않는_씬에서_싱글톤_접근을_함,
     }
 
     public enum DynamicData
