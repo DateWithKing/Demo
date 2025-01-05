@@ -14,7 +14,7 @@ public class Clock
 
     /// <summary>
     /// 현재 시간을 반환<br/>
-    /// 형식 : 12:00Gvoi
+    /// 형식 : 12:00
     /// </summary>
     /// <returns></returns>
     public string GetCurrentTime()
