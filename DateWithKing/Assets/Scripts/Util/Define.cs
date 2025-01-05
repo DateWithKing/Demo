@@ -43,3 +43,19 @@ using System.Collections.Generic;
         목,
         금
     }
+
+    public enum DaySpot
+    {
+        동아리방,
+        강의실,
+        공대도서관,
+        식당,
+        정문
+    }
+
+    public enum Character
+    {
+        양나현,
+        신아산,
+        서은표
+    }
