@@ -10,17 +10,16 @@ public class Slot : MonoBehaviour
 
     [field: SerializeField] public int slotID { get; private set; }
 
-    [SerializeField] private TextMeshProUGUI week;
-    [SerializeField] private TextMeshProUGUI day;
-    [SerializeField] private Image polaroidImage;
+    [field: SerializeField] public Button slot { get; private set; }
+    [SerializeField] private TextMeshProUGUI date;
+    [SerializeField] private Sprite polaroidImage;
 
 
     internal void PrintSlot(int slot, SlotDTO slotDTO)
     {
         if (slot == slotID)
         {
-            week.text = slotDTO.week.ToString();
-            day.text = slotDTO.day.ToString();
+            date.text = slotDTO.date.ToString();
             polaroidImage = slotDTO.polaroidImage;
 
 

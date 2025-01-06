@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class SlotDTO
 {
-    public string week;
-    public string day;
-    public Image polaroidImage;
+    public string date;
+    public Sprite polaroidImage;
 
-    public SlotDTO(string week, string day)
+    public SlotDTO(string date)
     {
-        this.week = week;
-        this.day = day;
+        this.date = date;
+        
     }
 
-    public SlotDTO(Image polaroidImage)
+    public SlotDTO(Sprite polaroidImage)
     {
         this.polaroidImage = polaroidImage;
     }
