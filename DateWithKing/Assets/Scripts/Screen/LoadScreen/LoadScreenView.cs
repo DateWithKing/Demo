@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class LoadScreenView : View, ILoadScreenView
 {
 
-    [SerializeField] private Button slot;
+    
     
     Slot slotInstance = new Slot();
 
@@ -20,7 +20,7 @@ public class LoadScreenView : View, ILoadScreenView
     void Start()
     {
         int slotID = slotInstance.slotID;
-        slot.onClick.AddListener(() => { ClickSlot?.Invoke(slotID); });
+        slotInstance.slot.onClick.AddListener(() => { ClickSlot?.Invoke(slotID); });
     }
 
 
