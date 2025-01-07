@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InitDisable : MonoBehaviour
 {
-    void Awake()
+    void Start()
     {
         gameObject.SetActive(false);
     }
