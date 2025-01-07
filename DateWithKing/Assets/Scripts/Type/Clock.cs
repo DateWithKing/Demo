@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -5,12 +6,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
-/// 하루의 시간을 나타내는 타입
+/// 하루의 시간을 나타내는 타입 <br/>
+/// WeekCycle에 종속됨(기획 변경 시 취약함)
 /// </summary>
 public class Clock
 {
     [JsonProperty]
-    private int currentHour = 12;
+    private int currentHour = 10;
+
+    /// <summary>
+    /// 시간이 바뀔 때 호출
+    /// </summary>
+    public event Action TimeChanged;
 
     /// <summary>
     /// 현재 시간을 반환<br/>
@@ -47,7 +54,7 @@ public class Clock
     /// </summary>
     public void InitTime()
     {
-        currentHour = 12;
+        currentHour = 10;
     }
 
     /// <summary>
@@ -56,7 +63,9 @@ public class Clock
     public void NextTime()
     {
         //12, 14, 16, 18 사이클
-        currentHour.LimitIncrement(18, 2, 12);
+        currentHour.LimitIncrement(18, 2, 10);
+        Debug.Log($"현재 시각 : {currentHour}");
+        TimeChanged?.Invoke();
     }
 
     /// <summary>
@@ -67,6 +76,27 @@ public class Clock
     {
         NextTime();
         return GetCurrentTime();
+    }
+
+    /// <summary>
+    /// 현재 시간을 WeekCycle로 반환
+    /// </summary>
+    /// <returns></returns>
+    public WeekCycle GetCurrentWeekCycle()
+    {
+        switch (currentHour)
+        {
+            case 10:
+                return WeekCycle.Intro;
+            case 12:
+            case 14:
+            case 16:
+                return WeekCycle.Day;
+            case 18:
+                return WeekCycle.Night;
+            default:
+                return WeekCycle.Intro;
+        }
     }
 
     private string IntToTime(int hour)

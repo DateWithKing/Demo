@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,8 @@ public class Screen : MonoBehaviour
     /// </summary>
     public void ShowScreen()
     {
-        gameObject.SetActive(true);
+        if (!gameObject.activeSelf)
+            gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -22,7 +24,8 @@ public class Screen : MonoBehaviour
     /// </summary>
     public void HideScreen()
     {
-        gameObject.SetActive(false);
+        if(gameObject.activeSelf)
+            gameObject.SetActive(false);
     }
 
     /// <summary>
