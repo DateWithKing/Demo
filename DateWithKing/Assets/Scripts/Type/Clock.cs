@@ -12,7 +12,7 @@ using UnityEngine;
 public class Clock
 {
     [JsonProperty]
-    private int currentHour = 12;
+    private int currentHour = 10;
 
     /// <summary>
     /// 시간이 바뀔 때 호출
@@ -54,7 +54,7 @@ public class Clock
     /// </summary>
     public void InitTime()
     {
-        currentHour = 12;
+        currentHour = 10;
     }
 
     /// <summary>
@@ -63,7 +63,8 @@ public class Clock
     public void NextTime()
     {
         //12, 14, 16, 18 사이클
-        currentHour.LimitIncrement(18, 2, 12);
+        currentHour.LimitIncrement(18, 2, 10);
+        Debug.Log($"현재 시각 : {currentHour}");
         TimeChanged?.Invoke();
     }
 
@@ -85,6 +86,8 @@ public class Clock
     {
         switch (currentHour)
         {
+            case 10:
+                return WeekCycle.Intro;
             case 12:
             case 14:
             case 16:
