@@ -64,7 +64,6 @@ public class Clock
     {
         //12, 14, 16, 18 사이클
         currentHour.LimitIncrement(18, 2, 10);
-        Debug.Log($"현재 시각 : {currentHour}");
         TimeChanged?.Invoke();
     }
 
