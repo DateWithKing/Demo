@@ -23,6 +23,7 @@ public class GameData : Entity
     public SettingDTO setting = new SettingDTO();
     public StatDataDTO statData = new StatDataDTO();
     public SlotDTO slot = new SlotDTO();
+
     public void SetCustomizingData(CustomizingDTO customizingDto)
     {
         customizing = customizingDto;
@@ -30,6 +31,6 @@ public class GameData : Entity
 
     public GameData()
     {
-        
+
     }
 }
