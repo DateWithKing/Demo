@@ -255,16 +255,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uC870\uAE45\uD558\uAE30"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1165449621323304615
@@ -388,16 +388,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uD3B8\uC758\uC810"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1855121938901106986
@@ -923,16 +923,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uD5EC\uC2A4\uD558\uAE30"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &5529556755943521462
@@ -1458,16 +1458,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uD0DC\uBE14\uB9BF"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6180843355158703846
@@ -1591,16 +1591,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uCC45\uC0C1"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &6387831667984931502
@@ -1979,16 +1979,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2778393622027293723}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uCE68\uB300"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &7492937884842397392
@@ -2112,16 +2112,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uD0DD\uBC30"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8197819052235440731
@@ -2245,16 +2245,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3725108447692149814}
-        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
-        m_MethodName: ShowScreen
-        m_Mode: 1
+      - m_Target: {fileID: 4422166103003763737}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: "\uAC15\uC544\uC9C0"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8257696439464405638
@@ -2649,17 +2649,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 040cc30109741804ea037c98e64dea80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3725108447692149814 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 484612369416100466, guid: 83796539ac8745d40a75db02c1f00bad, type: 3}
-  m_PrefabInstance: {fileID: 3822304858375048772}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2778393622027293723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7860922867695169658
