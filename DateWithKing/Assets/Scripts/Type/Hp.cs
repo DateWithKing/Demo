@@ -3,17 +3,27 @@ using Unity.Mathematics;
 
 public class Hp
 {
-    private const int LimitHp = 100;
-    private readonly int startHp;
-    private readonly int maxHp;
+    public const int LimitHp = 100;
+    private int startHp;
+    private int maxHp;
     private int currentHp;
     
     public Hp(int maxHp, int bonusHp = 0)
+    {
+        InitHp(maxHp, bonusHp);
+    }
+
+    public void InitHp(int maxHp, int bonusHp = 0)
     {
         this.maxHp = maxHp;
         startHp = maxHp + bonusHp;
         if (startHp > LimitHp) startHp = LimitHp;
         currentHp = startHp;
+    }
+
+    public int GetMaxHp()
+    {
+        return maxHp;
     }
 
     public int GetHp()

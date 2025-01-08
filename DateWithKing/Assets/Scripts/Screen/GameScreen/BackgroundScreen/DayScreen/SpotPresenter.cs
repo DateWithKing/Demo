@@ -12,7 +12,17 @@ public class SpotPresenter : Presenter
         string spotData = $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
                       $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
                       $"_{spot}";
-        Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.daySpot.spotCharacters[spotData]}을/를 만났습니다.");
+        if (SemesterSceneData.Instance.daySpot.spotCharacters.ContainsKey(spotData))
+        {
+            Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.daySpot.spotCharacters[spotData]}을/를 만났습니다.");
+            SemesterSceneData.Instance.hp.UseHp(20);
+            Debug.Log($"체력을 20 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
+        }
+        else
+        {
+            SemesterSceneData.Instance.hp.RecoverHp(10);
+            Debug.Log($"체력을 10 회복했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
+        }
     }
 
     private void OnDisable()

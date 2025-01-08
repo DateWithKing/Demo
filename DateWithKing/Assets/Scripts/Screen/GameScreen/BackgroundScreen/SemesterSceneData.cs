@@ -13,6 +13,7 @@ public class SemesterSceneData : SceneSingleton<SemesterSceneData>
     void Awake()
     {
         clock = new Clock();
+        //초기 값 GameManager에서 가져오도록 수정해야 함
         hp = new Hp(50);
         nightActivity = DataLoader.ReadData<NightActivityData>();
         daySpot = DataLoader.ReadData<DaySpotData>();
