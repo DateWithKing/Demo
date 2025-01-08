@@ -9,7 +9,9 @@ public class SpotPresenter : Presenter
     private DaySpot spot = DaySpot.강의실;
     private void OnEnable()
     {
-        Debug.Log($"{spot}에 방문했습니다. ({SemesterSceneData.Instance.clock.GetCurrentTime()})");
+        Debug.Log($"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
+                  $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
+                  $"_{spot}에 방문했습니다. ({SemesterSceneData.Instance.clock.GetCurrentTime()})");
     }
 
     private void OnDisable()
