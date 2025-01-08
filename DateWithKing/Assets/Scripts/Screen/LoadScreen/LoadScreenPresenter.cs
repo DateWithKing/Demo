@@ -23,7 +23,7 @@ public class LoadScreenPresenter : Presenter
 
     void Start()
     {
-        // View¿¡ ½½·Ô µ¥ÀÌÅÍ¸¦ Ãâ·Â
+        // Viewì— ìŠ¬ë¡¯ ë°ì´í„°ë¥¼ ì¶œë ¥
         for (int i = 0; i < slots.Length; i++)
         {
             view.PrintSlot(i, slots[i]);
@@ -32,39 +32,39 @@ public class LoadScreenPresenter : Presenter
 
 
     /// <summary>
-    /// ½½·Ô Å¬¸¯ ½Ã È£ÃâµÇ´Â ¸Ş¼­µå
+    /// ìŠ¬ë¡¯ í´ë¦­ ì‹œ í˜¸ì¶œë˜ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <param name="SlotID"> Å¬¸¯µÈ ½½·Ô ¹øÈ£ (0, 1, 2) </param>
+    /// <param name="SlotID"> í´ë¦­ëœ ìŠ¬ë¡¯ ë²ˆí˜¸ (0, 1, 2) </param>
     private void OnSlotClicked(int slotID)
     {
         SlotDTO selectedSlot = slots[slotID];
 
-        // ½½·ÔÀÌ ºñ¾îÀÖ´ÂÁö È®ÀÎ
+        // ìŠ¬ë¡¯ì´ ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸
         if (string.IsNullOrEmpty(selectedSlot.date))
         {
             UnityEngine.Debug.Log($"Slot {slotID} is empty. Cannot start the game.");
             return;
         }
 
-        // SlotDTO¸¦ CustomizingDTO·Î º¯È¯
+        // SlotDTOë¥¼ CustomizingDTOë¡œ ë³€í™˜
         CustomizingDTO customizingData = ConvertToCustomizingDTO(selectedSlot);
 
-        // ½½·Ô µ¥ÀÌÅÍ¸¦ °ÔÀÓ ¸Å´ÏÀú¿¡ ÀúÀå
+        // ìŠ¬ë¡¯ ë°ì´í„°ë¥¼ ê²Œì„ ë§¤ë‹ˆì €ì— ì €ì¥
         GameManager.Instance.InitData(customizingData);
 
-        // °ÔÀÓ ½ÃÀÛ
+        // ê²Œì„ ì‹œì‘
         screen.MoveScene("Semester");
     }
 
     /// <summary>
-    /// SlotDTO µ¥ÀÌÅÍ¸¦ CustomizingDTO·Î º¯È¯ÇÏ´Â ¸Ş¼­µå
+    /// SlotDTO ë°ì´í„°ë¥¼ CustomizingDTOë¡œ ë³€í™˜í•˜ëŠ” ë©”ì„œë“œ
     /// </summary>
-    /// <returns>CustomizingDTO °´Ã¼</returns>
+    /// <returns>CustomizingDTO ê°ì²´</returns>
     public CustomizingDTO ConvertToCustomizingDTO(SlotDTO slot)
     {
         CustomizingDTO customizingDTO = new CustomizingDTO
         {
-            stat = new StatDataDTO()
+            stats = new StatDataDTO()
         };
 
         return customizingDTO;
