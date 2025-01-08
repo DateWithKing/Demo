@@ -7,10 +7,12 @@ public class SemesterSceneData : SceneSingleton<SemesterSceneData>
 {
     public Clock clock { get; private set; }
     public Hp hp { get; private set; }
-
+    public NightActivityData nightActivity;
+    
     void Awake()
     {
         clock = new Clock();
         hp = new Hp(50);
+        nightActivity = DataLoader.ReadData<NightActivityData>();
     }
 }
