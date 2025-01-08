@@ -1,0 +1,108 @@
+{
+  "deltaStat": {
+    "책상": {
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 1,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "강아지": {
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 1,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "태블릿": {
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 1,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "침대": {
+      "hpCost": 0,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 10,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "조깅하기": {
+      "hpCost": 20,
+      "hp": 1,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "헬스하기": {
+      "hpCost": 20,
+      "hp": 0,
+      "str": 1,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "편의점": {
+      "hpCost": 30,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 50
+    },
+    "택배": {
+      "hpCost": 50,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": -20,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 150
+    }
+  }
+}
