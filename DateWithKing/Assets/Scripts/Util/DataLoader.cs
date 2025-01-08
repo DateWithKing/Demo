@@ -19,6 +19,7 @@ public class Entity
 /// </summary>
 public static class DataLoader
 {
+    private static readonly string StaticDataWritePath = Application.dataPath + "/Resources/StaticData/";
     private const string StaticDataPath = "StaticData/";
     private static readonly string DynamicDataPath = Application.persistentDataPath + "/";
 
@@ -38,6 +39,19 @@ public static class DataLoader
         TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + query);
         T data = JsonConvert.DeserializeObject<T>(jsonData.text);
         return data;
+    }
+    
+    /// <summary>
+    /// 정적 데이터를 Read하기 편하도록 데이터를 생성하는 함수 <br/>
+    /// 개발 시 사용하는 것이 아닌 데이터 생성 용도로 사용하는 것
+    /// </summary>
+    /// <param name="data">데이터</param>
+    /// <param name="query"> Read 시 사용할 추가 쿼리 </param>
+    /// <typeparam name="T"> 데이터 타입 </typeparam>
+    public static void WriteData<T>(T data, string query = "") where T : Entity
+    {
+        string jsonData = JsonConvert.SerializeObject(data, Formatting.Indented);
+        File.WriteAllText(StaticDataWritePath + typeof(T).Name + query + ".json", jsonData);
     }
 
     /// <summary>
