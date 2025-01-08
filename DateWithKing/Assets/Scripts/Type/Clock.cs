@@ -18,6 +18,7 @@ public class Clock
     /// 시간이 바뀔 때 호출
     /// </summary>
     public event Action TimeChanged;
+    public event Action DateChanged;
 
     /// <summary>
     /// 현재 시간을 반환<br/>
@@ -65,6 +66,7 @@ public class Clock
         //12, 14, 16, 18 사이클
         currentHour.LimitIncrement(18, 2, 10);
         TimeChanged?.Invoke();
+        if(currentHour == 10) DateChanged?.Invoke();
     }
 
     /// <summary>
