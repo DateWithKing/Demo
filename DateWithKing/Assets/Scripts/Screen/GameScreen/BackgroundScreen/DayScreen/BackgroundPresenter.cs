@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BackgroundPresenter : Presenter
@@ -31,7 +32,7 @@ public class BackgroundPresenter : Presenter
             screen.ShowScreen();
         }
         //직전 weekCycle 씬 제외 전부 비활성화
-        else if ((int)SemesterSceneData.Instance.clock.GetCurrentWeekCycle() - 1 != (int)weekCycle)
+        else if (SemesterSceneData.Instance.clock.GetBeforeWeekCycle() != weekCycle)
             screen.HideScreen();
     }
 }

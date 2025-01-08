@@ -98,6 +98,12 @@ public class Clock
         }
     }
 
+    public WeekCycle GetBeforeWeekCycle()
+    {
+        if((int)GetCurrentWeekCycle() == 0) return WeekCycle.Night;
+        return (WeekCycle)((int)GetCurrentWeekCycle() - 1);
+    }
+
     private string IntToTime(int hour)
     {
         return hour.ToString() + ":00";
