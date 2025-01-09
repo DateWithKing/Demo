@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SlotDTO
 {
     public string date = "";
-    public Sprite polaroidImage = null; // ±âº» ¹«Ç¥Á¤
+    public Sprite polaroidImage = null; // ê¸°ë³¸ ë¬´í‘œì •
     public StatDataDTO statData = new StatDataDTO();
 
     public SlotDTO() { }
@@ -22,7 +22,4 @@ public class SlotDTO
     {
         this.polaroidImage = polaroidImage;
     }
-
-    
-
 }

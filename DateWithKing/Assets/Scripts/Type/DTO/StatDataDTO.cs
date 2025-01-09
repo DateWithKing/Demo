@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StatDataDTO
 {
-    public int hp = 5; // ÃÊ±â °ª ¼³Á¤
+    public int hp = 5; // ì´ˆê¸° ê°’ ì„¤ì •
     public int str = 1;
     public int intel = 1;
     public int slave = 1;
@@ -15,7 +15,7 @@ public class StatDataDTO
 
     }
 
-    // °ªÀ» ¹Ş¾Æ¿Í¼­ ¼³Á¤ÇÏ´Â »ı¼ºÀÚ ¸Ş¼­µå
+    // ê°’ì„ ë°›ì•„ì™€ì„œ ì„¤ì •í•˜ëŠ” ìƒì„±ì ë©”ì„œë“œ
     public StatDataDTO(int hp, int str, int intel, int slave, int otk)
     {
         this.hp = hp;
@@ -25,4 +25,3 @@ public class StatDataDTO
         this.otk = otk;
     }
 }
-
