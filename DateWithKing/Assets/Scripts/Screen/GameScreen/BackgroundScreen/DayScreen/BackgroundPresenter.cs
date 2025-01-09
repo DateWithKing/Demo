@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,8 +6,8 @@ using UnityEngine;
 
 public class BackgroundPresenter : Presenter
 {
-    [SerializeField]
-    private WeekCycle weekCycle = WeekCycle.Intro;
+    [SerializeField] private WeekCycle weekCycle = WeekCycle.Intro;
+    [SerializeField] private Texture2D cursorImage;
     private Screen screen;
     void Awake()
     {
@@ -30,6 +31,10 @@ public class BackgroundPresenter : Presenter
         if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() == weekCycle)
         {
             screen.ShowScreen();
+            if (weekCycle != WeekCycle.Intro)
+            {
+                CursorHandler.ChangeCursor(cursorImage);
+            }
         }
         //직전 weekCycle 씬 제외 전부 비활성화
         else if (SemesterSceneData.Instance.clock.GetBeforeWeekCycle() != weekCycle)
