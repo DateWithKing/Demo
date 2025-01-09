@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CustomizingDTO
 {
-    public string name = "손서희";
+    public string name { get; set; }
+    public StatDataDTO stats { get; set; }
 
     public CustomizingDTO(string name)
     {
@@ -13,6 +14,8 @@ public class CustomizingDTO
 
     public CustomizingDTO()
     {
-        
+        name = "손서희";
+        stats = new StatDataDTO(); 
     }
 }
+

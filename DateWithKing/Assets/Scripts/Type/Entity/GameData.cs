@@ -21,7 +21,7 @@ public class GameData : Entity
     public CustomizingDTO customizing = new CustomizingDTO();
     public PlayerStatDTO stat = new PlayerStatDTO();
     public SettingDTO setting = new SettingDTO();
-    
+
     public void SetCustomizingData(CustomizingDTO customizingDto)
     {
         customizing = customizingDto;
@@ -29,6 +29,6 @@ public class GameData : Entity
 
     public GameData()
     {
-        
+
     }
 }

@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SlotDTO : MonoBehaviour
+public class SlotDTO
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string date = "";
+    public Sprite polaroidImage = null; // 기본 무표정
 
-    // Update is called once per frame
-    void Update()
+    public SlotDTO() { }
+
+    public SlotDTO(string date, Sprite polaroidImage)
     {
-        
+        this.date = date;
+        this.polaroidImage = polaroidImage;
     }
 }

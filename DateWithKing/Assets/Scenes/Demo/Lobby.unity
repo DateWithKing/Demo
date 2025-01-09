@@ -739,6 +739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 4494710619067419822, guid: 05f1ab8f9bace294e81dc58de1529fef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
