@@ -20,6 +20,8 @@ public class GameManager : Singleton<GameManager>
         tempData.customizing = new CustomizingDTO();
         tempData.stat = new PlayerStatDTO();
         tempData.setting = new SettingDTO();
+        tempData.statData = new StatDataDTO();
+        tempData.slot = new SlotDTO();
         data = tempData;
         //data = DataLoader.ReadData<GameData>();
         data.SetCustomizingData(customizingDto);
