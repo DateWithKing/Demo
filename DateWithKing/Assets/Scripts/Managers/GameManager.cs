@@ -8,6 +8,8 @@ public class GameManager : Singleton<GameManager>
 {
     public GameData data { get; set; } = new GameData();
 
+    public int ticket = 0;
+
     /// <summary>
     /// 최초 게임 데이터 세팅 <br/>
     /// </summary>
@@ -23,6 +25,8 @@ public class GameManager : Singleton<GameManager>
         data = tempData;
         //data = DataLoader.ReadData<GameData>();
         data.SetCustomizingData(customizingDto);
+
+        ticket = 0;
     }
     
     /// <summary>
