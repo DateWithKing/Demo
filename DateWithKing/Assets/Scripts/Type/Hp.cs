@@ -1,4 +1,5 @@
 
+using System;
 using Unity.Mathematics;
 
 public class Hp
@@ -7,6 +8,12 @@ public class Hp
     private int startHp;
     private int maxHp;
     private int currentHp;
+
+    /// <summary>
+    /// 현재 Hp 변경을 알리는 이벤트 <br/>
+    /// Hp 관련 UI는 MVVP로 구현
+    /// </summary>
+    public event Action CurrentHpChanged;
     
     public Hp(int maxHp, int bonusHp = 0)
     {
@@ -19,6 +26,7 @@ public class Hp
         startHp = maxHp + bonusHp;
         if (startHp > LimitHp) startHp = LimitHp;
         currentHp = startHp;
+        CurrentHpChanged?.Invoke();
     }
 
     public int GetMaxHp()
@@ -51,6 +59,7 @@ public class Hp
     {
         if (!CanUse(hpAmount)) return;
         currentHp -= hpAmount;
+        CurrentHpChanged?.Invoke();
     }
 
     /// <summary>
@@ -62,5 +71,6 @@ public class Hp
     {
         currentHp += hpAmount;
         if (currentHp > maxHp) currentHp = maxHp;
+        CurrentHpChanged?.Invoke();
     }
 }
