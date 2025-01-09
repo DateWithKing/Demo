@@ -13,15 +13,23 @@ public class HpBarPresenter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SemesterSceneData.Instance.clock.TimeChanged -= ViewUpdate;
-        SemesterSceneData.Instance.clock.TimeChanged += ViewUpdate;
+        DateUpdate();
+        HpUpdate();
+        SemesterSceneData.Instance.clock.TimeChanged -= DateUpdate;
+        SemesterSceneData.Instance.clock.TimeChanged += DateUpdate;
+        SemesterSceneData.Instance.hp.CurrentHpChanged -= HpUpdate;
+        SemesterSceneData.Instance.hp.CurrentHpChanged += HpUpdate;
     }
 
-    private void ViewUpdate()
+    private void HpUpdate()
+    {
+        currentHp.value = SemesterSceneData.Instance.hp.GetHp() / (float)Hp.LimitHp;
+        maxHp.value = SemesterSceneData.Instance.hp.GetMaxHp() / (float)Hp.LimitHp;
+    }
+
+    private void DateUpdate()
     {
         date.text =
             $"{GameManager.Instance.data.date.GetCurrentDate()}/n{SemesterSceneData.Instance.clock.GetCurrentTime()}";
-        currentHp.value = SemesterSceneData.Instance.hp.GetHp() / (float)Hp.LimitHp;
-        maxHp.value = SemesterSceneData.Instance.hp.GetMaxHp() / (float)Hp.LimitHp;
     }
 }
