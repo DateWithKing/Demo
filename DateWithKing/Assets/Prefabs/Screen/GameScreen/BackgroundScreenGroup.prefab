@@ -156,6 +156,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6862011548428325479, guid: 97a265cdac12b4d4e91f87052c012a27, type: 3}
+      propertyPath: cursorImage
+      value: 
+      objectReference: {fileID: 2800000, guid: 752bbf69110526e45833e743975bb58b, type: 3}
     - target: {fileID: 7964021228356647089, guid: 97a265cdac12b4d4e91f87052c012a27, type: 3}
       propertyPath: m_Name
       value: DayScreen
@@ -221,6 +225,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1845878538502950672, guid: 927f2d475ffda0e40a06b90ed4fbe049, type: 3}
+      propertyPath: cursorImage
+      value: 
+      objectReference: {fileID: 2800000, guid: 752bbf69110526e45833e743975bb58b, type: 3}
     - target: {fileID: 3441802663740202128, guid: 927f2d475ffda0e40a06b90ed4fbe049, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -30,6 +30,6 @@ public class HpBarPresenter : MonoBehaviour
     private void DateUpdate()
     {
         date.text =
-            $"{GameManager.Instance.data.date.GetCurrentDate()}/n{SemesterSceneData.Instance.clock.GetCurrentTime()}";
+            $"{GameManager.Instance.data.date.GetCurrentDate()}{SemesterSceneData.Instance.clock.GetCurrentTime()}";
     }
 }

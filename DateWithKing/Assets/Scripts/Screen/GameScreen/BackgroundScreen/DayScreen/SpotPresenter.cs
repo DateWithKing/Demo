@@ -9,6 +9,7 @@ public class SpotPresenter : Presenter
     private DaySpot spot = DaySpot.강의실;
     private void OnEnable()
     {
+        CursorHandler.ChangeCursor();
         string spotData = $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
                       $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
                       $"_{spot}";
@@ -27,6 +28,7 @@ public class SpotPresenter : Presenter
 
     private void OnDisable()
     {
+        CursorHandler.ReturnCursor();
         SemesterSceneData.Instance.clock.NextTime();
     }
 }
