@@ -21,8 +21,6 @@ public class GameData : Entity
     public CustomizingDTO customizing = new CustomizingDTO();
     public PlayerStatDTO stat = new PlayerStatDTO();
     public SettingDTO setting = new SettingDTO();
-    public StatDataDTO statData = new StatDataDTO();
-    public SlotDTO slot = new SlotDTO();
 
     public void SetCustomizingData(CustomizingDTO customizingDto)
     {

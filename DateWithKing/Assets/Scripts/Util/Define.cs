@@ -21,9 +21,9 @@ using System.Collections.Generic;
 
     public enum DynamicData
     {
+        Save0 = 0,
         Save1 = 1,
         Save2 = 2,
-        Save3 = 3,
     }
 
     public enum WeekCycle

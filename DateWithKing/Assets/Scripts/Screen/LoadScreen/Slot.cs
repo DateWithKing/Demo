@@ -7,15 +7,17 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-
-    [field: SerializeField] public int slotID { get; private set; }
-
-    [field: SerializeField] public Button slot { get; private set; }
+    [field : SerializeField] public int slotID { get; private set; }
+    public Button slot { get; private set; }
     [SerializeField] private TextMeshProUGUI date;
     [SerializeField] private Image polaroidImage;
 
+    void Awake()
+    {
+        slot = GetComponent<Button>();
+    }
 
-    internal void PrintSlot(int slot, SlotDTO slotDTO)
+    public void PrintSlot(int slot, SlotDTO slotDTO)
     {
         if (slot != slotID)
         {
@@ -27,6 +29,11 @@ public class Slot : MonoBehaviour
         {
             Debug.LogError("SlotDTO is null! Cannot print slot data.");
             return;
+        }
+
+        if (slotDTO.date == "")
+        {
+            this.slot.interactable = false;
         }
 
         if (date != null)

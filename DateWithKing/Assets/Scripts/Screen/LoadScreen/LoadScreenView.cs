@@ -7,31 +7,25 @@ using UnityEngine.UI;
 
 public class LoadScreenView : View, ILoadScreenView
 {
-
-    
-    
-    Slot slotInstance = new Slot();
-
-
-
+    [SerializeField] private List<Slot> slots;
     public event Action<int> ClickSlot;
     
-
     void Start()
     {
-        int slotID = slotInstance.slotID;
-        slotInstance.slot.onClick.AddListener(() => { ClickSlot?.Invoke(slotID); });
+        foreach (Slot slot in slots)
+        {
+            slot.slot.onClick.AddListener(() => { ClickSlot?.Invoke(slot.slotID); });
+        }
     }
 
 
     /// <summary>
-    /// È­¸é¿¡ ½½·Ô µ¥ÀÌÅÍ Ãâ·Â
+    /// È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="slot"> Ãâ·ÂÇÒ ½½·Ô ¹øÈ£ (0, 1, 2 ¼ø) </param>
-    /// <param name="slotDTO"> Ãâ·ÂÇÒ ½½·Ô µ¥ÀÌÅÍ </param>
-    public void PrintSlot(int slot, SlotDTO slotDTO)
+    /// <param name="slot"> ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ (0, 1, 2 ï¿½ï¿½) </param>
+    /// <param name="slotDTO"> ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ </param>
+    public void PrintSlot(int slot, SlotDTO slotDto)
     {
-        slotInstance.PrintSlot(slot, slotDTO);
-
+        slots[slot].PrintSlot(slot, slotDto);
     }
 }

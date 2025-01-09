@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Diagnostics;
+using System.IO;
+using Debug = UnityEngine.Debug;
 
 public class LoadScreenPresenter : Presenter
 {
@@ -14,23 +16,30 @@ public class LoadScreenPresenter : Presenter
 
         view.ClickSlot -= OnSlotClicked;
         view.ClickSlot += OnSlotClicked;
-
-        for (int i = 0; i < slots.Length; i++)
-        {
-            slots[i] = new SlotDTO($"Week {i + 1}");
-        }
     }
 
     void Start()
     {
-        // View에 슬롯 데이터를 출력
         for (int i = 0; i < slots.Length; i++)
         {
-            view.PrintSlot(i, slots[i]);
+            try
+            {
+                GameData data = DataLoader.ReadData<GameData>((DynamicData)i);
+            }
+            catch (FileNotFoundException ex)
+            {
+                slots[i] = new SlotDTO("", Resources.Load<Sprite>("Lobby/Sad"));
+            }
+            finally
+            {
+                slots[i] ??= new SlotDTO(
+                        DataLoader.ReadData<GameData>((DynamicData)i).date.GetCurrentDate(),
+                        Resources.Load<Sprite>("Lobby/Smile"));
+                view.PrintSlot(i, slots[i]);
+            }
         }
     }
-
-
+    
     /// <summary>
     /// 슬롯 클릭 시 호출되는 메서드
     /// </summary>
@@ -46,27 +55,10 @@ public class LoadScreenPresenter : Presenter
             return;
         }
 
-        // SlotDTO를 CustomizingDTO로 변환
-        CustomizingDTO customizingData = ConvertToCustomizingDTO(selectedSlot);
-
         // 슬롯 데이터를 게임 매니저에 저장
-        GameManager.Instance.InitData(customizingData);
+        GameManager.Instance.LoadData(slotID);
 
         // 게임 시작
         screen.MoveScene("Semester");
-    }
-
-    /// <summary>
-    /// SlotDTO 데이터를 CustomizingDTO로 변환하는 메서드
-    /// </summary>
-    /// <returns>CustomizingDTO 객체</returns>
-    public CustomizingDTO ConvertToCustomizingDTO(SlotDTO slot)
-    {
-        CustomizingDTO customizingDTO = new CustomizingDTO
-        {
-            stats = new StatDataDTO()
-        };
-
-        return customizingDTO;
     }
 }

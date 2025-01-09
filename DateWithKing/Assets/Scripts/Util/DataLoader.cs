@@ -63,9 +63,16 @@ public static class DataLoader
     /// <returns></returns>
     public static T ReadData<T>(DynamicData name)
     {
-        string jsonData = File.ReadAllText(DynamicDataPath + name + ".json");
-        T data = JsonConvert.DeserializeObject<T>(jsonData);
-        return data;
+        try
+        {
+            string jsonData = File.ReadAllText(DynamicDataPath + name + ".json");
+            T data = JsonConvert.DeserializeObject<T>(jsonData);
+            return data;
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new FileNotFoundException();
+        }
     }
 
     /// <summary>

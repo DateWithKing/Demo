@@ -356,7 +356,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462985bd173d46e4783d5b7e512f9e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <slotID>k__BackingField: 0
-  <slot>k__BackingField: {fileID: 3662233955921341299}
   date: {fileID: 3624795038599311777}
-  polaroidImage: {fileID: 21300000, guid: a0b17131cca566f46b55d41a40ff693c, type: 3}
+  polaroidImage: {fileID: 7666304324787430042}
