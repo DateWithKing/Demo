@@ -7,15 +7,15 @@ public class SemesterSceneData : SceneSingleton<SemesterSceneData>
 {
     public Clock clock { get; private set; }
     public Hp hp { get; private set; }
-    public DaySpotData daySpot;
-    public NightActivityData nightActivity;
+    public DayDialogueData DayDialogue;
+    public SpotData spot;
     
     void Awake()
     {
         clock = new Clock();
         //초기 값 GameManager에서 가져오도록 수정해야 함
         hp = new Hp(50);
-        nightActivity = DataLoader.ReadData<NightActivityData>();
-        daySpot = DataLoader.ReadData<DaySpotData>();
+        spot = DataLoader.ReadData<SpotData>();
+        DayDialogue = DataLoader.ReadData<DayDialogueData>();
     }
 }

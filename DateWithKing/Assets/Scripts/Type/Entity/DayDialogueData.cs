@@ -2,7 +2,7 @@
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class DaySpotData : Entity
+    public class DayDialogueData : Entity
     {
         /// <summary>
         /// key - 요일_교시_장소

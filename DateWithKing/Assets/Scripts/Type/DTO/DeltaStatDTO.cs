@@ -3,6 +3,7 @@
 /// </summary>
 public class DeltaStatDTO
 {
+    public string comment = "";
     public int hpCost = 0;
     public int hp = 0;
     public int str = 0;
