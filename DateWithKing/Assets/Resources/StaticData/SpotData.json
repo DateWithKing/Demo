@@ -1,6 +1,7 @@
 {
   "deltaStat": {
     "책상": {
+      "comment": "공부나 할까",
       "hpCost": 20,
       "hp": 0,
       "str": 0,
@@ -14,6 +15,7 @@
       "gold": 0
     },
     "강아지": {
+      "comment": "강아지 산책이나 하자",
       "hpCost": 20,
       "hp": 0,
       "str": 0,
@@ -27,6 +29,7 @@
       "gold": 0
     },
     "태블릿": {
+      "comment": "공부 좀 해볼까",
       "hpCost": 20,
       "hp": 0,
       "str": 0,
@@ -40,6 +43,7 @@
       "gold": 0
     },
     "침대": {
+      "comment": "도로롱",
       "hpCost": 0,
       "hp": 0,
       "str": 0,
@@ -53,6 +57,7 @@
       "gold": 0
     },
     "조깅하기": {
+      "comment": "체력 좀 키워볼까",
       "hpCost": 20,
       "hp": 1,
       "str": 0,
@@ -66,6 +71,7 @@
       "gold": 0
     },
     "헬스하기": {
+      "comment": "근력 좀 키워볼까",
       "hpCost": 20,
       "hp": 0,
       "str": 1,
@@ -79,6 +85,7 @@
       "gold": 0
     },
     "편의점": {
+      "comment": "꿀알바 가보자고",
       "hpCost": 30,
       "hp": 0,
       "str": 0,
@@ -92,6 +99,7 @@
       "gold": 50
     },
     "택배": {
+      "comment": "좀 힘들지만...",
       "hpCost": 50,
       "hp": 0,
       "str": 0,
@@ -103,6 +111,76 @@
       "lvHyun": 0,
       "lvPyo": 0,
       "gold": 150
+    },
+    "공대도서관": {
+      "comment": "넓고 좋다",
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "식당": {
+      "comment": "학식이맛없다",
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "동아리방": {
+      "comment": "유사피씨방",
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "강의실": {
+      "comment": "사보개 도인실 교수님 101호",
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
+    },
+    "정문": {
+      "comment": "비상탈출구",
+      "hpCost": 20,
+      "hp": 0,
+      "str": 0,
+      "wis": 0,
+      "otk": 0,
+      "slv": 0,
+      "bonusHp": 0,
+      "lvSan": 0,
+      "lvHyun": 0,
+      "lvPyo": 0,
+      "gold": 0
     }
   }
 }

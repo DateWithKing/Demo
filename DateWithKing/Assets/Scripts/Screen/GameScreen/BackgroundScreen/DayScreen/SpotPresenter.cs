@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 장소의 행동을 관리
+/// </summary>
 public class SpotPresenter : Presenter
 {
     [SerializeField]
@@ -13,9 +16,9 @@ public class SpotPresenter : Presenter
         string spotData = $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
                       $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
                       $"_{spot}";
-        if (SemesterSceneData.Instance.daySpot.spotCharacters.ContainsKey(spotData))
+        if (SemesterSceneData.Instance.DayDialogue.spotCharacters.ContainsKey(spotData))
         {
-            Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.daySpot.spotCharacters[spotData]}을/를 만났습니다.");
+            Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             SemesterSceneData.Instance.hp.UseHp(20);
             Debug.Log($"체력을 20 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
         }
