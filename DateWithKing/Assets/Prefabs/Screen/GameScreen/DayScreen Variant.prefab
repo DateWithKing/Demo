@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 2257847254389806537}
   - component: {fileID: 3961146355059211848}
   - component: {fileID: 4372508236997042074}
+  - component: {fileID: 6844527855760066798}
   m_Layer: 5
   m_Name: SpotButton_2
   m_TagString: Untagged
@@ -402,7 +403,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comment: "\uC870\uC6A9\uD558\uB2E4"
+  comment: 
+--- !u!114 &6844527855760066798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112562740487528192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uACF5\uB300\uB3C4\uC11C\uAD00"
+  hpCost: 20
 --- !u!1 &2226274090173837568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1867,7 @@ GameObject:
   - component: {fileID: 4523930220154120099}
   - component: {fileID: 5169716208600855120}
   - component: {fileID: 3763937983224769719}
+  - component: {fileID: 4876974797174960507}
   m_Layer: 5
   m_Name: SpotButton_1
   m_TagString: Untagged
@@ -1985,7 +2001,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comment: "\uD559\uC2DD\uB178\uB9DB"
+  comment: 
+--- !u!114 &4876974797174960507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481451745669697557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uC2DD\uB2F9"
+  hpCost: 20
 --- !u!1 &5685444782572445401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,6 +2679,7 @@ GameObject:
   - component: {fileID: 4070452324790659542}
   - component: {fileID: 7142286429885982573}
   - component: {fileID: 1818509064313744425}
+  - component: {fileID: 1851965700963992602}
   m_Layer: 5
   m_Name: SpotButton_3
   m_TagString: Untagged
@@ -2782,7 +2813,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comment: "\uD53C\uC528\uBC29"
+  comment: 
+--- !u!114 &1851965700963992602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666004654837743007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uB3D9\uC544\uB9AC\uBC29"
+  hpCost: 20
 --- !u!1 &7490687803340608137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3360,7 @@ GameObject:
   - component: {fileID: 5512089096740617258}
   - component: {fileID: 7188695484084073114}
   - component: {fileID: 151887717651130269}
+  - component: {fileID: 8900828161985890608}
   m_Layer: 5
   m_Name: SpotButton_5
   m_TagString: Untagged
@@ -3448,7 +3494,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comment: "\uD0C8\uCD9C\uAD6C"
+  comment: 
+--- !u!114 &8900828161985890608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908166793708163108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uC815\uBB38"
+  hpCost: 20
 --- !u!1 &8124013200850475872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,6 +3522,7 @@ GameObject:
   - component: {fileID: 6502409689755705771}
   - component: {fileID: 45672825887714191}
   - component: {fileID: 2411653413323010299}
+  - component: {fileID: 1568209490232722262}
   m_Layer: 5
   m_Name: SpotButton_4
   m_TagString: Untagged
@@ -3595,7 +3656,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comment: "\uC0AC\uBCF4\uAC1C\uAC15\uC758\uC2E4"
+  comment: 
+--- !u!114 &1568209490232722262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124013200850475872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uAC15\uC758\uC2E4"
+  hpCost: 20
 --- !u!1 &8135909028039252021
 GameObject:
   m_ObjectHideFlags: 0
