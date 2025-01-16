@@ -24,8 +24,8 @@ public class GameData : Entity
     {
         { "hp", new Stat(5, 5, 10) },
         { "str", new Stat(1, 1, 10) },
-        { "intel", new Stat(1, 1, 10) },
-        { "slave", new Stat(1, 1, 10) },
+        { "wis", new Stat(1, 1, 10) },
+        { "slv", new Stat(1, 1, 10) },
         { "otk", new Stat(1, 1, 10) },
         { "bonusHp", new Stat(0, 0, 50) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
         { "lvSan", new Stat(0, -50, 100) },
@@ -37,6 +37,10 @@ public class GameData : Entity
 
     public GameData()
     {
-
+        //다회 실행 시 그만큼 구독 수가 늘어 중첩될 수 있음 주의
+        foreach (var stat in stats)
+        {
+            stat.Value.StatChanged += () => { Debug.Log($"스탯 {stat.Key}이 변경되었습니다. 현재 값: {stat.Value.value}"); };
+        }
     }
 }
