@@ -13,18 +13,13 @@ public class GameManager : Singleton<GameManager>
     /// <summary>
     /// 최초 게임 데이터 세팅 <br/>
     /// </summary>
-    public void InitData(CustomizingDTO customizingDto)
+    public void InitData()
     {
         //1-3
         //데이터를 추가하셨다면 아래 형식에 맞게 작성해주세요~
         GameData tempData = new GameData();
-        tempData.date = new Date();
-        tempData.customizing = new CustomizingDTO();
-        tempData.stat = new PlayerStatDTO();
-        tempData.setting = new SettingDTO();
         data = tempData;
         //data = DataLoader.ReadData<GameData>();
-        data.SetCustomizingData(customizingDto);
 
         ticket = 0;
     }
