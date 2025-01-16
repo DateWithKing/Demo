@@ -144,14 +144,14 @@ public class Mole : MonoBehaviour
     {
         moleIndex = index;
     }
-    /*
+    
     // 게임 끝나면 종료하는 메서드
     public void StopGame()
     {
         hittable = false;
         StopAllCoroutines();
     }
-    */
+    
     public void Activate(int level)
     {
         SetLevel(level);

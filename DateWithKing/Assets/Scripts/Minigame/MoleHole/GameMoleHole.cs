@@ -10,6 +10,7 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private TMPro.TextMeshProUGUI timeText;
     [SerializeField] private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] private Sprite backGround;
 
     private float startingTime = 10f;
     private float timeRemaining;
@@ -35,6 +36,18 @@ public class GameMoleHole : MonoBehaviour
 
     public void GameOver(int type)
     {
+        if (int.Parse(scoreText.text) >= 6)
+        {
+            UnityEngine.Debug.Log("티켓을 5개 얻었다!");
+        }
+        else
+        {
+            UnityEngine.Debug.Log("티켓을 얻지 못했다...");
+        }
+        foreach (Mole mole in moles)
+        {
+            mole.StopGame();
+        }
         playing = false;
     }
 
