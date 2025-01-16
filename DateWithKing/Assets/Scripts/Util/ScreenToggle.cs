@@ -12,9 +12,8 @@ public class ScreenToggle : MonoBehaviour
 {
     [SerializeField]
     private List<Screen> group = new List<Screen>();
-    
-    // Start is called before the first frame update
-    void Start()
+
+    void OnEnable()
     {
         if(group.Any()) ShowScreen(0);
     }
