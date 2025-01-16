@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 1700397758773880240}
   - component: {fileID: 2692207411170322150}
   - component: {fileID: 3747876961755027072}
+  - component: {fileID: 6952594097686568699}
   m_Layer: 5
   m_Name: SettingScreen
   m_TagString: Untagged
@@ -661,6 +662,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6952594097686568699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5964176110392204678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da02cf01150a2742bc5a917f784a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6616663480273164125
