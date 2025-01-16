@@ -7,7 +7,9 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private List<Mole> moles;
 
     [Header("UI objects")]
-    // [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject gameUI;
+    [SerializeField] private TMPro.TextMeshProUGUI timeText;
+    [SerializeField] private TMPro.TextMeshProUGUI scoreText;
 
     private float startingTime = 10f;
     private float timeRemaining;
@@ -18,6 +20,7 @@ public class GameMoleHole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameUI.SetActive(true);
         for (int i = 0; i < moles.Count; i++)
         {
             moles[i].Hide();
@@ -26,6 +29,7 @@ public class GameMoleHole : MonoBehaviour
         currentMoles.Clear();
         timeRemaining = startingTime;
         score = 0;
+        scoreText.text = "0";
         playing = true;
     }
 
@@ -45,6 +49,7 @@ public class GameMoleHole : MonoBehaviour
                 timeRemaining = 0;
                 GameOver(0);
             }
+            timeText.text = $"{(int)timeRemaining % 60:D2}";
             if (currentMoles.Count <= 1)
             {
                 int index = UnityEngine.Random.Range(0, moles.Count);
@@ -60,6 +65,7 @@ public class GameMoleHole : MonoBehaviour
     public void AddScore(int moleIndex)
     {
         score += 1;
+        scoreText.text = $"{score}";
         currentMoles.Remove(moles[moleIndex]);
     }
 }

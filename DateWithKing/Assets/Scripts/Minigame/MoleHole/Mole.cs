@@ -101,9 +101,7 @@ public class Mole : MonoBehaviour
     {
         if (hittable)
         {
-            //playMole.AddScore(moleIndex);
             gameMoleHole.AddScore(moleIndex);
-            UnityEngine.Debug.Log("잡았다!");
             StopAllCoroutines();
             StartCoroutine(QuickHide());
             hittable = false;
