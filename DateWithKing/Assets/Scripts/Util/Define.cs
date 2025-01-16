@@ -59,3 +59,12 @@ using System.Collections.Generic;
         신아산,
         서은표
     }
+    
+    public enum Background
+    {
+        Day,
+        Night,
+        Looking,
+        SummerVacation,
+        ClosingClass,
+    }
