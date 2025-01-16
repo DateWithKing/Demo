@@ -14,25 +14,25 @@ public class Mole : MonoBehaviour
     [Header("Game Manager")]
     [SerializeField] private PlayMole playMole;
 
-    // 두더지 위치
-    private Vector2 startPosition = new Vector2(0f, -4.05f);
+    // 두더지 숨길 위치
+    private Vector2 startPosition = new Vector2(0f, -1.0f);
     private Vector2 endPosition = Vector2.zero;
     // 숨기기/보여주기 매개변수로 할 시간
     private float showDuration = 0.5f;
     private float duration = 1f;
-
+    
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;
     private Vector2 boxOffset;
     private Vector2 boxSize;
     private Vector2 boxOffsetHidden;
     private Vector2 boxSizeHidden;
-
+    
     // mole parameters
     private bool hittable = true;
     private int lives;
-    private int moleIndex = 0;
-
+    //private int moleIndex = 0;
+    
     // coroutine으로 시작 -> IEnumerator, 시작/종료 위치 전달
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
     {
@@ -73,13 +73,13 @@ public class Mole : MonoBehaviour
         transform.localPosition = start;
         boxCollider2D.offset = boxOffsetHidden;
         boxCollider2D.size = boxSizeHidden;
-
+        /*
         if (hittable)
         {
             hittable = false;
-        }
+        }*/
     }
-
+    
     public void Hide()
     {
         transform.localPosition = startPosition;
@@ -89,19 +89,20 @@ public class Mole : MonoBehaviour
 
     private IEnumerator QuickHide()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         if (!hittable)
         {
             Hide();
         }
     }
-
+    
     private void OnMouseDown()
     {
         if (hittable)
         {
-            playMole.AddScore(moleIndex);
-            // StopAllCoroutines();
+            //playMole.AddScore(moleIndex);
+            UnityEngine.Debug.Log("잡았다!");
+            StopAllCoroutines();
             StartCoroutine(QuickHide());
             hittable = false;
         }
@@ -110,28 +111,24 @@ public class Mole : MonoBehaviour
     private void CreateNext()
     {
         float random = UnityEngine.Random.Range(0f, 1f);
-        if (random < 0)
+        if (random < 0f)
         {
 
         }
         else
         {
-            random = UnityEngine.Random.Range(0f, 1f);
-            if (random < 0)
-            {
-                lives = 1;
-            }
+            lives = 1;
         }
         hittable = true;
     }
-
+    
     private void SetLevel(int level)
     {
         float durationMin = Mathf.Clamp(1 - level * 0.1f, 0.01f, 1f);
         float durationMax = Mathf.Clamp(2 - level * 0.1f, 0.01f, 2f);
         duration = UnityEngine.Random.Range(durationMin, durationMax);
     }
-
+    
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -141,7 +138,7 @@ public class Mole : MonoBehaviour
         boxOffsetHidden = new Vector2(boxOffset.x, -startPosition.y / 2f);
         boxSizeHidden = new Vector2(boxSize.x, 0f);
     }
-
+    /*
     public void Activate(int level)
     {
         UnityEngine.Debug.Log($"Activate called for Mole index {moleIndex} with level {level}");
@@ -161,5 +158,12 @@ public class Mole : MonoBehaviour
     {
         hittable = false;
         StopAllCoroutines();
+    }
+    */
+    private void Start()
+    {
+        SetLevel(0);
+        CreateNext();
+        StartCoroutine(ShowHide(startPosition, endPosition));
     }
 }
