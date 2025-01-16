@@ -12,10 +12,10 @@ public class Mole : MonoBehaviour
     [SerializeField] private Sprite mole;
 
     [Header("Game Manager")]
-    [SerializeField] private PlayMole playMole;
+    [SerializeField] private GameMoleHole gameMoleHole;
 
     // 두더지 숨길 위치
-    private Vector2 startPosition = new Vector2(0f, -1.0f);
+    private Vector2 startPosition = new Vector2(0f, -1.5f);
     private Vector2 endPosition = Vector2.zero;
     // 숨기기/보여주기 매개변수로 할 시간
     private float showDuration = 0.5f;
@@ -31,7 +31,7 @@ public class Mole : MonoBehaviour
     // mole parameters
     private bool hittable = true;
     private int lives;
-    //private int moleIndex = 0;
+    private int moleIndex = 0;
     
     // coroutine으로 시작 -> IEnumerator, 시작/종료 위치 전달
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
@@ -73,11 +73,12 @@ public class Mole : MonoBehaviour
         transform.localPosition = start;
         boxCollider2D.offset = boxOffsetHidden;
         boxCollider2D.size = boxSizeHidden;
-        /*
+        
+        // 두더지 놓친 경우 -> 아무 변화 없고 hittable 상태만 false로 변경
         if (hittable)
         {
             hittable = false;
-        }*/
+        }
     }
     
     public void Hide()
@@ -101,6 +102,7 @@ public class Mole : MonoBehaviour
         if (hittable)
         {
             //playMole.AddScore(moleIndex);
+            gameMoleHole.AddScore(moleIndex);
             UnityEngine.Debug.Log("잡았다!");
             StopAllCoroutines();
             StartCoroutine(QuickHide());
@@ -138,21 +140,13 @@ public class Mole : MonoBehaviour
         boxOffsetHidden = new Vector2(boxOffset.x, -startPosition.y / 2f);
         boxSizeHidden = new Vector2(boxSize.x, 0f);
     }
-    /*
-    public void Activate(int level)
-    {
-        UnityEngine.Debug.Log($"Activate called for Mole index {moleIndex} with level {level}");
-        SetLevel(level);
-        CreateNext();
-        StartCoroutine(ShowHide(startPosition, endPosition));
-    }
-
+   
     // 두더지 인덱스 관리
     public void SetIndex(int index)
     {
         moleIndex = index;
     }
-
+    /*
     // 게임 끝나면 종료하는 메서드
     public void StopGame()
     {
@@ -160,9 +154,9 @@ public class Mole : MonoBehaviour
         StopAllCoroutines();
     }
     */
-    private void Start()
+    public void Activate(int level)
     {
-        SetLevel(0);
+        SetLevel(level);
         CreateNext();
         StartCoroutine(ShowHide(startPosition, endPosition));
     }
