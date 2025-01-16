@@ -5,5 +5,5 @@ using Newtonsoft.Json;
 public class SpotData : Entity
 {
     [JsonProperty]
-    public Dictionary<string, DeltaStatDTO> deltaStat { get; private set; } 
+    public Dictionary<string, Spot> deltaStat { get; private set; } 
 }

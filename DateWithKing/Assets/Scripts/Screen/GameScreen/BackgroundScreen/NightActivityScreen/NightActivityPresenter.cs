@@ -24,6 +24,5 @@ public class NightActivityPresenter : Presenter
     {
         screen.ShowScreen();
         Debug.Log($"{activity}을/를 했다!");
-        Debug.Log($"{SemesterSceneData.Instance.spot.deltaStat[activity].hpCost}만큼 체력을 사용했다. ");
     }
 }
