@@ -24,8 +24,8 @@ public class GameData : Entity
     {
         { "hp", new Stat(5, 5, 10) },
         { "str", new Stat(1, 1, 10) },
-        { "intel", new Stat(1, 1, 10) },
-        { "slave", new Stat(1, 1, 10) },
+        { "wis", new Stat(1, 1, 10) },
+        { "slv", new Stat(1, 1, 10) },
         { "otk", new Stat(1, 1, 10) },
         { "bonusHp", new Stat(0, 0, 50) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
         { "lvSan", new Stat(0, -50, 100) },
