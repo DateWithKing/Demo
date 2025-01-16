@@ -17,15 +17,10 @@ using UnityEngine;
 public class GameData : Entity
 {
     //1-2
+    public string name { get; set; }
     public Date date = new Date();
-    public CustomizingDTO customizing = new CustomizingDTO();
-    public PlayerStatDTO stat = new PlayerStatDTO();
+    public StatDataDTO stats { get; set; } = new StatDataDTO();
     public SettingDTO setting = new SettingDTO();
-
-    public void SetCustomizingData(CustomizingDTO customizingDto)
-    {
-        customizing = customizingDto;
-    }
 
     public GameData()
     {

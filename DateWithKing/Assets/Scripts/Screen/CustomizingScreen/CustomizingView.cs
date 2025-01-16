@@ -23,7 +23,7 @@ public class CustomizingView : View, ICustomizingView
     /// 화면에 선택지를 출력
     /// </summary>
     /// <param name="customizingDto"> 출력할 선택지 데이터 </param>
-    public void SetCustomizingData(CustomizingDTO customizingDto)
+    /*public void SetCustomizingData(CustomizingDTO customizingDto)
     {
         
     }
@@ -35,5 +35,5 @@ public class CustomizingView : View, ICustomizingView
     public CustomizingDTO GetCustomizingData()
     {
         return new CustomizingDTO(nameField.text);
-    }
+    }*/
 }

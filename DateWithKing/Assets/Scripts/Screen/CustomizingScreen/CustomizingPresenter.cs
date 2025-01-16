@@ -20,7 +20,7 @@ public class CustomizingPresenter : Presenter
 
     private void GameStart()
     {
-        GameManager.Instance.InitData(view.GetCustomizingData());
+        //GameManager.Instance.InitData(view.GetCustomizingData());
         screen.MoveScene("Semester");
     }
 }
