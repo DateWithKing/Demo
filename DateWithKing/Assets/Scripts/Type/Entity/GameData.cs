@@ -37,6 +37,10 @@ public class GameData : Entity
 
     public GameData()
     {
-
+        //다회 실행 시 그만큼 구독 수가 늘어 중첩될 수 있음 주의
+        foreach (var stat in stats)
+        {
+            stat.Value.StatChanged += () => { Debug.Log($"스탯 {stat.Key}이 변경되었습니다. 현재 값: {stat.Value.value}"); };
+        }
     }
 }
