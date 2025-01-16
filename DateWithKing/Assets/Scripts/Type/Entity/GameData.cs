@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,19 @@ public class GameData : Entity
     //1-2
     public string name { get; set; }
     public Date date = new Date();
-    public StatDataDTO stats { get; set; } = new StatDataDTO();
+    public Dictionary<string, Stat> stats = new Dictionary<string, Stat>
+    {
+        { "hp", new Stat(5, 5, 10) },
+        { "str", new Stat(1, 1, 10) },
+        { "intel", new Stat(1, 1, 10) },
+        { "slave", new Stat(1, 1, 10) },
+        { "otk", new Stat(1, 1, 10) },
+        { "bonusHp", new Stat(0, 0, 50) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
+        { "lvSan", new Stat(0, -50, 100) },
+        { "lvHyun", new Stat(0, -50, 100) },
+        { "lvPyo", new Stat(0, -50, 100) },
+        { "gold", new Stat(150, 0, Int32.MaxValue) }
+    };
     public SettingDTO setting = new SettingDTO();
 
     public GameData()
