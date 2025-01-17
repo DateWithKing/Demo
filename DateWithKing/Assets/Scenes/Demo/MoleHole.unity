@@ -877,6 +877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 761259398}
   - component: {fileID: 761259397}
+  - component: {fileID: 761259399}
   m_Layer: 0
   m_Name: GameMoleHole
   m_TagString: Untagged
@@ -912,6 +913,9 @@ MonoBehaviour:
   countDown: {fileID: 1751577470}
   backGround: {fileID: 1984681221}
   hammerTexture: {fileID: 2800000, guid: 2a865fcff8796ec44b49230b8df5d57d, type: 3}
+  hammerIdleCursor: {fileID: 2800000, guid: 2a865fcff8796ec44b49230b8df5d57d, type: 3}
+  hammerHitCursor: {fileID: 2800000, guid: ec6834c802a231d478a1401a51f40f9b, type: 3}
+  hitEffectDuration: 0.15
 --- !u!4 &761259398
 Transform:
   m_ObjectHideFlags: 0
@@ -927,6 +931,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &761259399
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761259396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e26d37f13f478084c959a9838c8cd652, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &802180162
 GameObject:
   m_ObjectHideFlags: 0

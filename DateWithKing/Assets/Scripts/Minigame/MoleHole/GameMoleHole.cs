@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -15,18 +16,25 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private GameObject backGround;
     [SerializeField] private Texture2D hammerTexture;
 
+    [Header("Cursor Settings")]
+    [SerializeField] private Texture2D hammerIdleCursor;  // 기본 망치 커서
+    [SerializeField] private Texture2D hammerHitCursor;   // 내려치는 망치 커서
+    [SerializeField] private float hitEffectDuration = 0.2f; // 클릭 효과 지속 시간
+
     private float startingTime = 10f;
     private float timeRemaining;
     private HashSet<Mole> currentMoles = new HashSet<Mole>();
     private int score;
     private bool playing = false;
+    private bool isClicking = false; // 클릭 중인지 체크
 
     // Start is called before the first frame update
     async void Start()
     {
         gameUI.SetActive(true);
         AdjustBackgroundToMolePosition();
-        ChangeCursorToHammer();
+        ChangeCursorToHammerIdle();
+
         for (int i = 0; i < moles.Count; i++)
         {
             moles[i].Hide();
@@ -42,13 +50,9 @@ public class GameMoleHole : MonoBehaviour
     }
 
     // 커서를 망치로 변경하는 함수
-    void ChangeCursorToHammer()
+    void ChangeCursorToHammerIdle()
     {
-        if (hammerTexture != null)
-        {
-            // Texture2D hammerTexture = hammerSprite.texture;
-            CursorHandler.ChangeCursor(hammerTexture);  // 커서 변경
-        }
+        CursorHandler.ChangeCursor(hammerIdleCursor);
     }
 
     // 카운트다운 코루틴 메서드
@@ -110,7 +114,21 @@ public class GameMoleHole : MonoBehaviour
                     moles[index].Activate(3);
                 }
             }
+
+            if (Input.GetMouseButtonDown(0) && !isClicking)
+            {
+                StartCoroutine(ClickEffect());
+            }
         }
+    }
+
+    private IEnumerator ClickEffect()
+    {
+        isClicking = true;
+        CursorHandler.ChangeCursor(hammerHitCursor); // 내려치는 커서 적용
+        yield return new WaitForSeconds(hitEffectDuration); // 일정 시간 대기
+        CursorHandler.ChangeCursor(hammerIdleCursor); // 기본 커서로 복귀
+        isClicking = false;
     }
 
     public void AddScore(int moleIndex)
@@ -130,4 +148,3 @@ public class GameMoleHole : MonoBehaviour
         backGround.transform.position = moleCenterPos;
     }
 }
-
