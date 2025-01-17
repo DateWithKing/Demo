@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameMoleHole : MonoBehaviour
@@ -10,6 +11,7 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private TMPro.TextMeshProUGUI timeText;
     [SerializeField] private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField] private TMPro.TextMeshProUGUI countDown;
     [SerializeField] private Sprite backGround;
 
     private float startingTime = 10f;
@@ -19,7 +21,7 @@ public class GameMoleHole : MonoBehaviour
     private bool playing = false;
 
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
         gameUI.SetActive(true);
         for (int i = 0; i < moles.Count; i++)
@@ -31,7 +33,29 @@ public class GameMoleHole : MonoBehaviour
         timeRemaining = startingTime;
         score = 0;
         scoreText.text = "0";
+        StartCoroutine(CountdownRoutine());
+        await Task.Delay(3000);
         playing = true;
+    }
+
+    // 카운트다운 코루틴
+    IEnumerator CountdownRoutine()
+    {
+        for (int i = 3; i > 0; i--)
+        {
+            countDown.gameObject.SetActive(true);
+            countDown.text = i.ToString();
+
+            //알파값 조정 (페이드 인 효과)
+            countDown.color = new Color(countDown.color.r, countDown.color.g, countDown.color.b, 1);
+
+            yield return new WaitForSeconds(1f); // 1초 대기
+
+            // 알파값 조정 (페이드 아웃 효과)
+            countDown.color = new Color(countDown.color.r, countDown.color.g, countDown.color.b, 0);
+        }
+
+        countDown.gameObject.SetActive(false); // 카운트다운 숨기기
     }
 
     public void GameOver(int type)
