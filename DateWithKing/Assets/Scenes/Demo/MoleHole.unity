@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -575, y: -20}
+  m_AnchoredPosition: {x: -530, y: -20}
   m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &188006063
@@ -391,7 +391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 575, y: -60}
+  m_AnchoredPosition: {x: 615, y: -60}
   m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211417273
@@ -598,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -575, y: -60}
+  m_AnchoredPosition: {x: -530, y: -60}
   m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &512924098
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 761259398}
   - component: {fileID: 761259397}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameMoleHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,7 +910,8 @@ MonoBehaviour:
   timeText: {fileID: 512924098}
   scoreText: {fileID: 211417273}
   countDown: {fileID: 1751577470}
-  backGround: {fileID: 21300000, guid: 435b8367379ff154f8d70767f5b5975b, type: 3}
+  backGround: {fileID: 1984681221}
+  hammerTexture: {fileID: 2800000, guid: 2a865fcff8796ec44b49230b8df5d57d, type: 3}
 --- !u!4 &761259398
 Transform:
   m_ObjectHideFlags: 0
@@ -1534,7 +1535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 575, y: -20}
+  m_AnchoredPosition: {x: 615, y: -20}
   m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1542357939
@@ -1908,21 +1909,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1984681222
-Transform:
+--- !u!224 &1984681222
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984681221}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1255.2, y: -540.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.43, y: 4.43, z: 4.43}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 183966161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1252.5, y: -540.7}
+  m_SizeDelta: {x: 12, y: 9}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1984681223
 SpriteRenderer:
   m_ObjectHideFlags: 0
