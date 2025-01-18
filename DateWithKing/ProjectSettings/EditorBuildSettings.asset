@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo/EndSemester.unity
     guid: 4186eb972498cbc43bc8274fec114b54
+  - enabled: 1
+    path: Assets/Scenes/Demo/SelectMinigame.unity
+    guid: 7ec2f434a9534d74485c200d804aefc5
+  - enabled: 1
+    path: Assets/Scenes/Demo/SpinRoulette.unity
+    guid: f80984b6ee7580348a0373b310b66072
   m_configObjects: {}
