@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine;
+using Yarn.Unity;
 
 public class GameMoleHole : MonoBehaviour
 {
@@ -29,7 +30,13 @@ public class GameMoleHole : MonoBehaviour
     private bool isClicking = false; // 클릭 중인지 체크
 
     // Start is called before the first frame update
-    async void Start()
+    void Start()
+    {
+        GameStart();
+    }
+
+    [YarnCommand("GameStart")]
+    async void GameStart()
     {
         gameUI.SetActive(true);
         AdjustBackgroundToMolePosition();
@@ -80,11 +87,12 @@ public class GameMoleHole : MonoBehaviour
         CursorHandler.DefaultCursor();
         if (int.Parse(scoreText.text) >= 6)
         {
-            UnityEngine.Debug.Log("티켓을 5개 얻었다!");
+            UnityEngine.Debug.Log("티켓을 5개 얻었다!"); // -> 다이얼로그
+            GameManager.Instance.ticket += 5;
         }
         else
         {
-            UnityEngine.Debug.Log("티켓을 얻지 못했다...");
+            UnityEngine.Debug.Log("티켓을 얻지 못했다..."); // -> 다이얼로그
         }
         foreach (Mole mole in moles)
         {
