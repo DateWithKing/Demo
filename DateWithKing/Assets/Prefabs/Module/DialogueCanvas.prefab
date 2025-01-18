@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueScreen: {fileID: 4394247423023704708}
   CharacterImage: {fileID: 126477802292690033}
+  BackgroundImage: {fileID: 7272672805657283090}
   SoundEffectAS: {fileID: 0}
   NoticeText: {fileID: 139824363418694185}
   PosNegPanel: {fileID: 6869624292629949451}
@@ -513,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: autoAdvance
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7778558435068644806, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: continueButton
@@ -884,3 +885,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3642063617816194300, guid: 95092bf522409c248a426904d8f79996, type: 3}
   m_PrefabInstance: {fileID: 7917041678850244855}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7272672805657283090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 662946238971005669, guid: 95092bf522409c248a426904d8f79996, type: 3}
+  m_PrefabInstance: {fileID: 7917041678850244855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
