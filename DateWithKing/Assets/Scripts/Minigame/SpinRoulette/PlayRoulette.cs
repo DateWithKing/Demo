@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 
 public class PlayRoulette : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayRoulette : MonoBehaviour
 
     private void Start()
     {
+        buttonSpin.interactable = false;
         StartRoulette();
     }
 
@@ -22,14 +24,25 @@ public class PlayRoulette : MonoBehaviour
         buttonSpin.interactable = true;
 
         Debug.Log($"{selectedData.ticketMultiple}");
+        GameManager.Instance.ticket += 5 * selectedData.ticketMultiple;
     }
 
+    [YarnCommand("StartRoulette")]
     public void StartRoulette()
     {
-        buttonSpin.onClick.AddListener(() =>
+        
+
+        if (GameManager.Instance.ticket >= 5)
         {
-            buttonSpin.interactable = false;
-            roulette.Spin(EndOfSpin);
-        });
+            buttonSpin.interactable = true;
+
+            buttonSpin.onClick.AddListener(() =>
+            {
+                buttonSpin.interactable = false;
+                roulette.Spin(EndOfSpin);
+                GameManager.Instance.ticket -= 5;
+            });
+        }
+        
     }
 }
