@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4242342633324886544}
   - component: {fileID: 996541812462970567}
   - component: {fileID: 3116927832211383388}
+  - component: {fileID: 6807239910170542211}
   m_Layer: 5
   m_Name: AppearancePanel
   m_TagString: Untagged
@@ -104,6 +105,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &6807239910170542211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071292430651413240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fb27ec06ceca34fae928bf7a0abc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1636093814736508991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,7 +127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3082765428151780065, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Name
-      value: HairStyleBar
+      value: ChooseBar_2
       objectReference: {fileID: 0}
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Pivot.x
@@ -195,6 +208,34 @@ PrefabInstance:
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attributeName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[0]
+      value: "\uC20F\uCEF7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[1]
+      value: "\uB2E8\uBC1C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[2]
+      value: "\uC911\uB2E8\uBC1C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[3]
+      value: "\uC7A5\uBC1C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477058761323219054, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: m_text
+      value: "\uC20F\uCEF7"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -220,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3082765428151780065, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Name
-      value: HeightBar
+      value: ChooseBar_3
       objectReference: {fileID: 0}
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Pivot.x
@@ -301,6 +342,30 @@ PrefabInstance:
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attributeName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[0]
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[1]
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[2]
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477058761323219054, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: m_text
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -326,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3082765428151780065, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Name
-      value: HairColorBar
+      value: ChooseBar_1
       objectReference: {fileID: 0}
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Pivot.x
@@ -407,6 +472,30 @@ PrefabInstance:
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attributeName
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[0]
+      value: "\uD751\uC0C9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[1]
+      value: "\uAE08\uC0C9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[2]
+      value: "\uAC08\uC0C9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477058761323219054, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: m_text
+      value: "\uD751\uBC1C"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -432,7 +521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3082765428151780065, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Name
-      value: ImpressionBar
+      value: ChooseBar_4
       objectReference: {fileID: 0}
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_Pivot.x
@@ -513,6 +602,30 @@ PrefabInstance:
     - target: {fileID: 5360309006417353047, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attributeName
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[0]
+      value: "\uCCAD\uC21C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[1]
+      value: "\uADC0\uC5FC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402352374734810025, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: attribute.Array.data[2]
+      value: "\uC139\uC2DC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477058761323219054, guid: a727673cc87c171459eda8a32c34dee7, type: 3}
+      propertyPath: m_text
+      value: "\uADC0\uC6A4"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
