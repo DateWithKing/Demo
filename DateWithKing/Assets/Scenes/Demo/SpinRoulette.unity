@@ -566,6 +566,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3620559854239156625, guid: 81c18b9368835144d9ff905a02c3d2e2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.96981126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620559854239156625, guid: 81c18b9368835144d9ff905a02c3d2e2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.96981126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620559854239156625, guid: 81c18b9368835144d9ff905a02c3d2e2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.96981126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1100,7 +1112,7 @@ MonoBehaviour:
     chance: 100
     index: 0
     weight: 0
-  - ticketMultiple: 2
+  - ticketMultiple: 3
     chance: 100
     index: 0
     weight: 0
@@ -1108,7 +1120,7 @@ MonoBehaviour:
     chance: 100
     index: 0
     weight: 0
-  - ticketMultiple: 2
+  - ticketMultiple: 3
     chance: 100
     index: 0
     weight: 0
@@ -1116,7 +1128,7 @@ MonoBehaviour:
     chance: 100
     index: 0
     weight: 0
-  - ticketMultiple: 2
+  - ticketMultiple: 3
     chance: 100
     index: 0
     weight: 0
@@ -1124,7 +1136,7 @@ MonoBehaviour:
     chance: 100
     index: 0
     weight: 0
-  - ticketMultiple: 2
+  - ticketMultiple: 3
     chance: 100
     index: 0
     weight: 0
@@ -1223,6 +1235,18 @@ PrefabInstance:
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.48781055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.48781055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4943396
       objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_RaycastTarget
