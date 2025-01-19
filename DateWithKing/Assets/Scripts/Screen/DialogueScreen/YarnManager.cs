@@ -8,9 +8,12 @@ using Yarn.Unity;
 
 public class YarnManager : SceneSingleton<YarnManager>
 {
-    DialogueRunner runner;
 
-    public Screen dialogueScreen;
+    [SerializeField]
+    private DialogueRunner runner;
+
+    [SerializeField]
+    private Screen dialogueScreen;
 
     [SerializeField]
     private Image CharacterImage;
@@ -36,12 +39,12 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner = GameObject.FindAnyObjectByType<DialogueRunner>();
         runner.AddCommandHandler("end", EndDialogue);
         runner.AddCommandHandler<string>("notice", Notice);
-        runner.AddCommandHandler<string>("dislike", (name)=>Notice(name+"(이/가) 싫어합니다."));
-        runner.AddCommandHandler<string>("like", (name)=>Notice(name+"(이/가) 좋아합니다."));
+        runner.AddCommandHandler<string>("dislike", (name)=>Notice(name+"이(/가) 싫어합니다."));
+        runner.AddCommandHandler<string>("like", (name)=>Notice(name+"이(/가) 좋아합니다."));
         runner.AddCommandHandler<string>("show", ShowCharactor);
         runner.AddCommandHandler<string>("bg", ShowBackground);
         runner.AddCommandHandler<string>("play", SoundEffect);
-        runner.AddCommandHandler<string, string>("choice", StartChoice);
+        runner.AddCommandHandler<string, string, string, string>("choice", StartChoice);
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
         runner.AddCommandHandler<int>("use_hp", UseHp);
@@ -113,19 +116,21 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="posNode"></param>
     /// <param name="negNode"></param>
-    void StartChoice(string posNode, string negNode){
+    void StartChoice(string posNode, string posText, string negNode, string negText){
 
         BackgroundController.Instance.ChangeImage(Background.Looking);
 
         // openCV 도입하면 바꿀부분
         PosNegPanel.SetActive(true);
 
+        PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
         PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
         PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(()=>{
             PosNegPanel.SetActive(false);
             RunDialogue(posNode);
             BackgroundController.Instance.ChangeImage(Background.Day);});
 
+        PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
         PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.RemoveAllListeners();
         PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>{
             PosNegPanel.SetActive(false);
