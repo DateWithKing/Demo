@@ -68,3 +68,20 @@ using System.Collections.Generic;
         SummerVacation,
         ClosingClass,
     }
+
+    public enum Appearance
+    {
+        머리색,
+        헤어스타일,
+        키,
+        인상
+    }
+
+    public enum InitialStat
+    {
+        hp,
+        str,
+        wis,
+        slv,
+        otk
+    }
