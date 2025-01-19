@@ -10,7 +10,6 @@ public class ChooseScreenTicket : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(GameManager.Instance.ticket);
         ticketAmount.text = "TICKET : " + GameManager.Instance.ticket.ToString();
     }
 
