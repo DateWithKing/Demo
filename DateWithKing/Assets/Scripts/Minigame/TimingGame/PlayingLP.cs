@@ -9,19 +9,19 @@ public class PlayingLP : MonoBehaviour
 {
     [SerializeField] private Transform reflection; // 빛반사부분
     [SerializeField] private Transform turntableArm;
-    
+
     [Header("UI objects")]
     [SerializeField] private GameObject gameUI;
     [SerializeField] private TMPro.TextMeshProUGUI timeText;
     [SerializeField] private TMPro.TextMeshProUGUI comboText;
     [SerializeField] private TMPro.TextMeshProUGUI countDown;
+    [SerializeField] private GameObject backGround;
 
     private float playingTime = 10f;
     private float timeRemaining;
     private int combo; // 올바른 클릭을 연속으로 하는 횟수
-    private bool isClicking = false;
     public bool isPlaying = false;
-    private bool isReflecting = false;
+    public bool isReflecting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +33,7 @@ public class PlayingLP : MonoBehaviour
     async void GameStart()
     {
         gameUI.SetActive(true);
+        AdjustBackgroundPosition();
         timeRemaining = playingTime;
         combo = 0;
         comboText.text = "0"; // 콤보는 0으로 시작
@@ -64,34 +65,90 @@ public class PlayingLP : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (isPlaying)
+        if (!isPlaying) return;
+
+        // 마우스 클릭 여부 확인
+        bool isMouseHeld = Input.GetMouseButton(0); // 클릭 중인지 확인
+
+        // 충돌 감지 (reflection 영역과 turntableArm 영역이 겹칠 경우 감지)
+        Collider2D hit = Physics2D.OverlapArea(
+            reflection.GetComponent<Collider2D>().bounds.min,
+            reflection.GetComponent<Collider2D>().bounds.max
+        );
+
+        // 디버그: 충돌 감지 여부 출력
+        if (hit != null)
         {
-            timeRemaining -= Time.deltaTime;
-            if(timeRemaining <= 0)
+            UnityEngine.Debug.Log("✅ 감지된 충돌: " + hit.name);
+        }
+        else
+        {
+            UnityEngine.Debug.Log("❌ 충돌 감지 안됨");
+        }
+
+        // TurntableArm과의 충돌 감지 (LP판과 겹쳤을 때)
+        if (hit != null && hit.CompareTag("TurntableArm"))
+        {
+            // 겹친 상태에서 마우스를 클릭하고 있으면
+            if (isMouseHeld)
             {
-                timeRemaining = 0;
-                GameOver();
-            }
-            timeText.text = $"{(int)timeRemaining % 60:D2}";
-            if (isPlaying && isReflecting && Input.GetMouseButtonDown(0))
-            {
-                // 클릭이 충돌한 범위 내에서 발생하는지 확인
+                UnityEngine.Debug.Log("🖱️ 마우스 클릭 감지됨!");
                 CheckClick();
             }
+
+            // 충돌 영역이 겹친 상태로 반사판 영역에서 클릭 시 콤보 추가
+            if (!isReflecting)
+            {
+                StopCoroutine(nameof(DisableReflecting));  // 충돌 후 반사판 유지
+                StartCoroutine(ReflectCooldown());  // 반사판 효과 대기
+            }
         }
-        
+        else
+        {
+            // 충돌이 사라지면 반사판 해제
+            if (isReflecting)
+            {
+                StopCoroutine(nameof(ReflectCooldown));
+                StartCoroutine(DisableReflecting());
+            }
+        }
+
+        // 시간 감소 (게임 진행 중)
+        timeRemaining -= Time.deltaTime;
+        if (timeRemaining <= 0)
+        {
+            timeRemaining = 0;
+            GameOver();
+        }
+
+        timeText.text = $"{(int)timeRemaining % 60:D2}";
+    }
+
+
+    // 잠시 동안 isReflecting 유지
+    IEnumerator ReflectCooldown()
+    {
+        isReflecting = true;
+        yield return new WaitForSeconds(0.1f);
+    }
+
+    // 충돌 감지가 사라지면 0.1초 후 isReflecting 해제
+    IEnumerator DisableReflecting()
+    {
+        yield return new WaitForSeconds(0.1f);
+        isReflecting = false;
+        UnityEngine.Debug.Log("Update()에서 충돌 해제!");
     }
 
     void CheckClick()
     {
         combo++;
         UnityEngine.Debug.Log("콤보!: " + combo);
-        if (combo >= 3 && isPlaying) // isPlaying이 true일 때만 GameOver 호출
+        if (combo >= 3)
         {
-            isPlaying = false; // 중복 호출 방지
-                               // GameOver(); // 중복 호출 방지
+            GameOver();
         }
     }
 
@@ -103,7 +160,8 @@ public class PlayingLP : MonoBehaviour
 
     void GameOver()
     {
-        if (combo >= 3) 
+        UnityEngine.Debug.Log("combo:" + combo);
+        if (combo >= 3)
         {
             UnityEngine.Debug.Log("티켓을 5장 얻었다!");
             GameManager.Instance.ticket += 5;
@@ -115,25 +173,24 @@ public class PlayingLP : MonoBehaviour
         isPlaying = false; // 게임 종료
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnDrawGizmos()
     {
-        UnityEngine.Debug.Log("OnTriggerEnter2D 호출됨! 충돌한 오브젝트: " + other.gameObject.name);
-
-        if (other.CompareTag("TurntableArm"))
+        if (reflection != null)
         {
-            isReflecting = true;
-            UnityEngine.Debug.Log("빛반사 부분이 턴테이블 팔과 충돌!");
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(reflection.GetComponent<Collider2D>().bounds.center, reflection.GetComponent<Collider2D>().bounds.size);
+        }
+        if (turntableArm != null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireCube(turntableArm.GetComponent<Collider2D>().bounds.center, turntableArm.GetComponent<Collider2D>().bounds.size);
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void AdjustBackgroundPosition()
     {
-        UnityEngine.Debug.Log("OnTriggerExit2D 호출됨! 충돌 해제된 오브젝트: " + other.gameObject.name);
-
-        if (other.CompareTag("TurntableArm"))
-        {
-            isReflecting = false;
-            UnityEngine.Debug.Log("빛반사 부분이 턴테이블 팔에서 벗어남!");
-        }
+        Vector3 turnCenterPos = turntableArm.transform.position;
+        turnCenterPos.z = 0;
+        backGround.transform.position = turnCenterPos;
     }
 }
