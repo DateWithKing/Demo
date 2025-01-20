@@ -11,6 +11,7 @@ public class Slot : MonoBehaviour
     public Button slot { get; private set; }
     [SerializeField] private TextMeshProUGUI date;
     [SerializeField] private Image polaroidImage;
+    [SerializeField] private bool noDataInteraction = false;
 
     void Awake()
     {
@@ -31,7 +32,7 @@ public class Slot : MonoBehaviour
             return;
         }
 
-        if (slotDTO.date == "")
+        if (slotDTO.date == "" && !noDataInteraction)
         {
             this.slot.interactable = false;
         }
