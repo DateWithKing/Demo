@@ -89,14 +89,12 @@ public class GameMoleHole : MonoBehaviour
 
     IEnumerator WaitSecond()
     {
-        yield return new WaitForSeconds(2.0f);
+        
+        yield return new WaitForSeconds(1.0f);
+        CursorHandler.ChangeCursor(runTexture);
         ChangeScreen.SetActive(true);
     }
 
-    void ChangeRunCursor()
-    {
-        CursorHandler.ChangeCursor(runTexture);
-    }
 
     public void GameOver(int type)
     {
@@ -115,12 +113,11 @@ public class GameMoleHole : MonoBehaviour
             mole.StopGame();
         }
 
-        ChangeRunCursor();
-        //UnityEngine.Debug.Log(.ToString());
-        playing = false;
-
-        StartCoroutine(WaitSecond());
         
+        playing = false;
+        
+        StartCoroutine(WaitSecond());
+
     }
 
     // Update is called once per frame

@@ -17,6 +17,8 @@ public class PlayingLP : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI countDown;
     [SerializeField] private GameObject backGround;
 
+    [SerializeField] private GameObject ChangeScreen;
+
     private float playingTime = 10f;
     private float timeRemaining;
     private int combo; // 올바른 클릭을 연속으로 하는 횟수
@@ -34,6 +36,7 @@ public class PlayingLP : MonoBehaviour
     async void GameStart()
     {
         gameUI.SetActive(true);
+        ChangeScreen.SetActive(false);
         AdjustBackgroundPosition();
         timeRemaining = playingTime;
         combo = 0;
@@ -138,6 +141,8 @@ public class PlayingLP : MonoBehaviour
             UnityEngine.Debug.Log("티켓을 얻지 못했다...");
         }
         isPlaying = false; // 게임 종료
+
+        ChangeScreen.SetActive(true);
     }
 
     void AdjustBackgroundPosition()

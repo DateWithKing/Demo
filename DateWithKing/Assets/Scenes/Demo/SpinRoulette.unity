@@ -1164,7 +1164,7 @@ MonoBehaviour:
     chance: 70
     index: 0
     weight: 0
-  - ticketMultiple: 3
+  - ticketMultiple: 2
     chance: 30
     index: 0
     weight: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
     chance: 70
     index: 0
     weight: 0
-  - ticketMultiple: 3
+  - ticketMultiple: 2
     chance: 30
     index: 0
     weight: 0
@@ -1180,7 +1180,7 @@ MonoBehaviour:
     chance: 70
     index: 0
     weight: 0
-  - ticketMultiple: 3
+  - ticketMultiple: 2
     chance: 30
     index: 0
     weight: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
     chance: 70
     index: 0
     weight: 0
-  - ticketMultiple: 3
+  - ticketMultiple: 2
     chance: 30
     index: 0
     weight: 0
