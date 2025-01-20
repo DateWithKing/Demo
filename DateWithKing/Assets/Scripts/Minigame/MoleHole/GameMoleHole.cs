@@ -17,6 +17,7 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI countDown;
     [SerializeField] private GameObject backGround;
     [SerializeField] private Texture2D hammerTexture;
+    [SerializeField] private Texture2D runTexture;
 
     [Header("Cursor Settings")]
     [SerializeField] private Texture2D hammerIdleCursor;  // 기본 망치 커서
@@ -38,7 +39,7 @@ public class GameMoleHole : MonoBehaviour
         GameStart();
     }
 
-    [YarnCommand("GameStart")]
+    //[YarnCommand("GameStart")]
     async void GameStart()
     {
         gameUI.SetActive(true);
@@ -86,9 +87,20 @@ public class GameMoleHole : MonoBehaviour
         countDown.gameObject.SetActive(false); // 카운트다운 숨기기
     }
 
+    IEnumerator WaitSecond()
+    {
+        yield return new WaitForSeconds(2.0f);
+        ChangeScreen.SetActive(true);
+    }
+
+    void ChangeRunCursor()
+    {
+        CursorHandler.ChangeCursor(runTexture);
+    }
+
     public void GameOver(int type)
     {
-        CursorHandler.DefaultCursor();
+        
         if (int.Parse(scoreText.text) >= 6)
         {
             UnityEngine.Debug.Log("티켓을 5개 얻었다!"); // -> 다이얼로그
@@ -104,7 +116,10 @@ public class GameMoleHole : MonoBehaviour
         }
         playing = false;
 
-        ChangeScreen.SetActive(true);
+        ChangeRunCursor();
+
+        StartCoroutine(WaitSecond());
+        
     }
 
     // Update is called once per frame
