@@ -1,9 +1,11 @@
 using System;
+using Newtonsoft.Json;
 
 public class Stat
 {
     public readonly int MaxValue = 10;
     public readonly int MinValue = 1;
+    [JsonProperty]
     public int value { get; private set; }
 
     public event Action StatChanged;
@@ -16,6 +18,11 @@ public class Stat
     }
 
     public Stat(int minValue, int maxValue) : this(minValue, minValue, maxValue)
+    {
+        
+    }
+
+    public Stat()
     {
         
     }
