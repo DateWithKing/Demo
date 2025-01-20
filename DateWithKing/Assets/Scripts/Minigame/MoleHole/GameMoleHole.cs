@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.UI;
 
 public class GameMoleHole : MonoBehaviour
 {
@@ -16,17 +17,20 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI countDown;
     [SerializeField] private GameObject backGround;
     [SerializeField] private Texture2D hammerTexture;
+    [SerializeField] private Texture2D runTexture;
 
     [Header("Cursor Settings")]
     [SerializeField] private Texture2D hammerIdleCursor;  // 기본 망치 커서
     [SerializeField] private Texture2D hammerHitCursor;   // 내려치는 망치 커서
     [SerializeField] private float hitEffectDuration = 0.2f; // 클릭 효과 지속 시간
 
+    [SerializeField] private GameObject ChangeScreen;
+
     private float startingTime = 10f;
     private float timeRemaining;
     private HashSet<Mole> currentMoles = new HashSet<Mole>();
     private int score;
-    private bool playing = false;
+    public bool playing = false;
     private bool isClicking = false; // 클릭 중인지 체크
 
     // Start is called before the first frame update
@@ -35,10 +39,11 @@ public class GameMoleHole : MonoBehaviour
         GameStart();
     }
 
-    [YarnCommand("GameStart")]
+    //[YarnCommand("GameStart")]
     async void GameStart()
     {
         gameUI.SetActive(true);
+        ChangeScreen.SetActive(false);
         AdjustBackgroundToMolePosition();
         ChangeCursorToHammerIdle();
 
@@ -82,10 +87,21 @@ public class GameMoleHole : MonoBehaviour
         countDown.gameObject.SetActive(false); // 카운트다운 숨기기
     }
 
+    IEnumerator WaitSecond()
+    {
+        yield return new WaitForSeconds(2.0f);
+        ChangeScreen.SetActive(true);
+    }
+
+    void ChangeRunCursor()
+    {
+        CursorHandler.ChangeCursor(runTexture);
+    }
+
     public void GameOver(int type)
     {
-        CursorHandler.DefaultCursor();
-        if (int.Parse(scoreText.text) >= 6)
+        
+        if (int.Parse(scoreText.text) >= 15)
         {
             UnityEngine.Debug.Log("티켓을 5개 얻었다!"); // -> 다이얼로그
             GameManager.Instance.ticket += 5;
@@ -98,7 +114,13 @@ public class GameMoleHole : MonoBehaviour
         {
             mole.StopGame();
         }
+
+        ChangeRunCursor();
+        //UnityEngine.Debug.Log(.ToString());
         playing = false;
+
+        StartCoroutine(WaitSecond());
+        
     }
 
     // Update is called once per frame
