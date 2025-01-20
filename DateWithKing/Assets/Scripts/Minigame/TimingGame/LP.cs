@@ -9,13 +9,12 @@ public class LP : MonoBehaviour
     [SerializeField] private float rotationSpeed; // 회전 속도
 
     [Header("Game Manager")]
-    [SerializeField] private PlayingLP playingLP;   
+    [SerializeField] private PlayingLP playingLP;
 
     // Start is called before the first frame update
     void Start()
     {
         rotationSpeed = 360f;
-        // rotationSpeed = UnityEngine.Random.Range(180f, 540f); // 회전 속도 초기화
     }
 
     // Update is called once per frame

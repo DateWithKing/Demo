@@ -127,8 +127,6 @@ public class PlayingLP : MonoBehaviour
 
     void GameOver()
     {
-        reflection.GetComponent<Rigidbody2D>().angularVelocity = 0f; // 회전 속도를 0으로 설정해서 회전 멈추기
-
         if (combo >= 3)
         {
             UnityEngine.Debug.Log("티켓을 5장 얻었다!");
