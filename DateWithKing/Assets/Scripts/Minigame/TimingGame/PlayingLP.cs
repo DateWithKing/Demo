@@ -22,6 +22,7 @@ public class PlayingLP : MonoBehaviour
     private int combo; // 올바른 클릭을 연속으로 하는 횟수
     public bool isPlaying = false;
     private bool isMouseHeld = false;
+    bool isInValidAngleRange = false;
 
     // Start is called before the first frame update
     void Start()
@@ -73,14 +74,14 @@ public class PlayingLP : MonoBehaviour
         float angle = reflection.transform.eulerAngles.z; // 빛반사부분의 회전 각도
 
         // 2시에서 4시 방향 
-        bool isInValidAngleRange = (angle >= 0f && angle <= 30f) || (angle >= 330f && angle <= 360f);
+        isInValidAngleRange = (angle >= 30f && angle <= 330f);
 
         // 마우스 클릭 여부 확인 (클릭 "순간"만 감지)
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !isMouseHeld) // 마우스나 스페이스바 클릭
         {
             isMouseHeld = true; // 클릭 상태로 설정
 
-            if (!isInValidAngleRange)
+            if (isInValidAngleRange)
             {
                 combo = 0; // 틀린 타이밍에 클릭하면 콤보 초기화
                 comboText.text = $"{combo:D3}";
