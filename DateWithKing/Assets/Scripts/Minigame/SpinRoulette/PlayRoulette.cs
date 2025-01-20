@@ -12,6 +12,8 @@ public class PlayRoulette : MonoBehaviour
     private Roulette roulette;
     [SerializeField]
     private Button buttonSpin;
+    [SerializeField]
+    private GameObject backButton;
 
     private void Start()
     {
@@ -22,15 +24,22 @@ public class PlayRoulette : MonoBehaviour
     private void EndOfSpin(RoulettePieceData selectedData)
     {
         buttonSpin.interactable = true;
+        backButton.SetActive(true);
 
         Debug.Log($"{selectedData.ticketMultiple}");
         GameManager.Instance.ticket += 5 * selectedData.ticketMultiple;
+        Debug.Log(GameManager.Instance.ticket);
+
+        if (GameManager.Instance.ticket <= 0)
+        {
+            buttonSpin.interactable = false;
+        }
     }
 
     [YarnCommand("StartRoulette")]
     public void StartRoulette()
     {
-        
+
 
         if (GameManager.Instance.ticket >= 5)
         {
@@ -39,6 +48,7 @@ public class PlayRoulette : MonoBehaviour
             buttonSpin.onClick.AddListener(() =>
             {
                 buttonSpin.interactable = false;
+                backButton.SetActive(false);
                 roulette.Spin(EndOfSpin);
                 GameManager.Instance.ticket -= 5;
             });
