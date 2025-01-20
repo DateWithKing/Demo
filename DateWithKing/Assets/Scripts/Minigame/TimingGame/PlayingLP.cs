@@ -73,28 +73,27 @@ public class PlayingLP : MonoBehaviour
         float angle = reflection.transform.eulerAngles.z; // 빛반사부분의 회전 각도
 
         // 2시에서 4시 방향 
-        bool isInValidAngleRange = (angle >= 0f && angle <= 25f) || (angle >= 345f && angle <= 360f);
+        bool isInValidAngleRange = (angle >= 0f && angle <= 30f) || (angle >= 330f && angle <= 360f);
 
         // 마우스 클릭 여부 확인 (클릭 "순간"만 감지)
-        if (Input.GetMouseButtonDown(0) && !isMouseHeld) // 한 번만 처리되도록 함
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !isMouseHeld) // 마우스나 스페이스바 클릭
         {
             isMouseHeld = true; // 클릭 상태로 설정
 
-            if (isInValidAngleRange)
-            {
-                CheckClick();  // 콤보 증가
-            }
-            else
+            if (!isInValidAngleRange)
             {
                 combo = 0; // 틀린 타이밍에 클릭하면 콤보 초기화
                 comboText.text = $"{combo:D3}";
             }
+            else
+            {
+                CheckClick();
+            }
         }
 
-        // 마우스를 떼면 다시 클릭을 할 수 있도록 설정
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space)) // 마우스를 떼거나 스페이스바를 떼면 클릭 상태를 풀어줌
         {
-            isMouseHeld = false; // 마우스를 떼면 클릭 상태를 풀어줌
+            isMouseHeld = false; // 클릭 상태 초기화
         }
 
         // 시간 감소
@@ -102,7 +101,6 @@ public class PlayingLP : MonoBehaviour
         if (timeRemaining <= 0)
         {
             timeRemaining = 0;
-            GameOver();
         }
 
         // UI 업데이트
@@ -129,6 +127,8 @@ public class PlayingLP : MonoBehaviour
 
     void GameOver()
     {
+        reflection.GetComponent<Rigidbody2D>().angularVelocity = 0f; // 회전 속도를 0으로 설정해서 회전 멈추기
+
         if (combo >= 3)
         {
             UnityEngine.Debug.Log("티켓을 5장 얻었다!");

@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53586e28fad49da49a962caa8ce5cd9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reflection: {fileID: 344020007}
+  reflection: {fileID: 1381260438}
   turntableArm: {fileID: 1896760424}
   gameUI: {fileID: 1095964749}
   timeText: {fileID: 2014250000}
@@ -1155,6 +1155,7 @@ GameObject:
   - component: {fileID: 1381260438}
   - component: {fileID: 1381260439}
   - component: {fileID: 1381260440}
+  - component: {fileID: 1381260441}
   m_Layer: 0
   m_Name: LP
   m_TagString: Untagged
@@ -1202,7 +1203,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381260437}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1240,6 +1241,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.578043, y: 0.92016375}
   m_EdgeRadius: 0
+--- !u!50 &1381260441
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381260437}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1431501295
 GameObject:
   m_ObjectHideFlags: 0

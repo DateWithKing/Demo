@@ -14,7 +14,8 @@ public class LP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotationSpeed = UnityEngine.Random.Range(36f, 720f); // 회전 속도 초기화
+        rotationSpeed = 360f;
+        // rotationSpeed = UnityEngine.Random.Range(180f, 540f); // 회전 속도 초기화
     }
 
     // Update is called once per frame
