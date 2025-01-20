@@ -26,7 +26,8 @@ public class SemesterScreenPresenter : MonoBehaviour
     private void OneDateLater()
     {
         //초기화 값 GameManager에서 가져오도록 수정해야 함
-        SemesterSceneData.Instance.hp.InitHp(50);
+        SemesterSceneData.Instance.hp.InitHp(GameManager.Instance.data.stats["hp"].value * 10, GameManager.Instance.data.stats["bonusHp"].value);
+        GameManager.Instance.data.stats["bonusHp"].InitStat();
     }
 
     private void SemesterEnd()

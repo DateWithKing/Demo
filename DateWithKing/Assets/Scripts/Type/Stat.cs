@@ -20,6 +20,11 @@ public class Stat
         
     }
 
+    public void InitStat()
+    {
+        value = MinValue;
+    }
+
     /// <summary>
     /// 현재 값을 기준으로 스탯을 변경시키는 함수
     /// </summary>
