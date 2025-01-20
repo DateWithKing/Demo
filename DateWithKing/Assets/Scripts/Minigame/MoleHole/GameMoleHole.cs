@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEngine.UI;
 
 public class GameMoleHole : MonoBehaviour
 {
@@ -22,11 +23,13 @@ public class GameMoleHole : MonoBehaviour
     [SerializeField] private Texture2D hammerHitCursor;   // 내려치는 망치 커서
     [SerializeField] private float hitEffectDuration = 0.2f; // 클릭 효과 지속 시간
 
+    [SerializeField] private GameObject ChangeScreen;
+
     private float startingTime = 10f;
     private float timeRemaining;
     private HashSet<Mole> currentMoles = new HashSet<Mole>();
     private int score;
-    private bool playing = false;
+    public bool playing = false;
     private bool isClicking = false; // 클릭 중인지 체크
 
     // Start is called before the first frame update
@@ -39,6 +42,7 @@ public class GameMoleHole : MonoBehaviour
     async void GameStart()
     {
         gameUI.SetActive(true);
+        ChangeScreen.SetActive(false);
         AdjustBackgroundToMolePosition();
         ChangeCursorToHammerIdle();
 
@@ -99,6 +103,8 @@ public class GameMoleHole : MonoBehaviour
             mole.StopGame();
         }
         playing = false;
+
+        ChangeScreen.SetActive(true);
     }
 
     // Update is called once per frame
