@@ -36,7 +36,7 @@ public class PlayingLP : MonoBehaviour
         AdjustBackgroundPosition();
         timeRemaining = playingTime;
         combo = 0;
-        comboText.text = "0"; // 콤보는 0으로 시작
+        comboText.text = $"{combo:D3}"; // 콤보는 0으로 시작
         StartCoroutine(CountdownRoutine());
         await Task.Delay(4000); // 3초 카운트다운 할 동안 대기
         isPlaying = true;
@@ -73,31 +73,28 @@ public class PlayingLP : MonoBehaviour
         float angle = reflection.transform.eulerAngles.z; // 빛반사부분의 회전 각도
 
         // 2시에서 4시 방향 
-        bool isInValidAngleRange = (angle >= 0f && angle <= 30f) || (angle >= 330f && angle <= 360f);
+        bool isInValidAngleRange = (angle >= 0f && angle <= 25f) || (angle >= 345f && angle <= 360f);
 
-        // 마우스 클릭 여부 확인
-        if (Input.GetMouseButtonDown(0))
+        // 마우스 클릭 여부 확인 (클릭 "순간"만 감지)
+        if (Input.GetMouseButtonDown(0) && !isMouseHeld) // 한 번만 처리되도록 함
         {
-            isMouseHeld = true;
-        }
-        else
-        {
-            isMouseHeld = false;
-        }
+            isMouseHeld = true; // 클릭 상태로 설정
 
-        // 마우스를 클릭했을 때, 빛반사부분이 2시~4시 방향에 있을 때만 콤보 체크
-        if (isMouseHeld)
-        {
             if (isInValidAngleRange)
             {
-                UnityEngine.Debug.Log("🖱️ 올바른 클릭 감지됨!");
-                CheckClick();  // 콤보 처리
+                CheckClick();  // 콤보 증가
             }
             else
             {
-                combo = 0;
+                combo = 0; // 틀린 타이밍에 클릭하면 콤보 초기화
+                comboText.text = $"{combo:D3}";
             }
-           
+        }
+
+        // 마우스를 떼면 다시 클릭을 할 수 있도록 설정
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMouseHeld = false; // 마우스를 떼면 클릭 상태를 풀어줌
         }
 
         // 시간 감소
@@ -110,7 +107,7 @@ public class PlayingLP : MonoBehaviour
 
         // UI 업데이트
         timeText.text = $"{(int)timeRemaining % 60:D2}";
-        comboText.text = combo.ToString();
+        comboText.text = $"{combo:D3}";
         if (int.Parse(comboText.text) >= 3)
         {
             GameOver();
@@ -121,6 +118,7 @@ public class PlayingLP : MonoBehaviour
     {
         combo++;
         UnityEngine.Debug.Log("콤보!: " + combo);
+        isMouseHeld = false;
     }
 
     IEnumerator GameTimer()
@@ -131,7 +129,6 @@ public class PlayingLP : MonoBehaviour
 
     void GameOver()
     {
-        UnityEngine.Debug.Log("combo:" + combo);
         if (combo >= 3)
         {
             UnityEngine.Debug.Log("티켓을 5장 얻었다!");

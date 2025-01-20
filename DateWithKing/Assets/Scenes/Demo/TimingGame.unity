@@ -1144,7 +1144,6 @@ MonoBehaviour:
   countDown: {fileID: 115792377}
   backGround: {fileID: 254772806}
   isPlaying: 0
-  isReflecting: 0
 --- !u!1 &1381260437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,8 +1193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinDuration: 10
   centerPoint: {fileID: 2026132741}
+  rotationSpeed: 0
   playingLP: {fileID: 1186581220}
-  rotationSpeed: 360
 --- !u!61 &1381260440
 BoxCollider2D:
   m_ObjectHideFlags: 0
