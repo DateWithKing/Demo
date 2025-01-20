@@ -101,7 +101,7 @@ public class GameMoleHole : MonoBehaviour
     public void GameOver(int type)
     {
         
-        if (int.Parse(scoreText.text) >= 6)
+        if (int.Parse(scoreText.text) >= 15)
         {
             UnityEngine.Debug.Log("티켓을 5개 얻었다!"); // -> 다이얼로그
             GameManager.Instance.ticket += 5;
@@ -114,9 +114,10 @@ public class GameMoleHole : MonoBehaviour
         {
             mole.StopGame();
         }
-        playing = false;
 
         ChangeRunCursor();
+        //UnityEngine.Debug.Log(.ToString());
+        playing = false;
 
         StartCoroutine(WaitSecond());
         
