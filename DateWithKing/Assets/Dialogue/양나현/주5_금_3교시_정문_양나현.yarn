@@ -103,7 +103,8 @@ title: 주5_금_3교시_정문_양나현_특수_분기2
 ---
 <<like 양나현>>
 <<change lvHyun +5>>
-<<chagne gold -100>>
+<<change gold -100>>
+(골드 -100)
 (우리는 7시 영화표를 예매하고 GGV에 도착했다.)
 <<show hyun_smile>>
 나현: 기대된다. 팝콘도 먹을래?
