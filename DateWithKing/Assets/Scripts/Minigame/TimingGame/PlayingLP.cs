@@ -29,11 +29,11 @@ public class PlayingLP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameStart();
+        YarnManager.Instance.RunDialogue("종강총회_레코드_시작");
     }
 
-    [YarnCommand("GameStart")]
-    async void GameStart()
+    [YarnCommand("StartLP")]
+    public async void StartLP()
     {
         gameUI.SetActive(true);
         ChangeScreen.SetActive(false);
@@ -133,12 +133,12 @@ public class PlayingLP : MonoBehaviour
     {
         if (combo >= 3)
         {
-            UnityEngine.Debug.Log("티켓을 5장 얻었다!");
+            YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
             GameManager.Instance.ticket += 5;
         }
         else
         {
-            UnityEngine.Debug.Log("티켓을 얻지 못했다...");
+            YarnManager.Instance.RunDialogue("종강총회_레코드_실패");
         }
         isPlaying = false; // 게임 종료
 
