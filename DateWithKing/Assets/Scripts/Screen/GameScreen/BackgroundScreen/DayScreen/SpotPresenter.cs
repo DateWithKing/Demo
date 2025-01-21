@@ -25,15 +25,12 @@ public class SpotPresenter : Presenter
                               $"_{SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}";
             Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             YarnManager.Instance.RunDialogue(dialogue);
-            /*SemesterSceneData.Instance.hp.UseHp(20);
-            Debug.Log($"체력을 20 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
-            */
+            SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot.ToString()].hpCost);
+            Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
         }
         else
         {
-            /*SemesterSceneData.Instance.hp.RecoverHp(10);
-            Debug.Log($"체력을 10 회복했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
-        */
+            Debug.Log("아무도 없습니다.");
         }
     }
 

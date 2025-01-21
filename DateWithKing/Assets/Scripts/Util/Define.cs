@@ -62,11 +62,13 @@ using System.Collections.Generic;
     
     public enum Background
     {
+        Intro,
         Day,
         Night,
         Looking,
         SummerVacation,
         ClosingClass,
+        MiniGame,
     }
 
     public enum Appearance

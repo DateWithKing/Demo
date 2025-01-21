@@ -294,7 +294,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4575390377866028945, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
   m_PrefabInstance: {fileID: 8325148839997368882}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &586454241
+--- !u!1001 &653938738
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -712,9 +712,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: SemesterScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2429828410029999673, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2429828410029999673, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2554679006334576461, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649797940350067544, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2649797940350067544, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2752699597485798224, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
@@ -727,6 +743,10 @@ PrefabInstance:
     - target: {fileID: 3764229389089478309, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954733251410387661, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4575390377866028945, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_Pivot.x
@@ -816,6 +836,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6027086711248785314, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6196273778463924946, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -828,9 +852,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8128485321227261202, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128485321227261202, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481311046167392371, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481311046167392371, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8662756432924745382, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778762304378966298, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779399776400667025, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5139673979131725454, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -848,7 +896,7 @@ SceneRoots:
   - {fileID: 771137189}
   - {fileID: 323458564}
   - {fileID: 1087195678}
-  - {fileID: 586454241}
   - {fileID: 672762229}
   - {fileID: 120523474}
   - {fileID: 1061902829}
+  - {fileID: 653938738}
