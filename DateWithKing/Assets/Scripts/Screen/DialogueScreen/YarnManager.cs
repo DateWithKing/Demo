@@ -5,6 +5,7 @@ using TMPro;
 using Yarn.Unity;
 
 
+
 public class YarnManager : SceneSingleton<YarnManager>
 {
 
