@@ -23,6 +23,7 @@ public class NightActivityPresenter : Presenter
     public void DoActivity(string activity)
     {
         screen.ShowScreen();
-        Debug.Log($"{activity}을/를 했다!");
+        string dialogue = $"밤_{activity}";
+        YarnManager.Instance.RunDialogue(dialogue);
     }
 }

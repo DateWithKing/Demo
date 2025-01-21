@@ -12,6 +12,8 @@ public class PlayRoulette : MonoBehaviour
     private Roulette roulette;
     [SerializeField]
     private Button buttonSpin;
+    [SerializeField]
+    private GameObject backButton;
 
     private void Start()
     {
@@ -22,15 +24,29 @@ public class PlayRoulette : MonoBehaviour
     private void EndOfSpin(RoulettePieceData selectedData)
     {
         buttonSpin.interactable = true;
+        backButton.SetActive(true);
 
-        Debug.Log($"{selectedData.ticketMultiple}");
+        if (selectedData.ticketMultiple == 2)
+        {
+            YarnManager.Instance.RunDialogue("종강총회_룰렛_성공");
+        }
+        else
+        {
+            YarnManager.Instance.RunDialogue("종강총회_룰렛_실패");
+        }
         GameManager.Instance.ticket += 5 * selectedData.ticketMultiple;
+        
+
+        if (GameManager.Instance.ticket <= 0)
+        {
+            buttonSpin.interactable = false;
+        }
     }
 
     [YarnCommand("StartRoulette")]
     public void StartRoulette()
     {
-        
+        YarnManager.Instance.RunDialogue("종강총회_룰렛_시작");
 
         if (GameManager.Instance.ticket >= 5)
         {
@@ -39,6 +55,7 @@ public class PlayRoulette : MonoBehaviour
             buttonSpin.onClick.AddListener(() =>
             {
                 buttonSpin.interactable = false;
+                backButton.SetActive(false);
                 roulette.Spin(EndOfSpin);
                 GameManager.Instance.ticket -= 5;
             });

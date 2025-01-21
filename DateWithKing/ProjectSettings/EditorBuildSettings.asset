@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo/MoleHole.unity
     guid: 9249a8a951427cd4586f9031e87c2cb4
+  - enabled: 1
+    path: Assets/Scenes/Demo/YangEnding.unity
+    guid: 7849b5f660a4d594e898956b4bafd7dc
+  - enabled: 1
+    path: Assets/Scenes/Demo/TimingGame.unity
+    guid: 5d777a396ee626a49ab4d297e2cfbe7f
   m_configObjects: {}

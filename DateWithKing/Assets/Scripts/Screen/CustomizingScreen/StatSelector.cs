@@ -4,27 +4,34 @@ using System.ComponentModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using Action = System.Action;
 
 public class StatSelector : MonoBehaviour
 {
-
     [SerializeField] private int lowerStatLimit;
     [SerializeField] private string statName;
 
     private int currentStatAmount;
     private int upperStatLimit = 10;
 
+    public int getLowerStatLimit
+    {
+        get { return lowerStatLimit; }
+    }
+
     public int getcurrentStatAmount
     {
         get { return currentStatAmount; }
     }
 
+    public event Action statChanged;
+
     // UI 요소
     public TextMeshProUGUI statAmount;
     public Button leftButton;
     public Button rightButton;
-
-
+    
     void Start()
     {
         currentStatAmount = lowerStatLimit;
@@ -42,6 +49,24 @@ public class StatSelector : MonoBehaviour
         rightButton.onClick.AddListener(SelectPlus);
     }
 
+    public string GetStatName()
+    {
+        return statName;
+    }
+
+    public void DisableButton()
+    {
+        rightButton.interactable = false;
+    }
+
+    public void EnableButton()
+    {
+        if (currentStatAmount < upperStatLimit)
+        {
+            rightButton.interactable = true;
+        }
+    }
+    
     void SelectMinus()
     {
         // 값에 따라 버튼 활성화, 비활성화
@@ -56,6 +81,7 @@ public class StatSelector : MonoBehaviour
             rightButton.interactable = true;
         }
 
+        statChanged?.Invoke();
         UpdateUI();
     }
 
@@ -72,6 +98,7 @@ public class StatSelector : MonoBehaviour
             leftButton.interactable = true;
         }
 
+        statChanged?.Invoke();
         UpdateUI();
     }
 

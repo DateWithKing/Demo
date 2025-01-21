@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class SpotButton : MonoBehaviour
 {
     [SerializeField] private string spotName;
-    [SerializeField] private int hpCost = 20;
+    private int hpCost = 20;
     private Button button;
     private ButtonComment comment;
 
@@ -21,8 +21,19 @@ public class SpotButton : MonoBehaviour
     }
     private void Start()
     {
-        //코멘트에 스탯 변경사항 써달라고 하면 해주기..ㅎㅎ
-        comment.SetComment(SemesterSceneData.Instance.spot.deltaStat[spotName].comment);
+        //말풍선 내 대사 세팅
+        string text = "<b>";
+        foreach (var data in SemesterSceneData.Instance.spot.deltaStat[spotName].GetDeltaData())
+        {
+            text += $"{data.Key} {data.Value.ToString()} ";
+        }
+
+        text += "</b>";
+        text += $"\n{SemesterSceneData.Instance.spot.deltaStat[spotName].comment}";
+        comment.SetComment(text);
+
+        hpCost = SemesterSceneData.Instance.spot.deltaStat[spotName].hpCost;
+        
         SemesterSceneData.Instance.hp.CurrentHpChanged -= EnableCheck;
         SemesterSceneData.Instance.hp.CurrentHpChanged += EnableCheck;
     }
