@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 6821901790149022678}
   - component: {fileID: 6107451738996601112}
   - component: {fileID: 2107643218520807252}
+  - component: {fileID: 1394101409920423567}
   m_Layer: 5
   m_Name: HpPanel
   m_TagString: Untagged
@@ -240,6 +241,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1394101409920423567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117382188931874512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d31f8da65428ba43b8ef91b61b50d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  date: {fileID: 5295590172303476757}
+  currentHp: {fileID: 6575071603458397517}
+  maxHp: {fileID: 4733848491594633368}
 --- !u!1 &4317397684987744370
 GameObject:
   m_ObjectHideFlags: 0
