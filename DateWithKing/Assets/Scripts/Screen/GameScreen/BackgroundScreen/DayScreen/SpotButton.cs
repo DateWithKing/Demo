@@ -11,12 +11,12 @@ public class SpotButton : MonoBehaviour
 {
     [SerializeField] private string spotName;
     private int hpCost = 20;
-    private Button button;
+    //private Button button;
     private ButtonComment comment;
 
     void Awake()
     {
-        button = GetComponent<Button>();
+        //button = GetComponent<Button>();
         comment = GetComponent<ButtonComment>();
     }
     private void Start()
@@ -40,10 +40,10 @@ public class SpotButton : MonoBehaviour
 
     private void EnableCheck()
     {
-        if (SemesterSceneData.Instance.hp.GetHp() < hpCost)
+        /*if (SemesterSceneData.Instance.hp.GetHp() < hpCost)
         {
             button.interactable = false;
         }
-        else button.interactable = true;
+        else button.interactable = true;*/
     }
 }
