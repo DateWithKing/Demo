@@ -41,7 +41,7 @@ public abstract class SaveLoadPresenter : Presenter
             finally
             {
                 slots[i] ??= new SlotDTO(
-                    DataLoader.ReadData<GameData>((DynamicData)i).date.GetCurrentDate(),
+                    DataLoader.ReadData<GameData>((DynamicData)i).date.GetCurrentDate(true),
                     Resources.Load<Sprite>("Lobby/Smile"));
                 
                 view.PrintSlot(i, slots[i]);
