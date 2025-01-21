@@ -7,6 +7,7 @@ public class Spot : MonoBehaviour
 {
     [SerializeField] private int index; // 0: 신아산, 1: 양나현, 2: 서은표
     [SerializeField] Button SpotButton;
+    [SerializeField] private GameObject[] chooseScreen;
 
     private int affection;
     // 자식 이미지 데이터
@@ -18,7 +19,7 @@ public class Spot : MonoBehaviour
         public Sprite highAffectionSprite; // 호감도 조건 만족 시 스프라이트
         public int affectionThreshold = 70; // 호감도 조건
     }
-
+    private int ticketLimit = 30;
 
     // 이미지 데이터 배열
     public ImageData[] imageDatas;
@@ -50,6 +51,21 @@ public class Spot : MonoBehaviour
                 SpotButton.interactable = false;
                 data.image.sprite = data.defaultSprite;
             }
+        }
+
+        
+    }
+
+    public void ChooseScreen()
+    {
+
+        if (GameManager.Instance.ticket >= ticketLimit)
+        {
+            chooseScreen[1].SetActive(true);
+        }
+        else
+        {
+            chooseScreen[0].SetActive(true);
         }
     }
 }

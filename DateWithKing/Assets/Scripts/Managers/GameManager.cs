@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
     /// <param name="slot">세이브 데이터 슬롯 번호</param>
     public void LoadData(int slot)
     {
-        GameData load = DataLoader.ReadData<GameData>((DynamicData)slot);
+        data = DataLoader.ReadData<GameData>((DynamicData)slot);
     }
 
     /// <summary>

@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class BackgroundController : Singleton<BackgroundController>
 {
     private const string imagePath = "Background/";
-    [SerializeField]private Image _image;
+    [SerializeField]private Image _leftImage;
+    [SerializeField]private Image _rightImage;
     
     /// <summary>
     /// 배경 이미지를 변경 <br/>
@@ -20,6 +21,7 @@ public class BackgroundController : Singleton<BackgroundController>
     /// <param name="background"> 배경 이미지 </param>
     public void ChangeImage(Background background)
     {
-        _image.sprite = Resources.Load<Sprite>(imagePath + background);
+        _leftImage.sprite = Resources.Load<Sprite>(imagePath + background);
+        _rightImage.sprite = Resources.Load<Sprite>(imagePath + background);
     }
 }
