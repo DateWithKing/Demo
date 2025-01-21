@@ -1594,6 +1594,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3441802663740202128}
     m_Modifications:
+    - target: {fileID: 611610898799884647, guid: 83796539ac8745d40a75db02c1f00bad, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611610898799884647, guid: 83796539ac8745d40a75db02c1f00bad, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 611610898799884647, guid: 83796539ac8745d40a75db02c1f00bad, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1406627504442317407, guid: 83796539ac8745d40a75db02c1f00bad, type: 3}
       propertyPath: m_Name
       value: NightActivityScreen
