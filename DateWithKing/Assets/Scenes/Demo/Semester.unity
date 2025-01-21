@@ -2542,7 +2542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spotName: "\uACF5\uB300\uB3C4\uC11C\uAD00"
+  spotName: "\uB3C4\uC11C\uAD00"
 --- !u!1 &1061902827
 GameObject:
   m_ObjectHideFlags: 0

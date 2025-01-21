@@ -2,7 +2,7 @@
   "deltaStat": {
     "식당": { "comment":"식당은 2교시부터 열린다. 학식이 인기가 많아 늦게 가면 먹을 수 없다.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "조깅하기": { "comment":"실내에만 있다보면 종종 바람을 쐬고 싶다. 나가서 잠깐 조깅이라도 하고 오자.", "hpCost":20, "hp":1, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
-    "공대도서관": { "comment":"2층에는 큰 도서관이 있다. 조용하고 집중이 잘 되는 곳이지만... 계단을 올라야 한다.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+    "도서관": { "comment":"2층에는 큰 도서관이 있다. 조용하고 집중이 잘 되는 곳이지만... 계단을 올라야 한다.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "강의실": { "comment":"장소 부족으로 강의실은 빌 날이 없다. 강의실에 가면 항상 누군가가 있을 것이다.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "정문": { "comment":"이곳에 오기 위해 항상 지나는 길이다. 문 밖에서 가끔 봉원이를 볼 수 있다.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "동아리방": { "comment":"가장 편안한 장소다. 게임 개발 동아리라는 이름에 맞게 게임용 컴퓨터가 4대나 있다.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
