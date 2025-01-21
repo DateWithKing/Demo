@@ -9,6 +9,8 @@ public class Spot : MonoBehaviour
     [SerializeField] Button SpotButton;
     [SerializeField] private GameObject[] chooseScreen;
 
+    [SerializeField] private GameObject AllUnder70;
+
     private int affection;
     // 자식 이미지 데이터
     [System.Serializable]
@@ -53,7 +55,6 @@ public class Spot : MonoBehaviour
             }
         }
 
-        
     }
 
     public void ChooseScreen()
@@ -62,6 +63,7 @@ public class Spot : MonoBehaviour
         if (GameManager.Instance.ticket >= ticketLimit)
         {
             chooseScreen[1].SetActive(true);
+            YarnManager.Instance.RunDialogue("종강총회_양나현");
         }
         else
         {

@@ -18,7 +18,7 @@ public class PlayRoulette : MonoBehaviour
     private void Start()
     {
         buttonSpin.interactable = false;
-        StartRoulette();
+        YarnManager.Instance.RunDialogue("종강총회_룰렛_시작");
     }
 
     private void EndOfSpin(RoulettePieceData selectedData)
@@ -46,7 +46,7 @@ public class PlayRoulette : MonoBehaviour
     [YarnCommand("StartRoulette")]
     public void StartRoulette()
     {
-        YarnManager.Instance.RunDialogue("종강총회_룰렛_시작");
+        
 
         if (GameManager.Instance.ticket >= 5)
         {
