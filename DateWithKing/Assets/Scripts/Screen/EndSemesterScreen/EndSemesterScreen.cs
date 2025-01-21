@@ -15,7 +15,6 @@ public class EndSemesterScreen : MonoBehaviour
         if (SceneLoadTracker.IsFirstLoad(currentSceneName))
         {
             targetObject.SetActive(true);
-            GameManager.Instance.ticket = 5;
         }
         else
         {
