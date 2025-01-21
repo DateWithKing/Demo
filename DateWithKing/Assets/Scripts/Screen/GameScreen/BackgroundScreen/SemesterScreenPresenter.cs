@@ -17,6 +17,7 @@ public class SemesterScreenPresenter : MonoBehaviour
     }
     void Start()
     {
+        BackgroundController.Instance.ChangeImage(Background.Intro);
         SemesterSceneData.Instance.clock.DateChanged -= SemesterEnd;
         SemesterSceneData.Instance.clock.DateChanged += SemesterEnd;
         SemesterSceneData.Instance.clock.DateChanged -= OneDateLater;
