@@ -133,13 +133,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1285757}
   - component: {fileID: 1285756}
+  - component: {fileID: 1285758}
   m_Layer: 0
   m_Name: "\uB0AE"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1285756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,6 +215,19 @@ Transform:
   - {fileID: 831567240}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1285758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01047520b0cdafb4fa5b23adf0828ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weekCycle: 1
 --- !u!1 &105812987
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +242,7 @@ GameObject:
   - component: {fileID: 105812991}
   - component: {fileID: 105812990}
   - component: {fileID: 105812989}
+  - component: {fileID: 105812994}
   m_Layer: 0
   m_Name: "\uD0DC\uBE14\uB9BF"
   m_TagString: Untagged
@@ -264,7 +279,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 436093742}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\uD0DC\uBE14\uB9BF"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -284,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comment: 
-  canvasObject: {fileID: 0}
+  canvasObject: {fileID: 1138981269}
 --- !u!114 &105812991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +451,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &105812994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105812987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uD0DC\uBE14\uB9BF"
 --- !u!1001 &120523474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -589,6 +629,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17702b25fb592314f817bf44554f7f24, type: 3}
+--- !u!224 &241780440 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6853840109835259628, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &261497837 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3774940019063602254, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -737,6 +782,7 @@ GameObject:
   - component: {fileID: 405201174}
   - component: {fileID: 405201173}
   - component: {fileID: 405201172}
+  - component: {fileID: 405201177}
   m_Layer: 0
   m_Name: "\uCC45\uC0C1"
   m_TagString: Untagged
@@ -773,7 +819,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 436093742}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\uCC45\uC0C1"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -793,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comment: 
-  canvasObject: {fileID: 0}
+  canvasObject: {fileID: 241780440}
 --- !u!114 &405201174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,6 +1073,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &405201177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405201170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uCC45\uC0C1"
+--- !u!114 &436093742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6969471275656686080, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 040cc30109741804ea037c98e64dea80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615491052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1384,11 @@ PolygonCollider2D:
       - {x: -1.16, y: -4.96}
       - {x: -1.15, y: -4.96}
   m_UseDelaunayMesh: 0
+--- !u!224 &661802410 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5456594935572287141, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &672762229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1399,6 +1486,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81c18b9368835144d9ff905a02c3d2e2, type: 3}
+--- !u!114 &710785990 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2262750089830983007, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &746167460 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5323443678749182812, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -2069,7 +2167,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 710785990}
+        m_TargetAssemblyTypeName: Screen, Assembly-CSharp
+        m_MethodName: ShowScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -2089,7 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comment: "\uBC16\uC73C\uB85C \uB098\uAC00\uBCFC\uAE4C?"
-  canvasObject: {fileID: 0}
+  canvasObject: {fileID: 1915906883}
 --- !u!60 &942770817
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2626,6 +2736,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1138981269 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6612523388242297359, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1195034246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,6 +2988,7 @@ GameObject:
   - component: {fileID: 1242699727}
   - component: {fileID: 1242699726}
   - component: {fileID: 1242699725}
+  - component: {fileID: 1242699730}
   m_Layer: 0
   m_Name: "\uAC15\uC544\uC9C0"
   m_TagString: Untagged
@@ -2909,7 +3025,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 436093742}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\uAC15\uC544\uC9C0"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -2929,7 +3057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comment: 
-  canvasObject: {fileID: 0}
+  canvasObject: {fileID: 661802410}
 --- !u!114 &1242699727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3096,6 +3224,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1242699730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242699723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uAC15\uC544\uC9C0"
 --- !u!224 &1323972521 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6209850066800765477, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -3112,6 +3253,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1448714808 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 975331724075185693, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463316480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3272,7 @@ GameObject:
   - component: {fileID: 1463316484}
   - component: {fileID: 1463316483}
   - component: {fileID: 1463316482}
+  - component: {fileID: 1463316487}
   m_Layer: 0
   m_Name: "\uCE68\uB300"
   m_TagString: Untagged
@@ -3162,7 +3309,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 436093742}
+        m_TargetAssemblyTypeName: NightActivityPresenter, Assembly-CSharp
+        m_MethodName: DoActivity
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\uCE68\uB300"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -3182,7 +3341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comment: 
-  canvasObject: {fileID: 0}
+  canvasObject: {fileID: 1448714808}
 --- !u!114 &1463316484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3393,6 +3552,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1463316487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463316480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c154e9f1a77747a297cdac404462dc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotName: "\uCE68\uB300"
 --- !u!1 &1473183540
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,6 +3575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473183542}
   - component: {fileID: 1473183541}
+  - component: {fileID: 1473183543}
   m_Layer: 0
   m_Name: "\uBC24"
   m_TagString: Untagged
@@ -3482,6 +3655,19 @@ Transform:
   - {fileID: 105812988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1473183543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473183540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01047520b0cdafb4fa5b23adf0828ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weekCycle: 2
 --- !u!224 &1632501287 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7429380770511794134, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -3703,6 +3889,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!224 &1915906883 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4308902068549185362, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1941076474
 GameObject:
   m_ObjectHideFlags: 0
