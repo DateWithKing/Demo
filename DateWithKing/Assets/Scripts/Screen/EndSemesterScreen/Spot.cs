@@ -65,7 +65,7 @@ public class Spot : MonoBehaviour
         }
         else
         {
-            chooseScreen[0].SetActive(true);
+            YarnManager.Instance.RunDialogue("종강총회_티켓부족");
         }
     }
 }
