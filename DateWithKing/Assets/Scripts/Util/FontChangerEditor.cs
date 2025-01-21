@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using TMPro;
 
+#if UNITY_EDITOR
 public class FontChangerEditor : EditorWindow
 {
     private TMP_FontAsset newFont;
@@ -36,3 +37,4 @@ public class FontChangerEditor : EditorWindow
         Debug.Log("Font changed for all TMP Text components.");
     }
 }
+#endif
