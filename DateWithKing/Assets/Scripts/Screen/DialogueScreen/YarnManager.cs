@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -30,6 +29,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField]
     private GameObject PosNegPanel;  // openCV 도입하면 바꿀부분
 
+    private event Action dialogEnded;
+
     void Start()
     {
         Init();
@@ -51,9 +52,10 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     /// <summary>
-    /// 타이틀이 <see cref="nodeName"/>인 다이얼로그를 찾아 실행함
+    /// 타이틀이 <see cref="nodeName"/>인 다이얼로그를 찾아 실행<br/>
+    /// 해당 대화 완전 종료시 <see cref="callback"/> 실행
     /// </summary>
-    public void RunDialogue(string nodeName)
+    public void RunDialogue(string nodeName, Action callback = null)
     {
         if (runner == null)
         {
@@ -61,6 +63,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
         runner.StartDialogue(nodeName);
         dialogueScreen.ShowScreen();
+        dialogEnded = callback;
     }
 
     /// <summary>
@@ -75,6 +78,8 @@ public class YarnManager : SceneSingleton<YarnManager>
         dialogueScreen.HideScreen();
         CharacterImage.gameObject.SetActive(false);
         BackgroundImage.gameObject.SetActive(false);
+        dialogEnded?.Invoke();
+        dialogEnded = null;
     }
 
     /// <summary>
@@ -127,14 +132,14 @@ public class YarnManager : SceneSingleton<YarnManager>
         PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
         PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(()=>{
             PosNegPanel.SetActive(false);
-            RunDialogue(posNode);
+            RunDialogue(posNode, dialogEnded);
             BackgroundController.Instance.ChangeImage(Background.Day);});
 
         PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
         PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.RemoveAllListeners();
         PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>{
             PosNegPanel.SetActive(false);
-            RunDialogue(negNode);
+            RunDialogue(negNode, dialogEnded);
             BackgroundController.Instance.ChangeImage(Background.Day);});
 
     }
