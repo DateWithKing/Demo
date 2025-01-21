@@ -21,7 +21,7 @@ public class Spot : MonoBehaviour
         public Sprite highAffectionSprite; // 호감도 조건 만족 시 스프라이트
         public int affectionThreshold = 70; // 호감도 조건
     }
-    private int ticketLimit = 30;
+    private int ticketLimit = 20;
 
     // 이미지 데이터 배열
     public ImageData[] imageDatas;

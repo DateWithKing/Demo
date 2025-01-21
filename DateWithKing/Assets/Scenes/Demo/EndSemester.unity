@@ -3178,6 +3178,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 81facb4bbb2ae3148b01af8cc2a832c6, type: 3}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
+      propertyPath: imageDatas.Array.data[0].affectionThreshold
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
       objectReference: {fileID: 21300000, guid: 96e7d6f3e6238f34cb93312b8d0440b2, type: 3}
