@@ -48,7 +48,7 @@ using System.Collections.Generic;
     {
         동아리방,
         강의실,
-        공대도서관,
+        도서관,
         식당,
         정문
     }
