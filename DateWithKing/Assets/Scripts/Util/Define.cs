@@ -87,3 +87,10 @@ using System.Collections.Generic;
         slv,
         otk
     }
+
+    public enum ItemType
+    {
+        hp,
+        present,
+        birthday,
+    }
