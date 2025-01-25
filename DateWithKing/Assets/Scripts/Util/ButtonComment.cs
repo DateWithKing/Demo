@@ -13,6 +13,7 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private GameObject textBubblePrefab;
     private TextBubble text;
     private GameObject textBubble;
+    public Transform canvasObject;
 
     void Awake()
     {
@@ -32,7 +33,7 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerEnter(PointerEventData eventData)
     {
         text.SetText(comment);
-        textBubble = Instantiate(textBubblePrefab, transform);
+        textBubble = Instantiate(textBubblePrefab, canvasObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)

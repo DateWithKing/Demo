@@ -73,6 +73,7 @@ public class Mole : MonoBehaviour
         transform.localPosition = start;
         boxCollider2D.offset = boxOffsetHidden;
         boxCollider2D.size = boxSizeHidden;
+        gameMoleHole.RemoveMole(moleIndex);
         
         // 두더지 놓친 경우 -> 아무 변화 없고 hittable 상태만 false로 변경
         if (hittable)
@@ -86,6 +87,8 @@ public class Mole : MonoBehaviour
         transform.localPosition = startPosition;
         boxCollider2D.offset = boxOffsetHidden;
         boxCollider2D.size = boxSizeHidden;
+
+        gameMoleHole.RemoveMole(moleIndex);
     }
 
     private IEnumerator QuickHide()
@@ -118,8 +121,10 @@ public class Mole : MonoBehaviour
         else
         {
             lives = 1;
+            hittable = true;
+            Debug.Log("두더지 생성");
         }
-        hittable = true;
+        
     }
     
     private void SetLevel(int level)

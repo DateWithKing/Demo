@@ -19,7 +19,7 @@ using UnityEngine;
 public class GameData : Entity
 {
     //1-2
-    public string name { get; set; }
+    public string name { get; set; } = "손서희";
     public Date date = new Date();
     public Dictionary<string, Stat> stats = new Dictionary<string, Stat>
     {
@@ -28,7 +28,7 @@ public class GameData : Entity
         { "wis", new Stat(1, 1, 10) },
         { "slv", new Stat(1, 1, 10) },
         { "otk", new Stat(1, 1, 10) },
-        { "bonusHp", new Stat(0, 0, 50) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
+        { "bonusHp", new Stat(0, -50, 50, 0) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
         { "lvSan", new Stat(0, -50, 100) },
         { "lvHyun", new Stat(0, -50, 100) },
         { "lvPyo", new Stat(0, -50, 100) },

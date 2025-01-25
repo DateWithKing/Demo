@@ -29,15 +29,17 @@ public class PlayingLP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameUI.SetActive(true);
+        AdjustBackgroundPosition();
         YarnManager.Instance.RunDialogue("종강총회_레코드_시작");
     }
 
     [YarnCommand("StartLP")]
     public async void StartLP()
     {
-        gameUI.SetActive(true);
+        
         ChangeScreen.SetActive(false);
-        AdjustBackgroundPosition();
+        
         timeRemaining = playingTime;
         combo = 0;
         comboText.text = $"{combo:D3}"; // 콤보는 0으로 시작
@@ -69,20 +71,22 @@ public class PlayingLP : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (!isPlaying) return;
 
         // LP판의 회전 각도 구하기
         float angle = reflection.transform.eulerAngles.z; // 빛반사부분의 회전 각도
-
+        
         // 2시에서 4시 방향 
-        isInValidAngleRange = (angle >= 30f && angle <= 330f);
+        isInValidAngleRange = (angle >= 10f && angle <= 350f);
 
         // 마우스 클릭 여부 확인 (클릭 "순간"만 감지)
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !isMouseHeld) // 마우스나 스페이스바 클릭
         {
+            
             isMouseHeld = true; // 클릭 상태로 설정
+            
 
             if (isInValidAngleRange)
             {
