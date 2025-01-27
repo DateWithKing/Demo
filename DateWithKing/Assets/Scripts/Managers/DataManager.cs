@@ -16,4 +16,11 @@ public class DataManager : Singleton<DataManager>
         { "lvPyo", "서은표 호감도" },
         { "gold", "골드" }
     };
+
+    public Dictionary<int, Item> itemData;
+    
+    public void Awake()
+    {
+        itemData = DataLoader.ReadData<ItemData>().GetItems();
+    }
 }

@@ -90,7 +90,7 @@ using System.Collections.Generic;
 
     public enum ItemType
     {
-        hp,
-        present,
-        birthday,
+        none,
+        체력,
+        선물
     }

@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class Item
 {
-    [JsonProperty] private int id;
-    [JsonProperty] private string name;
-    [JsonProperty] private string description;
-    [JsonProperty] private int price;
-    [JsonProperty] private ItemType type;
+    [JsonProperty] public int id { get; private set; }= 0;
+    [JsonProperty] public string name { get; private set; }= "";
+    [JsonProperty] public string description { get; private set; }= "";
+    [JsonProperty] public int price { get; private set; } = 0;
+    [JsonProperty] public ItemType type { get; private set; } = ItemType.none;
+    public virtual void UseItem()
+    {
+        
+    }
 }

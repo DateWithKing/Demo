@@ -1,18 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class StoreView : MonoBehaviour
+public class StoreView : MonoBehaviour, IStoreView
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject itemSlotPrefab;
+    private List<ItemSlot> items = new List<ItemSlot>();
+    public event Action<int> BuyItem = null;
+
+    public void InitStore()
     {
-        
+        foreach (var item in items)
+        {
+            Destroy(item.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RegisterItem(Item item)
     {
-        
+        ItemSlot slot = Instantiate(itemSlotPrefab, transform).GetComponent<ItemSlot>();
+        slot.InitSlot(item);
+        items.Add(slot);
+        slot.BuyItem -= BuyItem;
+        slot.BuyItem += BuyItem;
     }
 }
