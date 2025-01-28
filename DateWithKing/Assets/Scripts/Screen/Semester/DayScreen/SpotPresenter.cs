@@ -2,16 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 장소의 행동을 관리
 /// </summary>
 public class SpotPresenter : Presenter
 {
-    [SerializeField]
-    private DaySpot spot = DaySpot.강의실;
-    private void OnEnable()
+    public const string SpotImagePath = "Sprites/Spot/";
+    [SerializeField] private Image spotImage;
+    public void ChangeSpot(string spot)
     {
+        spotImage.sprite = Resources.Load<Sprite>(SpotImagePath + spot);
+        gameObject.SetActive(true);
         CursorHandler.ChangeCursor();
         string spotData = $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
                           $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
@@ -21,11 +24,11 @@ public class SpotPresenter : Presenter
             string dialogue = $"주{GameManager.Instance.data.date.GetCurrentWeek().ToString()}" +
                               $"_{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
                               $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시" +
-                              $"_{spot.ToString()}" +
+                              $"_{spot}" +
                               $"_{SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}";
             Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             YarnManager.Instance.RunDialogue(dialogue);
-            SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot.ToString()].hpCost);
+            SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot].hpCost);
             Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
         }
         else
