@@ -17,7 +17,6 @@ public class InventoryView : MonoBehaviour, IInventoryView
     
     public void UpdateView()
     {
-        Debug.Log("들어왔니?;;;");
         for (int i = 0; i < Inventory.Inventory_Capacity; i++)
         { 
             items[i].InitSlot(i, GameManager.Instance.data.inventory.GetItem(i));
