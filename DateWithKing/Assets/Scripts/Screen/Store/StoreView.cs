@@ -7,7 +7,7 @@ using UnityEngine;
 public class StoreView : MonoBehaviour, IStoreView
 {
     [SerializeField] private GameObject itemSlotPrefab;
-    private List<ItemSlot> items = new List<ItemSlot>();
+    private List<StoreSlot> items = new List<StoreSlot>();
     public event Action<int> BuyItem = null;
 
     public void InitStore()
@@ -20,10 +20,10 @@ public class StoreView : MonoBehaviour, IStoreView
 
     public void RegisterItem(Item item)
     {
-        ItemSlot slot = Instantiate(itemSlotPrefab, transform).GetComponent<ItemSlot>();
+        StoreSlot slot = Instantiate(itemSlotPrefab, transform).GetComponent<StoreSlot>();
         slot.InitSlot(item);
         items.Add(slot);
-        slot.BuyItem -= BuyItem;
-        slot.BuyItem += BuyItem;
+        slot.DoubleClick -= BuyItem;
+        slot.DoubleClick += BuyItem;
     }
 }

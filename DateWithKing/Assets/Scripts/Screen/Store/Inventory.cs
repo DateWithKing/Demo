@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using UnityEngine;
 
 public class Inventory
 {
     [JsonProperty]
     private List<Item> items = new List<Item>();
-    private Item nullItem = new Item();
-    private const int Inventory_Capacity = 4;
+    private readonly Item nullItem = new Item();
+    public const int Inventory_Capacity = 4;
 
-    public event Action OnItemAdd;
+    public Action OnItemChanged = null;
 
     public bool CanAddItem()
     {
@@ -21,7 +22,15 @@ public class Inventory
     {
         if (items.Count >= Inventory_Capacity) return;
         items.Add(item);
-        OnItemAdd?.Invoke();
+        OnItemChanged?.Invoke();
+    }
+
+    public void UseItem(int slot)
+    {
+        if (items.Count <= slot) return;
+        items[slot].UseItem();
+        items[slot] = nullItem;
+        OnItemChanged?.Invoke();
     }
 
     public Item GetItem(int slot)
