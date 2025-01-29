@@ -29,7 +29,13 @@ public class HpBarPresenter : MonoBehaviour
 
     private void DateUpdate()
     {
+        if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night)
+        {
+            date.text =
+                $"{GameManager.Instance.data.date.GetCurrentDate()}\n{SemesterSceneData.Instance.clock.GetCurrentTime()}";
+            return;
+        }
         date.text =
-            $"{GameManager.Instance.data.date.GetCurrentDate()}{SemesterSceneData.Instance.clock.GetCurrentTime()}";
+            $"{GameManager.Instance.data.date.GetCurrentDate()}\n{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시";
     }
 }
