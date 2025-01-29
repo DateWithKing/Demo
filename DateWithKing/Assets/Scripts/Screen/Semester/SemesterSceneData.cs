@@ -14,7 +14,7 @@ public class SemesterSceneData : SceneSingleton<SemesterSceneData>
     {
         clock = new Clock();
         //초기 값 GameManager에서 가져오도록 수정해야 함
-        hp = new Hp(GameManager.Instance.data.stats["hp"].value);
+        hp = new Hp(GameManager.Instance.data.stats["hp"].value * 10);
         spot = DataLoader.ReadData<SpotData>();
         DayDialogue = DataLoader.ReadData<DayDialogueData>();
     }

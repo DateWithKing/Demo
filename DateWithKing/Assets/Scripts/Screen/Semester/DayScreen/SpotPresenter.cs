@@ -11,7 +11,7 @@ public class SpotPresenter : Presenter
 {
     public const string SpotImagePath = "Sprites/Spot/";
     [SerializeField] private Image spotImage;
-    [SerializeField] private GameObject giftPanel;
+    [SerializeField] private GiftView giftSystem;
     private string currentSpot = "";
     
     public void ChangeSpot(string spot)
@@ -28,7 +28,7 @@ public class SpotPresenter : Presenter
         {
             Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             
-            giftPanel.SetActive(true);
+            giftSystem.StartPresent(SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData].ToString());
             SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot].hpCost);
             
             Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
@@ -38,10 +38,10 @@ public class SpotPresenter : Presenter
             Debug.Log("아무도 없습니다.");
         }
     }
-
+    
     public void StartDialogue()
     {
-        YarnManager.Instance.RunDialogue(GetDialotueIndex());
+        YarnManager.Instance.RunDialogue(GetDialogueIndex());
     }
 
     private void OnDisable()
@@ -57,7 +57,7 @@ public class SpotPresenter : Presenter
             $"_{currentSpot}";
     }
 
-    private string GetDialotueIndex()
+    private string GetDialogueIndex()
     {
         return $"주{GameManager.Instance.data.date.GetCurrentWeek().ToString()}" +
             $"_{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
