@@ -35,7 +35,8 @@ public class GameData : Entity
         { "gold", new Stat(150, 0, Int32.MaxValue) }
     };
     public SettingDTO setting = new SettingDTO();
-
+    public Inventory inventory = new Inventory();
+    
     public GameData()
     {
         //다회 실행 시 그만큼 구독 수가 늘어 중첩될 수 있음 주의
