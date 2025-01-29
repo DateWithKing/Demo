@@ -1,0 +1,26 @@
+{
+  "attributes": {
+  "흑색": { "lvSan":5, "lvHyun":0, "lvPyo":0},
+  "갈색": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "금색": { "lvSan":-10, "lvHyun":0, "lvPyo":0},
+  "숏컷": { "lvSan":5, "lvHyun":-10, "lvPyo":0},
+  "단발": { "lvSan":0, "lvHyun":0, "lvPyo":5},
+  "중단발": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "장발": { "lvSan":0, "lvHyun":5, "lvPyo":-10},
+  "150": { "lvSan":5, "lvHyun":-10, "lvPyo":0},
+  "160": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "170": { "lvSan":-10, "lvHyun":-10, "lvPyo":5},
+  "180": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "190": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "강아지상": { "lvSan":5, "lvHyun":-10, "lvPyo":5},
+  "고양이상": { "lvSan":0, "lvHyun":5, "lvPyo":-10},
+  "여우상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "토끼상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "쥐상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "호랑이상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "상어상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "뱀상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "공룡상": { "lvSan":0, "lvHyun":0, "lvPyo":0},
+  "NDM대상": { "lvSan":0, "lvHyun":0, "lvPyo":0}
+  }
+}

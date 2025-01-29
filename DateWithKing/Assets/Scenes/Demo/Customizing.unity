@@ -299,26 +299,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3216657288458835140, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216657288458835140, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[0]
-      value: "\uC20F\uCEF7"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216657288458835140, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[1]
-      value: "\uB2E8\uBC1C"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216657288458835140, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[2]
-      value: "\uC911\uB2E8\uBC1C"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3216657288458835140, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[3]
-      value: "\uC7A5\uBC1C"
-      objectReference: {fileID: 0}
     - target: {fileID: 3663165172922684647, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -767,22 +747,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8328602521486873192, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328602521486873192, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[0]
-      value: "\uCCAD\uC21C"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328602521486873192, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[1]
-      value: "\uADC0\uC5FC"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8328602521486873192, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[2]
-      value: "\uC139\uC2DC"
-      objectReference: {fileID: 0}
     - target: {fileID: 8572294271628112185, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -806,38 +770,6 @@ PrefabInstance:
     - target: {fileID: 8572294271628112185, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8766399648719886414, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8766399648719886414, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[0]
-      value: "\uD751\uC0C9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8766399648719886414, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[1]
-      value: "\uAC08\uC0C9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8766399648719886414, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[2]
-      value: "\uAE08\uC0C9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8837935338312954712, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8837935338312954712, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[0]
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 8837935338312954712, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[1]
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 8837935338312954712, guid: 8ba0f058b133cd643a68a4a518f9f9e5, type: 3}
-      propertyPath: attribute.Array.data[2]
-      value: 170
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
