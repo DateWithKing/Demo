@@ -14,7 +14,10 @@ public class DataManager : Singleton<DataManager>
         { "lvSan", "신아산 호감도" },
         { "lvHyun", "양나현 호감도" },
         { "lvPyo", "서은표 호감도" },
-        { "gold", "골드" }
+        { "gold", "골드" },
+        { "신아산", "san"},
+        { "양나현", "hyun"},
+        { "서은표", "pyo"}
     };
 
     public Dictionary<int, Item> itemData;

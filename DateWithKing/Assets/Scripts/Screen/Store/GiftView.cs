@@ -14,6 +14,7 @@ public class GiftView : MonoBehaviour
     [SerializeField] private GameObject giftSystemObject;
     
     [SerializeField] private UnityEvent endPresent;
+    [SerializeField] private Image characterImage;
 
     private string target;
 
@@ -33,6 +34,10 @@ public class GiftView : MonoBehaviour
     public void StartPresent(string target)
     {
         this.target = target;
+        characterImage.sprite = Resources.Load<Sprite>(
+            "Sprites/Charactor/" 
+            + DataManager.Instance.translator[target]
+            + "_idle");
         giftSystemObject.SetActive(true);
         giftButton.gameObject.SetActive(true);
     }
