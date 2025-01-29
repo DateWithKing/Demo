@@ -31,8 +31,7 @@ public class HpBarPresenter : MonoBehaviour
     {
         if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night)
         {
-            date.text =
-                $"{GameManager.Instance.data.date.GetCurrentDate()}\n{SemesterSceneData.Instance.clock.GetCurrentTime()}";
+            date.text = GameManager.Instance.data.date.GetCurrentDate();
             return;
         }
         date.text =
