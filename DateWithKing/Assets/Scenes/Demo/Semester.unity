@@ -3651,6 +3651,7 @@ GameObject:
   - component: {fileID: 1867436594}
   - component: {fileID: 1867436593}
   - component: {fileID: 1867436592}
+  - component: {fileID: 1867436595}
   m_Layer: 0
   m_Name: "\uC0C1\uC810"
   m_TagString: Untagged
@@ -3839,6 +3840,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1867436595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867436590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9335092c6443d40b26ad31e8dae243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comment: "\uC774\uB9C8\uD2B8 24"
+  canvasObject: {fileID: 8325148839997368884}
 --- !u!224 &1915906883 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4308902068549185362, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
@@ -5294,6 +5309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8325148839997368884 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7000231951135727632, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
+  m_PrefabInstance: {fileID: 8325148839997368882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8325148839997368890 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7510612625250259250, guid: 898a92159bd77a645aad4e7bd817ed80, type: 3}
