@@ -36,19 +36,19 @@ public class StorePresenter : MonoBehaviour
     {
         if (GameManager.Instance.data.stats["gold"].value < DataManager.Instance.itemData[item].price)
         {
-            Debug.Log("돈이 부족합니다.");
+            Popup.Instance.PopPanel("돈이 부족합니다.");
             return;
         }
 
         if (purchasedCount >= MaxPurchasedCount)
         {
-            Debug.Log("오늘의 최대 구매 개수를 초과했다. ");
+            Popup.Instance.PopPanel("오늘의 최대 구매 개수를 초과했다. ");
             return;
         }
         
         if (!GameManager.Instance.data.inventory.CanAddItem())
         {
-            Debug.Log("더 이상 들 수 없다.  ");
+            Popup.Instance.PopPanel("더 이상 들 수 없다. \n(인벤토리 공간이 부족합니다.) ");
             return;
         }
         

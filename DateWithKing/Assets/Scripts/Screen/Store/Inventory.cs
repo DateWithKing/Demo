@@ -31,7 +31,7 @@ public class Inventory
         if (items.Count <= slot) return;
         items[slot].UseItem();
         OnUseItem?.Invoke(items[slot].id);
-        items[slot] = nullItem;
+        items.RemoveAt(slot);
         OnItemChanged?.Invoke();
     }
 
