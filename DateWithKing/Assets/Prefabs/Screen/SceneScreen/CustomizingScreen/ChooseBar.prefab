@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attribute: []
-  attributeName: 
+  attributeName: 0
   optionText: {fileID: 8477058761323219054}
   leftButton: {fileID: 3191489737810360097}
   rightButton: {fileID: 8550276667284522585}
@@ -364,8 +364,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC120\uD0DD\uC9C0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 038e4da7f02b6004b8516b2a9b8b199c, type: 2}
-  m_sharedMaterial: {fileID: -284002917476334533, guid: 038e4da7f02b6004b8516b2a9b8b199c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0ac8af67cda84e42846b0b807422fa4, type: 2}
+  m_sharedMaterial: {fileID: 5264448701889796755, guid: b0ac8af67cda84e42846b0b807422fa4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -389,10 +389,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
+  m_fontSize: 39.9
   m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -498,8 +498,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD5E4\uC5B4\uC2A4\uD0C0\uC77C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 038e4da7f02b6004b8516b2a9b8b199c, type: 2}
-  m_sharedMaterial: {fileID: -284002917476334533, guid: 038e4da7f02b6004b8516b2a9b8b199c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0ac8af67cda84e42846b0b807422fa4, type: 2}
+  m_sharedMaterial: {fileID: 5264448701889796755, guid: b0ac8af67cda84e42846b0b807422fa4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

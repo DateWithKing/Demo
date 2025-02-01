@@ -11,26 +11,12 @@ public class CustomizingPresenter : Presenter
     private Screen screen;
     private StatPanel stat;
     private AppearancePanel style;
-    
-    private Dictionary<string, lvDTO> attributes = new Dictionary<string, lvDTO>
-    {
-        { "흑색", new lvDTO { lvSan = 5, lvHyun = 0, lvPyo = 0 } },
-        { "갈색", new lvDTO { lvSan = 0, lvHyun = 0, lvPyo = 0 } },
-        { "금색", new lvDTO { lvSan = -10, lvHyun = 0, lvPyo = 0 } },
-        { "숏컷", new lvDTO { lvSan = 5, lvHyun = -10, lvPyo = 0 } },
-        { "단발", new lvDTO { lvSan = 0, lvHyun = 0, lvPyo = 5 } },
-        { "중단발", new lvDTO { lvSan = 0, lvHyun = 0, lvPyo = 0 } },
-        { "장발", new lvDTO { lvSan = 0, lvHyun = 5, lvPyo = -10 } },
-        { "150", new lvDTO { lvSan = 5, lvHyun = -10, lvPyo = 0 } },
-        { "160", new lvDTO { lvSan = 0, lvHyun = 0, lvPyo = 0 } },
-        { "170", new lvDTO { lvSan = -10, lvHyun = -10, lvPyo = 5 } },
-        { "귀염", new lvDTO { lvSan = 5, lvHyun = -10, lvPyo = 5 } },
-        { "청순", new lvDTO { lvSan = 0, lvHyun = 5, lvPyo = -10 } },
-        { "섹시", new lvDTO { lvSan = 0, lvHyun = 0, lvPyo = 0 } }
-    };
+
+    private Dictionary<string, lvDTO> attributes;
     
     void Awake()
     {
+        attributes = DataLoader.ReadData<AppearanceData>().attributes;
         screen = GetComponent<Screen>();
         stat = GetComponentInChildren<StatPanel>();
         style = GetComponentInChildren<AppearancePanel>();
