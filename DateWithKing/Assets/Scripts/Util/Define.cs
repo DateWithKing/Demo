@@ -87,3 +87,10 @@ using System.Collections.Generic;
         slv,
         otk
     }
+
+    public enum ItemType
+    {
+        none,
+        체력,
+        선물
+    }
