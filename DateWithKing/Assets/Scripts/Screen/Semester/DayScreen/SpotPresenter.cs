@@ -22,7 +22,7 @@ public class SpotPresenter : Presenter
         
         CursorHandler.ChangeCursor();
 
-        string spotData = GetSpotIndex();
+        string spotData = DayDialogueData.GetSpotIndex(currentSpot);
         
         if (SemesterSceneData.Instance.DayDialogue.spotCharacters.ContainsKey(spotData))
         {
@@ -50,19 +50,12 @@ public class SpotPresenter : Presenter
         SemesterSceneData.Instance.clock.NextTime();
     }
 
-    private string GetSpotIndex()
-    {
-        return $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
-            $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
-            $"_{currentSpot}";
-    }
-
     private string GetDialogueIndex()
     {
         return $"주{GameManager.Instance.data.date.GetCurrentWeek().ToString()}" +
             $"_{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
             $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시" +
             $"_{currentSpot}" +
-            $"_{SemesterSceneData.Instance.DayDialogue.spotCharacters[GetSpotIndex()]}";
+            $"_{SemesterSceneData.Instance.DayDialogue.spotCharacters[DayDialogueData.GetSpotIndex(currentSpot)]}";
     }
 }
