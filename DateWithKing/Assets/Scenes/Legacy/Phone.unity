@@ -1012,70 +1012,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &610311870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 610311872}
-  - component: {fileID: 610311871}
-  m_Layer: 0
-  m_Name: ChatManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &610311871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610311870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77bb018f6c9e7b742a4da2e3023fe8fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profileSpriteName:
-  - "\uC591\uB098\uD604"
-  - "\uC11C\uC740\uD45C"
-  - "\uC2E0\uC544\uC0B0"
-  proImage: {fileID: 2127648171}
-  opponentName: {fileID: 383497499}
-  ChatBox_Me: {fileID: 3685822767979464703, guid: 17d1c94610265984abe0488d548c7322, type: 3}
-  ChatBox_Opponent: {fileID: 3685822767979464703, guid: 4dde65123f9a46c40a2e78ef9e038fbf, type: 3}
-  ChatBox_Opponent_Image: {fileID: 3685822767979464703, guid: 3b1a9a223f9e67148aba1936bf5f54b9, type: 3}
-  BlackScreen: {fileID: 126206887}
-  PhoneBase: {fileID: 1539897814}
-  Emoticon1: {fileID: 1824376532}
-  Emoticon2: {fileID: 1613085617}
-  Emoticon3: {fileID: 1076871145}
-  Emoticon:
-  - {fileID: 21300000, guid: a2622b99a1f5cb84180266bb05060afb, type: 3}
-  - {fileID: 21300000, guid: 3cd299222fd4c604a89828f0aa24358b, type: 3}
-  - {fileID: 21300000, guid: a57f37e929a0aa5468eb30e7bdeed1c4, type: 3}
-  Chatroom: {fileID: 235924752}
-  slideUPDown: {fileID: 1539897810}
---- !u!4 &610311872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610311870}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &642637939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1747,6 +1683,7 @@ GameObject:
   - component: {fileID: 1748926136}
   - component: {fileID: 1748926135}
   - component: {fileID: 1748926134}
+  - component: {fileID: 1748926138}
   m_Layer: 5
   m_Name: PhoneCanvas
   m_TagString: Untagged
@@ -1837,6 +1774,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1748926138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748926133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bb018f6c9e7b742a4da2e3023fe8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profileSpriteName:
+  - "\uC591\uB098\uD604"
+  - "\uC11C\uC740\uD45C"
+  - "\uC2E0\uC544\uC0B0"
+  proImage: {fileID: 2127648171}
+  opponentName: {fileID: 383497499}
+  ChatBox_Me: {fileID: 3685822767979464703, guid: 17d1c94610265984abe0488d548c7322, type: 3}
+  ChatBox_Opponent: {fileID: 3685822767979464703, guid: 4dde65123f9a46c40a2e78ef9e038fbf, type: 3}
+  ChatBox_Opponent_Image: {fileID: 3685822767979464703, guid: 3b1a9a223f9e67148aba1936bf5f54b9, type: 3}
+  BlackScreen: {fileID: 126206887}
+  PhoneBase: {fileID: 1539897814}
+  Emoticon1: {fileID: 1824376532}
+  Emoticon2: {fileID: 1613085617}
+  Emoticon3: {fileID: 1076871145}
+  Emoticon:
+  - {fileID: 21300000, guid: a2622b99a1f5cb84180266bb05060afb, type: 3}
+  - {fileID: 21300000, guid: 3cd299222fd4c604a89828f0aa24358b, type: 3}
+  - {fileID: 21300000, guid: a57f37e929a0aa5468eb30e7bdeed1c4, type: 3}
+  Chatroom: {fileID: 235924752}
+  slideUPDown: {fileID: 1539897810}
 --- !u!1001 &1824376526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2135,4 +2104,3 @@ SceneRoots:
   - {fileID: 202055191}
   - {fileID: 1748926137}
   - {fileID: 406258566}
-  - {fileID: 610311872}

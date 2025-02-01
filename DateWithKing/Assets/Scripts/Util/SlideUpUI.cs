@@ -23,6 +23,10 @@ public class SlideUpUI : MonoBehaviour
 
             //SlideUp();
         }
+        else
+        {
+            Debug.Log("null");
+        }
         
     }
 
