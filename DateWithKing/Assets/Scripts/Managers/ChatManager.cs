@@ -54,7 +54,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         Emoticon3.interactable = false;
 
         LateStart();
-        StartChat("신아산_80");
+        //StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
     }
@@ -161,7 +161,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         }
 
 
-        Debug.Log("채팅 아래로 내리기");
+        
         LayoutRebuilder.ForceRebuildLayoutImmediate(ChatBox.GetComponent<RectTransform>());
 
         // 채팅방의 content size fitter 동작 보장
