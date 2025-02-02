@@ -37,6 +37,7 @@ public class CustomizingPresenter : Presenter
         }
 
         lvDTO lv = new lvDTO();
+        GameManager.Instance.data.appearance = style.GetStyle();
 
         foreach (var selector in style.GetStyle())
         {
