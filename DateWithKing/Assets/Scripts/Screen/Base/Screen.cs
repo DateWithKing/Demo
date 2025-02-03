@@ -36,7 +36,15 @@ public class Screen : MonoBehaviour
     /// </param>
     public void MoveScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        // SceneManager.LoadScene(sceneName);
+        if (FadeManager.Instance != null)
+        {
+            FadeManager.Instance.LoadScene(sceneName); // 페이드 효과 포함된 씬 이동
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName); // 예외 처리 (FadeManager 없으면 바로 이동)
+        }
     }
 
     /// <summary>
