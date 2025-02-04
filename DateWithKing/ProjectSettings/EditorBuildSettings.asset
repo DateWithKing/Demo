@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo/TimingGame.unity
     guid: 5d777a396ee626a49ab4d297e2cfbe7f
+  - enabled: 1
+    path: Assets/Scenes/Demo/OpeningScene.unity
+    guid: 16d01a876c8b1fa49838e3d1b67deab0
   m_configObjects: {}
