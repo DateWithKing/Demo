@@ -9,13 +9,14 @@ using UnityEngine.UI;
 /// </summary>
 public class SpotButton : MonoBehaviour
 {
-    [SerializeField] private string spotName;
+    private string spotName;
     private int hpCost = 20;
     //private Button button;
     private ButtonComment comment;
 
     void Awake()
     {
+        spotName = name;
         //button = GetComponent<Button>();
         comment = GetComponent<ButtonComment>();
     }
