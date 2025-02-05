@@ -677,9 +677,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1895496287703083318, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 717805920}
-    - targetCorrespondingSourceObject: {fileID: 1895496287703083318, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 455903149}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
 --- !u!224 &304423632 stripped
@@ -954,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 020d7a66729c781438b6cd18be0b436e, type: 3}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].affectionThreshold
-      value: 0
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
@@ -1124,142 +1121,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448115904}
   m_CullTransparentMesh: 1
---- !u!1 &455903145
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 455903149}
-  - component: {fileID: 455903148}
-  - component: {fileID: 455903147}
-  - component: {fileID: 455903146}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &455903146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455903145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5ef6c142bef0f45bc8ca4d80e728ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableFadeIn: 0
-  enableFadeOut: 1
-  panel: {fileID: 455903145}
---- !u!114 &455903147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455903145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &455903148
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455903145}
-  m_CullTransparentMesh: 1
---- !u!224 &455903149
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455903145}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 304423632}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &477079811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 477079813}
-  - component: {fileID: 477079814}
-  m_Layer: 0
-  m_Name: FadeManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &477079813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477079811}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 303.9, y: 164, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &477079814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477079811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9285d2d733e42ae48bb7a9b404dc9338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeController: {fileID: 455903146}
 --- !u!1 &506053645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1570,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ac873aa4df8087e49af020cfd813c15b, type: 3}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].affectionThreshold
-      value: 0
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
@@ -3318,7 +3179,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 81facb4bbb2ae3148b01af8cc2a832c6, type: 3}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].affectionThreshold
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
@@ -3550,4 +3411,3 @@ SceneRoots:
   - {fileID: 1160382021}
   - {fileID: 1405693237}
   - {fileID: 1033002191}
-  - {fileID: 477079813}

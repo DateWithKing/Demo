@@ -35,6 +35,8 @@ public class GameData : Entity
         { "gold", new Stat(150, 0, Int32.MaxValue) },
         { "karma", new Stat(0, 0, 10)}
     };
+    //외관 데이터
+    public Dictionary<Appearance, string> appearance = new Dictionary<Appearance, string>();
     public SettingDTO setting = new SettingDTO();
     public Inventory inventory = new Inventory();
     

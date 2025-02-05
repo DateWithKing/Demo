@@ -10,7 +10,7 @@ public class SaveScreenPresenter : SaveLoadPresenter
     /// <param name="SlotID"> 클릭된 슬롯 번호 (0, 1, 2) </param>
     protected override void OnSlotClicked(int slotID)
     {
-        slots[slotID] = new SlotDTO(GameManager.Instance.data.date.GetCurrentDate(),
+        slots[slotID] = new SlotDTO(GameManager.Instance.data.date.GetCurrentDate(true),
             Resources.Load<Sprite>("Lobby/Smile"));
         view.PrintSlot(slotID, slots[slotID]);
         GameManager.Instance.SaveData(slotID);

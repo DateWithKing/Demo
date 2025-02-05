@@ -10,23 +10,23 @@ public class StyleSelector : MonoBehaviour
     [SerializeField] private List<string> attribute = new List<string>();
     [SerializeField] private Appearance attributeName;
 
-    // ¸®½ºÆ® ÀÎµ¦½º
+    // ë¦¬ìŠ¤íŠ¸ ì¸ë±ìŠ¤
     private int currentIndex = 0;
     private string currentAttribute;
 
 
-    // UI¿ä¼Ò
+    // UIìš”ì†Œ
     public TextMeshProUGUI optionText;
     public Button leftButton;
     public Button rightButton;
 
-    // ÃÊ±âÈ­
+    // ì´ˆê¸°í™”
     private void Start()
     {
-        // ui ¾÷µ¥ÀÌÆ®
+        // ui ì—…ë°ì´íŠ¸
         UpdateUI();
 
-        // ¹öÆ°¿¡ Å¬¸¯ ÀÌº¥Æ® Ãß°¡
+        // ë²„íŠ¼ì— í´ë¦­ ì´ë²¤íŠ¸ ì¶”ê°€
         leftButton.onClick.AddListener(SelectPrevious);
         rightButton.onClick.AddListener(SelectNext);
     }
@@ -41,7 +41,7 @@ public class StyleSelector : MonoBehaviour
         return attributeName;
     }
 
-    // ÀÌÀü ¼±ÅÃÁö
+    // ì´ì „ ì„ íƒì§€
     void SelectPrevious()
     {
         currentIndex--;
@@ -52,7 +52,7 @@ public class StyleSelector : MonoBehaviour
         UpdateUI();
     }
 
-    // ´ÙÀ½ ¼±ÅÃÁö
+    // ë‹¤ìŒ ì„ íƒì§€
     void SelectNext()
     {
         currentIndex++;
@@ -63,7 +63,7 @@ public class StyleSelector : MonoBehaviour
         UpdateUI();
     }
 
-    // UI ¾÷µ¥ÀÌÆ®
+    // UI ì—…ë°ì´íŠ¸
     void UpdateUI()
     {
         currentAttribute = attribute[currentIndex];

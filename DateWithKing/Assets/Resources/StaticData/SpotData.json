@@ -12,6 +12,7 @@
     "침대": { "comment":"내 침대이다. 푹 자고 일어나서 내일을 더 힘차게 시작할 수 있을 것이다.", "hpCost":0, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":10, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "책상": { "comment":"이 상태로는 학사경고를 받을 지도 모른다. 나도 공부를 좀 해야한다...", "hpCost":20, "hp":0, "str":0, "wis":1, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
     "강아지": { "comment":"나의 귀여운 참깨. 집에 혼자 있는 시간이 길어서 미안하다. 지금이라도 놀아줘야지.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":1, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
-    "태블릿": { "comment":"오늘도 힘냈으니 누워서 애니메이션이나 봐야겠다. 뭘 볼지 고르는 것부터 문제지만.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":1, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0}
+    "태블릿": { "comment":"오늘도 힘냈으니 누워서 애니메이션이나 봐야겠다. 뭘 볼지 고르는 것부터 문제지만.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":1, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+    "상점": { "comment":"학교 매점. 이것저것 잡다한 것을 살 수 있다.", "hpCost":0, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0}
   }
 }
