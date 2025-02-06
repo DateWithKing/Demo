@@ -1,12 +1,11 @@
 using UnityEngine;
 
 /// <summary>
-/// UI오브젝트에 부착하면 enable 시 위로 2초동안 위로 올라가며 서서히 흐려짐
+/// UI오브젝트에 부착하면 enable 시 3초동안 서서히 흐려짐
 /// </summary>
 public class FadeAndMoveUp : MonoBehaviour  
 {
-    public float moveDistance = 20f; // 위로 이동할 거리
-    public float duration = 2f;     // 이동 및 페이드아웃 시간
+    public float duration = 3f;     // 페이드아웃 시간
 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
@@ -22,15 +21,11 @@ public class FadeAndMoveUp : MonoBehaviour
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
-
-        // 시작 위치 저장
-        startPos = rectTransform.localPosition;
     }
 
     private void OnEnable()
     {
         // 초기화 및 코루틴 시작
-        rectTransform.localPosition = startPos;
         canvasGroup.alpha = 1f;
         StartCoroutine(FadeAndMoveCoroutine());
     }
@@ -44,9 +39,6 @@ public class FadeAndMoveUp : MonoBehaviour
             // 진행도 계산
             elapsedTime += Time.deltaTime;
             float progress = Mathf.Clamp01(elapsedTime / duration);
-
-            // 위치 이동 (localPosition 사용)
-            rectTransform.localPosition = startPos + new Vector3(0, moveDistance * progress, 0);
 
             // 투명도 감소
             canvasGroup.alpha = 1f - progress;
