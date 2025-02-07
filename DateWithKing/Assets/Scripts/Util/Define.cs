@@ -63,6 +63,15 @@ using System.Collections.Generic;
     public enum Background
     {
         Intro,
+        낮_1,
+        낮_2,
+        낮_3,
+        낮_1_흑백,
+        낮_2_흑백,
+        낮_3_흑백,
+        밤,
+        밤_흑백,
+        호러,
         Day,
         Night,
         Looking,
