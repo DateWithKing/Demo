@@ -7,7 +7,7 @@ public class SemesterScreenPresenter : MonoBehaviour
     /// <summary>
     /// 한 학기 일수
     /// </summary>
-    [SerializeField] private int semesterDays = 10;
+    [SerializeField] private int semesterDays = 5;
 
     private Screen screen;
 
