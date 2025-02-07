@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1847,6 +1847,10 @@ PrefabInstance:
       objectReference: {fileID: -7538615775956244149, guid: 4c1906005357fae4cb7323a5f522177e, type: 2}
     - target: {fileID: 2006457854699458184, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503985112708605369, guid: 95092bf522409c248a426904d8f79996, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2786232571485433386, guid: 95092bf522409c248a426904d8f79996, type: 3}
