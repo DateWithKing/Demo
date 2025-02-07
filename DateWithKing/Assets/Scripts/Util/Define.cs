@@ -72,7 +72,6 @@ using System.Collections.Generic;
         밤,
         밤_흑백,
         호러,
-        Day,
         Day, //legacy
         Day1,
         Day2,
