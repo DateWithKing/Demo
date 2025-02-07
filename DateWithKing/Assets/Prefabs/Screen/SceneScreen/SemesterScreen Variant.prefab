@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66df5a865562ad469d9e3c9de255e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  semesterDays: 10
+  semesterDays: 5
 --- !u!224 &4575390377866028945 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4789409566450334535, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
