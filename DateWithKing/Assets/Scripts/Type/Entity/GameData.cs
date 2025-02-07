@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Type;
 using UnityEngine;
 
 /// <summary>
@@ -39,6 +40,13 @@ public class GameData : Entity
     public Dictionary<Appearance, string> appearance = new Dictionary<Appearance, string>();
     public SettingDTO setting = new SettingDTO();
     public Inventory inventory = new Inventory();
+    //채팅 데이터(마지막으로 받은 채팅의 호감도)
+    public Dictionary<Character, Chat> chatting = new Dictionary<Character, Chat>
+    {
+        { Character.양나현, new Chat() },
+        { Character.신아산, new Chat() },
+        { Character.서은표, new Chat() }
+    };
     
     public GameData()
     {
