@@ -8,7 +8,7 @@ public class Date
     private const int BeginMonth = 3;
     private const int EndMonth = 12;
     private const int BeginWeek = 1;
-    private const int EndWeek = 14;
+    private const int EndWeek = 4;
 
     [JsonProperty]
     private int currentMonth = BeginMonth;

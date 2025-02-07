@@ -35,7 +35,7 @@ public class OpenCVController : Singleton<OpenCVController>
         
         writer = pythonProcess.StandardInput;
     }
-    
+
     /// <summary>
     /// function 종류 - 반환값<br/>
     /// Start - (반환이 하나라서 신경 안 써도 됨)
@@ -44,10 +44,19 @@ public class OpenCVController : Singleton<OpenCVController>
     /// </summary>
     /// <param name="function"></param>
     /// <param name="action">function이 끝난 뒤 실행될 함수</param>
-    public async void InvokeDetector(string function, Action<string> action)
+    /// <param name="timeLimit">시간제한 옵션 추가</param>
+    public async void InvokeDetector(string function, Action<string> action, bool timeLimit = false)
     {
-        string result = await RunFunction(function);
-        action?.Invoke(result);
+        if (timeLimit)
+        {
+            string result = await RunFunctionWithTimeLimit(function);
+            action?.Invoke(result);
+        }
+        else
+        {
+            string result = await RunFunction(function);
+            action?.Invoke(result);
+        }
     }
 
     private async Task<string> RunFunction(string function)
@@ -59,6 +68,36 @@ public class OpenCVController : Singleton<OpenCVController>
                 writer.WriteLine(function);
                 return pythonProcess.StandardOutput.ReadLine();
             });
+        }
+        
+        return null;
+    }
+    
+    private async Task<string> RunFunctionWithTimeLimit(string function)
+    {
+        if (pythonProcess != null && !pythonProcess.HasExited)
+        {
+            using (CancellationTokenSource cts = new CancellationTokenSource(TimeSpan.FromSeconds(5)))
+            {
+                return await Task.Run(async () =>
+                {
+                    writer.WriteLine(function);
+                    // 결과를 읽기 위한 Task
+                    Task<string> readTask = Task.Run(() => pythonProcess.StandardOutput.ReadLine());
+
+                    // 타임아웃과 결과 읽기 작업을 동시에 대기
+                    if (await Task.WhenAny(readTask, Task.Delay(-1, cts.Token)) == readTask)
+                    {
+                        // 읽기가 완료되면 결과 반환
+                        return await readTask; // 결과를 비동기적으로 반환
+                    }
+                    else
+                    {
+                        // 타임아웃이 발생한 경우
+                        return "Timeout"; // 또는 적절한 오류 메시지 반환
+                    }
+                }, cts.Token);
+            }
         }
         
         return null;

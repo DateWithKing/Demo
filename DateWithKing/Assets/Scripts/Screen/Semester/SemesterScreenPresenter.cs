@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class SemesterScreenPresenter : MonoBehaviour
     /// <summary>
     /// 한 학기 일수
     /// </summary>
-    [SerializeField] private int semesterDays = 10;
+    [SerializeField] private int semesterDays = 5;
 
     private Screen screen;
 
@@ -22,6 +23,16 @@ public class SemesterScreenPresenter : MonoBehaviour
         SemesterSceneData.Instance.clock.DateChanged += SemesterEnd;
         SemesterSceneData.Instance.clock.DateChanged -= OneDateLater;
         SemesterSceneData.Instance.clock.DateChanged += OneDateLater;
+        SemesterSceneData.Instance.clock.TimeChanged -= BackgroundChanger;
+        SemesterSceneData.Instance.clock.TimeChanged += BackgroundChanger;
+    }
+    
+    //Semester 동안 배경 변경 담당
+    private void BackgroundChanger()
+    {
+        if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() == WeekCycle.Day)
+            BackgroundController.Instance.ChangeImage((Background)Enum.Parse(typeof(Background), $"Day{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}"));
+        else BackgroundController.Instance.ChangeImage(Enum.Parse<Background>(SemesterSceneData.Instance.clock.GetCurrentWeekCycle().ToString()));
     }
 
     private void OneDateLater()

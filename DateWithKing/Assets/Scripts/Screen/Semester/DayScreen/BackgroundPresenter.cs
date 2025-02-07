@@ -19,11 +19,6 @@ public class BackgroundPresenter : Presenter
         SemesterSceneData.Instance.clock.TimeChanged += UpdateBackgroundScreen;
     }
 
-    void OnEnable()
-    {
-        BackgroundController.Instance.ChangeImage(Enum.Parse<Background>(weekCycle.ToString()));
-    }
-
     private void UpdateBackgroundScreen()
     {
         //Intro로 돌아가면 Date 업데이트
