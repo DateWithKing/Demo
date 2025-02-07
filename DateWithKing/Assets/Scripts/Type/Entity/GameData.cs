@@ -47,6 +47,13 @@ public class GameData : Entity
         { Character.신아산, new Chat() },
         { Character.서은표, new Chat() }
     };
+
+    public Dictionary<Character, int> fuckNum = new Dictionary<Character, int>
+    {
+        { Character.양나현, 0 },
+        { Character.신아산, 0 },
+        { Character.서은표, 0 }
+    };
     
     public GameData()
     {
