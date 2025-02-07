@@ -34,6 +34,9 @@ public class NightActivityPresenter : Presenter
     public void PrintActivityDialogue()
     {
         string dialogue = $"밤_{currentActivity}";
+        SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[currentActivity].hpCost);
+            
+        Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
         YarnManager.Instance.RunDialogue(dialogue);
     }
     

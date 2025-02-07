@@ -29,14 +29,14 @@ public class SpotPresenter : Presenter
             Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             
             giftSystem.StartPresent(SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData].ToString());
-            SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot].hpCost);
-            
-            Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
         }
         else
         {
             Debug.Log("아무도 없습니다.");
         }
+        
+        SemesterSceneData.Instance.hp.UseHp(SemesterSceneData.Instance.spot.deltaStat[spot].hpCost);
+        Debug.Log($"체력을 사용했습니다. 현재 체력 : {SemesterSceneData.Instance.hp.GetHp()}");
     }
     
     public void StartDialogue()
