@@ -12,11 +12,15 @@ public class SoundManager : Singleton<SoundManager>
     private const string SFXPath = "Sound/SFX/";
     private AudioSource bgmSounder;
     private AudioSource sfxSounder;
+    private AudioReverbFilter reverb;
     void Awake()
     {
         base.Awake();
         bgmSounder = transform.Find("BGMSource").GetComponent<AudioSource>();
         sfxSounder = transform.Find("SFXSource").GetComponent<AudioSource>();
+
+        GameManager.Instance.data.stats["karma"].StatChanged -= AddHorrorEffect;
+        GameManager.Instance.data.stats["karma"].StatChanged += AddHorrorEffect;
 
         bgmSounder.loop = true;
         sfxSounder.loop = false;
@@ -78,5 +82,32 @@ public class SoundManager : Singleton<SoundManager>
     public void ChangeSFXVolume(float ratio)
     {
         sfxSounder.volume = ratio;
+    }
+
+    /// <summary>
+    /// 호러 이펙트 적용
+    /// </summary>
+    public void AddHorrorEffect()
+    {
+        int amount = GameManager.Instance.data.stats["karma"].value;
+        if (amount < 5)
+        {
+            reverb.dryLevel = 0f;
+            reverb.decayTime = 1f;
+            reverb.diffusion = 100f;
+            reverb.density = 100f;
+        }
+        else if (amount < 8)
+        {
+            reverb.dryLevel = -10000f;
+            reverb.decayTime = 2f;
+        }
+        else
+        {
+            reverb.dryLevel = -10000f;
+            reverb.decayTime = 5f;
+            reverb.diffusion = 0f;
+            reverb.density = 0f;
+        }
     }
 }
