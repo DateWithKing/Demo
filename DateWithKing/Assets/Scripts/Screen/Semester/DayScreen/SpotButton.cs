@@ -11,13 +11,13 @@ public class SpotButton : MonoBehaviour
 {
     private string spotName;
     private int hpCost = 20;
-    //private Button button;
+    private ObjectButton button;
     private ButtonComment comment;
 
     void Awake()
     {
         spotName = name;
-        //button = GetComponent<Button>();
+        button = GetComponent<ObjectButton>();
         comment = GetComponent<ButtonComment>();
     }
     private void Start()
@@ -41,10 +41,10 @@ public class SpotButton : MonoBehaviour
 
     private void EnableCheck()
     {
-        /*if (SemesterSceneData.Instance.hp.GetHp() < hpCost)
+        if (SemesterSceneData.Instance.hp.GetHp() < hpCost)
         {
-            button.interactable = false;
+            button.isInteractable = false;
         }
-        else button.interactable = true;*/
+        else button.isInteractable = true;
     }
 }
