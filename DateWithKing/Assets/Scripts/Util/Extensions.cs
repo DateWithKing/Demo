@@ -19,6 +19,17 @@ public static class Extensions
     }
 
     /// <summary>
+    /// string 값을 T Enum 값으로 반환
+    /// </summary>
+    /// <param name="input"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T ToEnum<T>(this string input)
+    {
+        return (T)Enum.Parse(typeof(T), input);
+    }
+
+    /// <summary>
     /// int를 1 증가시키는 과정에서 값 limit를 넘는 것을 방지하고, 제약 값을 넘었을 시 limitValue로 값을 변경 <br/>
     /// 변수의 값을 제한하고 제한 값을 벗어날 시 원점으로 회귀해야 할 때 사용<br/>
     /// 만약 값 증가와 무관하게 범위 제약만 하고 싶을 경우 Math.Clamp()를 사용할 것
