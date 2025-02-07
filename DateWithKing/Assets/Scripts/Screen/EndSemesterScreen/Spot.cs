@@ -9,7 +9,6 @@ public class Spot : MonoBehaviour
     [SerializeField] Button SpotButton;
     [SerializeField] private GameObject[] chooseScreen;
 
-    [SerializeField] private GameObject AllUnder70;
 
     private int affection;
     // 자식 이미지 데이터
@@ -19,7 +18,7 @@ public class Spot : MonoBehaviour
         public Image image; // 이미지 컴포넌트
         public Sprite defaultSprite; // 기본 스프라이트
         public Sprite highAffectionSprite; // 호감도 조건 만족 시 스프라이트
-        public int affectionThreshold = 70; // 호감도 조건
+        public int affectionThreshold = -50; // 호감도 조건
     }
     private int ticketLimit = 20;
 
@@ -63,11 +62,13 @@ public class Spot : MonoBehaviour
         if (GameManager.Instance.ticket >= ticketLimit)
         {
             chooseScreen[1].SetActive(true);
-            YarnManager.Instance.RunDialogue("종강총회_양나현");
+
+            if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산");
+            if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현");
+            if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표");
         }
-        else
-        {
-            YarnManager.Instance.RunDialogue("종강총회_티켓부족");
-        }
+        
     }
+
+    
 }

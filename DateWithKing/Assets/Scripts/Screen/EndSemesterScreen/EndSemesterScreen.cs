@@ -33,11 +33,16 @@ public class EndSemesterScreen : MonoBehaviour
 
     public void isAllUnder70()
     {
-        if (GameManager.Instance.data.stats["lvSan"].value < 70 &&
-            GameManager.Instance.data.stats["lvHyun"].value < 40 &&
-            GameManager.Instance.data.stats["lvPyo"].value < 70)
+        if (GameManager.Instance.data.stats["lvSan"].value < -50 &&
+            GameManager.Instance.data.stats["lvHyun"].value < -50 &&
+            GameManager.Instance.data.stats["lvPyo"].value < -50)
         {
             AllUnder70.SetActive(true);
         }
+    }
+
+    public void StartEndSemester()
+    {
+        YarnManager.Instance.RunDialogue("종강총회_시작");
     }
 }
