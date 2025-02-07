@@ -20,6 +20,7 @@ public class SlideUpUI : MonoBehaviour
             RectTransform canvasRect = canvas.GetComponent<RectTransform>();
             offScreenPosition = new Vector2(0, -canvasRect.rect.height);
             uiImage.anchoredPosition = offScreenPosition;
+            
 
             //SlideUp();
         }
