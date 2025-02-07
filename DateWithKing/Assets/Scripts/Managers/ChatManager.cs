@@ -10,10 +10,12 @@ using System.Reflection;
 
 public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해야함
 { 
-    const string spritePath = "Assets/Arts/NightPhone/";
+    const string spritePath = "Sprites/NightPhone/";
     public string[] profileSpriteName = {"양나현", "서은표", "신아산"};  // 스프라이트 이름
     public Dictionary<string, Sprite> profileImage = new Dictionary<string, Sprite>();  // 프로필 이미지 딕셔너리
     public Dictionary<string, Chatting> chattingDict = new Dictionary<string, Chatting>();  // 채팅목록 딕셔너리
+
+    [SerializeField] private GameObject PhoneScreen;
 
     [SerializeField] private Image proImage;
     [SerializeField] private TextMeshProUGUI opponentName;
@@ -54,7 +56,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         Emoticon3.interactable = false;
 
         LateStart();
-        //StartChat("신아산_80");
+        StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
     }
@@ -93,6 +95,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [YarnCommand("StartPhoneChat")]
     public void StartChat(string chattingTitle, Action endMessage = null)
     {
+        PhoneScreen.SetActive(true);
         Debug.Log("Start Chat: " + chattingTitle);
         SetChat(chattingTitle);
         slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기

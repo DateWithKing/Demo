@@ -460,6 +460,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6753808909658495811}
+        m_TargetAssemblyTypeName: WaitHideScreen, Assembly-CSharp
+        m_MethodName: WaitScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2536241798061433296
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +666,7 @@ MonoBehaviour:
   - "\uC591\uB098\uD604"
   - "\uC11C\uC740\uD45C"
   - "\uC2E0\uC544\uC0B0"
+  PhoneScreen: {fileID: 8266697097175669024}
   proImage: {fileID: 1913317561913178410}
   opponentName: {fileID: 2833082917804730321}
   ChatBox_Me: {fileID: 3685822767979464703, guid: 17d1c94610265984abe0488d548c7322, type: 3}
@@ -852,7 +865,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -0.000061035156, y: -0.000030517578}
-  m_SizeDelta: {x: 502.00015, y: 0}
+  m_SizeDelta: {x: 502.00015, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &8076221647649234183
 MonoBehaviour:
@@ -986,6 +999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 7467844806070313251, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.a
       value: 0.34901962
@@ -1011,13 +1028,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4789409566450334535, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6847348714892777766}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7467844806070313251, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6753808909658495811}
   m_SourcePrefab: {fileID: 100100000, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
 --- !u!224 &6299778173267116868 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4789409566450334535, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
   m_PrefabInstance: {fileID: 1520572349604804611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8266697097175669024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7467844806070313251, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+  m_PrefabInstance: {fileID: 1520572349604804611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6753808909658495811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266697097175669024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fc79b6a0da019498c73ef6935c5dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2121703126272074337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1109,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 7467844806070313251, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Name
       value: PhoneUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467844806070313251, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.a
@@ -1226,6 +1267,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2016054381314168029}
         m_TargetAssemblyTypeName: SlideUpUI, Assembly-CSharp
         m_MethodName: SlideDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6753808909658495811}
+        m_TargetAssemblyTypeName: WaitHideScreen, Assembly-CSharp
+        m_MethodName: WaitScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
