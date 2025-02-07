@@ -22,7 +22,7 @@ public class ShakingScreen : MonoBehaviour
     [SerializeField] private float magnitude = 0.1f; // 흔들림 강도
     [SerializeField] private float shakingSpeed = 20f; // 흔들림 속도
 
-    void Start()
+    public void ShakingStart()
     {
         if (rightHand != null && leftHand != null)
         {
