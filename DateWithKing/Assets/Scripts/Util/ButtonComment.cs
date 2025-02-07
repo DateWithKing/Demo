@@ -1,12 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
-/// <summary>
-/// 설명을 팝업하고 싶은 버튼이 있는 오브젝트에 부착 시 말풍선을 팝업
-/// </summary>
 public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private string comment;
@@ -14,6 +9,8 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private TextBubble text;
     private GameObject textBubble;
     public Transform canvasObject;
+
+    private Coroutine destroyCoroutine; // 파괴 타이머를 위한 Coroutine
 
     void Awake()
     {
@@ -32,12 +29,28 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        // 말풍선 텍스트 설정
         text.SetText(comment);
-        textBubble = Instantiate(textBubblePrefab, canvasObject);
+
+        // 기존의 파괴 코루틴이 있으면 중단
+        if (destroyCoroutine != null)
+        {
+            StopCoroutine(destroyCoroutine);
+        }
+        else
+            textBubble = Instantiate(textBubblePrefab, canvasObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        // 1초 후에 말풍선을 파괴하는 코루틴 시작
+        destroyCoroutine = StartCoroutine(DestroyTextBubbleAfterDelay(0.5f));
+    }
+
+    private IEnumerator DestroyTextBubbleAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         Destroy(textBubble); 
+        destroyCoroutine = null; // 파괴 후 코루틴 null로 설정
     }
 }
