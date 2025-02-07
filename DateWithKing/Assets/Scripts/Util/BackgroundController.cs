@@ -16,7 +16,6 @@ public class BackgroundController : Singleton<BackgroundController>
     [SerializeField] GameObject[] CharacterScreen; // 0:신 1:양 2:서
     [SerializeField] GameObject HorrorMask;
 
-    [SerializeField] GameObject BaseCanvas;
 
     public Background currentBackground;
     GameObject characterScreen;
@@ -45,7 +44,6 @@ public class BackgroundController : Singleton<BackgroundController>
     public void OnLooking(string name)
     {
         int karma = GameManager.Instance.data.stats["karma"].value;
-        karma = 8;
 
         if (karma >= 8)
         {
@@ -58,15 +56,15 @@ public class BackgroundController : Singleton<BackgroundController>
 
             if (name == "신아산")
             {
-                characterScreen = Instantiate(CharacterScreen[0], BaseCanvas.transform);
+                characterScreen = Instantiate(CharacterScreen[0], transform);
             }
             else if (name == "양나현")
             {
-                characterScreen = Instantiate(CharacterScreen[1], BaseCanvas.transform);
+                characterScreen = Instantiate(CharacterScreen[1], transform);
             }
             else if (name == "서은표")
             {
-                characterScreen = Instantiate(CharacterScreen[2], BaseCanvas.transform);
+                characterScreen = Instantiate(CharacterScreen[2], transform);
             }
             else { Debug.Log("name이 잘못됨"); }
         }

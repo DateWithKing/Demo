@@ -391,6 +391,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 155593440344572808, guid: 17702b25fb592314f817bf44554f7f24, type: 3}
+      propertyPath: BaseCanvas
+      value: 
+      objectReference: {fileID: 1520804215}
+    - target: {fileID: 155593440344572808, guid: 17702b25fb592314f817bf44554f7f24, type: 3}
       propertyPath: currentBackground
       value: 1
       objectReference: {fileID: 0}
@@ -405,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 155593440344572808, guid: 17702b25fb592314f817bf44554f7f24, type: 3}
       propertyPath: CharacterScreen.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7332403613648909911, guid: 3e38981ec32e6eb41b68732607d3f11b, type: 3}
     - target: {fileID: 155593440344572808, guid: 17702b25fb592314f817bf44554f7f24, type: 3}
       propertyPath: CharacterScreen.Array.data[2]
       value: 

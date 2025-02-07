@@ -620,7 +620,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &6099139833676570341
 MonoBehaviour:
@@ -681,4 +681,5 @@ MonoBehaviour:
   - {fileID: 7332403613648909911, guid: 3e38981ec32e6eb41b68732607d3f11b, type: 3}
   - {fileID: 5119786480724323601, guid: 7bae2e3b9a6513346876ece38bbc1fef, type: 3}
   HorrorMask: {fileID: 6559010177786165621}
+  BaseCanvas: {fileID: 0}
   currentBackground: 0
