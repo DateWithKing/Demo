@@ -73,6 +73,10 @@ using System.Collections.Generic;
         밤_흑백,
         호러,
         Day,
+        Day, //legacy
+        Day1,
+        Day2,
+        Day3,
         Night,
         Looking,
         SummerVacation,
