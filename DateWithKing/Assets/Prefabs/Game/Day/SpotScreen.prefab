@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GiveGift
       objectReference: {fileID: 0}
+    - target: {fileID: 6935841772229557592, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6971701010482984568, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 208
