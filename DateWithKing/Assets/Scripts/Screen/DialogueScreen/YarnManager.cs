@@ -321,7 +321,9 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="node"></param>
     void cheese(string node){
-        OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{RunDialogue(node);});
+        OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{
+            SoundEffect("브이_찰칵");
+            RunDialogue(node);});
     }
     
 }
