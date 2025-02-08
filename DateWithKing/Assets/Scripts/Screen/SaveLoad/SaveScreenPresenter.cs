@@ -11,7 +11,7 @@ public class SaveScreenPresenter : SaveLoadPresenter
     protected override void OnSlotClicked(int slotID)
     {
         slots[slotID] = new SlotDTO(GameManager.Instance.data.date.GetCurrentDate(true),
-            Resources.Load<Sprite>("Lobby/Smile"));
+            Resources.Load<Sprite>($"Lobby/데이터있음{slotID+1}"));
         view.PrintSlot(slotID, slots[slotID]);
         GameManager.Instance.SaveData(slotID);
     }
