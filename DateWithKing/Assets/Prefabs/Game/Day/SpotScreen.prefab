@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5999203690608378304, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6640414291336049221, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
       propertyPath: endPresent.m_PersistentCalls.m_Calls.Array.size
@@ -324,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6935841772229557592, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6971701010482984568, guid: 9ac000b09099ae44ca78791950532d6f, type: 3}
       propertyPath: m_SizeDelta.x
