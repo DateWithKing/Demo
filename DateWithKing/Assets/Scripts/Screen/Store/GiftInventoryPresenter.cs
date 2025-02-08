@@ -12,7 +12,7 @@ public class GiftInventoryPresenter : InventoryPresenter
         }
         if (item.type != ItemType.선물)
         {
-            Popup.Instance.PopPanel("사용할 수 없습니다. ");
+            YarnManager.Instance.RunDialogue("예외처리_아이템사용불가");
             return;
         }
         GameManager.Instance.data.inventory.UseItem(slot);

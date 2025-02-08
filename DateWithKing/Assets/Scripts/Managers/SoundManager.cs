@@ -18,6 +18,7 @@ public class SoundManager : Singleton<SoundManager>
         base.Awake();
         bgmSounder = transform.Find("BGMSource").GetComponent<AudioSource>();
         sfxSounder = transform.Find("SFXSource").GetComponent<AudioSource>();
+        reverb = bgmSounder.GetComponent<AudioReverbFilter>();
 
         GameManager.Instance.data.stats["karma"].StatChanged -= AddHorrorEffect;
         GameManager.Instance.data.stats["karma"].StatChanged += AddHorrorEffect;
@@ -49,6 +50,14 @@ public class SoundManager : Singleton<SoundManager>
     public void PauseBGM()
     {
         bgmSounder.Stop();
+    }
+
+    /// <summary>
+    /// BGM 다시 재생
+    /// </summary>
+    public void resumeBGM()
+    {
+        bgmSounder.Play();
     }
 
     /// <summary>
