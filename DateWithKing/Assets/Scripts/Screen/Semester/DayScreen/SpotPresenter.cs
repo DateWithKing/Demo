@@ -32,6 +32,7 @@ public class SpotPresenter : Presenter
         }
         else
         {
+            YarnManager.Instance.RunDialogue($"낮_{currentSpot}");
             Debug.Log("아무도 없습니다.");
         }
         
