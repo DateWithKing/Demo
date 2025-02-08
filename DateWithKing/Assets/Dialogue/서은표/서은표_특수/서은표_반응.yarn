@@ -1,6 +1,7 @@
 title: 서은표_엿
 ---
 <<show pyo_idle>>
+<<play 서은표_흠>>
 은표 : …?!
 <<show pyo_spec>>
 은표: {name()}, 그거 나쁜 거야.
