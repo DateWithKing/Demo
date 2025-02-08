@@ -58,6 +58,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.AddCommandHandler<string>("show", ShowCharactor);
         runner.AddCommandHandler<string>("bg", ShowBackground);
         runner.AddCommandHandler<string>("play", SoundEffect);
+        runner.AddCommandHandler<string>("cheese", cheese);
         runner.AddCommandHandler<string, string, string, string, bool>("choice", StartChoice);
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
@@ -211,13 +212,6 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     /// <summary>
-    /// 이전 choice 단계를 다시 실행함
-    /// </summary>
-    void ChoiceAgain(){
-        prevChoice?.Invoke();
-    }
-
-    /// <summary>
     /// 다이얼로그 2초 늦게 실행, 진행중인 다이얼로그가 있어도 강제실행
     /// </summary>
     /// <param name="node"></param>
@@ -232,6 +226,13 @@ public class YarnManager : SceneSingleton<YarnManager>
         contiuneButton.SetActive(true);
         RunDialogue(node, dialogEnded);
         PosNegPanel.SetActive(false);
+    }
+    
+    /// <summary>
+    /// 이전 choice 단계를 다시 실행함
+    /// </summary>
+    void ChoiceAgain(){
+        prevChoice?.Invoke();
     }
 
     /// <summary>
@@ -313,6 +314,14 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// <returns></returns>
     void SetStat(string statName, int val){
         GameManager.Instance.data.stats[statName].ChangeStat(val);
+    }
+
+    /// <summary>
+    /// 브이~ 인식 후 node 다이얼로그 실행
+    /// </summary>
+    /// <param name="node"></param>
+    void cheese(string node){
+        OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{RunDialogue(node);});
     }
     
 }
