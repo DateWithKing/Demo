@@ -80,6 +80,7 @@ using System.Collections.Generic;
         Day2_흑백,
         Day3_흑백,
         Night,
+        Night_흑백,
         Looking,
         SummerVacation,
         ClosingClass,

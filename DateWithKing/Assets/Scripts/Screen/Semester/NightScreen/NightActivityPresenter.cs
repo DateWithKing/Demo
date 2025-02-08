@@ -45,9 +45,10 @@ public class NightActivityPresenter : Presenter
         string spotData = $"밤_{GameManager.Instance.data.date.GetCurrentWeek()}_{currentActivity}";
         if (SemesterSceneData.Instance.DayDialogue.spotCharacters.ContainsKey(spotData))
         {
+            Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
+            spotData += $"_{SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}";
             meetGirls.gameObject.SetActive(true);
             meetGirls.sprite = Resources.Load<Sprite>(SpotImagePath + currentActivity);
-            Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
             YarnManager.Instance.RunDialogue(spotData);
         }
         else
