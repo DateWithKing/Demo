@@ -52,6 +52,14 @@ public class SoundManager : Singleton<SoundManager>
     }
 
     /// <summary>
+    /// BGM 다시 재생
+    /// </summary>
+    public void resumeBGM()
+    {
+        bgmSounder.Play();
+    }
+
+    /// <summary>
     /// Resources/Sound/SFX/ 아래 있는 오디오 클립을 단발적으로 재생
     /// </summary>
     /// <param name="source">오디오 클립 이름</param>

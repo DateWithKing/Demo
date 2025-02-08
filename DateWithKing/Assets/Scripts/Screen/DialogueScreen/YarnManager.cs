@@ -49,6 +49,8 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner = GameObject.FindAnyObjectByType<DialogueRunner>();
         runner.AddCommandHandler("end", EndDialogue);
         runner.AddCommandHandler("hide", HideCharactor);
+        runner.AddCommandHandler("bgm_stop", SoundManager.Instance.PauseBGM);
+        runner.AddCommandHandler("bgm_resume", SoundManager.Instance.resumeBGM);
         runner.AddCommandHandler("choice_again", ChoiceAgain);
         runner.AddCommandHandler<string>("notice", Notice2);
         runner.AddCommandHandler<string>("dislike", (name)=>Notice(name+"이(/가) 싫어합니다."));
@@ -143,12 +145,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="audioName"></param>
     void SoundEffect(string audioName){
-        try {
-            SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
-            SoundEffectAS.Play();
-        } catch(Exception e){
-            Debug.LogWarning("사운드 파일이 존재하지 않음: "+audioName+"\n"+e.Message);
-        }
+        SoundManager.Instance.PlaySFX(audioName);
     }
 
     /// <summary>
