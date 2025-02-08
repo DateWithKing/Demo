@@ -18,6 +18,7 @@ public class SoundManager : Singleton<SoundManager>
         base.Awake();
         bgmSounder = transform.Find("BGMSource").GetComponent<AudioSource>();
         sfxSounder = transform.Find("SFXSource").GetComponent<AudioSource>();
+        reverb = bgmSounder.GetComponent<AudioReverbFilter>();
 
         GameManager.Instance.data.stats["karma"].StatChanged -= AddHorrorEffect;
         GameManager.Instance.data.stats["karma"].StatChanged += AddHorrorEffect;
