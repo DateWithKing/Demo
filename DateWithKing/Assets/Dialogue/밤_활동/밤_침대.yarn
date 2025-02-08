@@ -1,6 +1,7 @@
 title: 밤_침대
 ---
+<<change bonusHp +10>>
 포근한 침대에서 푹 잤다. 개운하다!
 (다음날 시작체력 +10)
-<<change bonusHp +10>>
+<<end>>
 ===

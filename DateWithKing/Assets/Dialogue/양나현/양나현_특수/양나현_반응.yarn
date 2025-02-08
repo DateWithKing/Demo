@@ -1,0 +1,17 @@
+title: 양나현_엿
+---
+<<show hyun_idle>>
+나현 : …?
+<<notice "당신은 분위기가 싸해짐을 느꼈다.">>
+<<change karma +2>>
+<<show hyun_neg>>
+나현 : 너 제정신이야?
+<<choice_again>>
+===
+
+title: 양나현_두명
+---
+<<show hyun_idle>>
+나현 : ...뒤에 친구야?
+<<choice_again>>
+===
