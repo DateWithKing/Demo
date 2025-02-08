@@ -1,0 +1,98 @@
+title: 키링_서은표
+---
+<<show pyo_blush>>
+은표: 우와! 뭐야?
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+은표: 토끼 키링이네? 너무 귀엽다. 소중히 간직할게.
+<<end>>
+===
+
+title: 쿠키_서은표
+---
+<<show pyo_idle>>
+은표: 나 주는 거야?
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+은표: 맛있겠다! 지금 같이 먹자. 고마워. 
+<<end>>
+===
+
+title: 기프트카드_서은표
+---
+<<show pyo_idle>>
+은표: 헉, 선물이라구? (작게 중얼거린다) 새로 나온 코스튬 마침 사고 싶었는데... 
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+은표: 너무 고마워! 잘 쓸게.
+<<end>>
+===
+
+title: 피크_서은표
+---
+<<show pyo_idle>>
+은표: 어, 이거 기타칠 때 쓰는 거 아냐?
+<<dislike 서은표>>
+<<change lvPyo -10>>
+은표: 내 선물이라구? 기타 칠 줄 모르긴 하는데... 고마워... 간직할게!
+<<end>>
+===
+
+title: 꽃_서은표
+---
+<<show pyo_idle>>
+은표: 꽃이네? 오늘 무슨 날이야?
+<<dislike 서은표>>
+<<change lvPyo -10>>
+은표: 헉, 나 주는 거라고?? 기르는 데 재능이 없긴 한데. 고마워...!
+<<end>>
+===
+
+title: 귀도리_서은표
+---
+<<show pyo_smile>>
+은표: 헉, 귀도리네?? 나 귀도리 엄청 좋아해서 거의 색깔별로 모으는데.
+<<show pyo_blush>>
+<<like 서은표>>
+<<change lvPyo +10>>
+은표: 이번 겨울에 꼭 쓰고 다닐게. 고마워!!
+<<end>>
+===
+
+title: 객체지향_서은표
+---
+<<show pyo_idle>>
+은표: 객체지향...?!
+<<show pyo_neg>>
+<<dislike 서은표>>
+<<change lvPyo -10>>
+은표: 우와... 우리 교수님이 좋아하시겠는걸.
+은표: 고마워... 읽어 볼게...
+<<end>>
+===
+
+title: 케이크_서은표
+---
+<<show pyo_idle>>
+은표: 우와, 고양이 모양 케이크네...?!
+<<show pyo_neg>>
+<<dislike 서은표>>
+<<change lvPyo -10>>
+은표: 사실 단 거 잘 못 먹긴 하는데, 가족이랑 먹어야겠다. 고마워.
+<<end>>
+===
+
+title: 만화책_서은표
+---
+<<show pyo_smile>>
+은표: 어?!!!! '돌세아때' 신간이다!!!!!
+<<show pyo_blush>>
+<<like 서은표>>
+<<change lvPyo +10>>
+은표: 안 그래도 사려고 했는데~~~ 진짜 고마워!! {name()}이가 역시 최고야.
+은표: 당장 읽어야지!!
+<<end>>
+===
