@@ -51,7 +51,8 @@ public class StorePresenter : MonoBehaviour
             Popup.Instance.PopPanel("더 이상 들 수 없다. \n(인벤토리 공간이 부족합니다.) ");
             return;
         }
-        
+
+        purchasedCount++;
         Debug.Log(DataManager.Instance.itemData[item].name + "을 구매했다! ");
         GameManager.Instance.data.inventory.AddItem(DataManager.Instance.itemData[item]); 
         GameManager.Instance.data.stats["gold"].ChangeStat(-DataManager.Instance.itemData[item].price);
