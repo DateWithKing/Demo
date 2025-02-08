@@ -5,16 +5,26 @@ public class Stat
 {
     public readonly int MaxValue = 10;
     public readonly int MinValue = 1;
+    public readonly int InitValue = 1;
     [JsonProperty]
     public int value { get; private set; }
 
     public event Action StatChanged;
+    
+    public Stat(int startValue, int minValue, int maxValue, int initValue)
+    {
+        value = startValue;
+        MinValue = minValue;
+        MaxValue = maxValue;
+        InitValue = initValue;
+    }
     
     public Stat(int startValue, int minValue, int maxValue)
     {
         value = startValue;
         MinValue = minValue;
         MaxValue = maxValue;
+        InitValue = MinValue;
     }
 
     public Stat(int minValue, int maxValue) : this(minValue, minValue, maxValue)
@@ -29,7 +39,7 @@ public class Stat
 
     public void InitStat()
     {
-        value = MinValue;
+        value = InitValue;
     }
 
     /// <summary>

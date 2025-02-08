@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Type;
 using UnityEngine;
 
 /// <summary>
@@ -19,7 +20,7 @@ using UnityEngine;
 public class GameData : Entity
 {
     //1-2
-    public string name { get; set; }
+    public string name { get; set; } = "손서희";
     public Date date = new Date();
     public Dictionary<string, Stat> stats = new Dictionary<string, Stat>
     {
@@ -28,14 +29,32 @@ public class GameData : Entity
         { "wis", new Stat(1, 1, 10) },
         { "slv", new Stat(1, 1, 10) },
         { "otk", new Stat(1, 1, 10) },
-        { "bonusHp", new Stat(0, 0, 50) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
+        { "bonusHp", new Stat(0, -50, 50, 0) }, //다음날 Hp 변동 수치(ex. 10이면 다음날 원래 hp + 10된 값으로 시작
         { "lvSan", new Stat(0, -50, 100) },
         { "lvHyun", new Stat(0, -50, 100) },
         { "lvPyo", new Stat(0, -50, 100) },
-        { "gold", new Stat(150, 0, Int32.MaxValue) }
+        { "gold", new Stat(150, 0, Int32.MaxValue) },
+        { "karma", new Stat(0, 0, 10)}
     };
+    //외관 데이터
+    public Dictionary<Appearance, string> appearance = new Dictionary<Appearance, string>();
     public SettingDTO setting = new SettingDTO();
+    public Inventory inventory = new Inventory();
+    //채팅 데이터(마지막으로 받은 채팅의 호감도)
+    public Dictionary<Character, Chat> chatting = new Dictionary<Character, Chat>
+    {
+        { Character.양나현, new Chat() },
+        { Character.신아산, new Chat() },
+        { Character.서은표, new Chat() }
+    };
 
+    public Dictionary<Character, int> fuckNum = new Dictionary<Character, int>
+    {
+        { Character.양나현, 0 },
+        { Character.신아산, 0 },
+        { Character.서은표, 0 }
+    };
+    
     public GameData()
     {
         //다회 실행 시 그만큼 구독 수가 늘어 중첩될 수 있음 주의

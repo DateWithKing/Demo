@@ -22,7 +22,7 @@ public class SpotDTO
     public Dictionary<string, int> GetDeltaData()
     {
         Dictionary<string, int> delta = new Dictionary<string, int>();
-        if (hpCost != 0) delta.Add(DataManager.Instance.translator["hpCost"], hpCost);
+        delta.Add(DataManager.Instance.translator["hpCost"], hpCost);
         if (hp != 0) delta.Add(DataManager.Instance.translator["hp"], hp);
         if (str != 0) delta.Add(DataManager.Instance.translator["str"], str);
         if (wis != 0) delta.Add(DataManager.Instance.translator["wis"], wis);

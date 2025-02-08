@@ -48,7 +48,7 @@ using System.Collections.Generic;
     {
         동아리방,
         강의실,
-        공대도서관,
+        도서관,
         식당,
         정문
     }
@@ -62,11 +62,28 @@ using System.Collections.Generic;
     
     public enum Background
     {
-        Day,
+        Intro,
+        낮_1,
+        낮_2,
+        낮_3,
+        낮_1_흑백,
+        낮_2_흑백,
+        낮_3_흑백,
+        밤,
+        밤_흑백,
+        호러,
+        Day, //legacy
+        Day1,
+        Day2,
+        Day3,
+        Day1_흑백,
+        Day2_흑백,
+        Day3_흑백,
         Night,
         Looking,
         SummerVacation,
         ClosingClass,
+        MiniGame,
     }
 
     public enum Appearance
@@ -84,4 +101,11 @@ using System.Collections.Generic;
         wis,
         slv,
         otk
+    }
+
+    public enum ItemType
+    {
+        none,
+        체력,
+        선물
     }
