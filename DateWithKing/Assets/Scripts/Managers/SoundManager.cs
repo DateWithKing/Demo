@@ -18,10 +18,7 @@ public class SoundManager : Singleton<SoundManager>
         base.Awake();
         bgmSounder = transform.Find("BGMSource").GetComponent<AudioSource>();
         sfxSounder = transform.Find("SFXSource").GetComponent<AudioSource>();
-        reverb = bgmSounder.GetComponent<AudioReverbFilter>();
-
-        GameManager.Instance.data.stats["karma"].StatChanged -= AddHorrorEffect;
-        GameManager.Instance.data.stats["karma"].StatChanged += AddHorrorEffect;
+        reverb = bgmSounder.transform.GetComponent<AudioReverbFilter>();
 
         bgmSounder.loop = true;
         sfxSounder.loop = false;
@@ -99,6 +96,7 @@ public class SoundManager : Singleton<SoundManager>
     public void AddHorrorEffect()
     {
         int amount = GameManager.Instance.data.stats["karma"].value;
+        
         if (amount < 5)
         {
             reverb.dryLevel = 0f;
