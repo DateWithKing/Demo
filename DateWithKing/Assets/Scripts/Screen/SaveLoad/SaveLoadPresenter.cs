@@ -36,13 +36,13 @@ public abstract class SaveLoadPresenter : Presenter
             }
             catch (FileNotFoundException ex)
             {
-                slots[i] = new SlotDTO("", Resources.Load<Sprite>("Lobby/Sad"));
+                slots[i] = new SlotDTO("", Resources.Load<Sprite>($"Lobby/데이터없음{i+1}"));
             }
             finally
             {
                 slots[i] ??= new SlotDTO(
                     DataLoader.ReadData<GameData>((DynamicData)i).date.GetCurrentDate(true),
-                    Resources.Load<Sprite>("Lobby/Smile"));
+                    Resources.Load<Sprite>($"Lobby/데이터있음{i+1}"));
                 
                 view.PrintSlot(i, slots[i]);
             }
