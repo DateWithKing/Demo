@@ -36,13 +36,15 @@ public class GameMoleHole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameStart();
+        gameUI.SetActive(true);
+        YarnManager.Instance.RunDialogue("종강총회_두더지잡기_시작");
     }
 
-    //[YarnCommand("GameStart")]
-    async void GameStart()
+    [YarnCommand("StartMoleHole")]
+    public async void StartMoleHole()
     {
-        gameUI.SetActive(true);
+        
+        
         ChangeScreen.SetActive(false);
         AdjustBackgroundToMolePosition();
         ChangeCursorToHammerIdle();
@@ -101,12 +103,12 @@ public class GameMoleHole : MonoBehaviour
         
         if (int.Parse(scoreText.text) >= 15)
         {
-            UnityEngine.Debug.Log("티켓을 5개 얻었다!"); // -> 다이얼로그
+            YarnManager.Instance.RunDialogue("종강총회_두더지잡기_성공"); // -> 다이얼로그
             GameManager.Instance.ticket += 5;
         }
         else
         {
-            UnityEngine.Debug.Log("티켓을 얻지 못했다..."); // -> 다이얼로그
+            YarnManager.Instance.RunDialogue("종강총회_두더지잡기_실패"); // -> 다이얼로그
         }
         foreach (Mole mole in moles)
         {
@@ -134,6 +136,7 @@ public class GameMoleHole : MonoBehaviour
             timeText.text = $"{(int)timeRemaining % 60:D2}"; // 남은 시간(초)를 항상 두 자리로 보여줌
             if (currentMoles.Count <= 1)
             {
+                UnityEngine.Debug.Log(currentMoles);
                 int index = UnityEngine.Random.Range(0, moles.Count);
                 if (!currentMoles.Contains(moles[index]))
                 {
@@ -162,6 +165,10 @@ public class GameMoleHole : MonoBehaviour
     {
         score += 1;
         scoreText.text = $"{score}";
+        currentMoles.Remove(moles[moleIndex]);
+    }
+
+    public void RemoveMole(int moleIndex) {
         currentMoles.Remove(moles[moleIndex]);
     }
 

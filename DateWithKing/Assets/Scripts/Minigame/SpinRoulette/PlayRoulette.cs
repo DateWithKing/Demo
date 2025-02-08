@@ -18,7 +18,7 @@ public class PlayRoulette : MonoBehaviour
     private void Start()
     {
         buttonSpin.interactable = false;
-        StartRoulette();
+        YarnManager.Instance.RunDialogue("종강총회_룰렛_시작");
     }
 
     private void EndOfSpin(RoulettePieceData selectedData)
@@ -26,9 +26,16 @@ public class PlayRoulette : MonoBehaviour
         buttonSpin.interactable = true;
         backButton.SetActive(true);
 
-        Debug.Log($"{selectedData.ticketMultiple}");
+        if (selectedData.ticketMultiple == 2)
+        {
+            YarnManager.Instance.RunDialogue("종강총회_룰렛_성공");
+        }
+        else
+        {
+            YarnManager.Instance.RunDialogue("종강총회_룰렛_실패");
+        }
         GameManager.Instance.ticket += 5 * selectedData.ticketMultiple;
-        Debug.Log(GameManager.Instance.ticket);
+        
 
         if (GameManager.Instance.ticket <= 0)
         {
@@ -39,7 +46,7 @@ public class PlayRoulette : MonoBehaviour
     [YarnCommand("StartRoulette")]
     public void StartRoulette()
     {
-
+        
 
         if (GameManager.Instance.ticket >= 5)
         {

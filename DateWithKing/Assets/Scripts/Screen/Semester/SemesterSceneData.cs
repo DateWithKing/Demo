@@ -1,0 +1,21 @@
+using UnityEngine;
+
+/// <summary>
+/// SemesterScene에서 씬 로드 시 데이터가 초기화 되어야 하는 데이터를 싱글톤으로 관리
+/// </summary>
+public class SemesterSceneData : SceneSingleton<SemesterSceneData>
+{
+    public Clock clock { get; private set; }
+    public Hp hp { get; private set; }
+    public DayDialogueData DayDialogue;
+    public SpotData spot;
+    
+    void Awake()
+    {
+        clock = new Clock();
+        //초기 값 GameManager에서 가져오도록 수정해야 함
+        hp = new Hp(GameManager.Instance.data.stats["hp"].value * 10);
+        spot = DataLoader.ReadData<SpotData>();
+        DayDialogue = DataLoader.ReadData<DayDialogueData>();
+    }
+}
