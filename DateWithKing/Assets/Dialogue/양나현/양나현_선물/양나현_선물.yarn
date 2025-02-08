@@ -5,6 +5,7 @@ title: 키링_양나현
 <<like 양나현>>
 <<change lvHyun +5>>
 <<show hyun_smile>>
+<<play 양나현_웃음>>
 나현: 귀엽다. 고마워. 가방에 달고 다닐래.
 <<end>>
 ===
@@ -16,6 +17,7 @@ title: 쿠키_양나현
 <<like 양나현>>
 <<change lvHyun +5>>
 <<show hyun_smile>>
+<<play 양나현_웃음>>
 나현: 고마워, 잘 먹을게.
 <<end>>
 ===
@@ -27,6 +29,7 @@ title: 기프트카드_양나현
 <<like 양나현>>
 <<change lvHyun +5>>
 <<show hyun_smile>>
+<<play 양나현_웃음>>
 나현: 고마워. 잘 쓸게.
 <<end>>
 ===
@@ -37,6 +40,7 @@ title: 피크_양나현
 나현: 이게 뭐야?
 <<dislike 양나현>>
 <<change lvHyun -10>>
+<<play 양나현_흠>>
 나현: 어디에 쓰는 거지... 장식인가? 일단 뭐 고마워...
 <<end>>
 ===
@@ -48,6 +52,7 @@ title: 꽃_양나현
 <<show hyun_blush>>
 <<like 양나현>>
 <<change lvHyun +10>>
+<<play 양나현_웃음>>
 나현: 갑자기? 고마워... 나 꽃 좋아해. 감동이다. 가져가서 화분에 옮겨놓을게.
 <<end>>
 ===
@@ -58,6 +63,7 @@ title: 귀도리_양나현
 나현: 귀도리? 나한테 주는 선물이야?
 <<dislike 양나현>>
 <<change lvHyun -10>>
+<<play 양나현_흠>>
 나현: 쓰면 머리 눌릴 것 같긴 한데... 고마워.
 <<end>>
 ===
@@ -67,6 +73,7 @@ title: 객체지향_양나현
 <<show hyun_idle>>
 나현: ...?
 나현: 나 읽으라고 주는 거야?
+<<play 양나현_허>>
 <<show hyun_neg>>
 <<dislike 양나현>>
 <<change lvHyun -10>>
@@ -83,6 +90,7 @@ title: 케이크_양나현
 <<show hyun_blush>>
 <<like 양나현>>
 <<change lvHyun +10>>
+<<play 양나현_웃음>>
 나현: 내 선물이라고...?! 사진 찍어서 별스타에 올릴래.
 나현: 진짜 아까워서 못 먹겠는데... 고마워. 너무 귀엽다.
 <<end>>
@@ -93,6 +101,7 @@ title: 만화책_양나현
 나현: 만화책? 어, 나 주는 거야?
 <<dislike 양나현>>
 <<change lvHyun -10>>
+<<play 양나현_흠>>
 나현: 이런 거 잘 안 보긴 하는데... 줬으니까 읽어는 볼게. 고마워.
 <<end>>
 ===
