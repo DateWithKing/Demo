@@ -187,9 +187,11 @@ public class YarnManager : SceneSingleton<YarnManager>
         yield return new WaitForSeconds(1f);
         
         PosNegPanel.SetActive(true);
+        if(timeLimit) TimeBarController.Instance.StartTimer();
 
         OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
             BackgroundController.Instance.FinishLooking();
+            TimeBarController.Instance.HideTimer();
             switch(answer){
                 case "Positive":
                     PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
@@ -206,6 +208,9 @@ public class YarnManager : SceneSingleton<YarnManager>
                 case "MultipleFace":
                     EndChoice(opponentCharacter+"_두명");
                     break;
+                case "Timeout":
+                    EndChoice(opponentCharacter+"_느려");
+                    break;
                 default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
             }
         }, timeLimit);
@@ -217,7 +222,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// <param name="node"></param>
     /// <returns></returns>
     public IEnumerator RunDialogueLate(string node, Action callback = null){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         this.dialogEnded = callback;
         EndChoice(node);
     }
