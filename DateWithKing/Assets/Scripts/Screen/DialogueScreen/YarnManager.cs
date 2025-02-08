@@ -83,6 +83,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// 캐릭터 이미지 비활성화 <br/>
     /// 배경경 이미지 비활성화 <br/>
     /// 다이얼로그 씬 비활성화 <br/>
+    /// 대화 완전 종료 시 실행되는 callback 호출 <br/>
     /// </summary>
     void EndDialogue()
     {
@@ -142,8 +143,12 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="audioName"></param>
     void SoundEffect(string audioName){
-        SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
-        SoundEffectAS.Play();
+        try {
+            SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
+            SoundEffectAS.Play();
+        } catch(Exception e){
+            Debug.LogWarning("사운드 파일이 존재하지 않음: "+audioName+"\n"+e.Message);
+        }
     }
 
     /// <summary>
