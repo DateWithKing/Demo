@@ -1,0 +1,20 @@
+title: 서은표_엿
+---
+<<show pyo_idle>>
+은표 : …?!
+<<show pyo_spec>>
+은표: {name()}, 그거 나쁜 거야.
+<<choice_again>>
+===
+
+title: 서은표_두명
+---
+<<show pyo_idle>>
+은표 : ...
+<<show pyo_horror>>
+은표: 뒤에 누구야?
+<<wait  1>>
+<<show pyo_neg>>
+은표 : 둘이서만 얘기했으면 좋겠는데.
+<<choice_again>>
+===
