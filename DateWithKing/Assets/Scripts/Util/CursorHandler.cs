@@ -16,7 +16,10 @@ public static class CursorHandler
     public static void ChangeCursor(Texture2D cursorImage = null)
     {
         if (cursorImage != null) beforeCursorImage = cursorImage;
-        Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.Auto);
+        Vector2 hotspot = Vector2.zero;
+        if(cursorImage is not null)
+            hotspot = new Vector2(cursorImage.width / 2f, cursorImage.height / 2f);
+        Cursor.SetCursor(cursorImage, hotspot, CursorMode.Auto);
     }
 
     /// <summary>
@@ -24,6 +27,10 @@ public static class CursorHandler
     /// </summary>
     public static void ReturnCursor()
     {
+
+        Vector2 hotspot = Vector2.zero;
+        if(beforeCursorImage is not null)
+            hotspot = new Vector2(beforeCursorImage.width / 2f, beforeCursorImage.height / 2f);
         Cursor.SetCursor(beforeCursorImage, Vector2.zero, CursorMode.Auto);
     }
 

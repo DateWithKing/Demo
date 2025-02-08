@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -28,9 +29,16 @@ public class YarnManager : SceneSingleton<YarnManager>
     private TMP_Text NoticeText;
 
     [SerializeField]
-    private GameObject PosNegPanel;  // openCV 도입하면 바꿀부분
+    private TMP_Text NoticeText2;
+
+    [SerializeField]
+    private GameObject PosNegPanel;
+
+    [SerializeField]
+    private GameObject contiuneButton;  // 다이얼로그 진행 버튼
 
     private event Action dialogEnded;
+    private event Action prevChoice;
 
     void Start()
     {
@@ -40,13 +48,15 @@ public class YarnManager : SceneSingleton<YarnManager>
     void Init(){
         runner = GameObject.FindAnyObjectByType<DialogueRunner>();
         runner.AddCommandHandler("end", EndDialogue);
-        runner.AddCommandHandler<string>("notice", Notice);
+        runner.AddCommandHandler("hide", HideCharactor);
+        runner.AddCommandHandler("choice_again", ChoiceAgain);
+        runner.AddCommandHandler<string>("notice", Notice2);
         runner.AddCommandHandler<string>("dislike", (name)=>Notice(name+"이(/가) 싫어합니다."));
         runner.AddCommandHandler<string>("like", (name)=>Notice(name+"이(/가) 좋아합니다."));
         runner.AddCommandHandler<string>("show", ShowCharactor);
         runner.AddCommandHandler<string>("bg", ShowBackground);
         runner.AddCommandHandler<string>("play", SoundEffect);
-        runner.AddCommandHandler<string, string, string, string>("choice", StartChoice);
+        runner.AddCommandHandler<string, string, string, string, bool>("choice", StartChoice);
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
         runner.AddCommandHandler<int>("use_hp", UseHp);
@@ -73,6 +83,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// 캐릭터 이미지 비활성화 <br/>
     /// 배경경 이미지 비활성화 <br/>
     /// 다이얼로그 씬 비활성화 <br/>
+    /// 대화 완전 종료 시 실행되는 callback 호출 <br/>
     /// </summary>
     void EndDialogue()
     {
@@ -91,6 +102,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         NoticeText.text = text;
         NoticeText.gameObject.SetActive(true);
     }
+    void Notice2(string text){
+        NoticeText2.text = text;
+        NoticeText2.gameObject.SetActive(true);
+    }
 
     /// <summary>
     /// <see cref="spriteName"/>에 해당하는 캐릭터 이미지를 보이게 함 (변경 포함)
@@ -103,17 +118,50 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     /// <summary>
+    /// 캐릭터 이미지를 숨김
+    /// </summary>
+    void HideCharactor(){
+        CharacterImage.gameObject.SetActive(false);
+    }
+
+    /// <summary>
     /// <see cref="spriteName"/>에 해당하는 배경 이미지를 보이게 함 (변경 포함)
     /// </summary>
     /// <param name="spriteName"></param>
     void ShowBackground(string spriteName){
-        BackgroundImage.sprite = Resources.Load<Sprite>("Sprites/Background/"+spriteName);
-        CharacterImage.gameObject.SetActive(true);
+        try{
+            BackgroundImage.sprite = Resources.Load<Sprite>("Sprites/Background/"+spriteName);
+            BackgroundImage.gameObject.SetActive(true);
+        }
+        catch(Exception e){
+            Debug.LogWarning("배경 스프라이트가 존재하지 않음: "+spriteName+"\n"+e.Message);
+        }
     }
 
+    /// <summary>
+    /// audioName에 해당하는 소리를 한 번 재생
+    /// </summary>
+    /// <param name="audioName"></param>
     void SoundEffect(string audioName){
-        SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
-        SoundEffectAS.Play();
+        try {
+            SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
+            SoundEffectAS.Play();
+        } catch(Exception e){
+            Debug.LogWarning("사운드 파일이 존재하지 않음: "+audioName+"\n"+e.Message);
+        }
+    }
+
+    /// <summary>
+    /// 현재 대화 중인 캐릭터의 이름을 반환
+    /// </summary>
+    /// <returns></returns>
+    public string GetOpponentCharacter(){
+        foreach(string character in Enum.GetNames(typeof(Character))){
+            if(!runner.CurrentNodeName.Contains(character)) continue;
+            return character;
+        }
+        Debug.LogError("노드 타이틀에 상대 캐릭터 이름이 없습니다.: "+runner.CurrentNodeName);
+        return null;
     }
 
     /// <summary>
@@ -122,27 +170,71 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="posNode"></param>
     /// <param name="negNode"></param>
-    void StartChoice(string posNode, string posText, string negNode, string negText){
+    void StartChoice(string posNode, string posText, string negNode, string negText, bool timeLimit=false)
+    {
+        contiuneButton.SetActive(false);
 
-        BackgroundController.Instance.ChangeImage(Background.Looking);
+        string opponentCharacter = GetOpponentCharacter();
+        BackgroundController.Instance.OnLooking(opponentCharacter);
 
-        // openCV 도입하면 바꿀부분
+        prevChoice = () => {StartChoice(posNode,posText,negNode,negText,timeLimit);};
+
+        PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "긍정";
+        PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "부정";
+
+        StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit));
+        
+    }
+    IEnumerator LateStartChoice(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false){
+        yield return new WaitForSeconds(1f);
+        
         PosNegPanel.SetActive(true);
 
-        PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
-        PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.RemoveAllListeners();
-        PosNegPanel.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(()=>{
-            PosNegPanel.SetActive(false);
-            RunDialogue(posNode, dialogEnded);
-            BackgroundController.Instance.ChangeImage(Background.Day);});
+        OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+            BackgroundController.Instance.FinishLooking();
+            switch(answer){
+                case "Positive":
+                    PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
+                    StartCoroutine(RunDialogueLate(posNode, dialogEnded));
+                    break;
+                case "Negative":
+                    PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
+                    StartCoroutine(RunDialogueLate(negNode, dialogEnded));
+                    break;
+                case "Fuck":
+                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
+                    EndChoice(opponentCharacter+"_엿");
+                    break;
+                case "MultipleFace":
+                    EndChoice(opponentCharacter+"_두명");
+                    break;
+                default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
+            }
+        }, timeLimit);
+    }
 
-        PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
-        PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.RemoveAllListeners();
-        PosNegPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(()=>{
-            PosNegPanel.SetActive(false);
-            RunDialogue(negNode, dialogEnded);
-            BackgroundController.Instance.ChangeImage(Background.Day);});
+    /// <summary>
+    /// 이전 choice 단계를 다시 실행함
+    /// </summary>
+    void ChoiceAgain(){
+        prevChoice?.Invoke();
+    }
 
+    /// <summary>
+    /// 다이얼로그 2초 늦게 실행, 진행중인 다이얼로그가 있어도 강제실행
+    /// </summary>
+    /// <param name="node"></param>
+    /// <returns></returns>
+    public IEnumerator RunDialogueLate(string node, Action callback = null){
+        yield return new WaitForSeconds(2f);
+        this.dialogEnded = callback;
+        EndChoice(node);
+    }
+    void EndChoice(string node){
+        runner.Stop();
+        contiuneButton.SetActive(true);
+        RunDialogue(node, dialogEnded);
+        PosNegPanel.SetActive(false);
     }
 
     /// <summary>
@@ -171,6 +263,25 @@ public class YarnManager : SceneSingleton<YarnManager>
         return SemesterSceneData.Instance.hp.GetHp();
     }
 
+    [YarnFunction("get_fuck")]
+    public static int GetFuck(){
+        return GameManager.Instance.data.fuckNum[Instance.GetOpponentCharacter().ToEnum<Character>()];
+    }
+
+    /// <summary>
+    /// 외관 종류를 매개변수로 받아 그 값을 문자열로 반환함
+    /// </summary>
+    [YarnFunction("get_appearance")]
+    public static string GetAppearance(string appearence){
+        if(Enum.TryParse(appearence, out Appearance app)){
+            return GameManager.Instance.data.appearance[app];
+        }
+        else{
+            Debug.LogError("존재하지 않는 외관 종류입니다: " + appearence);
+            return "";
+        }
+    }
+
     /// <summary>
     /// val만큼 현재 hp를 감소시킴
     /// </summary>
@@ -197,7 +308,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
     }
 
-
     /// <summary>
     /// <see cref="statName"/>에 해당하는 스탯 수치 <see cref="val"/>만큼 조정
     /// </summary>
@@ -207,5 +317,5 @@ public class YarnManager : SceneSingleton<YarnManager>
     void SetStat(string statName, int val){
         GameManager.Instance.data.stats[statName].ChangeStat(val);
     }
-
+    
 }

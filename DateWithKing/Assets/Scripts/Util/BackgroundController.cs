@@ -18,6 +18,7 @@ public class BackgroundController : Singleton<BackgroundController>
 
 
     public Background currentBackground;
+    Background currentBackgroundtemp;
     GameObject characterScreen;
 
     /// <summary>
@@ -52,6 +53,7 @@ public class BackgroundController : Singleton<BackgroundController>
         else
         {
             Background BWBackground = GetBWBackground();
+            currentBackgroundtemp = currentBackground;
             ChangeImage(BWBackground);
 
             if (name == "신아산")
@@ -74,7 +76,7 @@ public class BackgroundController : Singleton<BackgroundController>
 
     public void FinishLooking()
     {
-        ChangeImage(currentBackground);
+        ChangeImage(currentBackgroundtemp);
         Destroy(characterScreen);
         HorrorMask.SetActive(false);
     }

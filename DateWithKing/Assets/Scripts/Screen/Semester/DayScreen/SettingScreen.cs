@@ -10,6 +10,8 @@ public class SettingScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateBGMSoundSetting(GameManager.Instance.data.setting.bgmVolume);
+        UpdateSFXSoundSetting(GameManager.Instance.data.setting.effectVolume);
         BGMToggle.toggleChanged -= UpdateBGMSoundSetting;
         BGMToggle.toggleChanged += UpdateBGMSoundSetting;
         SFXToggle.toggleChanged -= UpdateSFXSoundSetting;
@@ -18,11 +20,13 @@ public class SettingScreen : MonoBehaviour
 
     private void UpdateBGMSoundSetting(int volumn)
     {
+        SoundManager.Instance.ChangeBGMVolume(volumn / (float)4);
         GameManager.Instance.data.setting.bgmVolume = volumn;
     }
     
     private void UpdateSFXSoundSetting(int volumn)
     {
+        SoundManager.Instance.ChangeSFXVolume(volumn / (float)4);
         GameManager.Instance.data.setting.effectVolume = volumn;
     }
 }
