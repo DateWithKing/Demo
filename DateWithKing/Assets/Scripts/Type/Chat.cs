@@ -18,6 +18,8 @@ namespace Type
             if (messagePoint.Length <= currentChat) return 0;
             if (messagePoint[currentChat] > lv) return 0;
 
+            beforeChat = currentChat;
+            
             return messagePoint[currentChat];
         }
     }
