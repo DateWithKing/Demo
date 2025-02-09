@@ -16,6 +16,7 @@ public class DayNightFade : MonoBehaviour
     // 검정색 화면 페이드 인 메서드
     public void FadeInBlackScreen()
     {
+        SoundManager.Instance.PlaySFX("버튼_낮밤전환");
         blackScreen.alpha = 0; 
         blackScreen.gameObject.SetActive(true); // 검정색 화면 활성화
         blackScreen.DOFade(1, 1).OnComplete(DisableTargetObject); // 1초 동안 페이드 인 후 게임 오브젝트 비활성화

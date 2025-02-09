@@ -53,6 +53,7 @@ public class StorePresenter : MonoBehaviour
         }
 
         purchasedCount++;
+        SoundManager.Instance.PlaySFX("상점_구매");
         Debug.Log(DataManager.Instance.itemData[item].name + "을 구매했다! ");
         GameManager.Instance.data.inventory.AddItem(DataManager.Instance.itemData[item]); 
         GameManager.Instance.data.stats["gold"].ChangeStat(-DataManager.Instance.itemData[item].price);

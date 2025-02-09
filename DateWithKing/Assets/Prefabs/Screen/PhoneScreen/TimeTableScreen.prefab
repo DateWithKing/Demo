@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3417027653151056625}
   - component: {fileID: 1230430713164377559}
   - component: {fileID: 8429559157358119182}
+  - component: {fileID: 1556352932768988444}
   m_Layer: 5
   m_Name: HyunButton
   m_TagString: Untagged
@@ -140,6 +141,18 @@ MonoBehaviour:
   offImage: {fileID: 21300000, guid: 2c39c75c19143764d8ae938539d49ccf, type: 3}
   onImage: {fileID: 21300000, guid: b15b22c1fce14644a996c0437ab17813, type: 3}
   onGameObject: {fileID: 4895676718353087282}
+--- !u!114 &1556352932768988444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340006829865581847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4924d3024ec5480bbd998ceb74ab6483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &482163681610517123
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +256,7 @@ GameObject:
   - component: {fileID: 1907717220181196738}
   - component: {fileID: 3104626613099528448}
   - component: {fileID: 4288975640154843294}
+  - component: {fileID: 5500298349911417790}
   m_Layer: 5
   m_Name: PyoButton
   m_TagString: Untagged
@@ -370,6 +384,18 @@ MonoBehaviour:
   offImage: {fileID: 21300000, guid: 067de60bdb610cf4ab9e6a3a3045c4d8, type: 3}
   onImage: {fileID: 21300000, guid: 3ecfd64a699db134bb6457568c9bb606, type: 3}
   onGameObject: {fileID: 5238803602193832058}
+--- !u!114 &5500298349911417790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4120287668407918500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4924d3024ec5480bbd998ceb74ab6483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4269046109802244132
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +410,7 @@ GameObject:
   - component: {fileID: 1079149938693850178}
   - component: {fileID: 5504698544964066227}
   - component: {fileID: 5832876644797616290}
+  - component: {fileID: 4097221141205441781}
   m_Layer: 5
   m_Name: SanButton
   m_TagString: Untagged
@@ -521,6 +548,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21419faf1fe56274f882b3e6fc85b05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4097221141205441781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269046109802244132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4924d3024ec5480bbd998ceb74ab6483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4395546470105509494
