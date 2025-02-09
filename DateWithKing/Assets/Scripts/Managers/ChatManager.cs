@@ -56,7 +56,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         Emoticon3.interactable = false;
 
         LateStart();
-        StartChat("신아산_80");
+        //StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
     }

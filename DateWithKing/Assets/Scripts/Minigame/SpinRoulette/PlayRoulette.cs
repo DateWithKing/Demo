@@ -17,6 +17,7 @@ public class PlayRoulette : MonoBehaviour
 
     private void Start()
     {
+        BackgroundController.Instance.ChangeImage(Background.미니게임);
         buttonSpin.interactable = false;
         YarnManager.Instance.RunDialogue("종강총회_룰렛_시작");
     }
