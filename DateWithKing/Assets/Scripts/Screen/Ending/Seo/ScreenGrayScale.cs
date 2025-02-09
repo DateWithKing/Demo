@@ -13,6 +13,7 @@ public class ScreenGrayScale : MonoBehaviour
     public void FadeOut()
     {
         StartCoroutine(CoFadeOut());
+        SoundManager.Instance.PauseBGM();
         Debug.Log("fade out");
     }
 

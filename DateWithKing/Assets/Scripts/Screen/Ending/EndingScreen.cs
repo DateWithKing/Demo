@@ -12,6 +12,11 @@ public class EndingScreen : MonoBehaviour
 
     [SerializeField] GameObject[] endingScreen;
 
+    private void Start()
+    {
+        BackgroundController.Instance.ChangeImage(Background.Black);
+    }
+
     public void StartEnding()
     {
 
