@@ -56,7 +56,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         Emoticon3.interactable = false;
 
         LateStart();
-        StartChat("신아산_80");
+        //StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
     }
@@ -103,6 +103,18 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
         
         this.endMessage = endMessage;
+        StartCoroutine("UpdatingChat");
+    } 
+    
+    public void StartChat(string chattingTitle)
+    {
+        PhoneScreen.SetActive(true);
+        Debug.Log("Start Chat: " + chattingTitle);
+        SetChat(chattingTitle);
+        slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
+
+        /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
+        
         StartCoroutine("UpdatingChat");
     } 
 

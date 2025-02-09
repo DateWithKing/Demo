@@ -36,22 +36,24 @@ public class StorePresenter : MonoBehaviour
     {
         if (GameManager.Instance.data.stats["gold"].value < DataManager.Instance.itemData[item].price)
         {
-            Popup.Instance.PopPanel("돈이 부족합니다.");
+            YarnManager.Instance.RunDialogue("예외처리_상점돈부족");
             return;
         }
 
         if (purchasedCount >= MaxPurchasedCount)
         {
-            Popup.Instance.PopPanel("오늘의 최대 구매 개수를 초과했다. ");
+            YarnManager.Instance.RunDialogue("예외처리_상점2개이상구매");
             return;
         }
         
         if (!GameManager.Instance.data.inventory.CanAddItem())
         {
-            Popup.Instance.PopPanel("더 이상 들 수 없다. \n(인벤토리 공간이 부족합니다.) ");
+            YarnManager.Instance.RunDialogue("예외처리_아이템4개이상소지");
             return;
         }
-        
+
+        purchasedCount++;
+        SoundManager.Instance.PlaySFX("상점_구매");
         Debug.Log(DataManager.Instance.itemData[item].name + "을 구매했다! ");
         GameManager.Instance.data.inventory.AddItem(DataManager.Instance.itemData[item]); 
         GameManager.Instance.data.stats["gold"].ChangeStat(-DataManager.Instance.itemData[item].price);

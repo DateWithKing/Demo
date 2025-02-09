@@ -756,5 +756,6 @@ MonoBehaviour:
   - {fileID: 7069045319061682889, guid: 35ca60bc2a317534b838412dbb38e4bc, type: 3}
   - {fileID: 7332403613648909911, guid: 3e38981ec32e6eb41b68732607d3f11b, type: 3}
   - {fileID: 5119786480724323601, guid: 7bae2e3b9a6513346876ece38bbc1fef, type: 3}
+  - {fileID: 7332403613648909911, guid: c32af723c6929874399f8df66e09fc5b, type: 3}
   HorrorMask: {fileID: 6559010177786165621}
   currentBackground: 0

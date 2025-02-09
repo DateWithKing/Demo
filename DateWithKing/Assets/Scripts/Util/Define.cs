@@ -63,6 +63,7 @@ using System.Collections.Generic;
     public enum Background
     {
         Intro,
+        Black,
         낮_1,
         낮_2,
         낮_3,
@@ -72,6 +73,9 @@ using System.Collections.Generic;
         밤,
         밤_흑백,
         호러,
+        종강총회,
+        오락실_게임기,
+        미니게임,
         Day, //legacy
         Day1,
         Day2,
@@ -80,6 +84,7 @@ using System.Collections.Generic;
         Day2_흑백,
         Day3_흑백,
         Night,
+        Night_흑백,
         Looking,
         SummerVacation,
         ClosingClass,

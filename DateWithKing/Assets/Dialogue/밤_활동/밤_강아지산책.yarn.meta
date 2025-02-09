@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DateWithKing/Assets/Dialogue/서은표/서은표_선물/서은표_선물.yarn.meta
+guid: 52b3c525d715f8141bbf973fcacf1560
+========
 guid: 2967dcbe99e71454f910344ad577602d
+>>>>>>>> origin/ssh-yarns:DateWithKing/Assets/Dialogue/밤_활동/밤_강아지산책.yarn.meta
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}

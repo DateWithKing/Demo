@@ -49,6 +49,8 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner = GameObject.FindAnyObjectByType<DialogueRunner>();
         runner.AddCommandHandler("end", EndDialogue);
         runner.AddCommandHandler("hide", HideCharactor);
+        runner.AddCommandHandler("bgm_stop", SoundManager.Instance.PauseBGM);
+        runner.AddCommandHandler("bgm_resume", SoundManager.Instance.resumeBGM);
         runner.AddCommandHandler("choice_again", ChoiceAgain);
         runner.AddCommandHandler<string>("notice", Notice2);
         runner.AddCommandHandler<string>("dislike", (name)=>Notice(name+"이(/가) 싫어합니다."));
@@ -56,6 +58,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.AddCommandHandler<string>("show", ShowCharactor);
         runner.AddCommandHandler<string>("bg", ShowBackground);
         runner.AddCommandHandler<string>("play", SoundEffect);
+        runner.AddCommandHandler<string>("cheese", cheese);
         runner.AddCommandHandler<string, string, string, string, bool>("choice", StartChoice);
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
@@ -143,12 +146,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="audioName"></param>
     void SoundEffect(string audioName){
-        try {
-            SoundEffectAS.clip = Resources.Load<AudioClip>("Audio/"+audioName);
-            SoundEffectAS.Play();
-        } catch(Exception e){
-            Debug.LogWarning("사운드 파일이 존재하지 않음: "+audioName+"\n"+e.Message);
-        }
+        SoundManager.Instance.PlaySFX(audioName);
     }
 
     /// <summary>
@@ -189,9 +187,11 @@ public class YarnManager : SceneSingleton<YarnManager>
         yield return new WaitForSeconds(1f);
         
         PosNegPanel.SetActive(true);
+        if(timeLimit) TimeBarController.Instance.StartTimer();
 
         OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
             BackgroundController.Instance.FinishLooking();
+            TimeBarController.Instance.HideTimer();
             switch(answer){
                 case "Positive":
                     PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
@@ -208,16 +208,12 @@ public class YarnManager : SceneSingleton<YarnManager>
                 case "MultipleFace":
                     EndChoice(opponentCharacter+"_두명");
                     break;
+                case "Timeout":
+                    EndChoice(opponentCharacter+"_느려");
+                    break;
                 default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
             }
         }, timeLimit);
-    }
-
-    /// <summary>
-    /// 이전 choice 단계를 다시 실행함
-    /// </summary>
-    void ChoiceAgain(){
-        prevChoice?.Invoke();
     }
 
     /// <summary>
@@ -226,7 +222,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// <param name="node"></param>
     /// <returns></returns>
     public IEnumerator RunDialogueLate(string node, Action callback = null){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         this.dialogEnded = callback;
         EndChoice(node);
     }
@@ -235,6 +231,13 @@ public class YarnManager : SceneSingleton<YarnManager>
         contiuneButton.SetActive(true);
         RunDialogue(node, dialogEnded);
         PosNegPanel.SetActive(false);
+    }
+    
+    /// <summary>
+    /// 이전 choice 단계를 다시 실행함
+    /// </summary>
+    void ChoiceAgain(){
+        prevChoice?.Invoke();
     }
 
     /// <summary>
@@ -316,6 +319,16 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// <returns></returns>
     void SetStat(string statName, int val){
         GameManager.Instance.data.stats[statName].ChangeStat(val);
+    }
+
+    /// <summary>
+    /// 브이~ 인식 후 node 다이얼로그 실행
+    /// </summary>
+    /// <param name="node"></param>
+    void cheese(string node){
+        OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{
+            SoundEffect("브이_찰칵");
+            RunDialogue(node);});
     }
     
 }
