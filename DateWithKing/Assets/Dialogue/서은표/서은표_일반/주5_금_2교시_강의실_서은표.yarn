@@ -39,8 +39,10 @@ title: 주5_금_2교시_강의실_서은표_긍1
 {name()}: 어. 뭔가 찾느라…
 {name()}: 아, 이거 혹시 너희 동아리 뱃지 아니야?
 (아까 주운 뱃지를 보여주었다.)
+<<bgm_stop>>
 <<show pyo_horror>>
 <<wait  1>>
+<<bgm_resume>>
 <<show pyo_idle>>
 은표: 아…
 <<show pyo_neg>>
