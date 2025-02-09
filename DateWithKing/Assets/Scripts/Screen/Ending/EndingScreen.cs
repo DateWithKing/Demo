@@ -33,6 +33,7 @@ public class EndingScreen : MonoBehaviour
         if (lvArray[0] < 50 &&  lvArray[1] < 50 && lvArray[2] < 50)
         {
             endingScreen[3].SetActive(true);
+            YarnManager.Instance.RunDialogue("솔로엔딩");
         }
         else if (CheckSame(lvArray) == 3)
         {
