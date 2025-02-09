@@ -39,7 +39,7 @@ public class SemesterScreenPresenter : MonoBehaviour
 
     private void SemesterEnd()
     {
-        if (GameManager.Instance.data.date.CountPassedDate() != Date.SemesterDays) return;
+        if (GameManager.Instance.data.date.CountPassedDate() <= Date.SemesterDays) return;
         
         Popup.Instance.PopPanel(String.Empty);
         screen.MoveScene("EndSemester");
