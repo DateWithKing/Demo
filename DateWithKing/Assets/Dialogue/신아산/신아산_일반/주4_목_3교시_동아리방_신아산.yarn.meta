@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DateWithKing/Assets/Dialogue/신아산/신아산_일반/주3_수_1교시_도서관_신아산.yarn.meta
+guid: c32db57915962c54e9176a6764574a6a
+========
 guid: 142d33dbcba87b3479a034009c857264
+>>>>>>>> 0b43356 ([FIX] yarn script 노드 이름 및 오류 수정):DateWithKing/Assets/Dialogue/신아산/신아산_일반/주4_목_3교시_동아리방_신아산.yarn.meta
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
