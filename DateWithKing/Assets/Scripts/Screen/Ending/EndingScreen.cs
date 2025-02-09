@@ -30,7 +30,11 @@ public class EndingScreen : MonoBehaviour
         lvArray[1] = lvHyun;
         lvArray[2] = lvPyo;
 
-        if (CheckSame(lvArray) == 3)
+        if (lvArray[0] < 50 &&  lvArray[1] < 50 && lvArray[2] < 50)
+        {
+            endingScreen[3].SetActive(true);
+        }
+        else if (CheckSame(lvArray) == 3)
         {
             for (int i = 0; i < lvArray.Length; i++)
             {
