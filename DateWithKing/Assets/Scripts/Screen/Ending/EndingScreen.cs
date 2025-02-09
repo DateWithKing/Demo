@@ -26,10 +26,6 @@ public class EndingScreen : MonoBehaviour
         
         int[] lvArray = new int[3];
 
-        lvHyun = 0;
-        lvSan = 10;
-        lvPyo = 90;
-
         lvArray[0] = lvSan;
         lvArray[1] = lvHyun;
         lvArray[2] = lvPyo;
