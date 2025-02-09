@@ -25,6 +25,7 @@ public class PlayingLP : MonoBehaviour
     public bool isPlaying = false;
     private bool isMouseHeld = false;
     bool isInValidAngleRange = false;
+    private int lastSecond = -1; // 이전 초를 저장할 변수
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class PlayingLP : MonoBehaviour
         gameUI.SetActive(true);
         AdjustBackgroundPosition();
         YarnManager.Instance.RunDialogue("종강총회_레코드_시작");
+        SoundManager.Instance.PlaySFX("미니게임_시작");
     }
 
     [YarnCommand("StartLP")]
@@ -78,16 +80,26 @@ public class PlayingLP : MonoBehaviour
 
         // LP판의 회전 각도 구하기
         float angle = reflection.transform.eulerAngles.z; // 빛반사부분의 회전 각도
-        
+
         // 2시에서 4시 방향 
         isInValidAngleRange = (angle >= 10f && angle <= 350f);
+
+        int currentSecond = Mathf.FloorToInt(timeRemaining);
+
+        // 초가 변경될 때마다 (즉, 매초마다) SFX 실행
+        if (currentSecond != lastSecond)
+        {
+            SoundManager.Instance.PlaySFX("박자_1박소리");
+            lastSecond = currentSecond; // 마지막 초 업데이트
+        }
+
 
         // 마우스 클릭 여부 확인 (클릭 "순간"만 감지)
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !isMouseHeld) // 마우스나 스페이스바 클릭
         {
             
             isMouseHeld = true; // 클릭 상태로 설정
-            
+            SoundManager.Instance.PlaySFX("박자_클릭시박수");
 
             if (isInValidAngleRange)
             {
@@ -138,11 +150,13 @@ public class PlayingLP : MonoBehaviour
     {
         if (combo == 3)
         {
+            SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
             GameManager.Instance.ticket += 5;
         }
         else
         {
+            SoundManager.Instance.PlaySFX("미니게임_게임오버");
             YarnManager.Instance.RunDialogue("종강총회_레코드_실패");
         }
         isPlaying = false; // 게임 종료

@@ -3,11 +3,14 @@ using Newtonsoft.Json;
 
 public class Stat
 {
+    [JsonProperty]
     public readonly int MaxValue = 10;
+    [JsonProperty]
     public readonly int MinValue = 1;
+    [JsonProperty]
     public readonly int InitValue = 1;
     [JsonProperty]
-    public int value { get; private set; }
+    public int value { get; private set; } 
 
     public event Action StatChanged;
     

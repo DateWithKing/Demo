@@ -1004,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 98b327feef9b3d74b8d2591e60c2ee04, type: 3}
+      objectReference: {fileID: 21300000, guid: 9c65323eb28b3f0449d69dfc50d92f00, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_3
@@ -1762,7 +1762,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: efb8b821a81dba442a88774cfa8727a1, type: 3}
+      objectReference: {fileID: 21300000, guid: d30467c58d894584ebd3f47df8defd54, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_1
@@ -3484,7 +3484,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 96e7d6f3e6238f34cb93312b8d0440b2, type: 3}
+      objectReference: {fileID: 21300000, guid: 703ba4fd57890774b8995c69d3e229f5, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_2
@@ -3583,20 +3583,48 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f26e36727f577ed4da36314d64c74c17, type: 3}
     - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 717805922}
     - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 520147684}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MoveScene
       objectReference: {fileID: 0}
     - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ClickSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: EndSemesterScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SelectMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662233955921341299, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7287097411216621768, guid: 931df591eb788ca4b8ff06b99e5e9c69, type: 3}
       propertyPath: m_Pivot.x

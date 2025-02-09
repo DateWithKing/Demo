@@ -12,6 +12,11 @@ public class EndingScreen : MonoBehaviour
 
     [SerializeField] GameObject[] endingScreen;
 
+    private void Start()
+    {
+        BackgroundController.Instance.ChangeImage(Background.Black);
+    }
+
     public void StartEnding()
     {
 
@@ -20,10 +25,6 @@ public class EndingScreen : MonoBehaviour
         int lvPyo = GameManager.Instance.data.stats["lvPyo"].value;
         
         int[] lvArray = new int[3];
-
-        lvHyun = 0;
-        lvSan = 10;
-        lvPyo = 90;
 
         lvArray[0] = lvSan;
         lvArray[1] = lvHyun;

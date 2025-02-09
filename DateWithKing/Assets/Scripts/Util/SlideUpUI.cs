@@ -39,5 +39,7 @@ public class SlideUpUI : MonoBehaviour
     public void SlideDown()
     {
         uiImage.DOAnchorPos(offScreenPosition, slideDuration).SetEase(Ease.InCubic);
+
     }
+    
 }

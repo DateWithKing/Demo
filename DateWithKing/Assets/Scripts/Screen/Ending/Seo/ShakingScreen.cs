@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShakingScreen : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ShakingScreen : MonoBehaviour
 
     [SerializeField] private GameObject rightFoldHand;
     [SerializeField] private GameObject leftFoldHand;
+
+    [SerializeField] private GameObject BlockScreen;
 
     [SerializeField] private Vector2 startPos1; // 첫 번째 오브젝트 시작 위치
     [SerializeField] private Vector2 endPos1; // 첫 번째 오브젝트 목표 위치
@@ -22,6 +25,10 @@ public class ShakingScreen : MonoBehaviour
     [SerializeField] private float magnitude = 0.1f; // 흔들림 강도
     [SerializeField] private float shakingSpeed = 20f; // 흔들림 속도
 
+    private void Start()
+    {
+        BlockScreen.SetActive(false);
+    }
     public void ShakingStart()
     {
         if (rightHand != null && leftHand != null)
@@ -34,6 +41,8 @@ public class ShakingScreen : MonoBehaviour
             // 이동 방향 설정
             direction = (endPos1 - startPos1).normalized;
             isMoving = true;
+
+            BlockScreen.SetActive(true);
         }
     }
 
@@ -105,5 +114,6 @@ public class ShakingScreen : MonoBehaviour
         }
 
         targetObject.localPosition = originalPosition;
+        BlockScreen.GetComponent<Button>().interactable = true;
     }
 }

@@ -20,7 +20,7 @@ public class Spot : MonoBehaviour
         public Sprite highAffectionSprite; // 호감도 조건 만족 시 스프라이트
         public int affectionThreshold = -50; // 호감도 조건
     }
-    private int ticketLimit = 20;
+    private int ticketLimit = 30;
 
     // 이미지 데이터 배열
     public ImageData[] imageDatas;
@@ -62,12 +62,16 @@ public class Spot : MonoBehaviour
         if (GameManager.Instance.ticket >= ticketLimit)
         {
             chooseScreen[1].SetActive(true);
+            SoundManager.Instance.PlaySFX("UI버튼_클릭");
 
             if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산");
             if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현");
             if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표");
         }
-        
+        else
+        {
+            SoundManager.Instance.PlaySFX("버튼_선택불가");
+        }
     }
 
     

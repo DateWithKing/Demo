@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1649401080726249704}
   - component: {fileID: 5822698359365213756}
   - component: {fileID: 4263654163227009539}
+  - component: {fileID: 7153873934739250624}
   m_Layer: 5
   m_Name: TextBubble
   m_TagString: Untagged
@@ -77,6 +78,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 5968086956956144184}
+--- !u!225 &7153873934739250624
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3113248666357573285}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &5026899269385550264
 GameObject:
   m_ObjectHideFlags: 0

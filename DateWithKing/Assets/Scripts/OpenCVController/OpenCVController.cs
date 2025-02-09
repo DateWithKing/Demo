@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Debug = System.Diagnostics.Debug;
@@ -18,8 +19,9 @@ public class OpenCVController : Singleton<OpenCVController>
     private Process pythonProcess;
     private StreamWriter writer;
     private readonly string exePath = Application.streamingAssetsPath + "/Detector.exe";
-    void Awake()
+    new void Awake()
     {
+        base.Awake();
         ProcessStartInfo startInfo = new ProcessStartInfo
         {
             FileName = exePath,  // PyInstaller로 빌드한 실행 파일 경로
@@ -34,6 +36,7 @@ public class OpenCVController : Singleton<OpenCVController>
         pythonProcess.Start();
         
         writer = pythonProcess.StandardInput;
+        pythonProcess.PriorityClass = ProcessPriorityClass.High;
     }
 
     /// <summary>
