@@ -33,6 +33,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [SerializeField] Button Emoticon1;
     [SerializeField] Button Emoticon2;
     [SerializeField] Button Emoticon3;
+    [SerializeField] GameObject BlockScreen;
 
     [SerializeField] private Sprite[] Emoticon;
 
@@ -97,6 +98,9 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [YarnCommand("StartPhoneChat")]
     public void StartChat(string chattingTitle, Action endMessage = null)
     {
+        BlockScreen.SetActive(true);
+        BlackScreen.interactable = false;
+        PhoneBase.interactable = false;
         SoundManager.Instance.PlaySFX("띠롱띠롱");
         this.endMessage = endMessage;
         StartCoroutine(StartChatting(chattingTitle));
@@ -117,6 +121,9 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         yield return new WaitForSeconds(2f);
         SetChat(chattingTitle);
         slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
+
+        yield return new WaitForSeconds(1.5f);
+        BlockScreen.SetActive(false);
 
         /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
 
