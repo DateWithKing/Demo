@@ -63,6 +63,7 @@ using System.Collections.Generic;
     public enum Background
     {
         Intro,
+        Intro_흑백,
         Black,
         낮_1,
         낮_2,
