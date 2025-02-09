@@ -62,12 +62,16 @@ public class Spot : MonoBehaviour
         if (GameManager.Instance.ticket >= ticketLimit)
         {
             chooseScreen[1].SetActive(true);
+            SoundManager.Instance.PlaySFX("UI버튼_클릭");
 
             if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산");
             if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현");
             if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표");
         }
-        
+        else
+        {
+            SoundManager.Instance.PlaySFX("버튼_선택불가");
+        }
     }
 
     

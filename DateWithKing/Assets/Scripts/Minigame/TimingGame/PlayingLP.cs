@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -33,6 +34,7 @@ public class PlayingLP : MonoBehaviour
         gameUI.SetActive(true);
         AdjustBackgroundPosition();
         YarnManager.Instance.RunDialogue("종강총회_레코드_시작");
+        SoundManager.Instance.PlaySFX("미니게임_시작");
     }
 
     [YarnCommand("StartLP")]
@@ -87,7 +89,7 @@ public class PlayingLP : MonoBehaviour
         {
             
             isMouseHeld = true; // 클릭 상태로 설정
-            
+            SoundManager.Instance.PlaySFX("박자_클릭시박수");
 
             if (isInValidAngleRange)
             {
@@ -138,11 +140,13 @@ public class PlayingLP : MonoBehaviour
     {
         if (combo == 3)
         {
+            SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
             GameManager.Instance.ticket += 5;
         }
         else
         {
+            SoundManager.Instance.PlaySFX("미니게임_게임오버");
             YarnManager.Instance.RunDialogue("종강총회_레코드_실패");
         }
         isPlaying = false; // 게임 종료

@@ -9,4 +9,9 @@ public class SelectMinigameScreen : MonoBehaviour
         BackgroundController.Instance.ChangeImage(Background.오락실_게임기);
     }
 
+    public void ClickSound()
+    {
+        SoundManager.Instance.PlaySFX("띠롱띠롱");
+    }
+
 }
