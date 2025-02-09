@@ -49,8 +49,10 @@ public class Spot : MonoBehaviour
             }
             else
             {
-                SpotButton.interactable = false;
-                data.image.sprite = data.defaultSprite;
+                //SpotButton.interactable = false;
+                SpotButton.interactable = true;
+                //data.image.sprite = data.defaultSprite;
+                data.image.sprite = data.highAffectionSprite;
             }
         }
 
