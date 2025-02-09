@@ -49,6 +49,7 @@ public class BackgroundController : Singleton<BackgroundController>
         if (karma >= 8)
         {
             HorrorMask.SetActive(true);
+            characterScreen = Instantiate(CharacterScreen[3], transform);
         }
         else
         {
