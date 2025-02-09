@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using Yarn.Unity;
 
