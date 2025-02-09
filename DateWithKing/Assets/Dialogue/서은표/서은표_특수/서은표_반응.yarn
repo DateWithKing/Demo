@@ -11,10 +11,14 @@ title: 서은표_엿
 title: 서은표_두명
 ---
 <<show pyo_idle>>
+<<notice "당신은 분위기가 싸해짐을 느꼈다.">>
+<<change karma +2>>
 은표 : ...
+<<bgm_stop>>
 <<show pyo_horror>>
 은표: 뒤에 누구야?
 <<wait  1>>
+<<bgm_resume>>
 <<show pyo_neg>>
 은표 : 둘이서만 얘기했으면 좋겠는데.
 <<choice_again>>

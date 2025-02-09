@@ -10,14 +10,7 @@ using UnityEngine;
 /// </summary>
 public class ChatPresenter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        SemesterSceneData.Instance.clock.TimeChanged -= TextingAtFirst;
-        SemesterSceneData.Instance.clock.TimeChanged += TextingAtFirst;
-    }
-
-    private void TextingAtFirst()
+    public void TextingAtFirst()
     {
         if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() != WeekCycle.Night) return;
 

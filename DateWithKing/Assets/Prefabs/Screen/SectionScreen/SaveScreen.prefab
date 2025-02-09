@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -275,6 +275,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1872574422916508486}
     m_Modifications:
+    - target: {fileID: 814066238581675105, guid: 2f1d60e25d68a7d4994ad866fa274741, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ff51a8f56782494a925a62f1aedd169, type: 3}
     - target: {fileID: 3662233955921341299, guid: 2f1d60e25d68a7d4994ad866fa274741, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -497,16 +501,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.b
-      value: 0.93396217
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.g
-      value: 0.99687535
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -658,6 +666,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1872574422916508486}
     m_Modifications:
+    - target: {fileID: 814066238581675105, guid: 2f1d60e25d68a7d4994ad866fa274741, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95b9b19ed1bbc47439adc8254aaf2d62, type: 3}
     - target: {fileID: 3662233955921341299, guid: 2f1d60e25d68a7d4994ad866fa274741, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
