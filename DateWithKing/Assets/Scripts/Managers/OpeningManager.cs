@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.EventSystems; // EventTrigger 관련
+using UnityEngine.EventSystems; 
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class OpeningManager : MonoBehaviour
 {
-    [SerializeField] public SpriteRenderer warningSprite;  // 경고문 스프라이트
-    [SerializeField] public SpriteRenderer teamLogoSprite; // 팀 로고 스프라이트
+    [SerializeField] public Image warningImage;  // 경고문 이미지
+    [SerializeField] public Image teamLogoImage; // 팀 로고 이미지
     [SerializeField] public GameObject mainScreenObject; // 메인 화면(배경+로고+자막)이 포함된 부모 오브젝트
-    [SerializeField] public SpriteRenderer backgroundSprite; // 배경 스프라이트
+    [SerializeField] public Image backgroundImage; // 배경 이미지
     [SerializeField] public GameObject skipButtonObject; // 스킵 버튼
 
     private List<SpriteRenderer> mainScreenSprites = new List<SpriteRenderer>();
@@ -26,8 +27,8 @@ public class OpeningManager : MonoBehaviour
         // 처음에 스킵 버튼과 배경 비활성화
         if (skipButtonObject != null)
             skipButtonObject.SetActive(false);
-        if (backgroundSprite != null)
-            backgroundSprite.gameObject.SetActive(false);
+        if (backgroundImage != null)
+            backgroundImage.gameObject.SetActive(false);
 
         if (mainScreenObject != null)
         {
@@ -53,8 +54,8 @@ public class OpeningManager : MonoBehaviour
     private IEnumerator PlayOpeningSequence()
     {
         // 경고문, 팀 로고, 메인 화면 스프라이트 페이드인
-        yield return StartCoroutine(FadeInOut(warningSprite));
-        yield return StartCoroutine(FadeInOut(teamLogoSprite));
+        yield return StartCoroutine(FadeInOut(warningImage));
+        yield return StartCoroutine(FadeInOut(teamLogoImage));
         yield return StartCoroutine(FadeInGroup(mainScreenSprites));
 
         // 손 흔들기 감지 시작
@@ -66,10 +67,10 @@ public class OpeningManager : MonoBehaviour
         // UnityEngine.Debug.Log("손 흔들기 감지 완료됨 -> 다음 단계 진행");
 
         // 손 흔들기 감지 후 배경 스프라이트 설정
-        backgroundSprite.sprite = backgroundSprite.sprite; // 원하는 배경 설정 (Resources 폴더에 저장된 이미지)
+        backgroundImage.sprite = backgroundImage.sprite; // 원하는 배경 설정 (Resources 폴더에 저장된 이미지)
 
         // 배경 스프라이트 페이드인
-        yield return StartCoroutine(FadeInBackground(backgroundSprite));
+        yield return StartCoroutine(FadeInBackground(backgroundImage));
 
         // 배경이 활성화되면 메인 화면 스프라이트 비활성화
         foreach (var sprite in mainScreenSprites)
@@ -80,15 +81,15 @@ public class OpeningManager : MonoBehaviour
         // 다이얼로그가 시작될 때 스킵 버튼과 배경을 활성화
         if (skipButtonObject != null)
             skipButtonObject.SetActive(true);
-        if (backgroundSprite != null)
-            backgroundSprite.gameObject.SetActive(true);
+        if (backgroundImage != null)
+            backgroundImage.gameObject.SetActive(true);
         if (mainScreenObject != null)
             mainScreenObject.SetActive(false);
 
         // 얀 스크립트 실행
         YarnManager.Instance.RunDialogue("개강총회", () =>
         {
-            StartCoroutine(FadeOutBackground(backgroundSprite));
+            StartCoroutine(FadeOutBackground(backgroundImage));
 
             SceneManager.LoadScene("Lobby");
         });
@@ -103,9 +104,9 @@ public class OpeningManager : MonoBehaviour
         });
     }
 
-    private IEnumerator FadeInOut(SpriteRenderer sprite)
+    private IEnumerator FadeInOut(Image image)
     {
-        yield return StartCoroutine(FadeIn(sprite));
+        yield return StartCoroutine(FadeIn(image));
 
         float elapsedTime = 0;
         while (elapsedTime < displayDuration)
@@ -119,39 +120,39 @@ public class OpeningManager : MonoBehaviour
             yield return null;
         }
 
-        yield return StartCoroutine(FadeOut(sprite));
+        yield return StartCoroutine(FadeOut(image));
     }
 
-    private IEnumerator FadeIn(SpriteRenderer sprite)
+    private IEnumerator FadeIn(Image image)
     {
-        sprite.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         float elapsedTime = 0;
-        Color color = sprite.color;
+        Color color = image.color;
         while (elapsedTime < fadeDuration)
         {
             color.a = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
-            sprite.color = color;
+            image.color = color;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         color.a = 1;
-        sprite.color = color;
+        image.color = color;
     }
 
-    private IEnumerator FadeOut(SpriteRenderer sprite)
+    private IEnumerator FadeOut(Image image)
     {
         float elapsedTime = 0;
-        Color color = sprite.color;
+        Color color = image.color;
         while (elapsedTime < fadeDuration)
         {
             color.a = Mathf.Lerp(1, 0, elapsedTime / fadeDuration);
-            sprite.color = color;
+            image.color = color;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         color.a = 0;
-        sprite.color = color;
-        sprite.gameObject.SetActive(false);
+        image.color = color;
+        image.gameObject.SetActive(false);
     }
 
     private IEnumerator FadeInGroup(List<SpriteRenderer> sprites)
@@ -185,41 +186,42 @@ public class OpeningManager : MonoBehaviour
         SceneManager.LoadScene("Lobby");
     }
 
-    private IEnumerator FadeInBackground(SpriteRenderer sprite)
+    private IEnumerator FadeInBackground(Image image) // SpriteRenderer -> Image 변경
     {
-        sprite.gameObject.SetActive(true);
+        image.gameObject.SetActive(true);
         float elapsedTime = 0;
-        Color color = sprite.color;
+        Color color = image.color;
         color.a = 0;  // 초기 투명도 설정
-        sprite.color = color;
+        image.color = color;
 
         while (elapsedTime < fadeDuration)
         {
             color.a = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
-            sprite.color = color;
+            image.color = color;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         color.a = 1;
-        sprite.color = color;
+        image.color = color;
     }
 
-    private IEnumerator FadeOutBackground(SpriteRenderer sprite)
+
+    private IEnumerator FadeOutBackground(Image image)
     {
         float elapsedTime = 0;
-        Color color = sprite.color;
+        Color color = image.color;
 
         while (elapsedTime < fadeDuration)
         {
             color.a = Mathf.Lerp(1, 0, elapsedTime / fadeDuration);
-            sprite.color = color;
+            image.color = color;
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         color.a = 0;
-        sprite.color = color;
-        sprite.gameObject.SetActive(false);
+        image.color = color;
+        image.gameObject.SetActive(false);
     }
 }
