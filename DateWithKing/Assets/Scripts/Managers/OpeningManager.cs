@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems; // EventTrigger 관련
 using UnityEngine.SceneManagement;
@@ -60,10 +61,9 @@ public class OpeningManager : MonoBehaviour
         StartHandWaveDetection();
 
         // 손 흔들릴 때까지 대기
-        while (!isHandWaveDetected)
-        {
-            yield return null;
-        }
+        yield return new WaitUntil(() => isHandWaveDetected);
+
+        // UnityEngine.Debug.Log("손 흔들기 감지 완료됨 -> 다음 단계 진행");
 
         // 손 흔들기 감지 후 배경 스프라이트 설정
         backgroundSprite.sprite = backgroundSprite.sprite; // 원하는 배경 설정 (Resources 폴더에 저장된 이미지)
@@ -99,11 +99,7 @@ public class OpeningManager : MonoBehaviour
         OpenCVController.Instance.InvokeDetector("Start", (result) =>
         {
             UnityEngine.Debug.Log($"OpenCV 감지 결과: {result}");
-
-            if (result == "Positive") // 손 흔들기 감지됨
-            {
-                isHandWaveDetected = true;
-            }
+            isHandWaveDetected = true;
         });
     }
 
