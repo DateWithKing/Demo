@@ -29,6 +29,7 @@ public class PlayingLP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BackgroundController.Instance.ChangeImage(Background.미니게임);
         gameUI.SetActive(true);
         AdjustBackgroundPosition();
         YarnManager.Instance.RunDialogue("종강총회_레코드_시작");
@@ -135,7 +136,7 @@ public class PlayingLP : MonoBehaviour
 
     void GameOver()
     {
-        if (combo >= 3)
+        if (combo == 3)
         {
             YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
             GameManager.Instance.ticket += 5;

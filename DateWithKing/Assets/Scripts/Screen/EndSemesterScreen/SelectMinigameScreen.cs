@@ -6,7 +6,7 @@ public class SelectMinigameScreen : MonoBehaviour
 {
     private void OnEnable()
     {
-        BackgroundController.Instance.ChangeImage(Background.MiniGame);
+        BackgroundController.Instance.ChangeImage(Background.오락실_게임기);
     }
 
 }

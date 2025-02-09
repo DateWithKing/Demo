@@ -10,25 +10,26 @@ public class EndSemesterScreen : MonoBehaviour
 
     void Awake()
     {
+        
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         // 씬이 처음 로드된 경우만 활성화
         if (SceneLoadTracker.IsFirstLoad(currentSceneName))
         {
-            BackgroundController.Instance.ChangeImage(Background.Intro);
+            BackgroundController.Instance.ChangeImage(Background.Black);
             targetObject.SetActive(true);
             
         }
         else
         {
-            BackgroundController.Instance.ChangeImage(Background.Day);
+            BackgroundController.Instance.ChangeImage(Background.종강총회);
             targetObject.SetActive(false);
         }
     }
 
     public void ChangeBackgroundDay()
     {
-        BackgroundController.Instance.ChangeImage(Background.Day);
+        BackgroundController.Instance.ChangeImage(Background.종강총회);
     }
 
     public void isAllUnder70()
