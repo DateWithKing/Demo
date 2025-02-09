@@ -44,6 +44,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
     private const string ImageSpritePath = "Sprites/NightPhone/";
     private string meName = GameManager.Instance.data.name;
+    private bool isPlaying = false;
 
     private void Start()
     {
@@ -96,15 +97,20 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [YarnCommand("StartPhoneChat")]
     public void StartChat(string chattingTitle, Action endMessage = null)
     {
-        PhoneScreen.SetActive(true);
-        Debug.Log("Start Chat: " + chattingTitle);
-        SetChat(chattingTitle);
-        slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
 
-        /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
+        if (isPlaying == false)
+        {
+            PhoneScreen.SetActive(true);
+            Debug.Log("Start Chat: " + chattingTitle);
+            SetChat(chattingTitle);
+            slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
+
+            /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
+
+            this.endMessage = endMessage;
+            StartCoroutine("UpdatingChat");
+        }
         
-        this.endMessage = endMessage;
-        StartCoroutine("UpdatingChat");
     } 
     
     public void StartChat(string chattingTitle)
@@ -138,10 +144,21 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             Emoticon3.interactable = true;
         }
         else{   // 이모티콘 선택 단계가 아니라면 (대화가 끝났다면) 
-            endMessage?.Invoke();
+            
             BlackScreen.interactable = true;
             PhoneBase.interactable = true;
         }
+    }
+
+    public void EndChat()
+    {
+        EndingChat();
+    }
+
+    public IEnumerator EndingChat()
+    {
+        yield return new WaitForSeconds(1f);
+        endMessage?.Invoke();
     }
 
     private void SetChat(string chattingTitle)
