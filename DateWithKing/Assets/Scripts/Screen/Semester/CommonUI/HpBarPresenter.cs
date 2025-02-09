@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HpBarPresenter : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI date;
+    [SerializeField] private TextMeshProUGUI lesson; //교시
     [SerializeField] private Slider currentHp;
     [SerializeField] private Slider maxHp;
     
@@ -30,11 +31,9 @@ public class HpBarPresenter : MonoBehaviour
     private void DateUpdate()
     {
         if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night)
-        {
-            date.text = GameManager.Instance.data.date.GetCurrentDate();
-            return;
-        }
-        date.text =
-            $"{GameManager.Instance.data.date.GetCurrentDate()}\n{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시";
+            lesson.text = "저녁";
+        else 
+            lesson.text = $"{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시";
+        date.text = GameManager.Instance.data.date.GetCurrentDate();
     }
 }

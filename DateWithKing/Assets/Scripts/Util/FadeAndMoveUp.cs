@@ -5,7 +5,7 @@ using UnityEngine;
 /// </summary>
 public class FadeAndMoveUp : MonoBehaviour  
 {
-    public float duration = 3f;     // 페이드아웃 시간
+    public float duration = 2f;     // 페이드아웃 시간
 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
@@ -32,6 +32,7 @@ public class FadeAndMoveUp : MonoBehaviour
 
     private System.Collections.IEnumerator FadeAndMoveCoroutine()
     {
+        yield return new WaitForSeconds(2f);
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
