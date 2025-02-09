@@ -43,6 +43,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [SerializeField] private SlideUpUI slideUPDown;
 
     private const string ImageSpritePath = "Sprites/NightPhone/";
+    private string meName = GameManager.Instance.data.name;
 
     private void Start()
     {
@@ -503,7 +504,232 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         chattingDict["양나현_100_2_2"].chatList.Add(new chat(false, "나도 네가 좋아."));
         chattingDict["양나현_100_2_2"].chatList.Add(new chat(false, "목소리 듣고 싶어."));
         chattingDict["양나현_100_2_2"].chatList.Add(new chat(false, "전화할래?"));
+
+        // 서은표 호감도 20
+        chattingDict.Add("서은표_20", new Chatting("서은표", false));
+        chattingDict["서은표_20"].chatList.Add(new chat(false, $"{meName} ~~ 뭐하고 있어?"));
+        chattingDict["서은표_20"] = new Chatting("서은표", true, new string[] { "서은표_20_0", "서은표_20_1", "서은표_20_2" })
+        {
+            chatList = chattingDict["서은표_20"].chatList
+        };
+
+        chattingDict["서은표_20_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_20_0"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
+        chattingDict["서은표_20_0"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_0"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
+
+        chattingDict["서은표_20_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_20_1"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
+        chattingDict["서은표_20_1"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_1"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
+
+        chattingDict["서은표_20_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_20_2"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
+        chattingDict["서은표_20_2"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_2"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
+
+        // 서은표 호감도 40
+        chattingDict.Add("서은표_40", new Chatting("서은표", false));
+        chattingDict["서은표_40"].chatList.Add(new chat(false, $"{meName}아, 요즘 너랑 학교 다니는 거 너무 좋아."));
+        chattingDict["서은표_40"] = new Chatting("서은표", true, new string[] { "서은표_40_0", "서은표_40_1", "서은표_40_2" })
+        {
+            chatList = chattingDict["서은표_40"].chatList
+        };
+
+        chattingDict["서은표_40_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_40_0"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_0"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
+        chattingDict["서은표_40_0"].chatList.Add(new chat(false, "근데 진짜야…"));
+
+        chattingDict["서은표_40_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_40_1"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_1"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
+        chattingDict["서은표_40_1"].chatList.Add(new chat(false, "근데 진짜야…"));
+
+        chattingDict["서은표_40_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_40_2"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_2"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
+        chattingDict["서은표_40_2"].chatList.Add(new chat(false, "근데 진짜야…"));
+
+        // 서은표 호감도 60
+        chattingDict.Add("서은표_60", new Chatting("서은표", false));
+        chattingDict["서은표_60"].chatList.Add(new chat(false, $"{meName}, 내일 학교 몇 시에 올 거야?"));
+        chattingDict["서은표_60"] = new Chatting("서은표", true, new string[] { "서은표_60_0", "서은표_60_1", "서은표_60_2" })
+        {
+            chatList = chattingDict["서은표_60"].chatList
+        };
+
+        chattingDict["서은표_60_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_0"].chatList.Add(new chat(false, "내일 후문으로 등교할 거지? ㅎㅎㅎ"));
+        chattingDict["서은표_60_0"] = new Chatting("서은표", true, new string[] { "서은표_60_0_0", "서은표_60_0_1", "서은표_60_0_2" })
+        {
+            chatList = chattingDict["서은표_60_0"].chatList
+        };
+        chattingDict["서은표_60_0_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_0_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_0_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_0_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_0_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_0_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_1"].chatList.Add(new chat(false, "내일 후문으로 등교할 거지? ㅎㅎㅎ"));
+        chattingDict["서은표_60_1"] = new Chatting("서은표", true, new string[] { "서은표_60_1_0", "서은표_60_1_1", "서은표_60_1_2" })
+        {
+            chatList = chattingDict["서은표_60_1"].chatList
+        };
+        chattingDict["서은표_60_1_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_1_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_1_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_1_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_1_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_1_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_2"].chatList.Add(new chat(false, "내일 후문으로 등교할 거지? ㅎㅎㅎ"));
+        chattingDict["서은표_60_2"] = new Chatting("서은표", true, new string[] { "서은표_60_2_0", "서은표_60_2_1", "서은표_60_2_2" })
+        {
+            chatList = chattingDict["서은표_60_2"].chatList
+        };
+        chattingDict["서은표_60_2_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_2_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_2_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_2_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        chattingDict["서은표_60_2_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_60_2_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
+
+        // 서은표 호감도 80
+        chattingDict.Add("서은표_80", new Chatting("서은표", false));
+        chattingDict["서은표_80"].chatList.Add(new chat(false, $"{meName}, 학교에 손수건 두고 간 거 알아???", "문자_서은표_손수건"));
+        chattingDict["서은표_80"].chatList.Add(new chat(false, $"{meName} 거 맞지? 다행히 내가 챙겨 왔어."));
+        chattingDict["서은표_80"] = new Chatting("서은표", true, new string[] { "서은표_80_0", "서은표_80_1", "서은표_80_2" })
+        {
+            chatList = chattingDict["서은표_80"].chatList
+        };
+
+        chattingDict["서은표_80_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_80_0"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_0"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
+        chattingDict["서은표_80_0"].chatList.Add(new chat(false, "좋다……"));
+
+        chattingDict["서은표_80_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_80_1"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_1"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
+        chattingDict["서은표_80_1"].chatList.Add(new chat(false, "좋다……"));
+
+        chattingDict["서은표_80_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_80_2"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_2"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
+        chattingDict["서은표_80_2"].chatList.Add(new chat(false, "좋다……"));
+
+        // 서은표 호감도 100
+        chattingDict.Add("서은표_100", new Chatting("서은표", false));
+        chattingDict["서은표_100"].chatList.Add(new chat(false, $"{meName}, 아까 잠깐 낮잠을 잤는데, 네가 꿈에 나왔어."));
+        chattingDict["서은표_100"] = new Chatting("서은표", true, new string[] { "서은표_100_0", "서은표_100_1", "서은표_100_2" })
+        {
+            chatList = chattingDict["서은표_100"].chatList
+        };
+
+        chattingDict["서은표_100_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_0"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_0"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
+        chattingDict["서은표_100_0"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
+        chattingDict["서은표_100_0"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
+        chattingDict["서은표_100_0"] = new Chatting("서은표", true, new string[] { "서은표_100_0_0", "서은표_100_0_1", "서은표_100_0_2" })
+        {
+            chatList = chattingDict["서은표_100_0"].chatList
+        };
+
+        chattingDict["서은표_100_0_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_0_0"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_0_0"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_0_0"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_0_0"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_0_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_0_1"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_0_1"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_0_1"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_0_1"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_0_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_0_2"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_0_2"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_0_2"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_0_2"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+
+        chattingDict["서은표_100_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_1"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_1"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
+        chattingDict["서은표_100_1"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
+        chattingDict["서은표_100_1"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
+        chattingDict["서은표_100_1"] = new Chatting("서은표", true, new string[] { "서은표_100_1_0", "서은표_100_1_1", "서은표_100_1_2" })
+        {
+            chatList = chattingDict["서은표_100_1"].chatList
+        };
+
+        chattingDict["서은표_100_1_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_1_0"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_1_0"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_1_0"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_1_0"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_1_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_1_1"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_1_1"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_1_1"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_1_1"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_1_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_1_2"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_1_2"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_1_2"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_1_2"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+
+        chattingDict["서은표_100_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_2"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_2"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
+        chattingDict["서은표_100_2"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
+        chattingDict["서은표_100_2"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
+        chattingDict["서은표_100_2"] = new Chatting("서은표", true, new string[] { "서은표_100_2_0", "서은표_100_2_1", "서은표_100_2_2" })
+        {
+            chatList = chattingDict["서은표_100_2"].chatList
+        };
+
+        chattingDict["서은표_100_2_0"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_2_0"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_2_0"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_2_0"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_2_0"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_2_1"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_2_1"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_2_1"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_2_1"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_2_1"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
+        chattingDict["서은표_100_2_2"] = new Chatting("서은표", false);
+        chattingDict["서은표_100_2_2"].chatList.Add(new chat(false, $"{meName}이랑 떨어져 있는 시간들이 너무 힘들어. 그냥 같이 살고 싶다… 조금 진지할지도…"));
+        chattingDict["서은표_100_2_2"].chatList.Add(new chat(false, "꿈에서 너무 행복했지 뭐야……"));
+        chattingDict["서은표_100_2_2"].chatList.Add(new chat(false, "진짜 같이 살래? 너만 좋다고 하면 당장이라도 좋아… 보고 싶어."));
+        chattingDict["서은표_100_2_2"].chatList.Add(new chat(false, $"내일이 얼른 왔으면 좋겠다… ㅎㅎㅎ 사랑해 {meName}"));
+
     }
-
-
 }
