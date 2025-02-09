@@ -32,25 +32,11 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         // 말풍선 텍스트 설정
         text.SetText(comment);
 
-        // 기존의 파괴 코루틴이 있으면 중단
-        if (destroyCoroutine != null)
-        {
-            StopCoroutine(destroyCoroutine);
-        }
-        else
-            textBubble = Instantiate(textBubblePrefab, canvasObject);
+        textBubble = Instantiate(textBubblePrefab, canvasObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // 1초 후에 말풍선을 파괴하는 코루틴 시작
-        destroyCoroutine = StartCoroutine(DestroyTextBubbleAfterDelay(0.5f));
-    }
-
-    private IEnumerator DestroyTextBubbleAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
         Destroy(textBubble); 
-        destroyCoroutine = null; // 파괴 후 코루틴 null로 설정
     }
 }
