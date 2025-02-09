@@ -12,13 +12,14 @@ public class EndSemesterScreen : MonoBehaviour
     {
         
         string currentSceneName = SceneManager.GetActiveScene().name;
+        
 
         // 씬이 처음 로드된 경우만 활성화
         if (SceneLoadTracker.IsFirstLoad(currentSceneName))
         {
             BackgroundController.Instance.ChangeImage(Background.Black);
             targetObject.SetActive(true);
-            
+            GameManager.Instance.ticket = 0;
         }
         else
         {
