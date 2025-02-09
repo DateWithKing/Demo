@@ -31,12 +31,14 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         // 말풍선 텍스트 설정
         text.SetText(comment);
-
-        textBubble = Instantiate(textBubblePrefab, canvasObject);
+        
+        if(textBubble is null) textBubble = Instantiate(textBubblePrefab, canvasObject);
+        else textBubble.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Destroy(textBubble); 
+        textBubble.SetActive(false);
+        //Destroy(textBubble); 
     }
 }
