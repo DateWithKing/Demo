@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeoEndingScreen : MonoBehaviour
 {
     [SerializeField] GameObject[] EndingScreen;
+    [SerializeField] Image Panel;
 
     private void Start()
     {
@@ -18,6 +20,7 @@ public class SeoEndingScreen : MonoBehaviour
             EndingScreen[1].SetActive(false);
             EndingScreen[2].SetActive(true);
             YarnManager.Instance.RunDialogue("엔딩납치_서은표");
+            Panel.color = Color.black;
         }
         else if (GameManager.Instance.data.stats["lvPyo"].value >= 70)
         {
