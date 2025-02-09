@@ -101,6 +101,10 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         BlockScreen.SetActive(true);
         BlackScreen.interactable = false;
         PhoneBase.interactable = false;
+        Emoticon1.interactable = false;
+        Emoticon2.interactable = false;
+        Emoticon3.interactable = false;
+
         SoundManager.Instance.PlaySFX("띠롱띠롱");
         this.endMessage = endMessage;
         StartCoroutine(StartChatting(chattingTitle));
@@ -122,9 +126,6 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         SetChat(chattingTitle);
         slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
 
-        yield return new WaitForSeconds(1.5f);
-        BlockScreen.SetActive(false);
-
         /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
 
         
@@ -134,6 +135,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     public void StartChat(string chattingTitle)
     {
         PhoneScreen.SetActive(true);
+        BlockScreen.SetActive(true);
         Debug.Log("Start Chat: " + chattingTitle);
         SetChat(chattingTitle);
         slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
@@ -157,6 +159,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             // ToDo: 이모티콘 선택 단계 추가
             // 각 이모티콘 선택 시 StartChat으로 해당하는 채팅 시작하도록 하기
             // 막아놓는거 풀기
+            BlockScreen.SetActive(false);
             Emoticon1.interactable = true;
             Emoticon2.interactable = true;
             Emoticon3.interactable = true;
@@ -165,6 +168,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             
             BlackScreen.interactable = true;
             PhoneBase.interactable = true;
+            BlockScreen.SetActive(false);
         }
     }
 
@@ -239,6 +243,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
     public IEnumerator StartNextChat(int index)
     {
+        BlockScreen.SetActive(true);
         yield return new WaitForSeconds(1f);
         StartChat(chatting.nextChatting[index]);
     }
