@@ -152,7 +152,7 @@ public class GameMoleHole : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !isClicking)
             {
                 StartCoroutine(ClickEffect());
-                SoundManager.Instance.PlaySFX("두더지_때리기");
+                
             }
         }
     }
@@ -169,6 +169,7 @@ public class GameMoleHole : MonoBehaviour
     public void AddScore(int moleIndex)
     {
         score += 1;
+        SoundManager.Instance.PlaySFX("두더지_때리기");
         scoreText.text = $"{score}";
         currentMoles.Remove(moles[moleIndex]);
     }
