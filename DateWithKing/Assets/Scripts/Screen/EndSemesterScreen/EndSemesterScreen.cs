@@ -46,4 +46,9 @@ public class EndSemesterScreen : MonoBehaviour
     {
         YarnManager.Instance.RunDialogue("종강총회_시작");
     }
+
+    public void ClickSound()
+    {
+        SoundManager.Instance.PlaySFX("UI버튼_클릭");
+    }
 }

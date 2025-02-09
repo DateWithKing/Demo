@@ -36,8 +36,10 @@ public class GameMoleHole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BackgroundController.Instance.ChangeImage(Background.미니게임);
         gameUI.SetActive(true);
         YarnManager.Instance.RunDialogue("종강총회_두더지잡기_시작");
+        SoundManager.Instance.PlaySFX("미니게임_시작");
     }
 
     [YarnCommand("StartMoleHole")]
@@ -103,11 +105,13 @@ public class GameMoleHole : MonoBehaviour
         
         if (int.Parse(scoreText.text) >= 15)
         {
+            SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_두더지잡기_성공"); // -> 다이얼로그
             GameManager.Instance.ticket += 5;
         }
         else
         {
+            SoundManager.Instance.PlaySFX("미니게임_게임오버");
             YarnManager.Instance.RunDialogue("종강총회_두더지잡기_실패"); // -> 다이얼로그
         }
         foreach (Mole mole in moles)
@@ -148,6 +152,7 @@ public class GameMoleHole : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && !isClicking)
             {
                 StartCoroutine(ClickEffect());
+                SoundManager.Instance.PlaySFX("두더지_때리기");
             }
         }
     }
