@@ -25,6 +25,7 @@ public class StatPanel : MonoBehaviour
         }
 
         LimitStat();
+        statAmount.text = "15 남음";
     }
 
     void LimitStat()
