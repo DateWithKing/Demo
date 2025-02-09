@@ -97,21 +97,32 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [YarnCommand("StartPhoneChat")]
     public void StartChat(string chattingTitle, Action endMessage = null)
     {
+        SoundManager.Instance.PlaySFX("띠롱띠롱");
+        this.endMessage = endMessage;
+        StartCoroutine(StartChatting(chattingTitle));
 
-        if (isPlaying == false)
-        {
-            PhoneScreen.SetActive(true);
-            Debug.Log("Start Chat: " + chattingTitle);
-            SetChat(chattingTitle);
-            slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
-
-            /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
-
-            this.endMessage = endMessage;
-            StartCoroutine("UpdatingChat");
-        }
-        
     } 
+
+    public IEnumerator StartChatting(string chattingTitle)
+    {
+        PhoneScreen.SetActive(true);
+        Debug.Log("Start Chat: " + chattingTitle);
+
+        foreach (Transform child in Chatroom.content.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+
+        yield return new WaitForSeconds(2f);
+        SetChat(chattingTitle);
+        slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
+
+        /* ToDo: 폰에다 채팅방 생성해서 띄우고 Chatroom에 채팅방의 ScrollRect 넣기 */
+
+        
+        StartCoroutine("UpdatingChat");
+    }
     
     public void StartChat(string chattingTitle)
     {
@@ -152,7 +163,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
     public void EndChat()
     {
-        EndingChat();
+        StartCoroutine(EndingChat());
     }
 
     public IEnumerator EndingChat()
@@ -376,13 +387,13 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         };
 
         chattingDict["양나현_40_0"] = new Chatting("양나현", false);
-        chattingDict["양나현_40_0"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.( *˘⌣˘)◞⁽⁽"));
+        chattingDict["양나현_40_0"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.<(*^U^))>"));
 
         chattingDict["양나현_40_1"] = new Chatting("양나현", false);
-        chattingDict["양나현_40_1"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.( *˘⌣˘)◞⁽⁽"));
+        chattingDict["양나현_40_1"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.<(*^U^))>"));
 
         chattingDict["양나현_40_2"] = new Chatting("양나현", false);
-        chattingDict["양나현_40_2"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.( *˘⌣˘)◞⁽⁽"));
+        chattingDict["양나현_40_2"].chatList.Add(new chat(false, "그냥 푸르는 게 낫겠다. 학교 끝나고 네컷 사진 찍으러 가기로 했는데 예쁘게 나오면 너도 보여줄게.<(*^U^))>"));
 
 
         // 양나현 호감도 60
@@ -397,15 +408,15 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         chattingDict["양나현_60_0"] = new Chatting("양나현", false);
         chattingDict["양나현_60_0"].chatList.Add(new chat(false, "뭐? 내가 더 귀엽다고?"));
-        chattingDict["양나현_60_0"].chatList.Add(new chat(false, "알긴 알아… ^ ̳ᴗ ̫ ᴗ ̳^"));
+        chattingDict["양나현_60_0"].chatList.Add(new chat(false, "알긴 알아… ^-ㅅ-^"));
 
         chattingDict["양나현_60_1"] = new Chatting("양나현", false);
         chattingDict["양나현_60_1"].chatList.Add(new chat(false, "뭐? 내가 더 귀엽다고?"));
-        chattingDict["양나현_60_1"].chatList.Add(new chat(false, "알긴 알아… ^ ̳ᴗ ̫ ᴗ ̳^"));
+        chattingDict["양나현_60_1"].chatList.Add(new chat(false, "알긴 알아… ^-ㅅ-^"));
 
         chattingDict["양나현_60_2"] = new Chatting("양나현", false);
         chattingDict["양나현_60_2"].chatList.Add(new chat(false, "뭐? 내가 더 귀엽다고?"));
-        chattingDict["양나현_60_2"].chatList.Add(new chat(false, "알긴 알아… ^ ̳ᴗ ̫ ᴗ ̳^"));
+        chattingDict["양나현_60_2"].chatList.Add(new chat(false, "알긴 알아… ^-ㅅ-^"));
 
 
         // 양나현 호감도 80
@@ -420,19 +431,19 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         chattingDict["양나현_80_0"] = new Chatting("양나현", false);
         chattingDict["양나현_80_0"].chatList.Add(new chat(false, "요즘 학교 가는 거 좀 재미있다?"));
         chattingDict["양나현_80_0"].chatList.Add(new chat(false, "원래 같았으면 이미 여섯 번은 결석했을 텐데."));
-        chattingDict["양나현_80_0"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. 〜(￣△￣〜)(〜￣△￣)〜"));
+        chattingDict["양나현_80_0"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. ~(^o^~)(~^o^)~"));
         chattingDict["양나현_80_0"].chatList.Add(new chat(false, "내일 봐."));
 
         chattingDict["양나현_80_1"] = new Chatting("양나현", false);
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "요즘 학교 가는 거 좀 재미있다?"));
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "원래 같았으면 이미 여섯 번은 결석했을 텐데."));
-        chattingDict["양나현_80_1"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. 〜(￣△￣〜)(〜￣△￣)〜"));
+        chattingDict["양나현_80_1"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. ~(^o^~)(~^o^)~"));
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "내일 봐."));
 
         chattingDict["양나현_80_1"] = new Chatting("양나현", false);
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "요즘 학교 가는 거 좀 재미있다?"));
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "원래 같았으면 이미 여섯 번은 결석했을 텐데."));
-        chattingDict["양나현_80_1"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. 〜(￣△￣〜)(〜￣△￣)〜"));
+        chattingDict["양나현_80_1"].chatList.Add(new chat(false, "딱히 너 때문은 아니야. ~(^o^~)(~^o^)~"));
         chattingDict["양나현_80_1"].chatList.Add(new chat(false, "내일 봐."));
 
 
@@ -532,17 +543,17 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         chattingDict["서은표_20_0"] = new Chatting("서은표", false);
         chattingDict["서은표_20_0"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
-        chattingDict["서은표_20_0"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_0"].chatList.Add(new chat(false, "(// ^^ //)"));
         chattingDict["서은표_20_0"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
 
         chattingDict["서은표_20_1"] = new Chatting("서은표", false);
         chattingDict["서은표_20_1"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
-        chattingDict["서은표_20_1"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_1"].chatList.Add(new chat(false, "(// ^^ //)"));
         chattingDict["서은표_20_1"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
 
         chattingDict["서은표_20_2"] = new Chatting("서은표", false);
         chattingDict["서은표_20_2"].chatList.Add(new chat(false, "나는 축구 연습 갔다가 집 와서 씻고…… 애니 보고 있어."));
-        chattingDict["서은표_20_2"].chatList.Add(new chat(false, "( 〃 ω〃)"));
+        chattingDict["서은표_20_2"].chatList.Add(new chat(false, "(// ^^ //)"));
         chattingDict["서은표_20_2"].chatList.Add(new chat(false, "오늘 하루 중 최고의 시간이야!!"));
 
         // 서은표 호감도 40
@@ -554,17 +565,17 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         };
 
         chattingDict["서은표_40_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_40_0"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_0"].chatList.Add(new chat(false, "보고 싶어… (// ^^ //)"));
         chattingDict["서은표_40_0"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
         chattingDict["서은표_40_0"].chatList.Add(new chat(false, "근데 진짜야…"));
 
         chattingDict["서은표_40_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_40_1"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_1"].chatList.Add(new chat(false, "보고 싶어… (// ^^ //)"));
         chattingDict["서은표_40_1"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
         chattingDict["서은표_40_1"].chatList.Add(new chat(false, "근데 진짜야…"));
 
         chattingDict["서은표_40_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_40_2"].chatList.Add(new chat(false, "보고 싶어… ( 〃 ω〃)"));
+        chattingDict["서은표_40_2"].chatList.Add(new chat(false, "보고 싶어… (// ^^ //)"));
         chattingDict["서은표_40_2"].chatList.Add(new chat(false, "이런 말 좀 그런가??! 무지 부끄럽네…"));
         chattingDict["서은표_40_2"].chatList.Add(new chat(false, "근데 진짜야…"));
 
@@ -583,15 +594,15 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             chatList = chattingDict["서은표_60_0"].chatList
         };
         chattingDict["서은표_60_0_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_0_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_0"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_0_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_0_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_0_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_1"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_0_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_0_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_0_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_0_2"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_0_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_1"] = new Chatting("서은표", false);
@@ -601,15 +612,15 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             chatList = chattingDict["서은표_60_1"].chatList
         };
         chattingDict["서은표_60_1_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_1_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_0"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_1_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_1_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_1_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_1"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_1_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_1_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_1_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_1_2"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_1_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_2"] = new Chatting("서은표", false);
@@ -619,15 +630,15 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             chatList = chattingDict["서은표_60_2"].chatList
         };
         chattingDict["서은표_60_2_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_2_0"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_0"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_2_0"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_2_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_2_1"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_1"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_2_1"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         chattingDict["서은표_60_2_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_60_2_2"].chatList.Add(new chat(false, "( 〃 ω〃) 좋아좋아~~ 얼른 보고 싶당."));
+        chattingDict["서은표_60_2_2"].chatList.Add(new chat(false, "(// ^^ //) 좋아좋아~~ 얼른 보고 싶당."));
         chattingDict["서은표_60_2_2"].chatList.Add(new chat(false, "나도 네 시간에 맞춰서 등교할까 봐~~ 잘 자!"));
 
         // 서은표 호감도 80
@@ -640,17 +651,17 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         };
 
         chattingDict["서은표_80_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_80_0"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_0"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ (// ^^ //)"));
         chattingDict["서은표_80_0"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
         chattingDict["서은표_80_0"].chatList.Add(new chat(false, "좋다……"));
 
         chattingDict["서은표_80_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_80_1"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_1"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ (// ^^ //)"));
         chattingDict["서은표_80_1"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
         chattingDict["서은표_80_1"].chatList.Add(new chat(false, "좋다……"));
 
         chattingDict["서은표_80_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_80_2"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ ( 〃 ω〃)"));
+        chattingDict["서은표_80_2"].chatList.Add(new chat(false, "돌려줄까, 말까~ ㅎㅎㅎ (// ^^ //)"));
         chattingDict["서은표_80_2"].chatList.Add(new chat(false, "손수건에서 네 냄새 나서, 꼭 같이 있는 것 같아."));
         chattingDict["서은표_80_2"].chatList.Add(new chat(false, "좋다……"));
 
@@ -663,7 +674,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         };
 
         chattingDict["서은표_100_0"] = new Chatting("서은표", false);
-        chattingDict["서은표_100_0"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_0"].chatList.Add(new chat(false, "꿈에서… (// ^^ //)…"));
         chattingDict["서은표_100_0"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
         chattingDict["서은표_100_0"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
         chattingDict["서은표_100_0"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
@@ -692,7 +703,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
 
         chattingDict["서은표_100_1"] = new Chatting("서은표", false);
-        chattingDict["서은표_100_1"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_1"].chatList.Add(new chat(false, "꿈에서… (// ^^ //)…"));
         chattingDict["서은표_100_1"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
         chattingDict["서은표_100_1"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
         chattingDict["서은표_100_1"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
@@ -721,7 +732,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
 
         chattingDict["서은표_100_2"] = new Chatting("서은표", false);
-        chattingDict["서은표_100_2"].chatList.Add(new chat(false, "꿈에서… ( 〃 ω〃)…"));
+        chattingDict["서은표_100_2"].chatList.Add(new chat(false, "꿈에서… (// ^^ //)…"));
         chattingDict["서은표_100_2"].chatList.Add(new chat(false, "아 말하기 좀 그런데?!?"));
         chattingDict["서은표_100_2"].chatList.Add(new chat(false, $"{meName}이랑 같이 사는 꿈을 꿨어…"));
         chattingDict["서은표_100_2"].chatList.Add(new chat(false, "말 나온 김에, 그냥 우리 집 와서 살래?"));
