@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -5,6 +6,7 @@ using UnityEngine;
 
 public class Date
 {
+    public const int SemesterDays = 5;
     private const int BeginMonth = 3;
     private const int EndMonth = 12;
     private const int BeginWeek = 1;

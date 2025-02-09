@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class SemesterScreenPresenter : MonoBehaviour
 {
-    /// <summary>
-    /// 한 학기 일수
-    /// </summary>
-    [SerializeField] private int semesterDays = 5;
-
     private Screen screen;
 
     void Awake()
@@ -44,7 +39,9 @@ public class SemesterScreenPresenter : MonoBehaviour
 
     private void SemesterEnd()
     {
-        if(GameManager.Instance.data.date.CountPassedDate() == semesterDays)
-            screen.MoveScene("EndSemester");
+        if (GameManager.Instance.data.date.CountPassedDate() != Date.SemesterDays) return;
+        
+        Popup.Instance.PopPanel(String.Empty);
+        screen.MoveScene("EndSemester");
     }
 }

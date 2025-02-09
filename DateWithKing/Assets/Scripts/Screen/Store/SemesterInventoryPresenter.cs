@@ -14,6 +14,7 @@ public class SemesterInventoryPresenter : InventoryPresenter
             YarnManager.Instance.RunDialogue("예외처리_아이템사용불가");
             return;
         } 
+        SoundManager.Instance.PlaySFX("아이템_사용");
         GameManager.Instance.data.inventory.UseItem(slot);
     }
 }
