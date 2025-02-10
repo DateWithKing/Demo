@@ -37,7 +37,8 @@ public class CanvasGroupFader : MonoBehaviour
             StopCoroutine(fadeCoroutine);
 
         // 페이드아웃 후 오브젝트 비활성화
-        fadeCoroutine = StartCoroutine(FadeCanvasGroup(1, 0, fadeOutDuration, () => gameObject.SetActive(false)));
+        if(gameObject.activeSelf)
+            fadeCoroutine = StartCoroutine(FadeCanvasGroup(1, 0, fadeOutDuration, () => gameObject.SetActive(false)));
     }
 
     private IEnumerator FadeCanvasGroup(float startAlpha, float endAlpha, float duration, System.Action onComplete = null)
