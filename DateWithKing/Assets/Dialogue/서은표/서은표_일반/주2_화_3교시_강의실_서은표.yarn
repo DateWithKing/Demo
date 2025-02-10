@@ -175,11 +175,11 @@ title: 주2_화_3교시_강의실_서은표_과제끝
 {name()}: 너 아니었으면 진짜 울었을 거야……
 <<show pyo_blush>>
 <<play 서은표_웃음>>
+<<like 서은표>>
+<<change lvPyo +5>>
 은표: 우는 것도 궁금하긴 한데?
 {name()}: 농담은.
 {name()}: 다음에 밥 살게.
-<<like 서은표>>
-<<change lvPyo +5>>
 은표: 좋지.
 <<end>>
 ===
