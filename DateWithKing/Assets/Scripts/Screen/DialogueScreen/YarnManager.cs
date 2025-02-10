@@ -46,10 +46,23 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField] 
     private TextMeshProUGUI fakeDialogueText;
 
+    [SerializeField] 
+    private TextMeshProUGUI fakeDialogueCharacterName;
+
     private event Action dialogEnded;
     private event Action prevChoice;
     private string prevChoiceDialogue;
+    private string prevChoiceDialogueCharacter;
+    GameObject posButton;
+    GameObject negButton;
 
+    [SerializeField]
+    Sprite shortButton;
+
+    [SerializeField]
+    Sprite longButton;
+
+    
     void Start()
     {
         Init();
@@ -69,10 +82,12 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.AddCommandHandler<string>("bg", ShowBackground);
         runner.AddCommandHandler<string>("play", SoundEffect);
         runner.AddCommandHandler<string>("cheese", cheese);
-        runner.AddCommandHandler<string, string, string, string, bool>("choice", StartChoice);
+        runner.AddCommandHandler<string, string, string, string, bool, bool>("choice", StartChoice);
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
         runner.AddCommandHandler<int>("use_hp", UseHp);
+        posButton = PosNegPanel.transform.GetChild(0).gameObject;
+        negButton = PosNegPanel.transform.GetChild(1).gameObject;
     }
 
     /// <summary>
@@ -179,7 +194,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="posNode"></param>
     /// <param name="negNode"></param>
-    void StartChoice(string posNode, string posText, string negNode, string negText, bool timeLimit=false)
+    void StartChoice(string posNode, string posText, string negNode, string negText, bool timeLimit=false, bool isAgain=false)
     {
         contiuneButton.SetActive(false);
 
@@ -188,97 +203,69 @@ public class YarnManager : SceneSingleton<YarnManager>
         
         prevChoice = () =>
         {
-            StartChoice(posNode,posText,negNode,negText,timeLimit);
+            StartChoice(posNode,posText,negNode,negText,timeLimit,true);
         };
 
-        PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "긍정";
-        PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "부정";
+        posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "긍정";
+        negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "부정";
 
-        StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit));
+        StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit, isAgain));
     }
-    IEnumerator LateStartChoice(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false){
+    IEnumerator LateStartChoice(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false, bool isAgain=false)
+    {
         yield return new WaitForSeconds(1f);
-        
+        if(!isAgain)
+        {
+            prevChoiceDialogue = lineView.lineText.text;
+            prevChoiceDialogueCharacter = lineView.characterNameText.text;
+        }
+
         PosNegPanel.SetActive(true);
         if(timeLimit) TimeBarController.Instance.StartTimer();
+        
 
-        CheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
+        if(GameManager.Instance.data.isThereAnyoneBehindYou)
+        {
+            OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                }, timeLimit);
+        }
+        else
+        {
+            OpenCVController.Instance.InvokeDetector("DialogueWithMultiface", (string answer)=>{
+                CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                }, timeLimit);
+        }
     }
     
-    private void CheckDialogueCV(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false)
+    private void CheckDialogueCV(string answer, string posNode, string posText, string negNode, string negText, string opponentCharacter)
     {
-        PosNegPanel.SetActive(true);
+        BackgroundController.Instance.FinishLooking();
+        TimeBarController.Instance.HideTimer();
         
-        OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-            BackgroundController.Instance.FinishLooking();
-            TimeBarController.Instance.HideTimer();
-            fakeDialogue.SetActive(false);
-            switch(answer){
-                case "Positive":
-                    PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
-                    StartCoroutine(RunDialogueLate(posNode, dialogEnded));
-                    break;
-                case "Negative":
-                    PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
-                    StartCoroutine(RunDialogueLate(negNode, dialogEnded));
-                    break;
-                case "Fuck":
-                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
-                    prevChoiceDialogue = lineView.lineText.text;
-                    EndChoice(opponentCharacter+"_엿");
-                    break;
-                case "MultipleFace":
-                    if (GameManager.Instance.data.isThereAnyoneBehindYou)
-                    {
-                        SecondCheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
-                        break;
-                    }
-                    GameManager.Instance.data.isThereAnyoneBehindYou = true;
-                    prevChoiceDialogue = lineView.lineText.text;
-                    EndChoice(opponentCharacter+"_두명");
-                    break;
-                case "Timeout":
-                    prevChoiceDialogue = lineView.lineText.text;
-                    EndChoice(opponentCharacter+"_느려");
-                    break;
-                default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
-            }
-        }, timeLimit);
-    }
-
-    private void SecondCheckDialogueCV(string posNode, string posText, string negNode, string negText,
-        string opponentCharacter, bool timeLimit = false)
-    {
-        PosNegPanel.SetActive(true);
-        BackgroundController.Instance.OnLooking(opponentCharacter);
-        PrintDialogue(prevChoiceDialogue);
-        
-        OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-            BackgroundController.Instance.FinishLooking();
-            TimeBarController.Instance.HideTimer();
-            fakeDialogue.SetActive(false);
-            switch(answer){
-                case "Positive":
-                    PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
-                    StartCoroutine(RunDialogueLate(posNode, dialogEnded));
-                    break;
-                case "Negative":
-                    PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
-                    StartCoroutine(RunDialogueLate(negNode, dialogEnded));
-                    break;
-                case "Fuck":
-                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
-                    EndChoice(opponentCharacter+"_엿");
-                    break;
-                case "MultipleFace":
-                    SecondCheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
-                    break;
-                case "Timeout":
-                    EndChoice(opponentCharacter+"_느려");
-                    break;
-                default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
-            }
-        }, timeLimit);
+        switch(answer){
+            case "Positive":
+                posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = posText;
+                StartCoroutine(RunDialogueLate(posNode, dialogEnded));
+                break;
+            case "Negative":
+                negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = negText;
+                StartCoroutine(RunDialogueLate(negNode, dialogEnded));
+                break;
+            case "Fuck":
+                GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
+                EndChoice(opponentCharacter+"_엿");
+                break;
+            case "MultipleFace":
+                if(GameManager.Instance.data.isThereAnyoneBehindYou) Debug.LogError("얼굴두개 두번째 인식됨");
+                GameManager.Instance.data.isThereAnyoneBehindYou = true;
+                EndChoice(opponentCharacter+"_두명");
+                break;
+            case "Timeout":
+                EndChoice(opponentCharacter+"_느려");
+                break;
+            default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
+        }
     }
 
     /// <summary>
@@ -286,10 +273,11 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="dialogue">대사</param>
     /// <param name="character">캐릭터 이름</param>
-    public void PrintDialogue(string dialogue)
+    public void PrintDialogue(string dialogue, string character)
     {
         fakeDialogueText.text = dialogue;
-        fakeDialogue.SetActive(true);
+        fakeDialogueCharacterName.text = character;
+        fakeDialogue.GetComponent<CanvasGroupFader>().EnableCanvasGroup();
     }
 
     /// <summary>
@@ -304,6 +292,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
     void EndChoice(string node){
         runner.Stop();
+        fakeDialogue.GetComponent<CanvasGroupFader>().DisableCanvasGroup();
         contiuneButton.SetActive(true);
         RunDialogue(node, dialogEnded);
         PosNegPanel.SetActive(false);
@@ -313,6 +302,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// 이전 choice 단계를 다시 실행함
     /// </summary>
     void ChoiceAgain(){
+        PrintDialogue(prevChoiceDialogue, prevChoiceDialogueCharacter);
         prevChoice?.Invoke();
     }
 
