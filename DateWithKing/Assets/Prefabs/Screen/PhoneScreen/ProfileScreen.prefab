@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 3241847792140587163}
   - component: {fileID: 2177765043574264781}
   - component: {fileID: 1109996132064142251}
+  - component: {fileID: 600018557652876466}
   m_Layer: 5
   m_Name: ProfileScreen
   m_TagString: Untagged
@@ -761,6 +762,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &600018557652876466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7611469531088070829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a542997315fcf3a4baccb8ed9acfa242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 50745212239827319}
+  defaultProfile: {fileID: 21300000, guid: f13e2c9fec382a14b8678ff492724440, type: 3}
+  ndmProfile: {fileID: 21300000, guid: 41821371d1515444dbe4ba58e9a52b3b, type: 3}
 --- !u!1 &9004845062361721949
 GameObject:
   m_ObjectHideFlags: 0
