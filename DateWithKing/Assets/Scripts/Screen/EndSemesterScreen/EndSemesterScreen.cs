@@ -17,7 +17,7 @@ public class EndSemesterScreen : MonoBehaviour
         // 씬이 처음 로드된 경우만 활성화
         if (SceneLoadTracker.IsFirstLoad(currentSceneName))
         {
-            BackgroundController.Instance.ChangeImage(Background.Black);
+            BackgroundController.Instance.ChangeImage(Background.Intro);
             targetObject.SetActive(true);
             GameManager.Instance.ticket = 0;
         }
