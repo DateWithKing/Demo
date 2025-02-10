@@ -14,6 +14,7 @@ public class OpeningManager : MonoBehaviour
     [SerializeField] public GameObject mainScreenObject; // 메인 화면(배경+로고+자막)이 포함된 부모 오브젝트
     [SerializeField] public Image backgroundImage; // 배경 이미지
     [SerializeField] public GameObject skipButtonObject; // 스킵 버튼
+    [SerializeField] private Image Misonye;
 
     private List<SpriteRenderer> mainScreenSprites = new List<SpriteRenderer>();
 
@@ -52,6 +53,7 @@ public class OpeningManager : MonoBehaviour
         // 경고문, 팀 로고, 메인 화면 스프라이트 페이드인
         yield return StartCoroutine(FadeInOut(warningImage));
         yield return StartCoroutine(FadeInOut(teamLogoImage));
+        yield return StartCoroutine(StartMisonye(Misonye));
         yield return StartCoroutine(FadeInGroup(mainScreenSprites));
 
         // 손 흔들기 감지 시작
@@ -174,6 +176,13 @@ public class OpeningManager : MonoBehaviour
             color.a = 1;
             sprite.color = color;
         }
+    }
+
+    public IEnumerator StartMisonye(Image image)
+    {
+        image.gameObject.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        StartCoroutine(FadeOut(image));
     }
 
     // 스킵 버튼 클릭 시 씬 전환
