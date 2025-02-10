@@ -8,13 +8,9 @@ public class DoubleClick : MonoBehaviour, IPointerClickHandler
     [SerializeField] private int index;
     public void OnPointerClick(PointerEventData eventData)
     {
-        int clickCount = eventData.clickCount;
 
-        if (clickCount == 2)
-        {
-            ChatManager.Instance.ChooseEmoticon(index);
-            // 다시 막아놓기
-        }
+        ChatManager.Instance.ChooseEmoticon(index);
+        SoundManager.Instance.PlaySFX("폰_이모티콘");
 
     }
 
