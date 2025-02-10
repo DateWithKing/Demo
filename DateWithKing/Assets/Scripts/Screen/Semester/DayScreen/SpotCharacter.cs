@@ -31,8 +31,13 @@ public class SpotCharacter : MonoBehaviour
             return;
 
         beforeObject = Instantiate(prefabObject, transform);
-        beforeObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(path +
-                                                                           SemesterSceneData.Instance.DayDialogue.spotCharacters[
-                                                                               DayDialogueData.GetSpotIndex(spot)]);
+        string dayDialogue = DayDialogueData.GetSpotIndex(spot);
+        string spritePath = path;
+        if(dayDialogue == "수_2_강의실" || dayDialogue == "수_3_강의실"){
+            spritePath += "특수_";
+        }
+        spritePath += SemesterSceneData.Instance.DayDialogue.spotCharacters[dayDialogue];
+            
+        beforeObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(spritePath);
     }
 }

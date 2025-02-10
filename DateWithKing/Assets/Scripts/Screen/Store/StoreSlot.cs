@@ -32,6 +32,6 @@ public class StoreSlot : MonoBehaviour, IPointerClickHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.clickCount == 2) DoubleClick?.Invoke(itemId);
+        if(eventData.clickCount == 1) DoubleClick?.Invoke(itemId);
     }
 }
