@@ -1,5 +1,7 @@
 title: 밤_3_무관
 ---
+<<bg 검은화면>>
+자리를 옮기려는 순간, 누군가에게서 연락이 왔다.
 <<play 띠롱띠롱>>
 <<wait  1>>
 (누군가에게서 연락이 왔다.)
@@ -132,8 +134,8 @@ title: 밤_3_무관_신아산_특수
 아산: 응!
 아산: 기다려봐.
 <<show san_spec>>
-아산: ♫ Congratulations 넌 참 대단해 ~~~♪
-아산: ♫ Congratulations 어쩜 그렇게~~~~♪
+아산: Congratulations 넌 참 대단해~~~~~~~~~~~
+아산: Congratulations 어쩜 그렇게~~~~~~~~~~~
 <<wait 1>>
 <<show san_blush>>
 아산: 어때?
