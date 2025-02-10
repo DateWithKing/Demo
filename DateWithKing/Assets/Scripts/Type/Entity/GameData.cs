@@ -54,6 +54,8 @@ public class GameData : Entity
         { Character.신아산, 0 },
         { Character.서은표, 0 }
     };
+
+    public bool isThereAnyoneBehindYou = false;
     
     public GameData()
     {

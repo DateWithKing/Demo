@@ -163,7 +163,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// 현재 대화 중인 캐릭터의 이름을 반환
     /// </summary>
     /// <returns></returns>
-    public string GetOpponentCharacter(){
+    public string GetOpponentCharacter()
+    {
         foreach(string character in Enum.GetNames(typeof(Character))){
             if(!runner.CurrentNodeName.Contains(character)) continue;
             return character;
@@ -202,6 +203,13 @@ public class YarnManager : SceneSingleton<YarnManager>
         PosNegPanel.SetActive(true);
         if(timeLimit) TimeBarController.Instance.StartTimer();
 
+        CheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
+    }
+    
+    private void CheckDialogueCV(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false)
+    {
+        PosNegPanel.SetActive(true);
+        
         OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
             BackgroundController.Instance.FinishLooking();
             TimeBarController.Instance.HideTimer();
@@ -221,11 +229,53 @@ public class YarnManager : SceneSingleton<YarnManager>
                     EndChoice(opponentCharacter+"_엿");
                     break;
                 case "MultipleFace":
+                    if (GameManager.Instance.data.isThereAnyoneBehindYou)
+                    {
+                        Debug.Log("시발");
+                        SecondCheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
+                        break;
+                    }
+                    GameManager.Instance.data.isThereAnyoneBehindYou = true;
                     prevChoiceDialogue = lineView.lineText.text;
                     EndChoice(opponentCharacter+"_두명");
                     break;
                 case "Timeout":
                     prevChoiceDialogue = lineView.lineText.text;
+                    EndChoice(opponentCharacter+"_느려");
+                    break;
+                default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
+            }
+        }, timeLimit);
+    }
+
+    private void SecondCheckDialogueCV(string posNode, string posText, string negNode, string negText,
+        string opponentCharacter, bool timeLimit = false)
+    {
+        PosNegPanel.SetActive(true);
+        BackgroundController.Instance.OnLooking(opponentCharacter);
+        PrintDialogue(prevChoiceDialogue);
+        
+        OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+            BackgroundController.Instance.FinishLooking();
+            TimeBarController.Instance.HideTimer();
+            fakeDialogue.SetActive(false);
+            switch(answer){
+                case "Positive":
+                    PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
+                    StartCoroutine(RunDialogueLate(posNode, dialogEnded));
+                    break;
+                case "Negative":
+                    PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = negText;
+                    StartCoroutine(RunDialogueLate(negNode, dialogEnded));
+                    break;
+                case "Fuck":
+                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
+                    EndChoice(opponentCharacter+"_엿");
+                    break;
+                case "MultipleFace":
+                    SecondCheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
+                    break;
+                case "Timeout":
                     EndChoice(opponentCharacter+"_느려");
                     break;
                 default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;

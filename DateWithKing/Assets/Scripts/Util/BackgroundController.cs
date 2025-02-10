@@ -37,7 +37,11 @@ public class BackgroundController : Singleton<BackgroundController>
 
     public Background GetBWBackground()
     {
-        string background = currentBackground.ToString() + "_흑백";
+        string background = currentBackground.ToString();
+        if (!background.Contains("흑백"))
+        {
+            background += "_흑백";
+        }
         Background BWBackground = (Background)Enum.Parse(typeof(Background), background);
         return BWBackground;
     }
