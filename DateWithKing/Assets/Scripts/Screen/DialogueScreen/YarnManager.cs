@@ -57,10 +57,13 @@ public class YarnManager : SceneSingleton<YarnManager>
     GameObject negButton;
 
     [SerializeField]
-    Sprite shortButton;
+    Sprite selected;
 
     [SerializeField]
-    Sprite longButton;
+    Sprite unselected;
+
+    [SerializeField]
+    Sprite nomal;
 
     
     void Start()
@@ -213,6 +216,13 @@ public class YarnManager : SceneSingleton<YarnManager>
 
         posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "긍정";
         negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = "부정";
+        posButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Normal;
+        negButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Normal;
+
+        posButton.GetComponent<Image>().sprite = nomal;
+        posButton.GetComponent<Image>().SetNativeSize();
+        negButton.GetComponent<Image>().sprite = nomal;
+        negButton.GetComponent<Image>().SetNativeSize();
 
         StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit, isAgain));
     }
@@ -250,11 +260,21 @@ public class YarnManager : SceneSingleton<YarnManager>
         
         switch(answer){
             case "Positive":
+                SoundEffect("선택_긍정");
                 posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = posText;
+                posButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
+                posButton.GetComponent<Image>().sprite = selected;
+                posButton.GetComponent<Image>().SetNativeSize();
+                negButton.GetComponent<Image>().sprite = unselected;
                 StartCoroutine(RunDialogueLate(posNode, dialogEnded));
                 break;
             case "Negative":
+                SoundEffect("선택_부정");
                 negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = negText;
+                negButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
+                negButton.GetComponent<Image>().sprite = selected;
+                negButton.GetComponent<Image>().SetNativeSize();
+                posButton.GetComponent<Image>().sprite = unselected;
                 StartCoroutine(RunDialogueLate(negNode, dialogEnded));
                 break;
             case "Fuck":
