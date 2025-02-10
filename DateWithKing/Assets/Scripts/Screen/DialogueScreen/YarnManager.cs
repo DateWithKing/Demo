@@ -231,7 +231,6 @@ public class YarnManager : SceneSingleton<YarnManager>
                 case "MultipleFace":
                     if (GameManager.Instance.data.isThereAnyoneBehindYou)
                     {
-                        Debug.Log("시발");
                         SecondCheckDialogueCV(posNode, posText, negNode, negText, opponentCharacter, timeLimit);
                         break;
                     }
