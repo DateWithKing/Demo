@@ -167,7 +167,6 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         }
         else{   // 이모티콘 선택 단계가 아니라면 (대화가 끝났다면) 
 
-            BlockScreen.SetActive(false);
             BlackScreen.interactable = true;
             PhoneBase.interactable = true;
             
