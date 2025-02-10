@@ -2359,7 +2359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1311416967570985025, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontSize
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1311416967570985025, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontAsset
@@ -2379,7 +2379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1311416967570985025, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontSizeBase
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1311416967570985025, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_sharedMaterial
@@ -2435,7 +2435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3526673500789363854, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 296
+      value: 349
       objectReference: {fileID: 0}
     - target: {fileID: 3642063617816194300, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_IsActive
@@ -2595,7 +2595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795232813452686046, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontSize
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7795232813452686046, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontAsset
@@ -2623,7 +2623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7795232813452686046, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_fontSizeBase
-      value: 48
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7795232813452686046, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_sharedMaterial
@@ -2659,7 +2659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033031873925028015, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 296
+      value: 349
       objectReference: {fileID: 0}
     - target: {fileID: 8341160373633006392, guid: 95092bf522409c248a426904d8f79996, type: 3}
       propertyPath: m_IsActive
