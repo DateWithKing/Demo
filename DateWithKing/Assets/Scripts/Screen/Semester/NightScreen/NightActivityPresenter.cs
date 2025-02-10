@@ -29,7 +29,7 @@ public class NightActivityPresenter : Presenter
     {
         currentActivity = activity;
         screen.ShowScreen();
-        if(GameManager.Instance.data.date.GetCurrentWeek() == 3) YarnManager.Instance.RunDialogue("밤_3_무관");
+        if(GameManager.Instance.data.date.GetPassedDays() == 3) YarnManager.Instance.RunDialogue("밤_3_무관");
         else MeetGirls();
     }
     public void PrintActivityDialogue()
@@ -43,7 +43,7 @@ public class NightActivityPresenter : Presenter
     
     public void MeetGirls()
     {
-        string spotData = $"밤_{GameManager.Instance.data.date.GetCurrentWeek()}_{currentActivity}";
+        string spotData = $"밤_{GameManager.Instance.data.date.GetPassedDays()}_{currentActivity}";
         if (SemesterSceneData.Instance.DayDialogue.spotCharacters.ContainsKey(spotData))
         {
             Debug.Log($"{spotData}에 방문해 {SemesterSceneData.Instance.DayDialogue.spotCharacters[spotData]}을/를 만났습니다.");
