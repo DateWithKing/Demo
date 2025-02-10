@@ -109,7 +109,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// 얀 스크립트에서 대화 종료시 호출해야함. <br/>
     /// 기능: <br/>
     /// 캐릭터 이미지 비활성화 <br/>
-    /// 배경경 이미지 비활성화 <br/>
+    /// 배경 이미지 비활성화 <br/>
+    /// notice, like/dislike 텍스트 비활성화 <br/>
     /// 다이얼로그 씬 비활성화 <br/>
     /// 대화 완전 종료 시 실행되는 callback 호출 <br/>
     /// </summary>
@@ -118,6 +119,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         dialogueScreen.HideScreen();
         CharacterImage.gameObject.SetActive(false);
         BackgroundImage.gameObject.SetActive(false);
+        NoticeText.gameObject.GetComponent<FadeAndMoveUp>().StopAllCoroutines();
+        NoticeText2.gameObject.GetComponent<FadeAndMoveUp>().StopAllCoroutines();
+        NoticeText.gameObject.SetActive(false);
+        NoticeText2.gameObject.SetActive(false);
         dialogEnded?.Invoke();
         dialogEnded = null;
     }
