@@ -188,7 +188,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         
         prevChoice = () =>
         {
-            PrintDialogue(prevChoiceDialogue);
             StartChoice(posNode,posText,negNode,negText,timeLimit);
         };
 
