@@ -13,6 +13,9 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField]
     private DialogueRunner runner;
 
+    [SerializeField] 
+    private LineView lineView;
+
     [SerializeField]
     private Screen dialogueScreen;
 
@@ -37,8 +40,15 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField]
     private GameObject contiuneButton;  // 다이얼로그 진행 버튼
 
+    [SerializeField] 
+    private GameObject fakeDialogue;
+    
+    [SerializeField] 
+    private TextMeshProUGUI fakeDialogueText;
+
     private event Action dialogEnded;
     private event Action prevChoice;
+    private string prevChoiceDialogue;
 
     void Start()
     {
@@ -174,14 +184,17 @@ public class YarnManager : SceneSingleton<YarnManager>
 
         string opponentCharacter = GetOpponentCharacter();
         BackgroundController.Instance.OnLooking(opponentCharacter);
-
-        prevChoice = () => {StartChoice(posNode,posText,negNode,negText,timeLimit);};
+        
+        prevChoice = () =>
+        {
+            PrintDialogue(prevChoiceDialogue);
+            StartChoice(posNode,posText,negNode,negText,timeLimit);
+        };
 
         PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = "긍정";
         PosNegPanel.transform.GetChild(1).GetChild(0).GetComponent<TMP_Text>().text = "부정";
 
         StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit));
-        
     }
     IEnumerator LateStartChoice(string posNode, string posText, string negNode, string negText, string opponentCharacter, bool timeLimit=false){
         yield return new WaitForSeconds(1f);
@@ -192,6 +205,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
             BackgroundController.Instance.FinishLooking();
             TimeBarController.Instance.HideTimer();
+            fakeDialogue.SetActive(false);
             switch(answer){
                 case "Positive":
                     PosNegPanel.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = posText;
@@ -203,17 +217,31 @@ public class YarnManager : SceneSingleton<YarnManager>
                     break;
                 case "Fuck":
                     GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
+                    prevChoiceDialogue = lineView.lineText.text;
                     EndChoice(opponentCharacter+"_엿");
                     break;
                 case "MultipleFace":
+                    prevChoiceDialogue = lineView.lineText.text;
                     EndChoice(opponentCharacter+"_두명");
                     break;
                 case "Timeout":
+                    prevChoiceDialogue = lineView.lineText.text;
                     EndChoice(opponentCharacter+"_느려");
                     break;
                 default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
             }
         }, timeLimit);
+    }
+
+    /// <summary>
+    /// 다이얼로그 한 줄을 출력
+    /// </summary>
+    /// <param name="dialogue">대사</param>
+    /// <param name="character">캐릭터 이름</param>
+    public void PrintDialogue(string dialogue)
+    {
+        fakeDialogueText.text = dialogue;
+        fakeDialogue.SetActive(true);
     }
 
     /// <summary>

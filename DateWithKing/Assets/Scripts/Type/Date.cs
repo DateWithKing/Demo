@@ -67,6 +67,11 @@ public class Date
         return currentWeek;
     }
 
+    public int GetPassedDays()
+    {
+        return countPassedDate;
+    }
+
     public Days GetCurrentDays()
     {
         return currentDays;

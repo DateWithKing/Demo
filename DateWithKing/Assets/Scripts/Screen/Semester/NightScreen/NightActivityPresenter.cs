@@ -29,7 +29,8 @@ public class NightActivityPresenter : Presenter
     {
         currentActivity = activity;
         screen.ShowScreen();
-        MeetGirls();
+        if(GameManager.Instance.data.date.GetCurrentWeek() == 3) YarnManager.Instance.RunDialogue("밤_3_무관");
+        else MeetGirls();
     }
     public void PrintActivityDialogue()
     {

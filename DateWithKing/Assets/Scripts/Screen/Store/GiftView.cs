@@ -52,7 +52,7 @@ public class GiftView : MonoBehaviour
     private void GiveGift(int gift)
     {
         if (DataManager.Instance.itemData[gift].type != ItemType.선물) return;
-        YarnManager.Instance.RunDialogue($"{target}_{DataManager.Instance.itemData[gift].name}");
+        YarnManager.Instance.RunDialogue($"{target}_{DataManager.Instance.itemData[gift].name.Replace(" ", "")}");
         giftPanel.SetActive(false);
         giftButton.gameObject.SetActive(false);
     }

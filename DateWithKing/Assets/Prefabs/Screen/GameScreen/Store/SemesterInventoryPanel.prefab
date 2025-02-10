@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 35
+    m_Left: 30
     m_Right: 20
     m_Top: 20
     m_Bottom: 20
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 90, y: 90}
-  m_Spacing: {x: 23, y: 0}
+  m_Spacing: {x: 17, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!114 &8585297741175782704

@@ -36,17 +36,13 @@ public class OpeningManager : MonoBehaviour
         }
 
         // EventTrigger 컴포넌트 추가
-        EventTrigger eventTrigger = skipButtonObject.GetComponent<EventTrigger>();
+        Button eventTrigger = skipButtonObject.GetComponent<Button>();
         if (eventTrigger == null)
         {
-            eventTrigger = skipButtonObject.AddComponent<EventTrigger>();
+            eventTrigger = skipButtonObject.AddComponent<Button>();
         }
 
-        // PointerClick 이벤트 추가
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.PointerClick;  // 클릭 이벤트
-        entry.callback.AddListener((data) => { SkipSequence(); });  // 클릭 시 SkipSequence() 호출
-        eventTrigger.triggers.Add(entry);  // 트리거 추가
+        eventTrigger.onClick.AddListener(SkipSequence);
 
         StartCoroutine(PlayOpeningSequence());
     }

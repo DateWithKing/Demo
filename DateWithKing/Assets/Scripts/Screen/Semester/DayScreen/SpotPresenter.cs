@@ -53,7 +53,7 @@ public class SpotPresenter : Presenter
 
     private string GetDialogueIndex()
     {
-        return $"주{GameManager.Instance.data.date.GetCurrentWeek().ToString()}" +
+        return $"주{GameManager.Instance.data.date.GetPassedDays().ToString()}" +
             $"_{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
             $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시" +
             $"_{currentSpot}" +
