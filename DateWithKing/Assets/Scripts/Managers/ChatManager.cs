@@ -44,7 +44,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
     [SerializeField] private SlideUpUI slideUPDown;
 
     private const string ImageSpritePath = "Sprites/NightPhone/";
-    private string meName = GameManager.Instance.data.name;
+    
     private bool isPlaying = false;
 
     private void Start()
@@ -59,7 +59,9 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         Emoticon3.interactable = false;
         BlockScreen.SetActive(true);
 
-        LateStart();
+        string meName = GameManager.Instance.data.name;
+
+        LateStart(meName);
         //StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
@@ -249,7 +251,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         StartChat(chatting.nextChatting[index]);
     }
 
-    private void LateStart()
+    private void LateStart(string meName)
     {
         // 신아산 호감도 20
         chattingDict.Add("신아산_20", new Chatting("신아산", false));
