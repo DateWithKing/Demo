@@ -11,6 +11,7 @@ public class EndingScreen : MonoBehaviour
     
 
     [SerializeField] GameObject[] endingScreen;
+    private System.Random rand = new System.Random(); // 전역 Random 객체 생성
 
     private void Start()
     {
@@ -23,61 +24,31 @@ public class EndingScreen : MonoBehaviour
         int lvHyun = GameManager.Instance.data.stats["lvHyun"].value;
         int lvSan = GameManager.Instance.data.stats["lvSan"].value;
         int lvPyo = GameManager.Instance.data.stats["lvPyo"].value;
-        
-        int[] lvArray = new int[3];
 
-        lvArray[0] = lvSan;
-        lvArray[1] = lvHyun;
-        lvArray[2] = lvPyo;
+        int[] lvArray = new int[] { lvSan, lvHyun, lvPyo };
 
-        if (lvArray[0] < 50 &&  lvArray[1] < 50 && lvArray[2] < 50)
+        if (lvArray.All(lv => lv < 50))
         {
             endingScreen[3].SetActive(true);
             YarnManager.Instance.RunDialogue("솔로엔딩");
+            return;
         }
-        else if (CheckSame(lvArray) == 3)
+
+        int maxAffinity = lvArray.Max();
+        List<int> candidates = new List<int>();
+
+        for (int i = 0; i < lvArray.Length; i++)
         {
-            for (int i = 0; i < lvArray.Length; i++)
+            if (lvArray[i] == maxAffinity)
             {
-                if (lvArray[i] == lvArray.Max())
-                {
-                    endingScreen[i].SetActive(true);
-                }
+                candidates.Add(i);
             }
         }
-        else
-        {
-            endingScreen[CheckSame(lvArray)].SetActive(true);
-        }
+
+        // 3. 최고 호감도를 가진 캐릭터가 여러 명이면 랜덤 선택
+        int selectedIndex = candidates[rand.Next(candidates.Count)];
+        endingScreen[selectedIndex].SetActive(true);
     }
 
-    private int CheckSame(int[] lvArray)
-    {
-        if (lvArray[0] == lvArray[1] && lvArray[1] == lvArray[2])
-        {
-            System.Random rand = new System.Random();
-            int index = rand.Next(0, lvArray.Length); // 0부터 배열 길이 - 1 사이의 랜덤 인덱스 선택
-            return index;
-
-        }
-        else if (lvArray[0] == lvArray[1])
-        {
-            System.Random rand = new System.Random();
-            return rand.Next(2) == 0 ? 0 : 1;
-        }
-        else if (lvArray[0] == lvArray[2])
-        {
-            System.Random rand = new System.Random();
-            return rand.Next(2) == 0 ? 0 : 2;
-        }
-        else if (lvArray[1] == lvArray[2])
-        {
-            System.Random rand = new System.Random();
-            return rand.Next(2) == 0 ? 2 : 1;
-        }
-        else
-        {
-            return 3;
-        }
-    }
+    
 }
