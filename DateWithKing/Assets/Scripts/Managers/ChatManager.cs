@@ -237,6 +237,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         Chatbox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = Emoticon[index];
         Instantiate(Emoticon[index], Chatroom.content.transform);
+        Chatroom.verticalNormalizedPosition = 0f;
         StartCoroutine(StartNextChat(index));
         PhoneBase.interactable = false;
         Emoticon1.interactable = false;
@@ -547,7 +548,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
             chatList = chattingDict["신아산_70_2_1"].chatList
         };
 
-        chattingDict.Add("신아산_70_0_1_0", new Chatting("신아산", false));
+        chattingDict.Add("신아산_70_2_1_0", new Chatting("신아산", false));
         chattingDict["신아산_70_2_1_0"].chatList.Add(new chat(false, "어….."));
         chattingDict["신아산_70_2_1_0"].chatList.Add(new chat(false, "나도 사......."));
         chattingDict["신아산_70_2_1_0"].chatList.Add(new chat(false, "사랑해."));
