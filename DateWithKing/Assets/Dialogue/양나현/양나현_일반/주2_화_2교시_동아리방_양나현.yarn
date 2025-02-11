@@ -47,7 +47,7 @@ title: 주2_화_2교시_동아리방_양나현_부1
 title: 주2_화_2교시_동아리방_양나현_긍2
 ---
 <<like 양나현>>
-<<change lvHyun +10>>
+<<change lvHyun +15>>
 {name()}: 좋아. 말 나온 김에 지금 시작해볼까?
 <<show hyun_smile>>
 나현: 시작하면 내가 도와줄게.
