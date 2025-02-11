@@ -12,7 +12,13 @@ public class SpotPresenter : Presenter
     public const string SpotImagePath = "Sprites/Spot/";
     [SerializeField] private Image spotImage;
     [SerializeField] private GiftView giftSystem;
+    [SerializeField] private Button go;
     private string currentSpot = "";
+
+    private void DisableSpotBackground()
+    {
+        go.onClick.Invoke();
+    }
     
     public void ChangeSpot(string spot)
     {
@@ -32,7 +38,7 @@ public class SpotPresenter : Presenter
         }
         else
         {
-            YarnManager.Instance.RunDialogue($"낮_{currentSpot}");
+            YarnManager.Instance.RunDialogue($"낮_{currentSpot}", DisableSpotBackground);
             Debug.Log("아무도 없습니다.");
         }
         
@@ -42,7 +48,7 @@ public class SpotPresenter : Presenter
     
     public void StartDialogue()
     {
-        YarnManager.Instance.RunDialogue(GetDialogueIndex());
+        YarnManager.Instance.RunDialogue(GetDialogueIndex(), DisableSpotBackground);
     }
 
     private void OnDisable()
