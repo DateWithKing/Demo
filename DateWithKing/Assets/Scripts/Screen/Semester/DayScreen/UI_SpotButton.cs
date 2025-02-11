@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -35,6 +36,11 @@ public class UI_SpotButton : MonoBehaviour, IPointerEnterHandler, IPointerClickH
         
         SemesterSceneData.Instance.hp.CurrentHpChanged -= EnableCheck;
         SemesterSceneData.Instance.hp.CurrentHpChanged += EnableCheck;
+    }
+
+    private void OnEnable()
+    {
+        EnableCheck();
     }
 
     private void EnableCheck()

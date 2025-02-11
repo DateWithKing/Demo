@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -9,8 +10,6 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private TextBubble text;
     private GameObject textBubble;
     public Transform canvasObject;
-
-    private Coroutine destroyCoroutine; // 파괴 타이머를 위한 Coroutine
 
     void Awake()
     {
@@ -37,6 +36,13 @@ public class ButtonComment : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Destroy(textBubble); 
+        if(textBubble is not null)
+            Destroy(textBubble); 
+    }
+
+    public void OnDisable()
+    {
+        if(textBubble is not null)
+            Destroy(textBubble);
     }
 }
