@@ -286,15 +286,15 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         chattingDict.Add("신아산_40_0", new Chatting("신아산", false));
         chattingDict["신아산_40_0"].chatList.Add(new chat(false, "뭐야 그 반응."));
-        chattingDict["신아산_40_0"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래? ㅡㅡ"));
+        chattingDict["신아산_40_0"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래?    ㅡㅡ"));
 
         chattingDict.Add("신아산_40_1", new Chatting("신아산", false));
         chattingDict["신아산_40_1"].chatList.Add(new chat(false, "뭐야 그 반응."));
-        chattingDict["신아산_40_1"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래? ㅡㅡ"));
+        chattingDict["신아산_40_1"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래?    ㅡㅡ"));
 
         chattingDict.Add("신아산_40_2", new Chatting("신아산", false));
         chattingDict["신아산_40_2"].chatList.Add(new chat(false, "뭐야 그 반응."));
-        chattingDict["신아산_40_2"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래? ㅡㅡ"));
+        chattingDict["신아산_40_2"].chatList.Add(new chat(false, "그래 나 아재개그 좋아한다 어쩔래?    ㅡㅡ"));
 
 
         // 신아산 호감도 60
