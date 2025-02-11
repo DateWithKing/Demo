@@ -487,6 +487,7 @@ MonoBehaviour:
   price: {fileID: 5354115866044449068}
   image: {fileID: 4802409587725156852}
   type: {fileID: 6609614512758504948}
+  button: {fileID: 1981192992589820045}
 --- !u!1 &4042588729015742584
 GameObject:
   m_ObjectHideFlags: 0

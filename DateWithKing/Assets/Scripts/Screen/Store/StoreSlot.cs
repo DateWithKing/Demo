@@ -6,19 +6,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class StoreSlot : MonoBehaviour, IPointerClickHandler
+public class StoreSlot : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI price;
     [SerializeField] private Image image;
     [SerializeField] private Image type;
-    
-    private const string ItemImagePath = "Sprites/Item/"; 
+    [SerializeField] private Button button;
+
+    private const string ItemImagePath = "Sprites/Item/";
 
     private int itemId;
-    
+
     public event Action<int> DoubleClick;
+
+    public void Start()
+    {
+        button.onClick.AddListener(() => { DoubleClick?.Invoke(itemId); });
+    }
 
     public void InitSlot(Item item)
     {
@@ -29,9 +35,5 @@ public class StoreSlot : MonoBehaviour, IPointerClickHandler
         image.sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
         type.sprite = Resources.Load<Sprite>(ItemImagePath + item.type.ToString());
     }
-    
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if(eventData.clickCount == 1) DoubleClick?.Invoke(itemId);
-    }
+
 }
