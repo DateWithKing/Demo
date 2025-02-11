@@ -9,6 +9,7 @@ public class ScreenGrayScale : MonoBehaviour
     [SerializeField] private Image Screen;
 
     [SerializeField] ShakingScreen shakingScreen;
+    [SerializeField] Canvas BaseCanvas;
 
     public void FadeOut()
     {
@@ -18,8 +19,8 @@ public class ScreenGrayScale : MonoBehaviour
     }
 
     public IEnumerator CoFadeOut()
-    { 
-
+    {
+        BaseCanvas.sortingOrder = 15;
         float elapsedTime = 0f;
         float fadedTime = 1f;
 
