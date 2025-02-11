@@ -1373,6 +1373,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3052181240856498920, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
   m_PrefabInstance: {fileID: 737230978}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &737230981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5133701452359320536, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
+  m_PrefabInstance: {fileID: 737230978}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &800928044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2537,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6369590980545296505, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6369590980545296505, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -2735,7 +2746,7 @@ MonoBehaviour:
   - {fileID: 2131011724}
   - {fileID: 2131011723}
   - {fileID: 2131011722}
-  Panel: {fileID: 0}
+  Panel: {fileID: 737230981}
 --- !u!1001 &2131011720
 PrefabInstance:
   m_ObjectHideFlags: 0
