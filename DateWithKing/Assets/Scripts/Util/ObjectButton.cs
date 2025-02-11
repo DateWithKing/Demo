@@ -43,7 +43,7 @@ public class ObjectButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         if (!interactable)
         {
-            Debug.Log("해당 장소와 상호작용할 수 없습니다.");
+            YarnManager.Instance.RunDialogue("예외처리_상호작용불가");
             return;
         }
         OnClick?.Invoke();
