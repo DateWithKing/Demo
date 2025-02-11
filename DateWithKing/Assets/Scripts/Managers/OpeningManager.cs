@@ -181,7 +181,7 @@ public class OpeningManager : MonoBehaviour
     public IEnumerator StartMisonye(Image image)
     {
         image.gameObject.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine(FadeOut(image));
     }
 
