@@ -1269,6 +1269,34 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2594966468234208992}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Screen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Lobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647347088477961793, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8147003380292319253, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
