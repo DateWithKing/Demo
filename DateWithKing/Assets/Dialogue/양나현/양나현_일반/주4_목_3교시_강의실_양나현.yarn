@@ -13,7 +13,7 @@ title: 주4_목_3교시_강의실_양나현
 title: 주4_목_3교시_강의실_양나현_긍1
 ---
 <<like 양나현>>
-<<change lvHyun +10>>
+<<change lvHyun +15>>
 {name()}: 많이 피곤해?
 <<show hyun_smile>>
 <<play 양나현_웃음>>
@@ -30,7 +30,7 @@ title: 주4_목_3교시_강의실_양나현_긍1
 title: 주4_목_3교시_강의실_양나현_부1
 ---
 <<dislike 양나현>>
-<<change lvHyun -10>>
+<<change lvHyun -5>>
 {name()}: 출튀하겠다는 거 아니야?
 {name()}: 온 김에 그냥 같이 듣자.
 <<show hyun_neg>>
