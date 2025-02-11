@@ -103,6 +103,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         {
             Init();
         }
+        runner.Stop();
         runner.StartDialogue(nodeName);
         dialogueScreen.ShowScreen();
         dialogEnded = callback;
