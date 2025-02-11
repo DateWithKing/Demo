@@ -9,6 +9,6 @@ public class HpItem : Item
     public override void UseItem()
     {
         Debug.Log("아이템을 사용해 체력을 회복했다: " + hp);
-        GameManager.Instance.data.stats["hp"].ChangeStat(hp);
+        SemesterSceneData.Instance.hp.RecoverHp(hp);
     }
 }
