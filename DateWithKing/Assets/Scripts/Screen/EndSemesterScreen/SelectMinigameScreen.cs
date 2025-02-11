@@ -9,7 +9,6 @@ public class SelectMinigameScreen : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Instance.ticket = 20;
         BackgroundController.Instance.ChangeImage(Background.오락실_게임기);
         if (GameManager.Instance.ticket >= 20)
         {
