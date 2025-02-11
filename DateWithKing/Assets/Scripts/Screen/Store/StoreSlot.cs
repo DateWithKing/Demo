@@ -35,5 +35,9 @@ public class StoreSlot : MonoBehaviour
         image.sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
         type.sprite = Resources.Load<Sprite>(ItemImagePath + item.type.ToString());
     }
-
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(eventData.clickCount == 1) DoubleClick?.Invoke(itemId);
+    }
 }
