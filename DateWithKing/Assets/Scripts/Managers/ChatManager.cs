@@ -356,23 +356,76 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         chattingDict.Add("신아산_70_0", new Chatting("신아산", false));
         chattingDict["신아산_70_0"].chatList.Add(new chat(false, "진짜 올거야??????????????"));
         chattingDict["신아산_70_0"].chatList.Add(new chat(false, "............."));
-        chattingDict["신아산_70_0"].chatList.Add(new chat(false, "어….."));
-        chattingDict["신아산_70_0"].chatList.Add(new chat(false, "나도 사......."));
-        chattingDict["신아산_70_0"].chatList.Add(new chat(false, "사랑해."));
+        chattingDict["신아산_70_0"].chatList.Add(new chat(false, "고마워."));
+        chattingDict["신아산_70_0"] = new Chatting("신아산", true, new string[] { "신아산_70_0_0", "신아산_70_0_1", "신아산_70_0_2" })
+        {
+            chatList = chattingDict["신아산_70_0"].chatList
+        };
+
+        chattingDict.Add("신아산_70_0_0", new Chatting("신아산", false));
+        chattingDict["신아산_70_0_0"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_0_0"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_0_0"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_0_1", new Chatting("신아산", false));
+        chattingDict["신아산_70_0_1"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_0_1"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_0_1"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_0_2", new Chatting("신아산", false));
+        chattingDict["신아산_70_0_2"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_0_2"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_0_2"].chatList.Add(new chat(false, "사랑해."));
+
 
         chattingDict.Add("신아산_70_1", new Chatting("신아산", false));
         chattingDict["신아산_70_1"].chatList.Add(new chat(false, "진짜 올거야??????????????"));
         chattingDict["신아산_70_1"].chatList.Add(new chat(false, "............."));
-        chattingDict["신아산_70_1"].chatList.Add(new chat(false, "어….."));
-        chattingDict["신아산_70_1"].chatList.Add(new chat(false, "나도 사......."));
-        chattingDict["신아산_70_1"].chatList.Add(new chat(false, "사랑해."));
+        chattingDict["신아산_70_1"].chatList.Add(new chat(false, "고마워."));
+        chattingDict["신아산_70_1"] = new Chatting("신아산", true, new string[] { "신아산_70_1_0", "신아산_70_1_1", "신아산_70_1_2" })
+        {
+            chatList = chattingDict["신아산_70_1"].chatList
+        };
+
+        chattingDict.Add("신아산_70_1_0", new Chatting("신아산", false));
+        chattingDict["신아산_70_1_0"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_1_0"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_1_0"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_1_1", new Chatting("신아산", false));
+        chattingDict["신아산_70_1_1"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_1_1"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_1_1"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_1_2", new Chatting("신아산", false));
+        chattingDict["신아산_70_1_2"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_1_2"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_1_2"].chatList.Add(new chat(false, "사랑해."));
+
 
         chattingDict.Add("신아산_70_2", new Chatting("신아산", false));
         chattingDict["신아산_70_2"].chatList.Add(new chat(false, "진짜 올거야??????????????"));
         chattingDict["신아산_70_2"].chatList.Add(new chat(false, "............."));
-        chattingDict["신아산_70_2"].chatList.Add(new chat(false, "어….."));
-        chattingDict["신아산_70_2"].chatList.Add(new chat(false, "나도 사......."));
-        chattingDict["신아산_70_2"].chatList.Add(new chat(false, "사랑해."));
+        chattingDict["신아산_70_2"].chatList.Add(new chat(false, "고마워."));
+        chattingDict["신아산_70_2"] = new Chatting("신아산", true, new string[] { "신아산_70_2_0", "신아산_70_2_1", "신아산_70_2_2" })
+        {
+            chatList = chattingDict["신아산_70_2"].chatList
+        };
+
+        chattingDict.Add("신아산_70_2_0", new Chatting("신아산", false));
+        chattingDict["신아산_70_2_0"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_2_0"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_2_0"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_2_1", new Chatting("신아산", false));
+        chattingDict["신아산_70_2_1"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_2_1"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_2_1"].chatList.Add(new chat(false, "사랑해."));
+
+        chattingDict.Add("신아산_70_2_2", new Chatting("신아산", false));
+        chattingDict["신아산_70_2_2"].chatList.Add(new chat(false, "어….."));
+        chattingDict["신아산_70_2_2"].chatList.Add(new chat(false, "나도 사......."));
+        chattingDict["신아산_70_2_2"].chatList.Add(new chat(false, "사랑해."));
 
 
         // 양나현 호감도 20
