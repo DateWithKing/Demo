@@ -8,6 +8,12 @@ public class Spot : MonoBehaviour
     [SerializeField] private int index; // 0: 신아산, 1: 양나현, 2: 서은표
     [SerializeField] Button SpotButton;
     [SerializeField] private GameObject[] chooseScreen;
+    [SerializeField] private Button screen;
+
+    private void Start()
+    {
+        screen = GetComponent<Button>();
+    }
 
 
     private int affection;
@@ -66,14 +72,19 @@ public class Spot : MonoBehaviour
             chooseScreen[1].SetActive(true);
             SoundManager.Instance.PlaySFX("UI버튼_클릭");
 
-            if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산");
-            if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현");
-            if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표");
+            if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산", DisableSpotBackground);
+            if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현", DisableSpotBackground);
+            if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표", DisableSpotBackground);
         }
         else
         {
             SoundManager.Instance.PlaySFX("버튼_선택불가");
         }
+    }
+    
+    private void DisableSpotBackground()
+    {
+        screen.onClick.Invoke();
     }
 
     

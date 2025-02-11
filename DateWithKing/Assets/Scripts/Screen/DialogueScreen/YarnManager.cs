@@ -89,6 +89,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.AddCommandHandler<string, int>("change", SetStat);
         runner.AddCommandHandler<int>("recover_hp", RecoverHp);
         runner.AddCommandHandler<int>("use_hp", UseHp);
+        runner.AddCommandHandler<string, string>("print", PrintDialogue);
         posButton = PosNegPanel.transform.GetChild(0).gameObject;
         negButton = PosNegPanel.transform.GetChild(1).gameObject;
     }
@@ -420,6 +421,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     void cheese(string node){
         OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{
             SoundEffect("브이_찰칵");
+            fakeDialogue.SetActive(false);
             RunDialogue(node);});
     }
     
