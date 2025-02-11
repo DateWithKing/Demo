@@ -711,7 +711,8 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         // 서은표 호감도 80
         chattingDict.Add("서은표_60", new Chatting("서은표", false));
-        chattingDict["서은표_60"].chatList.Add(new chat(false, $"{meName}, 학교에 손수건 두고 간 거 알아???", "문자_서은표_손수건"));
+        chattingDict["서은표_60"].chatList.Add(new chat(false, $"{meName}, 학교에 손수건 두고 간 거 알아???"));
+        chattingDict["서은표_60"].chatList.Add(new chat(false, $"흰색에 곰돌이 그려진 거"));
         chattingDict["서은표_60"].chatList.Add(new chat(false, $"{meName} 거 맞지? 다행히 내가 챙겨 왔어."));
         chattingDict["서은표_60"] = new Chatting("서은표", true, new string[] { "서은표_60_0", "서은표_60_1", "서은표_60_2" })
         {
