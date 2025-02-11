@@ -1004,7 +1004,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9c65323eb28b3f0449d69dfc50d92f00, type: 3}
+      objectReference: {fileID: 21300000, guid: 9e7bb5a034e417f4b8cd850bebc743c1, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_3
@@ -1765,7 +1765,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: d30467c58d894584ebd3f47df8defd54, type: 3}
+      objectReference: {fileID: 21300000, guid: 6d116f443b1d49f46836abd68fdcd123, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_1
@@ -3502,7 +3502,7 @@ PrefabInstance:
     - target: {fileID: 7828904513842267103, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: imageDatas.Array.data[0].highAffectionSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 703ba4fd57890774b8995c69d3e229f5, type: 3}
+      objectReference: {fileID: 21300000, guid: ec754a2999d43f04f8da03a04e63bcb7, type: 3}
     - target: {fileID: 8487556880722940005, guid: 83017cfeaaeda02498aeab3387538b2f, type: 3}
       propertyPath: m_Name
       value: SpotButton_2
