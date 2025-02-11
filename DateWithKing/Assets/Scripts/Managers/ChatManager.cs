@@ -150,7 +150,6 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
     public IEnumerator UpdatingChat(){
         Debug.Log("updating chat");
-        Debug.Log(chatting.chatList.Count);
         foreach(chat c in chatting.chatList)
         {
             Debug.Log("generate chat");
@@ -226,6 +225,7 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
         LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
         LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
 
+        Debug.Log(Chatroom.verticalNormalizedPosition);
         Chatroom.verticalNormalizedPosition = 0f;  // 스크롤 내리기
     }
 
@@ -237,13 +237,23 @@ public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해�
 
         Chatbox.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>().sprite = Emoticon[index];
         Instantiate(Emoticon[index], Chatroom.content.transform);
-        Chatroom.verticalNormalizedPosition = 0f;
+
+        StartCoroutine(UpdateScrollPosition());
+
         StartCoroutine(StartNextChat(index));
         PhoneBase.interactable = false;
         Emoticon1.interactable = false;
         Emoticon2.interactable = false;
         Emoticon3.interactable = false;
         BlockScreen.SetActive(true);
+    }
+
+    private IEnumerator UpdateScrollPosition()
+    {
+        yield return null; // 한 프레임 대기
+        LayoutRebuilder.ForceRebuildLayoutImmediate(Chatroom.content);
+        yield return null; // 또 한 프레임 대기
+        Chatroom.verticalNormalizedPosition = 0f;
     }
 
     public IEnumerator StartNextChat(int index)
