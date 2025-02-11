@@ -27,6 +27,8 @@ public class PlayingLP : MonoBehaviour
     bool isInValidAngleRange = false;
     private int lastSecond = -1; // 이전 초를 저장할 변수
 
+    private bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -143,7 +145,12 @@ public class PlayingLP : MonoBehaviour
     IEnumerator GameTimer()
     {
         yield return new WaitForSeconds(playingTime);
-        GameOver();
+        if (!isGameOver)
+        {
+            GameOver();
+            isGameOver = true;
+        }
+        
     }
 
     void GameOver()
@@ -153,6 +160,7 @@ public class PlayingLP : MonoBehaviour
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
             GameManager.Instance.ticket += 5;
+            isGameOver = true;
         }
         else
         {
