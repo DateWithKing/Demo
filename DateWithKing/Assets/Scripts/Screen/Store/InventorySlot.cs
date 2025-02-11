@@ -15,7 +15,13 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     public void InitSlot(int slot, Item item)
     {
         this.slot = slot;
-        image.sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
+        Sprite sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
+        if(sprite == null) image.color = Color.clear;
+        else
+        {
+            image.color = Color.white;
+            image.sprite = sprite;
+        }
     }
     
     public void OnPointerClick(PointerEventData eventData)
