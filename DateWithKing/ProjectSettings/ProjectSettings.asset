@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: FancyLoveFactory
   productName: KingDatingSim
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -286,7 +286,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4103d9140da954f40b9cabb26d60e7f4, type: 3}
+      m_Icon: {fileID: 2800000, guid: 5846a8636d0fde6458cc08bd81065a34, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
