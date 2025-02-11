@@ -2548,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6369590980545296505, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
       propertyPath: m_SortingOrder
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6369590980545296505, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -2610,6 +2610,11 @@ MonoBehaviour:
   - {fileID: 155248889}
   - {fileID: 2103740415}
   - {fileID: 1674302001}
+--- !u!223 &1933924353 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6369590980545296505, guid: f3d213ae40564de45a15c29ccc4c40cd, type: 3}
+  m_PrefabInstance: {fileID: 1933924349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2027132664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7296098727457036694, guid: 722ac14e4daf1f84dbd7f4f39f794564, type: 3}
@@ -2875,6 +2880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8436244695085001542, guid: 722ac14e4daf1f84dbd7f4f39f794564, type: 3}
+      propertyPath: BaseCanvas
+      value: 
+      objectReference: {fileID: 1933924353}
     - target: {fileID: 9131413002752162478, guid: 722ac14e4daf1f84dbd7f4f39f794564, type: 3}
       propertyPath: m_Sprite
       value: 
