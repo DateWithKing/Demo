@@ -3,12 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     public GameData data { get; set; } = new GameData();
 
     public int ticket = 0;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && Input.GetKeyDown(KeyCode.S))
+        {
+            SceneManager.LoadScene("OpeningScene");
+        }
+    }
 
     /// <summary>
     /// 최초 게임 데이터 세팅 <br/>
