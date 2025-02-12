@@ -8,7 +8,7 @@ using Yarn.Unity;
 using UnityEngine.EventSystems;
 using System.Reflection;
 
-public class ChatManager : Singleton<ChatManager> // ToDo: 싱글톤 상속해야함
+public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속해야함
 { 
     const string spritePath = "Sprites/NightPhone/";
     public string[] profileSpriteName = {"양나현", "서은표", "신아산"};  // 스프라이트 이름
