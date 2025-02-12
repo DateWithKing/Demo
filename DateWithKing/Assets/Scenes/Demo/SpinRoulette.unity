@@ -1580,35 +1580,35 @@ MonoBehaviour:
     m_RotationOrder: 4
   roulettePieceData:
   - ticketMultiple: 0
-    chance: 70
+    chance: 5
     index: 0
     weight: 0
   - ticketMultiple: 2
-    chance: 30
+    chance: 95
     index: 0
     weight: 0
   - ticketMultiple: 0
-    chance: 70
+    chance: 5
     index: 0
     weight: 0
   - ticketMultiple: 2
-    chance: 30
+    chance: 95
     index: 0
     weight: 0
   - ticketMultiple: 0
-    chance: 70
+    chance: 5
     index: 0
     weight: 0
   - ticketMultiple: 2
-    chance: 30
+    chance: 95
     index: 0
     weight: 0
   - ticketMultiple: 0
-    chance: 70
+    chance: 5
     index: 0
     weight: 0
   - ticketMultiple: 2
-    chance: 30
+    chance: 95
     index: 0
     weight: 0
 --- !u!1001 &2111846895
