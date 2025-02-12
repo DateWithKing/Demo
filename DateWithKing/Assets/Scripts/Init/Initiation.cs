@@ -7,5 +7,6 @@ public class Initiation : MonoBehaviour
     void Start()
     {
         GameManager.Instance.data.stats["karma"].InitStat();
+        GameManager.Instance.ticket = 0;
     }
 }
