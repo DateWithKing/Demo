@@ -280,13 +280,25 @@ public class YarnManager : SceneSingleton<YarnManager>
                 StartCoroutine(RunDialogueLate(negNode, dialogEnded));
                 break;
             case "Fuck":
-                GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
-                EndChoice(opponentCharacter+"_엿");
+                if (opponentCharacter is not null)
+                {
+                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
+                    EndChoice(opponentCharacter+"_엿");
+                }
+                else
+                {
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                });}
                 break;
             case "MultipleFace":
                 if(GameManager.Instance.data.isThereAnyoneBehindYou) Debug.LogError("얼굴두개 두번째 인식됨");
                 GameManager.Instance.data.isThereAnyoneBehindYou = true;
-                EndChoice(opponentCharacter+"_두명");
+                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_두명");
+                else {
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                });}
                 break;
             case "Timeout":
                 EndChoice(opponentCharacter+"_느려");
