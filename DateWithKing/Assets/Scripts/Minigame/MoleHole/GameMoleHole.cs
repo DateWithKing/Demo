@@ -107,7 +107,7 @@ public class GameMoleHole : MonoBehaviour
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_두더지잡기_성공"); // -> 다이얼로그
-            GameManager.Instance.ticket += 5;
+            GameManager.Instance.ticket += 10;
         }
         else
         {

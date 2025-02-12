@@ -32,13 +32,13 @@ public class PlayRoulette : MonoBehaviour
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_룰렛_성공");
+            GameManager.Instance.ticket += 15;
         }
         else
         {
             SoundManager.Instance.PlaySFX("미니게임_게임오버");
             YarnManager.Instance.RunDialogue("종강총회_룰렛_실패");
         }
-        GameManager.Instance.ticket += 5 * selectedData.ticketMultiple;
         
 
         if (GameManager.Instance.ticket <= 0)
