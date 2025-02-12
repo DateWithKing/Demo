@@ -10,6 +10,7 @@ public class Ticket : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.ticket = 0;
         ticketAmount.text = GameManager.Instance.ticket.ToString();
     }
 
