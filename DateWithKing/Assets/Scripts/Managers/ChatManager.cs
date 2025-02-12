@@ -35,6 +35,8 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
     [SerializeField] Button Emoticon3;
     [SerializeField] GameObject BlockScreen;
 
+    [SerializeField] GameObject BackButton;
+
     [SerializeField] private Sprite[] Emoticon;
 
     Chatting chatting;  // 지금 출력중인 채팅
@@ -58,6 +60,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
         Emoticon2.interactable = false;
         Emoticon3.interactable = false;
         BlockScreen.SetActive(true);
+        BackButton.SetActive(false);
 
         string meName = GameManager.Instance.data.name;
 
@@ -107,6 +110,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
         Emoticon1.interactable = false;
         Emoticon2.interactable = false;
         Emoticon3.interactable = false;
+        BackButton.SetActive(false);
 
         SoundManager.Instance.PlaySFX("띠롱띠롱");
         this.endMessage = endMessage;
@@ -125,7 +129,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
         }
 
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         SetChat(chattingTitle);
         slideUPDown.SlideUp(); // ToDo: 폰 키는 코드로 바꾸기
 
@@ -154,7 +158,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
         {
             Debug.Log("generate chat");
             GenerateChat(c);
-            yield return new WaitForSeconds(2f);  // 채팅 생성 속도
+            yield return new WaitForSeconds(1f);  // 채팅 생성 속도
         }
 
         if(chatting.chooseImoticon){
@@ -170,7 +174,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
 
             BlackScreen.interactable = true;
             PhoneBase.interactable = true;
-            
+            BackButton.SetActive(true);
         }
     }
 
