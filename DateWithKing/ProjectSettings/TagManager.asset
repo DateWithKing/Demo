@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TurntableArm
+  - Trap
   layers:
   - Default
   - TransparentFX
