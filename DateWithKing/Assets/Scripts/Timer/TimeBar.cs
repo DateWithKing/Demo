@@ -4,7 +4,7 @@ using System;
 
 public class TimeBar : MonoBehaviour
 {
-    public Image timerBar; // UI 바 이미지
+    [SerializeField] private Image timerBar; // UI 바 이미지
     public float totalTime; // 타이머 총 시간
     private float remainingTime;
     public event Action Timeout;
