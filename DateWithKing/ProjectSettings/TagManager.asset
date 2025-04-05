@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TurntableArm
+  - ScoreTrigger
   - Trap
+  - Floor
   layers:
   - Default
   - TransparentFX
