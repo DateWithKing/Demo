@@ -13,7 +13,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         ShootingGameManager.Instance.StartGame += () => {gameObject.SetActive(true);};
-        ShootingGameManager.Instance.EndGame += () => {this.enabled = false;};
+        ShootingGameManager.Instance.EndGame += () => {this.enabled = false; GetComponent<Collider2D>().enabled = false;};
         t = Random.Range(0,1);
         speed = Random.Range(0.5f,2f);
         gameObject.SetActive(false);
