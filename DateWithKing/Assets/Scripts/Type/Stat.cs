@@ -14,6 +14,11 @@ public class Stat
 
     public event Action StatChanged;
     
+    public static implicit operator int(Stat stat)
+    { 
+        return stat.value;
+    }
+    
     public Stat(int startValue, int minValue, int maxValue, int initValue)
     {
         value = startValue;
