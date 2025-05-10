@@ -110,7 +110,11 @@ public class OpenCVController : Singleton<OpenCVController>
     {
         if (pythonProcess != null && !pythonProcess.HasExited){
             InvokeDetector("End", null);
-            pythonProcess?.Kill();  // 프로세스 강제 종료
+            if (!pythonProcess.WaitForExit(5000))
+            {
+                // 3) 그래도 안 꺼지면 Kill
+                pythonProcess.Kill();
+            }
             pythonProcess?.Dispose();  // 리소스 정리
         }
     }
