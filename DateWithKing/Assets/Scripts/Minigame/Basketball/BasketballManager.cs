@@ -14,6 +14,8 @@ public class BasketballManager : SceneSingleton<BasketballManager>
     const int TICKET = 5;
     const int TIME_LIMIT = 20;
     private bool gameOverSemaphore = true;
+    [SerializeField] private Screen ChangeScreen;
+
 
     void Start()
     {
@@ -52,12 +54,12 @@ public class BasketballManager : SceneSingleton<BasketballManager>
 
         if(score >= CLEAR_SCORE){
             SoundManager.Instance.PlaySFX("미니게임_성공");
-            YarnManager.Instance.RunDialogue("종강총회_농구게임_성공");
+            YarnManager.Instance.RunDialogue("종강총회_농구게임_성공", () => ChangeScreen.MoveScene("SelectMinigame"));
             GameManager.Instance.ticket += TICKET;
         }
         else{
             SoundManager.Instance.PlaySFX("미니게임_게임오버");
-            YarnManager.Instance.RunDialogue("종강총회_농구게임_실패");
+            YarnManager.Instance.RunDialogue("종강총회_농구게임_실패", () => ChangeScreen.MoveScene("SelectMinigame"));
         }
     }
 
