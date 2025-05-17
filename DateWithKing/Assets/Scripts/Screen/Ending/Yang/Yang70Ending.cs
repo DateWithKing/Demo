@@ -15,12 +15,14 @@ public class Yang70Ending : MonoBehaviour
             EndingScreen[1].SetActive(false);
             EndingScreen[0].SetActive(true);
             YarnManager.Instance.RunDialogue("엔딩70_양나현");
+            GameManager.Instance.data.ending["양나현_진엔딩"] = true;
         }
         else if (GameManager.Instance.data.stats["lvHyun"].value >= 50)
         {
             EndingScreen[0].SetActive(false);
             EndingScreen[1].SetActive(true);
             YarnManager.Instance.RunDialogue("엔딩50_양나현");
+            GameManager.Instance.data.ending["양나현_일반엔딩"] = true;
         }
     }
 
