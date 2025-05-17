@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class SelectMinigameScreen : MonoBehaviour
 {
-    [SerializeField] private GameObject BlackScreen;
     [SerializeField] private BlinkImage BlinkImage;
 
     private void OnEnable()
     {
         BackgroundController.Instance.ChangeImage(Background.오락실_게임기);
-        if (GameManager.Instance.ticket >= 20)
+        if (GameManager.Instance.ticket >= 30)
         {
-            BlackScreen.SetActive(true);
             BlinkImage.StartBlinking();
         }
     }
