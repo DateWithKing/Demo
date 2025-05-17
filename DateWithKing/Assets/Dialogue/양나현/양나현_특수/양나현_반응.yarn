@@ -16,3 +16,34 @@ title: 양나현_두명
 나현 : ...뒤에 친구야?
 <<choice_again>>
 ===
+
+title: 양나현_K하트
+---
+<<show hyun_smile>>
+나현 : 흠... 하트?
+나현 : 그렇게 하는 거 아닌데.
+(나현은 손하트를 해보였다.)
+(윙크는 덤!)
+<<choice_again>>
+===
+
+title: 양나현_주먹
+---
+<<show hyun_neg>>
+나현 : 꺄---악!!!!!!
+<<notice "당신은 분위기가 싸해짐을 느꼈다.">>
+<<change karma +2>>
+나현 : 데이트폭력이야!!!!
+(짝!!!)
+(나현이 뺨을 때렸다.)
+<<choice_again>>
+===
+
+title: 양나현_쉿
+---
+<<show hyun_idle>>
+나현 : ...?
+<<show hyun_neg>>
+나현 : 다른 사람이 말하고 있는데 그러는 거 아니야.
+<<choice_again>>
+===
