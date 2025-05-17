@@ -895,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4202625976034232676, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1960,6 +1960,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1051853455}
         m_TargetAssemblyTypeName: PlayRoulette, Assembly-CSharp
         m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 706088157}
+        m_TargetAssemblyTypeName: ChooseScreenTicket, Assembly-CSharp
+        m_MethodName: UpdateTicket
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
