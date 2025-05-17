@@ -260,6 +260,8 @@ public class YarnManager : SceneSingleton<YarnManager>
         BackgroundController.Instance.FinishLooking();
         TimeBarController.Instance.HideTimer();
         
+        Debug.Log("OpenCV Answer: "+answer);
+
         switch(answer){
             case "Positive":
             case "Thumbs_Up":
