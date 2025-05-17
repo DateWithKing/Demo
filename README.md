@@ -1,4 +1,5 @@
 # 👑킹연시(가제)👑
+![잠나미_노션썸네일](https://github.com/user-attachments/assets/61cb6200-46bc-45c2-ba97-cbbedbbbf932)
 <br>
 
 ## 📚 게임 개요
