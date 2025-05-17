@@ -26,7 +26,7 @@ public class Spot : MonoBehaviour
         public Sprite highAffectionSprite; // 호감도 조건 만족 시 스프라이트
         public int affectionThreshold = -50; // 호감도 조건
     }
-    private int ticketLimit = 20;
+    private int ticketLimit = 30;
 
     // 이미지 데이터 배열
     public ImageData[] imageDatas;
@@ -72,9 +72,21 @@ public class Spot : MonoBehaviour
             chooseScreen[1].SetActive(true);
             SoundManager.Instance.PlaySFX("UI버튼_클릭");
 
-            if (index == 0) YarnManager.Instance.RunDialogue("종강총회_신아산", DisableSpotBackground);
-            if (index == 1) YarnManager.Instance.RunDialogue("종강총회_양나현", DisableSpotBackground);
-            if (index == 2) YarnManager.Instance.RunDialogue("종강총회_서은표", DisableSpotBackground);
+            if (index == 0)
+            {
+                YarnManager.Instance.RunDialogue("종강총회_신아산", DisableSpotBackground);
+                GameManager.Instance.data.ending["신아산_종강총회"] = true;
+            }
+            if (index == 1)
+            {
+                YarnManager.Instance.RunDialogue("종강총회_양나현", DisableSpotBackground);
+                GameManager.Instance.data.ending["양나현_종강총회"] = true;
+            }
+            if (index == 2)
+            {
+                YarnManager.Instance.RunDialogue("종강총회_서은표", DisableSpotBackground);
+                GameManager.Instance.data.ending["서은표_종강총회"] = true;
+            }
         }
         else
         {

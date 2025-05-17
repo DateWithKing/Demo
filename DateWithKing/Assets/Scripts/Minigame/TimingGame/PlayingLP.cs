@@ -159,7 +159,7 @@ public class PlayingLP : MonoBehaviour
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_레코드_성공");
-            GameManager.Instance.ticket += 10;
+            GameManager.Instance.ticket += 5;
             isGameOver = true;
         }
         else
