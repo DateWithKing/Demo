@@ -63,7 +63,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     Sprite unselected;
 
     [SerializeField]
-    Sprite nomal;
+    Sprite normal;
 
     
     void Start()
@@ -221,9 +221,9 @@ public class YarnManager : SceneSingleton<YarnManager>
         posButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Normal;
         negButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Normal;
 
-        posButton.GetComponent<Image>().sprite = nomal;
+        posButton.GetComponent<Image>().sprite = normal;
         posButton.GetComponent<Image>().SetNativeSize();
-        negButton.GetComponent<Image>().sprite = nomal;
+        negButton.GetComponent<Image>().sprite = normal;
         negButton.GetComponent<Image>().SetNativeSize();
 
         StartCoroutine(LateStartChoice(posNode, posText, negNode, negText, opponentCharacter, timeLimit, isAgain));
@@ -241,7 +241,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         if(timeLimit) TimeBarController.Instance.StartTimer();
         
 
-        if(GameManager.Instance.data.isThereAnyoneBehindYou)
+        if(GameManager.Instance.data.isThereAnyoneBehindYou)  // 뒤에 누구 있어? 는 한번만 띄우기로 해서 이렇게 했구나
         {
             OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
                 CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
@@ -262,6 +262,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         
         switch(answer){
             case "Positive":
+            case "Thumbs_Up":
                 SoundEffect("선택_긍정");
                 posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = posText;
                 posButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
@@ -271,6 +272,7 @@ public class YarnManager : SceneSingleton<YarnManager>
                 StartCoroutine(RunDialogueLate(posNode, dialogEnded));
                 break;
             case "Negative":
+            case "Thumbs_Down":
                 SoundEffect("선택_부정");
                 negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = negText;
                 negButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
@@ -302,6 +304,27 @@ public class YarnManager : SceneSingleton<YarnManager>
                 break;
             case "Timeout":
                 EndChoice(opponentCharacter+"_느려");
+                break;
+            case "FingerHeart":
+                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_K하트");
+                else {
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                });}
+                break;
+            case "Punch":
+                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_주먹");
+                else {
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                });}
+                break;
+            case "Shh":
+                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_쉿");
+                else {
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
+                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                });}
                 break;
             default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
         }
@@ -338,7 +361,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
     
     /// <summary>
-    /// 이전 choice 단계를 다시 실행함
+    /// 이전 choice 단계를 다시 실행함 (이스터에그 다이얼로그 끝에, 다시 선택지로 돌아가야 할 경우 호출)
     /// </summary>
     void ChoiceAgain(){
         PrintDialogue(prevChoiceDialogue, prevChoiceDialogueCharacter);
