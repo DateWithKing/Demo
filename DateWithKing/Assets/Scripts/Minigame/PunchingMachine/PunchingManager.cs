@@ -30,6 +30,12 @@ public class PunchingManager : MonoBehaviour
 
     void Start()
     {
+        StartPunch();
+    }
+
+    [YarnCommand("StartPunch")]
+    public async void StartPunch()
+    {
         timeLeft = gameTime;
         lastClickTime = Time.time;
         gaugeSlider.value = 0;
@@ -40,12 +46,6 @@ public class PunchingManager : MonoBehaviour
             circle.AddComponent<CircleCollider2D>();
         }
 
-        StartPunch();
-    }
-
-    [YarnCommand("StartPunch")]
-    public async void StartPunch()
-    {
         gauge = 0;
         gaugeSlider.value = 0;
         timeLeft = gameTime;
