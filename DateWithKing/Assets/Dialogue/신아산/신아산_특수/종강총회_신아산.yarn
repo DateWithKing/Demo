@@ -4,12 +4,13 @@ title: 종강총회_신아산
 아산: 회전목마 타고 싶은데...
 아산: 혼자 타면 재미 없겠지...
 {name()}: 아산아!
-<<show san_smile>>
-<<play 신아산_웃음>>
+<<play san_sound>>
+<<show san_shock>>
 아산: 어, {name()}?
 아산: 혹시 티켓을 다 모아 온 거야?
 {name()}: 응.
 {name()}: 너랑 같이 타고 싶어서.
+<<play 신아산_웃음>>
 <<show san_blush>>
 아산: !!!!!!!!!!
 <<like 신아산>>

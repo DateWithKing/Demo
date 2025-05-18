@@ -1,6 +1,6 @@
 title: 서은표_엿
 ---
-<<show pyo_idle>>
+<<show pyo_shock>>
 <<play 서은표_흠>>
 은표 : …?!
 <<show pyo_spec>>
@@ -47,7 +47,7 @@ title: 서은표_주먹
 ---
 <<show pyo_idle>>
 은표: !!
-<<show pyo_neg>>
+<<show pyo_neg2>>
 은표: 앗... 내가 뭔가 잘못 했나?
 은표: 일단은 미안해.
 (그렇게 말하지만 속으로는)

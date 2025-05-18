@@ -4,7 +4,7 @@ title: 양나현_엿
 나현 : …?
 <<notice "당신은 분위기가 싸해짐을 느꼈다.">>
 <<change karma +2>>
-<<show hyun_neg>>
+<<show hyun_neg2>>
 <<play 양나현_허>>
 나현 : 너 제정신이야?
 <<choice_again>>
@@ -29,11 +29,12 @@ title: 양나현_K하트
 
 title: 양나현_주먹
 ---
-<<show hyun_neg>>
+<<show hyun_shock>>
 나현 : 꺄---악!!!!!!
 <<notice "당신은 분위기가 싸해짐을 느꼈다.">>
 <<change karma +2>>
 나현 : 데이트폭력이야!!!!
+<<show hyun_neg>>
 (짝!!!)
 (나현이 뺨을 때렸다.)
 <<choice_again>>
@@ -43,7 +44,7 @@ title: 양나현_쉿
 ---
 <<show hyun_idle>>
 나현 : ...?
-<<show hyun_neg>>
+<<show hyun_neg2>>
 나현 : 다른 사람이 말하고 있는데 그러는 거 아니야.
 <<choice_again>>
 ===

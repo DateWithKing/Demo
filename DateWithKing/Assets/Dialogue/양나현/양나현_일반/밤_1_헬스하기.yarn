@@ -3,7 +3,8 @@ title: 밤_1_헬스하기_양나현
 (헬스장에 와 준비운동 후 사이클에 앉아 유산소 운동을 했다.)
 (잠시 숨을 고르며 땀을 닦는데, 누군가 내 어깨를 두드린다.)
 (뒤를 돌아보았다.)
-<<show hyun_idle>>
+<<show hyun_idle_ver2>>
+<<play hyun_sound>>
 나현: 안녕.
 {name()}: 엇, 안녕.
 {name()}: 너도 여기 헬스장 다니는구나.
@@ -28,7 +29,7 @@ title: 밤_1_헬스하기_부1
 ---
 <<like 양나현>>
 <<change lvHyun +5>>
-<<show hyun_smile>>
+<<show hyun_smile_ver2>>
 나현: 어쩐지. 안 보이더라.
 <<play 양나현_웃음>>
 (나현이 소리내어 웃는다.)
@@ -48,7 +49,7 @@ title: 밤_1_헬스하기_호감도
 
 title: 밤_1_헬스하기_양나현_분기1
 ---
-<<show hyun_idle>>
+<<show hyun_idle_ver2>>
 <<if get("str") >= 3>>
     <<jump 밤_1_헬스하기_양나현_근력>>
 <<else>>
@@ -82,7 +83,7 @@ title: 밤_1_헬스하기_긍2
 (균형이 잘 잡힌 등이다. 운동을 자주 나온다는 말이 사실인 것 같다.)
 {name()}: 딱이야. 이대로 열 번만 해봐.
 (나현의 자세를 봐주며 운동을 도와주었다.)
-<<show hyun_smile>>
+<<show hyun_smile_ver2>>
 나현: 고마워. 
 나현: 다음에 또 만나면 같이 운동하자.
 <<end>>
