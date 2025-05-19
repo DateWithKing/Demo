@@ -1,6 +1,7 @@
 title: 주3_수_1교시_강의실_양나현
 ---
 <<show hyun_idle>>
+<<play hyun_sound>>
 나현: 안녕, {name()}.
 {name()}: 안녕.
 <<show hyun_spec>>
