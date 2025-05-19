@@ -14,6 +14,8 @@ public class PlayRoulette : MonoBehaviour
     private Button buttonSpin;
     [SerializeField]
     private GameObject backButton;
+    [SerializeField] private Button PlusButton;
+    [SerializeField] private Button MinusButton;
 
     private void Start()
     {
@@ -27,12 +29,16 @@ public class PlayRoulette : MonoBehaviour
     {
         buttonSpin.interactable = true;
         backButton.SetActive(true);
+        PlusButton.interactable = true;
+        MinusButton.interactable = true;
 
-        if (selectedData.ticketMultiple == 2)
+
+        if (selectedData.ticketMultiple == 3)
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_룰렛_성공");
-            GameManager.Instance.ticket += 15;
+            GameManager.Instance.ticket += TicketBetting.Instance.bettingTicket * 3;
+            Debug.Log(TicketBetting.Instance.bettingTicket);
         }
         else
         {
@@ -44,6 +50,8 @@ public class PlayRoulette : MonoBehaviour
         if (GameManager.Instance.ticket <= 0)
         {
             buttonSpin.interactable = false;
+            PlusButton.interactable = false;
+            MinusButton.interactable = false;
         }
     }
 
@@ -52,7 +60,7 @@ public class PlayRoulette : MonoBehaviour
     {
         
 
-        if (GameManager.Instance.ticket >= 5)
+        if (GameManager.Instance.ticket >= 1)
         {
             buttonSpin.interactable = true;
 
@@ -61,8 +69,10 @@ public class PlayRoulette : MonoBehaviour
                 SoundManager.Instance.PlaySFX("룰렛_돌아가는중");
                 buttonSpin.interactable = false;
                 backButton.SetActive(false);
+                PlusButton.interactable = false;
+                MinusButton.interactable = false;
                 roulette.Spin(EndOfSpin);
-                GameManager.Instance.ticket -= 5;
+                GameManager.Instance.ticket -= TicketBetting.Instance.bettingTicket;
             });
         }
         

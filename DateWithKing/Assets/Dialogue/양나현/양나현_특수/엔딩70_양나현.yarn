@@ -6,6 +6,7 @@ title: 엔딩70_양나현
 {name()}: 나현아. 나 너를 좋아해.
 {name()}: 나랑 사귀어줘.
 <<show hyun_blush>>
+<<play hyun_sound>>
 나현: {name()}..., 나도 너를 좋아해.
 <<play 양나현_웃음>>
 나현: 좋아.

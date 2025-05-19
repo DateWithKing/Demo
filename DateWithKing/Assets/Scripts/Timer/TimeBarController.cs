@@ -11,7 +11,7 @@ public class TimeBarController : SceneSingleton<TimeBarController>
     }
 
     /// <summary>
-    /// 해당 씬에 TimeBarModule을 붙이고 부르세요, 타이머를 종료하려면 HideTimer를 호출하세요 <br/>
+    /// 해당 씬의 BaseCanvas에 TimeBarModule을 붙이고 부르세요, 타이머를 종료하려면 HideTimer를 호출하세요 <br/>
     /// </summary>
     /// <param name="time">제한 시간</param>
     /// <param name="timeout">타임오버 시 실행될 함수</param>
@@ -19,7 +19,6 @@ public class TimeBarController : SceneSingleton<TimeBarController>
         if (timeBar == null){ Debug.LogError("타임바 없음"); return; }
         timeBar.totalTime = time;
         timeBar.Timeout += timeout;
-        timeBar.gameObject.SetActive(true);
         timeBar.gameObject.SetActive(true);
     }
 

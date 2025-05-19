@@ -13,7 +13,7 @@ public class ChooseScreenTicket : MonoBehaviour
         ticketAmount.text = GameManager.Instance.ticket.ToString();
     }
 
-    void UpdateTicket()
+    public void UpdateTicket()
     {
         ticketAmount.text = GameManager.Instance.ticket.ToString();
     }

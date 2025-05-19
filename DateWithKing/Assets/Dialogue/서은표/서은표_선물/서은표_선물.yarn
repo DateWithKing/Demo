@@ -47,7 +47,7 @@ title: 서은표_피크
 
 title: 서은표_꽃
 ---
-<<show pyo_idle>>
+<<show pyo_shock>>
 은표: 꽃이네? 오늘 무슨 날이야?
 <<dislike 서은표>>
 <<change lvPyo -10>>

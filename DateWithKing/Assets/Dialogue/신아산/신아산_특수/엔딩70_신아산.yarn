@@ -7,6 +7,9 @@ title: 엔딩70_신아산
 <<show san_idle>>
 (저 멀리 아산이가 보인다.)
 {name()}: 신아산!
+<<play san_sound>>
+<<show san_shock>>
+<<wait 2>>
 <<show san_smile>>
 아산: 어, {name()}!!
 아산: 진짜로 와줬네.
