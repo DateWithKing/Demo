@@ -27,9 +27,11 @@ public class PunchingManager : MonoBehaviour
 
     public bool isPlaying = false;
     private bool isGameActive = false;
+    [SerializeField] private Screen ChangeScreen;
 
     void Start()
     {
+        // BackgroundController.Instance.ChangeImage(Background.미니게임);
         YarnManager.Instance.RunDialogue("종강총회_펀치머신_시작");
         SoundManager.Instance.PlaySFX("미니게임_시작");
     }
@@ -103,7 +105,6 @@ public class PunchingManager : MonoBehaviour
 
     public void OnCircleClick()
     {
-        UnityEngine.Debug.Log("클릭 감지됨!");
         SoundManager.Instance.PlaySFX("펀치_때리기");
         if (!isGameActive) return;
 
@@ -135,13 +136,13 @@ public class PunchingManager : MonoBehaviour
         if (gauge >= 85)
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
-            YarnManager.Instance.RunDialogue("종강총회_펀치머신_성공");
+            YarnManager.Instance.RunDialogue("종강총회_사격게임_성공", () => ChangeScreen.MoveScene("SelectMinigame"));
             GameManager.Instance.ticket += 5;
         }
         else
         {
             SoundManager.Instance.PlaySFX("미니게임_게임오버");
-            YarnManager.Instance.RunDialogue("종강총회_펀치머신_실패"); 
+            YarnManager.Instance.RunDialogue("종강총회_사격게임_실패", () => ChangeScreen.MoveScene("SelectMinigame"));
         }
     }
 }
