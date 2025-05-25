@@ -10,6 +10,7 @@ using Yarn.Unity;
 public class OpeningManager : MonoBehaviour
 {
     [SerializeField] public Image warningImage;  // 경고문 이미지
+    [SerializeField] public Image guideImage; // 안내문 이미지
     [SerializeField] public Image teamLogoImage; // 팀 로고 이미지
     [SerializeField] public GameObject mainScreenObject; // 메인 화면(배경+로고+자막)이 포함된 부모 오브젝트
     [SerializeField] public Image backgroundImage; // 배경 이미지
@@ -52,6 +53,7 @@ public class OpeningManager : MonoBehaviour
     {
         // 경고문, 팀 로고, 메인 화면 스프라이트 페이드인
         yield return StartCoroutine(FadeInOut(warningImage));
+        yield return StartCoroutine(FadeInOut(guideImage)); 
         yield return StartCoroutine(FadeInOut(teamLogoImage));
         yield return StartCoroutine(StartMisonye(Misonye));
         yield return StartCoroutine(FadeInGroup(mainScreenSprites));
