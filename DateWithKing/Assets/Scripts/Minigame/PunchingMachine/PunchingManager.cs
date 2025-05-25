@@ -30,7 +30,8 @@ public class PunchingManager : MonoBehaviour
 
     void Start()
     {
-        StartPunch();
+        YarnManager.Instance.RunDialogue("종강총회_펀치머신_시작");
+        SoundManager.Instance.PlaySFX("미니게임_시작");
     }
 
     [YarnCommand("StartPunch")]
@@ -103,6 +104,7 @@ public class PunchingManager : MonoBehaviour
     public void OnCircleClick()
     {
         UnityEngine.Debug.Log("클릭 감지됨!");
+        SoundManager.Instance.PlaySFX("펀치_때리기");
         if (!isGameActive) return;
 
         ChangeGauge(increasePerClick);
@@ -132,11 +134,14 @@ public class PunchingManager : MonoBehaviour
 
         if (gauge >= 85)
         {
-            UnityEngine.Debug.Log("게임 성공!");
+            SoundManager.Instance.PlaySFX("미니게임_성공");
+            YarnManager.Instance.RunDialogue("종강총회_펀치머신_성공");
+            GameManager.Instance.ticket += 5;
         }
         else
         {
-            UnityEngine.Debug.Log("게임 실패!");
+            SoundManager.Instance.PlaySFX("미니게임_게임오버");
+            YarnManager.Instance.RunDialogue("종강총회_펀치머신_실패"); 
         }
     }
 }
