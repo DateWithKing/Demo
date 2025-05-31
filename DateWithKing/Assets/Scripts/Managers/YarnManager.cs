@@ -92,6 +92,12 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.AddCommandHandler<string, string>("print", PrintDialogue);
         posButton = PosNegPanel.transform.GetChild(0).gameObject;
         negButton = PosNegPanel.transform.GetChild(1).gameObject;
+        lineView.holdTime = 1.5f; // 오토 진행 시 대사 출력 후 1.5초 후에 다음 대사로 넘어감
+    }
+
+    public void AutoAdvance(){
+        lineView.autoAdvance = !lineView.autoAdvance;
+        if(lineView.autoAdvance) lineView.OnContinueClicked();
     }
 
     /// <summary>
