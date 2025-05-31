@@ -44,6 +44,7 @@ public class PowerGaugeController : MonoBehaviour
 
     void LaunchBall(float power)
     {
+        SoundManager.Instance.PlaySFX("농구_던지기");
         ball.LaunchBall(power);
     }
 }

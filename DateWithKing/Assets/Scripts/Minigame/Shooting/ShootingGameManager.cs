@@ -33,10 +33,12 @@ public class ShootingGameManager : SceneSingleton<ShootingGameManager>
 
     public void GetScore(string tag){
         if(tag == "Trap"){
+            SoundManager.Instance.PlaySFX("사격_함정표적");
             score += TrapScore;
             if(score < 0) score = 0;
         }
         else{
+            SoundManager.Instance.PlaySFX("사격_표적");
             score += TargetScore;
         }
         ScoreText.Instance.SetScore(score);

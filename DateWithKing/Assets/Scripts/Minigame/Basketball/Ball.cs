@@ -34,6 +34,7 @@ public class Ball : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.gameObject.tag == "ScoreTrigger") {
+            SoundManager.Instance.PlaySFX("농구_골성공");
             BasketballManager.Instance.ScoreUp();
         }
     }
