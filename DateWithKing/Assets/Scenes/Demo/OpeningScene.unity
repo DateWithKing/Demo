@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warningImage: {fileID: 600515343}
-  guideImage: {fileID: 0}
+  guideImage: {fileID: 1435088512}
   teamLogoImage: {fileID: 48163884}
   mainScreenObject: {fileID: 1940908558}
   backgroundImage: {fileID: 854853657}
