@@ -8,9 +8,9 @@ title: 주1_월_1교시_도서관_신아산
 아산: .......
 {name()}: 저기?
 <<show san_shock>>
+<<play san_sound>>
 아산: 앗, 깜짝아!!!!
 {name()}: 개강 첫주인데 벌써부터 공부해?
-<<play san_sound>>
 <<show san_idle>>
 아산: 당연하지.
 아산: 배움은 짧고, 인생은 기니까.
