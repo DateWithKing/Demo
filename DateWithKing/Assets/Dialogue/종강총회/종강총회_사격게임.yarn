@@ -1,7 +1,7 @@
 ﻿title: 종강총회_사격게임_시작
 ---
 제한시간 안에 10점을 넘기자!
-표적을 맞추고, 함정은 피하자!
+표적을 맞추고, 사람이 그려진 함정은 피하자!
 <<PlayShootingGame ShootingGameManager>>
 <<end>>
 ===
