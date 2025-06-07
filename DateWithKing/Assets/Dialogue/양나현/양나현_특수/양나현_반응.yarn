@@ -7,6 +7,7 @@ title: 양나현_엿
 <<show hyun_neg2>>
 <<play 양나현_허>>
 나현 : 너 제정신이야?
+<<show hyun_idle>>
 <<choice_again>>
 ===
 
@@ -24,6 +25,7 @@ title: 양나현_K하트
 나현 : 그렇게 하는 거 아닌데.
 (나현은 손하트를 해보였다.)
 (윙크는 덤!)
+<<show hyun_idle>>
 <<choice_again>>
 ===
 
@@ -37,6 +39,7 @@ title: 양나현_주먹
 <<show hyun_neg>>
 (짝!!!)
 (나현이 뺨을 때렸다.)
+<<show hyun_idle>>
 <<choice_again>>
 ===
 
@@ -46,5 +49,6 @@ title: 양나현_쉿
 나현 : ...?
 <<show hyun_neg2>>
 나현 : 다른 사람이 말하고 있는데 그러는 거 아니야.
+<<show hyun_idle>>
 <<choice_again>>
 ===

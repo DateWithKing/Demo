@@ -116,7 +116,7 @@ title: 주4_목_밤_편의점_서은표_긍정2
 {name()}: 이게 다 뭐야? 왜 여기 있는 거야?
 <<bgm_stop>>
 <<show pyo_horror>>
-<<wait  1>>
+<<wait  2>>
 <<bgm_resume>>
 <<show pyo_idle>>
 <<play 서은표_흠>>
