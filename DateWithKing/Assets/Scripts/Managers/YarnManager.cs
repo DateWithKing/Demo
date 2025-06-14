@@ -53,6 +53,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     private event Action prevChoice;
     private string prevChoiceDialogue;
     private string prevChoiceDialogueCharacter;
+    private string prevChoiceDialogueName;
     GameObject posButton;
     GameObject negButton;
 
@@ -161,6 +162,13 @@ public class YarnManager : SceneSingleton<YarnManager>
         CharacterImage.gameObject.SetActive(true);
     }
 
+    bool isNight(){
+        if(prevChoiceDialogueName.Contains("밤"))
+            return true;
+        else
+            return false;
+    }
+
     /// <summary>
     /// 캐릭터 이미지를 숨김
     /// </summary>
@@ -240,6 +248,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         if(!isAgain)
         {
             prevChoiceDialogue = lineView.lineText.text;
+            prevChoiceDialogueName = runner.CurrentNodeName;
             prevChoiceDialogueCharacter = lineView.characterNameText.text;
         }
 
@@ -435,7 +444,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     /// <summary>
-    /// val만큼 현재 hp를 증가시킴킴
+    /// val만큼 현재 hp를 증가시킴
     /// </summary>
     /// <param name="val"></param>
     void RecoverHp(int val){
