@@ -53,7 +53,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     private event Action prevChoice;
     private string prevChoiceDialogue;
     private string prevChoiceDialogueCharacter;
-    private string prevChoiceDialogueName;
+    private string prevChoiceDialogueName = "";
     GameObject posButton;
     GameObject negButton;
 
@@ -157,7 +157,15 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// </summary>
     /// <param name="spriteName">Resorces/Sprites 폴더에 있는 스프라이트여야 함</param>
     void ShowCharactor(string spriteName){
+        if(isNight() && !spriteName.Contains("_ver2") 
+        && !prevChoiceDialogueName.Contains("편의점_서은표")){  // 주4 밤 편의점 서은표 예외처리
+            spriteName += "_ver2";
+        }
         CharacterImage.sprite = Resources.Load<Sprite>("Sprites/Charactor/"+spriteName);
+        if(CharacterImage.sprite == null){
+            Debug.LogError("이미지가 존재하지 않음: "+spriteName);
+            return;
+        }
         CharacterImage.SetNativeSize();
         CharacterImage.gameObject.SetActive(true);
     }
