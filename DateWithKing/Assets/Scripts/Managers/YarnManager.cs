@@ -171,10 +171,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     bool isNight(){
-        if(prevChoiceDialogueName.Contains("밤"))
-            return true;
-        else
-            return false;
+        return SemesterSceneData.Instance.clock.GetCurrentWeekCycle() == WeekCycle.Night;
     }
 
     /// <summary>
