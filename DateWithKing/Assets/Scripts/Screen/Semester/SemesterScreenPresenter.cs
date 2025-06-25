@@ -6,6 +6,8 @@ using UnityEngine;
 public class SemesterScreenPresenter : MonoBehaviour
 {
     private Screen screen;
+    [SerializeField]
+    private Blocker blocker;
 
     void Awake()
     {
@@ -20,6 +22,13 @@ public class SemesterScreenPresenter : MonoBehaviour
         SemesterSceneData.Instance.clock.DateChanged += OneDateLater;
         SemesterSceneData.Instance.clock.TimeChanged -= BackgroundChanger;
         SemesterSceneData.Instance.clock.TimeChanged += BackgroundChanger;
+        SemesterSceneData.Instance.clock.TimeChanged -= Block;
+        SemesterSceneData.Instance.clock.TimeChanged += Block;
+    }
+
+    private void Block()
+    {
+        blocker.Block();
     }
     
     //Semester 동안 배경 변경 담당
