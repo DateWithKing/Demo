@@ -16,6 +16,9 @@ public class PunchingManager : MonoBehaviour
     [SerializeField] private GameObject gameUI;
     [SerializeField] private TMPro.TextMeshProUGUI timeText;
     [SerializeField] private TMPro.TextMeshProUGUI countDown;
+    [SerializeField] private GameObject punchEffectPrefab;
+    [SerializeField] private Canvas canvas; // UI 위치 기준
+
 
     private float gauge = 0f;
     private float maxGauge = 100f;
@@ -110,6 +113,8 @@ public class PunchingManager : MonoBehaviour
 
         ChangeGauge(increasePerClick);
         lastClickTime = Time.time;
+
+        ShowPunchEffect();
     }
 
     private void ChangeGauge(float amount)
@@ -144,5 +149,21 @@ public class PunchingManager : MonoBehaviour
             SoundManager.Instance.PlaySFX("미니게임_게임오버");
             YarnManager.Instance.RunDialogue("종강총회_사격게임_실패", () => ChangeScreen.MoveScene("SelectMinigame"));
         }
+    }
+
+    private void ShowPunchEffect()
+    {
+        // 마우스 위치를 월드 좌표로 변환
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        worldPos.z = 0; // 깊이 값 고정 (카메라 거리 조정)
+
+        GameObject punch = Instantiate(punchEffectPrefab, worldPos, Quaternion.identity);
+        StartCoroutine(DestroyAfterDelay(punch, 0.5f));
+    }
+
+    IEnumerator DestroyAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
     }
 }
