@@ -24,6 +24,7 @@ using System.Collections.Generic;
         Save0 = 0,
         Save1 = 1,
         Save2 = 2,
+        Permanent = 3,
     }
 
     public enum WeekCycle

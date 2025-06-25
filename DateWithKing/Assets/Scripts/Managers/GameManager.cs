@@ -14,7 +14,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        PermanentData = DataLoader.ReadData<PermanentData>() ?? PermanentData;
+        PermanentData = DataLoader.ReadData<PermanentData>(DynamicData.Permanent) ?? PermanentData;
     }
 
     void Update()
