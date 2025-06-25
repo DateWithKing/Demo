@@ -12,7 +12,7 @@ title: 양나현_키링
 
 title: 양나현_쿠키
 ---
-<<show hyun_shock>>
+<<show hyun_shock>>d
 나현: 오, 나 이 쿠키 진짜 좋아하는데.
 <<like 양나현>>
 <<change lvHyun +5>>
