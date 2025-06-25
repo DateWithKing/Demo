@@ -412,16 +412,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 811d96674f453ca4e827051aaddb21c4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -451,6 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverTimeThreshold: 2
   isRight: 1
+  selectMini: {fileID: 403340819}
 --- !u!114 &382179609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkImage: {fileID: 1015345436}
+  RightButton: {fileID: 382179606}
+  LeftButton: {fileID: 1250061184}
 --- !u!114 &403340820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,6 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverTimeThreshold: 2
   isRight: 0
+  selectMini: {fileID: 403340819}
 --- !u!114 &1250061183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,16 +1893,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 38b0580a86fbcdb4f83789926bfba1c1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

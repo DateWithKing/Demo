@@ -16,14 +16,18 @@ public class HoveringButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private SlideSideUI slideSideUI;
 
+    [SerializeField] SelectMinigameScreen selectMini;
+
     void Awake()
     {
         button = GetComponent<Button>();
         slideSideUI = GetComponent<SlideSideUI>();
+
         if (button != null)
         {
             // 클릭 막기: Interactable false는 아니고, 클릭 이벤트 제거
             button.onClick.RemoveAllListeners();
+            selectMini.DisableLeft();
         }
     }
 
@@ -59,11 +63,15 @@ public class HoveringButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (isRight)
         {
+            selectMini.DisableRight();
             slideSideUI.SlideLeft();
+            
         }
         else
         {
+            selectMini.DisableLeft();
             slideSideUI.SlideRight();
+            
         }
     }
 }

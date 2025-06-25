@@ -16,6 +16,7 @@ public class PlayRoulette : MonoBehaviour
     private GameObject backButton;
     [SerializeField] private Button PlusButton;
     [SerializeField] private Button MinusButton;
+    [SerializeField] private ChooseScreenTicket chScTicket;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class PlayRoulette : MonoBehaviour
             SoundManager.Instance.PlaySFX("미니게임_성공");
             YarnManager.Instance.RunDialogue("종강총회_룰렛_성공");
             GameManager.Instance.ticket += TicketBetting.Instance.bettingTicket * 3;
+            chScTicket.UpdateTicket();
             Debug.Log(TicketBetting.Instance.bettingTicket);
         }
         else
@@ -73,6 +75,7 @@ public class PlayRoulette : MonoBehaviour
                 MinusButton.interactable = false;
                 roulette.Spin(EndOfSpin);
                 GameManager.Instance.ticket -= TicketBetting.Instance.bettingTicket;
+                chScTicket.UpdateTicket();
             });
         }
         
