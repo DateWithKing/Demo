@@ -335,7 +335,7 @@ public class YarnManager : SceneSingleton<YarnManager>
                     CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
                 });}
                 break;
-            case "Punch":
+            case "Slap":
                 if(opponentCharacter is not null) EndChoice(opponentCharacter+"_주먹");
                 else {
                     OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
