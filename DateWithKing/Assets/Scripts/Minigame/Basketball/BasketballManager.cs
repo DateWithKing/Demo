@@ -10,7 +10,7 @@ public class BasketballManager : SceneSingleton<BasketballManager>
     public event Action StartGame;
     public event Action EndGame;
     private int score = 0;
-    const int CLEAR_SCORE = 3;
+    const int CLEAR_SCORE = 2;
     const int TICKET = 5;
     const int TIME_LIMIT = 20;
     private bool gameOverSemaphore = true;
