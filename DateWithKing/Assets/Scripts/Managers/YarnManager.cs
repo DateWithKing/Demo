@@ -189,6 +189,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         try{
             BackgroundImage.sprite = Resources.Load<Sprite>("Sprites/Background/"+spriteName);
             BackgroundImage.gameObject.SetActive(true);
+            GameManager.Instance.PermanentData.UpdateGallery(spriteName);
         }
         catch(Exception e){
             Debug.LogWarning("배경 스프라이트가 존재하지 않음: "+spriteName+"\n"+e.Message);

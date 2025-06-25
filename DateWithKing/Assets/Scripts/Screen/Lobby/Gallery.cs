@@ -20,7 +20,7 @@ public class Gallery : MonoBehaviour
 
     void Start()
     {
-        foreach (var ending in GameManager.Instance.data.ending)
+        foreach (var ending in GameManager.Instance.PermanentData.gallery)
         {
             //만약에 추가되거나 할 일 생기면 리팩토링
             if (ending.Key == "서은표_납치엔딩") continue;
@@ -28,7 +28,7 @@ public class Gallery : MonoBehaviour
         }
         foreach(var hidden in Hidden)
         {
-            hidden.SetImage(hidden.name, !GameManager.Instance.data.ending[hidden.name], EnlargeImage, EnlargeButton);
+            hidden.SetImage(hidden.name, !GameManager.Instance.PermanentData.gallery[hidden.name], EnlargeImage, EnlargeButton);
         }
     }
 }
