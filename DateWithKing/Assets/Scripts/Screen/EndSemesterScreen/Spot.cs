@@ -75,17 +75,14 @@ public class Spot : MonoBehaviour
             if (index == 0)
             {
                 YarnManager.Instance.RunDialogue("종강총회_신아산", DisableSpotBackground);
-                GameManager.Instance.data.ending["신아산_종강총회"] = true;
             }
             if (index == 1)
             {
                 YarnManager.Instance.RunDialogue("종강총회_양나현", DisableSpotBackground);
-                GameManager.Instance.data.ending["양나현_종강총회"] = true;
             }
             if (index == 2)
             {
                 YarnManager.Instance.RunDialogue("종강총회_서은표", DisableSpotBackground);
-                GameManager.Instance.data.ending["서은표_종강총회"] = true;
             }
         }
         else

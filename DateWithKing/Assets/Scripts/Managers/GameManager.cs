@@ -8,8 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     public GameData data { get; set; } = new GameData();
+    public PermanentData PermanentData { get; set; } = new PermanentData();
 
     public int ticket = 0;
+
+    void Start()
+    {
+        PermanentData = DataLoader.ReadData<PermanentData>() ?? PermanentData;
+    }
 
     void Update()
     {

@@ -36,9 +36,16 @@ public static class DataLoader
     /// <returns></returns>
     public static T ReadData<T>(string query = "") where T : Entity
     {
-        TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + query);
-        T data = JsonConvert.DeserializeObject<T>(jsonData.text);
-        return data;
+        try
+        {
+            TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + query);
+            T data = JsonConvert.DeserializeObject<T>(jsonData.text);
+            return data;
+        }
+        catch (Exception e)
+        {
+            return default(T);
+        }
     }
     
     /// <summary>

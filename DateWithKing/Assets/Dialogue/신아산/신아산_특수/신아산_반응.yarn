@@ -8,6 +8,7 @@ title: 신아산_엿
 (아산이 나에게 엿을 날렸다.)
 <<show san_smile>>
 아산: 수고ㅋㅋ
+<<show san_idle>>
 <<choice_again>>
 ===
 
@@ -38,6 +39,7 @@ title: 신아산_k하트
 아산: 질 수 없지..
 아산: 나의 "손하트섬광초월울어라무광이여4식"을 보여주마!!!!!!!!!!!!
 {name()}: 그게 뭔소리냐고!!!!!
+<<show san_idle>>
 <<choice_again>>
 ===
 
@@ -50,6 +52,7 @@ title: 신아산_주먹
 아산: 너.. 너 지금 숙녀한테 정권 지르기를 한거야?
 아산: 미..
 아산: 미친놈아!!!!!!
+<<show san_idle>>
 <<choice_again>>
 ===
 
@@ -60,5 +63,6 @@ title: 신아산_쉿
 <<show san_neg>>
 아산: 사람 말은 끝까지 들어야 복이 온댔어.
 아산: ...책에서 봤어.
+<<show san_idle>>
 <<choice_again>>
 ===

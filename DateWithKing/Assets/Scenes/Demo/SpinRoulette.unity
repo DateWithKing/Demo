@@ -1218,6 +1218,7 @@ MonoBehaviour:
   backButton: {fileID: 1753120062}
   PlusButton: {fileID: 1381594437}
   MinusButton: {fileID: 896137840}
+  chScTicket: {fileID: 706088157}
 --- !u!4 &1051853456
 Transform:
   m_ObjectHideFlags: 0

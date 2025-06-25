@@ -17,9 +17,10 @@ title: 주1_월_3교시_동아리방_양나현_긍1
 {name()}: 응, 같이 먹자.
 <<like 양나현>>
 <<change lvHyun +10>>
-<<show hyun_smile>>
+<<show hyun_neg>>
 나현: 내가 왜?
 {name()}: ...
+<<show hyun_smile>>
 나현: (웃으며) 장난이야. 뭐 먹을래?
 <<if get("slv") < 3>>
     <<jump 주1_월_3교시_동아리방_양나현_의존성>>
@@ -58,6 +59,7 @@ title: 주1_월_3교시_동아리방_양나현_부1
 <<change lvHyun -5>>
 {name()}: 나는 배가 안 고파서 조금 이따 먹으려고.
 나현: 그래? 그럼 말고.
+<<show hyun_neg>>
 <<play 양나현_흠>>
 (나현은 다시 휴대폰으로 시선을 옮긴다.)
 <<end>>
