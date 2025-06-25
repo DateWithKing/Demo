@@ -42,7 +42,7 @@ title: 주5_금_2교시_강의실_서은표_긍1
 (아까 주운 뱃지를 보여주었다.)
 <<bgm_stop>>
 <<show pyo_horror>>
-<<wait  2>
+<<wait  2>>
 <<bgm_resume>>
 <<show pyo_idle>>
 은표: 아…
