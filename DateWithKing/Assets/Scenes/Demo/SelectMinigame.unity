@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1b515a2beb6684c8789584a911eb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverTimeThreshold: 2
+  hoverTimeThreshold: 0.5
   isRight: 1
   selectMini: {fileID: 403340819}
 --- !u!114 &382179609
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1b515a2beb6684c8789584a911eb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverTimeThreshold: 2
+  hoverTimeThreshold: 0.5
   isRight: 0
   selectMini: {fileID: 403340819}
 --- !u!114 &1250061183
