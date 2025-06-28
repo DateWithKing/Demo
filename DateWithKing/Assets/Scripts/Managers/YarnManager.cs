@@ -40,6 +40,9 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField]
     private GameObject contiuneButton;  // 다이얼로그 진행 버튼
 
+    [SerializeField]
+    private GameObject autoToggle;  // 오토 진행 버튼
+
     [SerializeField] 
     private GameObject fakeDialogue;
     
@@ -54,6 +57,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     private string prevChoiceDialogue;
     private string prevChoiceDialogueCharacter;
     private string prevChoiceDialogueName = "";
+    private bool isAuto = false; // 오토 진행 여부
     GameObject posButton;
     GameObject negButton;
 
@@ -97,7 +101,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     }
 
     public void AutoAdvance(){
-        lineView.autoAdvance = !lineView.autoAdvance;
+        isAuto = !isAuto;
+        lineView.autoAdvance = isAuto;
         if(lineView.autoAdvance) lineView.OnContinueClicked();
     }
 
@@ -227,6 +232,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     void StartChoice(string posNode, string posText, string negNode, string negText, bool timeLimit=false, bool isAgain=false)
     {
         contiuneButton.SetActive(false);
+        lineView.autoAdvance = false;  // 오토 진행 일시 중지
+        autoToggle.SetActive(false);  // 오토 진행 버튼 비활성화
 
         string opponentCharacter = GetOpponentCharacter();
         BackgroundController.Instance.OnLooking(opponentCharacter);
@@ -379,6 +386,8 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.Stop();
         fakeDialogue.GetComponent<CanvasGroupFader>().DisableCanvasGroup();
         contiuneButton.SetActive(true);
+        autoToggle.SetActive(true);  // 오토 진행 버튼 활성화
+        if(isAuto) lineView.autoAdvance = true;  // 오토 진행 재개
         RunDialogue(node, dialogEnded);
         PosNegPanel.SetActive(false);
     }

@@ -436,6 +436,7 @@ MonoBehaviour:
   NoticeText2: {fileID: 9218285409437077686}
   PosNegPanel: {fileID: 11901683730332231}
   contiuneButton: {fileID: 3893573939019331325}
+  autoToggle: {fileID: 1363950063937769481}
   fakeDialogue: {fileID: 4452311782764498157}
   fakeDialogueText: {fileID: 1994815938073214354}
   fakeDialogueCharacterName: {fileID: 920583739058498302}
