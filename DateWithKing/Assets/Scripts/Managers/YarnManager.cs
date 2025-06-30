@@ -163,7 +163,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     /// <param name="spriteName">Resorces/Sprites 폴더에 있는 스프라이트여야 함</param>
     void ShowCharactor(string spriteName){
         if(isNight() && !spriteName.Contains("_ver2") 
-        && !prevChoiceDialogueName.Contains("편의점_서은표")){  // 주4 밤 편의점 서은표 예외처리
+        && !prevChoiceDialogueName.Contains("편의점_서은표") && !runner.CurrentNodeName.Contains("편의점_서은표")){  // 주4 밤 편의점 서은표 예외처리
             spriteName += "_ver2";
         }
         CharacterImage.sprite = Resources.Load<Sprite>("Sprites/Charactor/"+spriteName);
