@@ -22,7 +22,7 @@ public class PunchingManager : MonoBehaviour
 
     private float gauge = 0f;
     private float maxGauge = 100f;
-    private float decreaseRate = 20f; // 1초 동안 클릭이 없으면 감소하는 양
+    private float decreaseRate = 5f; // 0.001초 동안 클릭이 없으면 감소하는 양
     private float increasePerClick = 5f; // 클릭 시 증가량
     private float gameTime = 5f; // 게임 지속 시간
     private float timeLeft;
@@ -95,7 +95,7 @@ public class PunchingManager : MonoBehaviour
         timeText.text = $"{(int)timeLeft % 60:D2}";
 
         // 1초 동안 클릭이 없으면 게이지 감소
-        if (Time.time - lastClickTime >= 1f)
+        if (Time.time - lastClickTime >= 0.001f)
         {
             ChangeGauge(-decreaseRate * Time.deltaTime);
         }
@@ -155,7 +155,7 @@ public class PunchingManager : MonoBehaviour
     {
         // 마우스 위치를 월드 좌표로 변환
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPos.z = 0; // 깊이 값 고정 (카메라 거리 조정)
+        worldPos.z = -1; // 깊이 값 고정 (카메라 거리 조정)
 
         GameObject punch = Instantiate(punchEffectPrefab, worldPos, Quaternion.identity);
         StartCoroutine(DestroyAfterDelay(punch, 0.25f));
