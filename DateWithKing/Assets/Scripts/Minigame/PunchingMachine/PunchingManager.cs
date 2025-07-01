@@ -141,13 +141,13 @@ public class PunchingManager : MonoBehaviour
         if (gauge >= 85)
         {
             SoundManager.Instance.PlaySFX("미니게임_성공");
-            YarnManager.Instance.RunDialogue("종강총회_사격게임_성공", () => ChangeScreen.MoveScene("SelectMinigame"));
+            YarnManager.Instance.RunDialogue("종강총회_펀치머신_성공", () => ChangeScreen.MoveScene("SelectMinigame"));
             GameManager.Instance.ticket += 5;
         }
         else
         {
             SoundManager.Instance.PlaySFX("미니게임_게임오버");
-            YarnManager.Instance.RunDialogue("종강총회_사격게임_실패", () => ChangeScreen.MoveScene("SelectMinigame"));
+            YarnManager.Instance.RunDialogue("종강총회_펀치머신_실패", () => ChangeScreen.MoveScene("SelectMinigame"));
         }
     }
 
@@ -158,7 +158,7 @@ public class PunchingManager : MonoBehaviour
         worldPos.z = -1; // 깊이 값 고정 (카메라 거리 조정)
 
         GameObject punch = Instantiate(punchEffectPrefab, worldPos, Quaternion.identity);
-        StartCoroutine(DestroyAfterDelay(punch, 0.3f));
+        StartCoroutine(DestroyAfterDelay(punch, 0.25f));
     }
 
     IEnumerator DestroyAfterDelay(GameObject obj, float delay)
