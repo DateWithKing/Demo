@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,11 @@ public class LoadScreenView : View, ILoadScreenView
         {
             slot.slot.onClick.AddListener(() => { ClickSlot?.Invoke(slot.slotID); });
         }
+    }
+
+    public void DisableSlot(int index)
+    {
+        slots[index].enabled = false;
     }
 
 

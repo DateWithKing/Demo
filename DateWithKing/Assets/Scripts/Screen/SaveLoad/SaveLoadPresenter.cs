@@ -17,9 +17,9 @@ public abstract class SaveLoadPresenter : Presenter
         view.ClickSlot += OnSlotClicked;
     }
 
-    void Start()
+    protected void Start()
     {
-        if (slots[0] != null)
+        if (slots[1] != null)
         {
             for (int i = 0; i < slots.Length; i++)
             {

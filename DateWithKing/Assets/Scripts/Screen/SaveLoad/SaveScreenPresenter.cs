@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SaveScreenPresenter : SaveLoadPresenter
 {
+    protected void Start()
+    {
+        base.Start();
+        view.DisableSlot(0);
+    }
     /// <summary>
     /// 슬롯 클릭 시 호출되는 메서드
     /// </summary>
