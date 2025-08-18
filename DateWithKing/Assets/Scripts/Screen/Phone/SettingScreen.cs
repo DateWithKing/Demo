@@ -9,8 +9,8 @@ public class SettingScreen : MonoBehaviour
 
     void Awake()
     {
-        UpdateBGMSoundSetting(GameManager.Instance.data.setting.bgmVolume);
-        UpdateSFXSoundSetting(GameManager.Instance.data.setting.effectVolume);
+        UpdateBGMSoundSetting(GameManager.Instance.PermanentData.setting.bgmVolume);
+        UpdateSFXSoundSetting(GameManager.Instance.PermanentData.setting.effectVolume);
     }
 
     // Start is called before the first frame update
@@ -20,17 +20,19 @@ public class SettingScreen : MonoBehaviour
         BGMToggle.toggleChanged += UpdateBGMSoundSetting;
         SFXToggle.toggleChanged -= UpdateSFXSoundSetting;
         SFXToggle.toggleChanged += UpdateSFXSoundSetting;
+        BGMToggle.ActivateToggle(GameManager.Instance.PermanentData.setting.bgmVolume);
+        SFXToggle.ActivateToggle(GameManager.Instance.PermanentData.setting.effectVolume);
     }
 
     private void UpdateBGMSoundSetting(int volumn)
     {
         SoundManager.Instance.ChangeBGMVolume((volumn / (float)4) * 0.5f);
-        GameManager.Instance.data.setting.bgmVolume = volumn;
+        GameManager.Instance.PermanentData.setting.bgmVolume = volumn; 
     }
     
     private void UpdateSFXSoundSetting(int volumn)
     {
-        SoundManager.Instance.ChangeSFXVolume((volumn / (float)4) * 0.2f); 
-        GameManager.Instance.data.setting.effectVolume = volumn;
+        SoundManager.Instance.ChangeSFXVolume((volumn / (float)4) * 0.1f); 
+        GameManager.Instance.PermanentData.setting.effectVolume = volumn;
     }
 }

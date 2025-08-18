@@ -31,6 +31,11 @@ public class SoundToggle : MonoBehaviour
         }
     }
 
+    public void ActivateToggle(int num)
+    {
+        toggles[num].isOn = true;
+    }
+
     /// <summary>
     /// 활성화된 토글 번호 반환
     /// </summary>

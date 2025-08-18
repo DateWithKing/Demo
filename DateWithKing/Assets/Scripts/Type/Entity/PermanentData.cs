@@ -4,6 +4,7 @@ using Yarn.Unity;
 
 public class PermanentData : Entity
 {
+    public SettingDTO setting = new SettingDTO();
     public void UpdateGallery(string spriteName)
     {
         if (!gallery.ContainsKey(spriteName)) return;

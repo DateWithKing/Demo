@@ -38,7 +38,6 @@ public class GameData : Entity
     };
     //외관 데이터
     public Dictionary<Appearance, string> appearance = new Dictionary<Appearance, string>();
-    public SettingDTO setting = new SettingDTO();
     public Inventory inventory = new Inventory();
     //채팅 데이터(마지막으로 받은 채팅의 호감도)
     public Dictionary<Character, Chat> chatting = new Dictionary<Character, Chat>
