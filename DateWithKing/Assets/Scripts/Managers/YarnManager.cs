@@ -100,10 +100,17 @@ public class YarnManager : SceneSingleton<YarnManager>
         lineView.holdTime = 1.5f; // 오토 진행 시 대사 출력 후 1.5초 후에 다음 대사로 넘어감
     }
 
-    public void AutoAdvance(){
+    public void AutoAdvance()
+    {
         isAuto = !isAuto;
         lineView.autoAdvance = isAuto;
         if(lineView.autoAdvance) lineView.OnContinueClicked();
+    }
+
+    public void SpeedUpDown()
+    {
+        lineView.typewriterEffectSpeed = lineView.typewriterEffectSpeed == 40f ? 160f : 40f;
+        lineView.holdTime = lineView.holdTime == 1.5f ? 0.2f : 1.5f;
     }
 
     /// <summary>
