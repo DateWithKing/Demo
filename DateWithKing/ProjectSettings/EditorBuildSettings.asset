@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo/PunchingGame.unity
     guid: a9e31b18e4561114489fe2d53787c205
+  - enabled: 1
+    path: Assets/Scenes/Demo/EndingCredit.unity
+    guid: e0215ed3e9326d64cb792e0c183546f4
   m_configObjects: {}

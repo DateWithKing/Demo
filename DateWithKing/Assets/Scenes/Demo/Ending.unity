@@ -780,7 +780,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lobby
+          m_StringArgument: EndingCredit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &625931315
@@ -1241,7 +1241,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lobby
+          m_StringArgument: EndingCredit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &737230978
@@ -1342,15 +1342,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5133701452359320536, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5133701452359320536, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5133701452359320536, guid: 4988d24cf7982284cabe8ec222c4de9c, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2695,7 +2695,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lobby
+          m_StringArgument: EndingCredit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2103740415
