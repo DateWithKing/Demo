@@ -14,6 +14,7 @@ public class StoreSlot : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Image type;
     [SerializeField] private Button button;
+    [SerializeField] private Image itemWindow;
 
     private const string ItemImagePath = "Sprites/Item/";
 
@@ -34,6 +35,10 @@ public class StoreSlot : MonoBehaviour
         price.text = item.price.ToString();
         image.sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
         type.sprite = Resources.Load<Sprite>(ItemImagePath + item.type.ToString());
+        if (item.type == ItemType.체력)
+        {
+            itemWindow.sprite = Resources.Load<Sprite>(ItemImagePath + "아이템창_체력");
+        }
     }
     
     public void OnPointerClick(PointerEventData eventData)

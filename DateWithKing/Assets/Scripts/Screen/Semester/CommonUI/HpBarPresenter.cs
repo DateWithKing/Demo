@@ -10,6 +10,9 @@ public class HpBarPresenter : MonoBehaviour
     [SerializeField] private TextMeshProUGUI lesson; //교시
     [SerializeField] private Slider currentHp;
     [SerializeField] private Slider maxHp;
+    [SerializeField] private Image hpImage;
+    [SerializeField] private Sprite normalHpImage;
+    [SerializeField] private Sprite shortageHpImage;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,15 @@ public class HpBarPresenter : MonoBehaviour
     {
         currentHp.value = SemesterSceneData.Instance.hp.GetHp() / (float)Hp.LimitHp;
         maxHp.value = SemesterSceneData.Instance.hp.GetMaxHp() / (float)Hp.LimitHp;
+
+        if (currentHp.value < 20)
+        {
+            hpImage.sprite = shortageHpImage;
+        }
+        else
+        {
+            hpImage.sprite = normalHpImage;
+        }
     }
 
     private void DateUpdate()

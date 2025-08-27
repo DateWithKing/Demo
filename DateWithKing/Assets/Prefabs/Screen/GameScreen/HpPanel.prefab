@@ -392,6 +392,9 @@ MonoBehaviour:
   lesson: {fileID: 7575384103665359167}
   currentHp: {fileID: 6575071603458397517}
   maxHp: {fileID: 4733848491594633368}
+  hpImage: {fileID: 1758963234729509203}
+  normalHpImage: {fileID: 21300000, guid: 49637ea8324d80245ade72eda6e27dea, type: 3}
+  shortageHpImage: {fileID: 21300000, guid: 7d40568beba449240bd2f9ec7b404557, type: 3}
 --- !u!1 &4317397684987744370
 GameObject:
   m_ObjectHideFlags: 0

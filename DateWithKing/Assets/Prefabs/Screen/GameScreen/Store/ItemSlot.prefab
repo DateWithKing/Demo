@@ -488,6 +488,7 @@ MonoBehaviour:
   image: {fileID: 4802409587725156852}
   type: {fileID: 6609614512758504948}
   button: {fileID: 1981192992589820045}
+  itemWindow: {fileID: 1655908406236316444}
 --- !u!1 &4042588729015742584
 GameObject:
   m_ObjectHideFlags: 0
