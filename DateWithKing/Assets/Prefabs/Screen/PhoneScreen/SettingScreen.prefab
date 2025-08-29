@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 424048983051899555}
   - component: {fileID: 6273279366672521118}
   - component: {fileID: 5912295387791329340}
+  - component: {fileID: 7754179032546644110}
   - component: {fileID: 7193236863856055988}
   m_Layer: 5
-  m_Name: BackButton
+  m_Name: DisplayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 450d5a8576e51c64082cee6e9adb5d94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e61048e78e03ea41b28352213cc7242, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -121,6 +122,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7754179032546644110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237024351412313527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e9b0d54866ae944a21e5ccc3fd3e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7193236863856055988
 MonoBehaviour:
   m_ObjectHideFlags: 0
