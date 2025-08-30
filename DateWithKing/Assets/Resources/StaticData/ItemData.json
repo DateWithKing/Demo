@@ -1,13 +1,13 @@
 {
   "hpItem": {
-    "1": { "id": 1, "name": "커피", "description": "만인의 아이스 아메리카노. 마시면 잠깐 정신을 깨울 수 있다.", "price": 20, "type": "체력", "hp": 10 },
-    "2": { "id": 2, "name": "샌드위치", "description": "간단한 간식이다. 신선한 야채가 들어가있어서 먹으면 힘이 난다.", "price": 30, "type": "체력", "hp": 20 },
-    "3": { "id": 3, "name": "김밥", "description": "우리 학교 명물김밥이다. 재료인 치즈색 때문에 황금김밥이라고도 불린다.", "price": 50, "type": "체력", "hp": 50 }
+    "1": {"id":1,"name":"커피","description":"만인의 아이스 아메리카노. 마시면 체력이 조금 회복된다.","price":20,"type":"체력","hp":10},
+    "2": {"id":2,"name":"샌드위치","description":"간단한 간식이다. 먹으면 체력이 꽤 회복된다.","price":30,"type":"체력","hp":20},
+    "3": {"id":3,"name":"김밥","description":"우리 학교 명물김밥이다. 먹으면 체력이 많이 회복된다.","price":50,"type":"체력","hp":50}
   },
   "presentItem": {
     "101": { "id": 101, "name": "키링", "description": "토끼 모양의 작은 키링. 모두가 무난하게 좋아할 것 같다.", "price": 100, "type": "선물", "lvSan": 5, "lvHyun": 5, "lvPyo": 5 },
     "102": { "id": 102, "name": "쿠키", "description": "초콜릿칩이 들어간 쿠키. 단 음식을 싫어하는 사람은 없을 것이다.", "price": 100, "type": "선물", "lvSan": 5, "lvHyun": 5, "lvPyo": 5 },
-    "103": { "id": 103, "name": "기프트카드", "description": "게임을 구매할 수 있는 상품권. 개발 동아리에게는 현금이나 다름없다.", "price": 100, "type": "선물", "lvSan": 5, "lvHyun": 5, "lvPyo": 5 },
+    "103": { "id": 103, "name": "기프트카드", "description": "게임을 구매할 수 있는 상품권. 우리 동아리원에게는 현금이나 다름없다.", "price": 100, "type": "선물", "lvSan": 5, "lvHyun": 5, "lvPyo": 5 },
     "104": { "id": 104, "name": "피크", "description": "해골이 그려진 보라색 피크. 척 보기에는 뭐하는 물건인지 모르겠다.", "price": 100, "type": "선물", "lvSan": 10, "lvHyun": -10, "lvPyo": -10 },
     "105": { "id": 105, "name": "꽃", "description": "노란 꽃으로 이루어진 꽃다발. 품종은 잘 모르겠지만 예쁘다.", "price": 100, "type": "선물", "lvSan": -10, "lvHyun": 10, "lvPyo": -10 },
     "106": { "id": 106, "name": "귀도리", "description": "초록색 귀도리. 방한용이라고는 하지만 거의 패션 소품이다.", "price": 100, "type": "선물", "lvSan": -10, "lvHyun": -10, "lvPyo": 10 },
