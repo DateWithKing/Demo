@@ -133,7 +133,7 @@ title: 밤_3_무관_신아산_특수
 {name()}: 베이스도 들고 왔어?
 아산: 응!
 아산: 기다려봐.
-<<show san_spec_ver2>>
+<<show san_smile_ver2>>
 아산: Congratulations 넌 참 대단해~~~~~~~~~~~
 아산: Congratulations 어쩜 그렇게~~~~~~~~~~~
 <<wait 1>>
