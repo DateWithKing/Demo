@@ -10,7 +10,7 @@ public class ImageScrollController : MonoBehaviour
     public Canvas parentCanvas; // 부모 캔버스 (화면 크기 계산용)
     
     [Header("스크롤 설정")]
-    public float normalScrollSpeed = 100f; // 기본 스크롤 속도 (픽셀/초)
+    public float normalScrollSpeed = 400f; // 기본 스크롤 속도 (픽셀/초)
     public float fastScrollMultiplier = 2f; // 빠른 스크롤 배수
     
     [Header("자동 계산 설정")]
