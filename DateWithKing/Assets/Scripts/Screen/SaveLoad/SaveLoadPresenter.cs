@@ -17,6 +17,25 @@ public abstract class SaveLoadPresenter : Presenter
         view.ClickSlot += OnSlotClicked;
     }
 
+    public void SaveSomething(int index)
+    {
+        slots[index] ??= new SlotDTO(
+            GameManager.Instance.data.date.GetCurrentDate(true),
+            Resources.Load<Sprite>($"Lobby/데이터있음{index+1}"));
+        view.PrintSlot(index, slots[index]);
+    }
+
+    void OnEnable()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i] != null)
+            {
+                view.PrintSlot(i, slots[i]);
+            }
+        }
+    }
+
     protected void Start()
     {
         if (slots[1] != null)
@@ -30,22 +49,14 @@ public abstract class SaveLoadPresenter : Presenter
         }
         for (int i = 0; i < slots.Length; i++)
         {
-            try
-            {
-                GameData data = DataLoader.ReadData<GameData>((DynamicData)i);
-            }
-            catch (FileNotFoundException ex)
-            {
-                slots[i] = new SlotDTO("", Resources.Load<Sprite>($"Lobby/데이터없음{i+1}"));
-            }
-            finally
-            {
+            GameData data = DataLoader.ReadData<GameData>((DynamicData)i);
+            if(data is null) slots[i] = new SlotDTO("", Resources.Load<Sprite>($"Lobby/데이터없음{i+1}"));
+            else{
                 slots[i] ??= new SlotDTO(
-                    DataLoader.ReadData<GameData>((DynamicData)i).date.GetCurrentDate(true),
+                    data.date.GetCurrentDate(true),
                     Resources.Load<Sprite>($"Lobby/데이터있음{i+1}"));
-                
-                view.PrintSlot(i, slots[i]);
             }
+            view.PrintSlot(i, slots[i]);
         }
     }
 

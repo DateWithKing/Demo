@@ -76,9 +76,9 @@ public static class DataLoader
             T data = JsonConvert.DeserializeObject<T>(jsonData);
             return data;
         }
-        catch (FileNotFoundException ex)
+        catch (Exception e)
         {
-            throw new FileNotFoundException();
+            return default(T);
         }
     }
 

@@ -12,23 +12,38 @@ public class Gallery : MonoBehaviour
     public GameObject imagePrefab;
     public Image EnlargeImage;
     public Button EnlargeButton;
+    public List<GalleryImage> Images = new List<GalleryImage>();
     public List<GalleryImage> Hidden = new List<GalleryImage>();
     void Awake()
     {
         parent = transform;
     }
 
-    void Start()
+    void OnEnable()
     {
         foreach (var ending in GameManager.Instance.PermanentData.gallery)
         {
             //만약에 추가되거나 할 일 생기면 리팩토링
             if (ending.Key == "서은표_납치엔딩") continue;
-            Instantiate(imagePrefab, parent).GetComponent<GalleryImage>().SetImage(ending.Key, !ending.Value, EnlargeImage, EnlargeButton);
+            GalleryImage image = Instantiate(imagePrefab, parent).GetComponent<GalleryImage>();
+            Images.Add(image);
+            image.SetImage(ending.Key, !ending.Value, EnlargeImage, EnlargeButton);
         }
         foreach(var hidden in Hidden)
         {
             hidden.SetImage(hidden.name, !GameManager.Instance.PermanentData.gallery[hidden.name], EnlargeImage, EnlargeButton);
+        }
+    }
+
+    void OnDisable()
+    {
+        foreach(var img in Images)
+        {
+            Destroy(img.gameObject);
+        }
+        foreach(var hidden in Hidden)
+        {
+            Destroy(hidden.gameObject);
         }
     }
 }

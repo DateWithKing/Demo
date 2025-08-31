@@ -21,7 +21,7 @@ public class LoadScreenView : View, ILoadScreenView
 
     public void DisableSlot(int index)
     {
-        slots[index].enabled = false;
+        slots[index].slot.interactable = false;
     }
 
 

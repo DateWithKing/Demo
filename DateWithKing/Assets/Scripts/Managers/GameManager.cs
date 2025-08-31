@@ -47,6 +47,10 @@ public class GameManager : Singleton<GameManager>
     public void LoadData(int slot)
     {
         data = DataLoader.ReadData<GameData>((DynamicData)slot);
+        if (data == null)
+        {
+            InitData();
+        }
     }
 
     /// <summary>
