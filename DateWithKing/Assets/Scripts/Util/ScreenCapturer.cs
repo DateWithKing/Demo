@@ -9,7 +9,7 @@ public class ScreenCapturer : Singleton<ScreenCapturer>
     string screenshotPath;
     void Start()
     {
-        screenshotPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "JaamNaMi");
+        screenshotPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Wait!Misonyeo");
     }
 
     void Update()
