@@ -7,12 +7,7 @@ public class LoadScreenPresenter : SaveLoadPresenter
 {
     void OnEnable()
     {
-        base.Start();
-        /*GameData data = DataLoader.ReadData<GameData>((DynamicData)0);
-        if(data == null) slots[0] = new SlotDTO("", Resources.Load<Sprite>($"Lobby/데이터없음{1}"));
-        else slots[0] ??= new SlotDTO(
-            data.date.GetCurrentDate(true),
-                Resources.Load<Sprite>($"Lobby/데이터있음{1}"));*/
+        base.OnEnable();
     }
     
     /// <summary>

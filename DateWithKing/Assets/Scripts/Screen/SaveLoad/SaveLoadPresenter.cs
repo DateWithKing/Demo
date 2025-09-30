@@ -17,19 +17,19 @@ public abstract class SaveLoadPresenter : Presenter
         view.ClickSlot += OnSlotClicked;
     }
 
-    public void SaveSomething(int index)
+    public void SaveData(int slotID)
     {
-        slots[index] ??= new SlotDTO(
-            GameManager.Instance.data.date.GetCurrentDate(true),
-            Resources.Load<Sprite>($"Lobby/데이터있음{index+1}"));
-        view.PrintSlot(index, slots[index]);
+        slots[slotID] = new SlotDTO(GameManager.Instance.data.date.GetCurrentDate(true),
+            Resources.Load<Sprite>($"Lobby/데이터있음{slotID+1}"));
+        GameManager.Instance.SaveData(slotID);
+        Debug.Log("데이터가 저장되엇씀?니다?");
     }
 
-    void OnEnable()
+    protected void OnEnable()
     {
         for (int i = 0; i < slots.Length; i++)
         {
-            if (slots[i] != null)
+            if (slots[i] != null) 
             {
                 view.PrintSlot(i, slots[i]);
             }
