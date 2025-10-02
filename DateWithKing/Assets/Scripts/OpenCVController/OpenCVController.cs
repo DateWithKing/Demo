@@ -62,6 +62,11 @@ public class OpenCVController : Singleton<OpenCVController>
         }
     }
 
+    public void ChangeThreshold(float percent)
+    {
+        InvokeDetector(GameManager.Instance.PermanentData.setting.GetThresholdCmd(percent), (s => UnityEngine.Debug.Log("민감도 적용이 완료되었습니다" + s)));
+    }
+
     private async Task<string> RunFunction(string function)
     {
         if (pythonProcess != null && !pythonProcess.HasExited)

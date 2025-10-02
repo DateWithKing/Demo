@@ -10,6 +10,11 @@ public class PermanentData : Entity
         if (!gallery.ContainsKey(spriteName)) return;
         
         gallery[spriteName] = true;
+        SavePermanentData();
+    }
+
+    public void SavePermanentData()
+    {
         DataLoader.WriteData(DynamicData.Permanent, this);
     }
     public Dictionary<string, bool> gallery { get; }= new Dictionary<string, bool>()

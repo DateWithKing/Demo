@@ -14,6 +14,7 @@ public class SemesterScreenPresenter : MonoBehaviour
     void Awake()
     {
         screen = GetComponent<Screen>();
+        OpenCVController.Instance.ChangeThreshold(GameManager.Instance.PermanentData.setting.thresholdPrecent);
     }
     void Start()
     {

@@ -989,6 +989,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1192526552985187206, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2021867882905324031, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1145,6 +1149,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 8137102229055331608, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137102229055331608, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137102229055331608, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 8147003380292319253, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1256,6 +1272,18 @@ PrefabInstance:
     - target: {fileID: 8518590749643449203, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690737186711074873, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690737186711074873, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690737186711074873, guid: 6f346e58d2ad7804bae9d76e9dc685d6, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

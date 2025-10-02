@@ -62,4 +62,9 @@ public class GameManager : Singleton<GameManager>
     {
         DataLoader.WriteData((DynamicData)slot, data);
     }
+    
+    private void OnApplicationQuit()
+    {
+        PermanentData.SavePermanentData();
+    }
 }
