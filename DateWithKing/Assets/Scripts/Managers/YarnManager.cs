@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using TMPro;
 using Yarn.Unity;
 
-
-
 public class YarnManager : SceneSingleton<YarnManager>
 {
 
@@ -52,6 +50,10 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField] 
     private TextMeshProUGUI fakeDialogueCharacterName;
 
+    // ADDED: A boolean to enable/disable keyboard choices. You can toggle this in the Unity Inspector.
+    [SerializeField]
+    private bool allowKeyboardChoices = false;
+
     private event Action dialogEnded;
     private event Action prevChoice;
     private string prevChoiceDialogue;
@@ -70,10 +72,37 @@ public class YarnManager : SceneSingleton<YarnManager>
     [SerializeField]
     Sprite normal;
 
+    // ADDED: Variables to store the current choice data for the Update loop to use.
+    private string currentPosNode;
+    private string currentPosText;
+    private string currentNegNode;
+    private string currentNegText;
+    private string currentOpponentCharacter;
     
     void Start()
     {
         Init();
+    }
+
+    // ADDED: The Update method to listen for keyboard input.
+    void Update()
+    {
+        // We only check for input if keyboard choices are allowed AND the choice panel is active.
+        if (allowKeyboardChoices && PosNegPanel.activeInHierarchy)
+        {
+            // '1' key for Positive
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+            {
+                // We pass "Positive" to a new handler function
+                HandleChoiceSelection("Positive");
+            }
+            // '2' key for Negative
+            else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
+            {
+                // We pass "Negative" to a new handler function
+                HandleChoiceSelection("Negative");
+            }
+        }
     }
 
     void Init(){
@@ -113,10 +142,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         lineView.holdTime = lineView.holdTime == 1.5f ? 0.2f : 1.5f;
     }
 
-    /// <summary>
-    /// 타이틀이 <see cref="nodeName"/>인 다이얼로그를 찾아 실행<br/>
-    /// 해당 대화 완전 종료시 <see cref="callback"/> 실행
-    /// </summary>
     public void RunDialogue(string nodeName, Action callback = null)
     {
         if (runner == null)
@@ -129,15 +154,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         dialogEnded = callback;
     }
 
-    /// <summary>
-    /// 얀 스크립트에서 대화 종료시 호출해야함. <br/>
-    /// 기능: <br/>
-    /// 캐릭터 이미지 비활성화 <br/>
-    /// 배경 이미지 비활성화 <br/>
-    /// notice, like/dislike 텍스트 비활성화 <br/>
-    /// 다이얼로그 씬 비활성화 <br/>
-    /// 대화 완전 종료 시 실행되는 callback 호출 <br/>
-    /// </summary>
     void EndDialogue()
     {
         dialogueScreen.HideScreen();
@@ -151,10 +167,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         dialogEnded = null;
     }
 
-    /// <summary>
-    /// <see cref="text"/>를 화면 좌측 상단에 2초간 띄웠다 사라지게함
-    /// </summary>
-    /// <param name="text">띄어쓰기 포함 시 큰따옴표로 묶어서 쓸 것</param>
     void Notice(string text){
         NoticeText.text = text;
         NoticeText.gameObject.SetActive(true);
@@ -164,10 +176,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         NoticeText2.gameObject.SetActive(true);
     }
 
-    /// <summary>
-    /// <see cref="spriteName"/>에 해당하는 캐릭터 이미지를 보이게 함 (변경 포함)
-    /// </summary>
-    /// <param name="spriteName">Resorces/Sprites 폴더에 있는 스프라이트여야 함</param>
     void ShowCharactor(string spriteName){
         if(isNight() && !spriteName.Contains("_ver2") 
         && !prevChoiceDialogueName.Contains("편의점_서은표") && !runner.CurrentNodeName.Contains("편의점_서은표")){  // 주4 밤 편의점 서은표 예외처리
@@ -186,17 +194,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         return SemesterSceneData.Instance.clock.GetCurrentWeekCycle() == WeekCycle.Night;
     }
 
-    /// <summary>
-    /// 캐릭터 이미지를 숨김
-    /// </summary>
     void HideCharactor(){
         CharacterImage.gameObject.SetActive(false);
     }
 
-    /// <summary>
-    /// <see cref="spriteName"/>에 해당하는 배경 이미지를 보이게 함 (변경 포함)
-    /// </summary>
-    /// <param name="spriteName"></param>
     void ShowBackground(string spriteName){
         try{
             BackgroundImage.sprite = Resources.Load<Sprite>("Sprites/Background/"+spriteName);
@@ -208,18 +209,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
     }
 
-    /// <summary>
-    /// audioName에 해당하는 소리를 한 번 재생
-    /// </summary>
-    /// <param name="audioName"></param>
     void SoundEffect(string audioName){
         SoundManager.Instance.PlaySFX(audioName);
     }
 
-    /// <summary>
-    /// 현재 대화 중인 캐릭터의 이름을 반환
-    /// </summary>
-    /// <returns></returns>
     public string GetOpponentCharacter()
     {
         foreach(string character in Enum.GetNames(typeof(Character))){
@@ -230,17 +223,11 @@ public class YarnManager : SceneSingleton<YarnManager>
         return null;
     }
 
-    /// <summary>
-    /// 긍정 선택 시 <see cref="posNode"/>실행, 
-    /// 부정 선택 시 <see cref="negNode"/>실행
-    /// </summary>
-    /// <param name="posNode"></param>
-    /// <param name="negNode"></param>
     void StartChoice(string posNode, string posText, string negNode, string negText, bool timeLimit=false, bool isAgain=false)
     {
         contiuneButton.SetActive(false);
-        lineView.autoAdvance = false;  // 오토 진행 일시 중지
-        autoToggle.SetActive(false);  // 오토 진행 버튼 비활성화
+        lineView.autoAdvance = false;  
+        autoToggle.SetActive(false);  
 
         string opponentCharacter = GetOpponentCharacter();
         BackgroundController.Instance.OnLooking(opponentCharacter);
@@ -274,104 +261,135 @@ public class YarnManager : SceneSingleton<YarnManager>
 
         PosNegPanel.SetActive(true);
         if(timeLimit) TimeBarController.Instance.StartTimer();
+
+        // ADDED: Store the choice data in class-level variables for the keyboard input to access.
+        currentPosNode = posNode;
+        currentPosText = posText;
+        currentNegNode = negNode;
+        currentNegText = negText;
+        currentOpponentCharacter = opponentCharacter;
         
 
-        if(GameManager.Instance.data.isThereAnyoneBehindYou)  // 뒤에 누구 있어? 는 한번만 띄우기로 해서 이렇게 했구나
+        
+        if(GameManager.Instance.data.isThereAnyoneBehindYou)
         {
             OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
                 CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
-                }, timeLimit);
+            }, timeLimit);
         }
         else
         {
             OpenCVController.Instance.InvokeDetector("DialogueWithMultiface", (string answer)=>{
                 CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
-                }, timeLimit);
+            }, timeLimit);
         }
     }
-    
-    private void CheckDialogueCV(string answer, string posNode, string posText, string negNode, string negText, string opponentCharacter)
+        // If keyboard input is enabled, we just wait. The Update() method will handle the rest.
+
+
+    // ADDED: A new function to handle making the choice, whether from OpenCV or Keyboard.
+    // This reduces code duplication.
+    private void HandleChoiceSelection(string answer)
     {
+        // IMPORTANT: If you are using keyboard, you might want to cancel the active OpenCV detection
+        // to prevent it from firing after a key is pressed. You may need to add a "Cancel" function
+        // to your OpenCVController.
+        // For example: OpenCVController.Instance.CancelCurrentDetection();
+
         BackgroundController.Instance.FinishLooking();
         TimeBarController.Instance.HideTimer();
         
-        Debug.Log("OpenCV Answer: "+answer);
+        Debug.Log("Input Answer: "+answer);
 
         switch(answer){
             case "Positive":
             case "Thumbs_Up":
                 SoundEffect("선택_긍정");
-                posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = posText;
+                posButton.transform.GetChild(0).GetComponent<TMP_Text>().text = currentPosText;
                 posButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
                 posButton.GetComponent<Image>().sprite = selected;
                 posButton.GetComponent<Image>().SetNativeSize();
                 negButton.GetComponent<Image>().sprite = unselected;
-                StartCoroutine(RunDialogueLate(posNode, dialogEnded));
+                StartCoroutine(RunDialogueLate(currentPosNode, dialogEnded));
                 break;
             case "Negative":
             case "Thumbs_Down":
                 SoundEffect("선택_부정");
-                negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = negText;
+                negButton.transform.GetChild(0).GetComponent<TMP_Text>().text = currentNegText;
                 negButton.transform.GetChild(0).GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
                 negButton.GetComponent<Image>().sprite = selected;
                 negButton.GetComponent<Image>().SetNativeSize();
                 posButton.GetComponent<Image>().sprite = unselected;
-                StartCoroutine(RunDialogueLate(negNode, dialogEnded));
+                StartCoroutine(RunDialogueLate(currentNegNode, dialogEnded));
                 break;
             case "Fuck":
-                if (opponentCharacter is not null)
+                if (currentOpponentCharacter is not null)
                 {
-                    GameManager.Instance.data.fuckNum[opponentCharacter.ToEnum<Character>()]++;
-                    EndChoice(opponentCharacter+"_엿");
+                    GameManager.Instance.data.fuckNum[currentOpponentCharacter.ToEnum<Character>()]++;
+                    EndChoice(currentOpponentCharacter+"_엿");
                 }
                 else
                 {
-                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                    // Fallback if there's no character context
+                    PosNegPanel.SetActive(false); // Hide panel to prevent multiple inputs
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string ans)=>{
+                        CheckDialogueCV(ans, currentPosNode, currentPosText, currentNegNode, currentNegText, currentOpponentCharacter);
                 });}
                 break;
             case "MultipleFace":
                 if(GameManager.Instance.data.isThereAnyoneBehindYou) Debug.LogError("얼굴두개 두번째 인식됨");
                 GameManager.Instance.data.isThereAnyoneBehindYou = true;
-                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_두명");
+                if(currentOpponentCharacter is not null) EndChoice(currentOpponentCharacter+"_두명");
                 else {
-                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                    PosNegPanel.SetActive(false); // Hide panel
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string ans)=>{
+                        CheckDialogueCV(ans, currentPosNode, currentPosText, currentNegNode, currentNegText, currentOpponentCharacter);
                 });}
                 break;
             case "Timeout":
-                EndChoice(opponentCharacter+"_느려");
+                EndChoice(currentOpponentCharacter+"_느려");
                 break;
             case "FingerHeart":
-                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_K하트");
+                if(currentOpponentCharacter is not null) EndChoice(currentOpponentCharacter+"_K하트");
                 else {
-                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                    PosNegPanel.SetActive(false); // Hide panel
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string ans)=>{
+                        CheckDialogueCV(ans, currentPosNode, currentPosText, currentNegNode, currentNegText, currentOpponentCharacter);
                 });}
                 break;
             case "Slap":
-                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_주먹");
+                if(currentOpponentCharacter is not null) EndChoice(currentOpponentCharacter+"_주먹");
                 else {
-                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                    PosNegPanel.SetActive(false); // Hide panel
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string ans)=>{
+                        CheckDialogueCV(ans, currentPosNode, currentPosText, currentNegNode, currentNegText, currentOpponentCharacter);
                 });}
                 break;
             case "Shh":
-                if(opponentCharacter is not null) EndChoice(opponentCharacter+"_쉿");
+                if(currentOpponentCharacter is not null) EndChoice(currentOpponentCharacter+"_쉿");
                 else {
-                    OpenCVController.Instance.InvokeDetector("Dialogue", (string answer)=>{
-                    CheckDialogueCV(answer, posNode, posText, negNode, negText, opponentCharacter);
+                    PosNegPanel.SetActive(false); // Hide panel
+                    OpenCVController.Instance.InvokeDetector("Dialogue", (string ans)=>{
+                        CheckDialogueCV(ans, currentPosNode, currentPosText, currentNegNode, currentNegText, currentOpponentCharacter);
                 });}
                 break;
-            default: Debug.LogError("OpenCV Answer is wrong: "+answer); break;
+            default: Debug.LogError("Input Answer is wrong: "+answer); break;
         }
     }
+    
+    // MODIFIED: This function now just calls the new handler function.
+    private void CheckDialogueCV(string answer, string posNode, string posText, string negNode, string negText, string opponentCharacter)
+    {
+        // Store current values just in case they're needed by a fallback
+        currentPosNode = posNode;
+        currentPosText = posText;
+        currentNegNode = negNode;
+        currentNegText = negText;
+        currentOpponentCharacter = opponentCharacter;
+        
+        HandleChoiceSelection(answer);
+    }
 
-    /// <summary>
-    /// 다이얼로그 한 줄을 출력
-    /// </summary>
-    /// <param name="dialogue">대사</param>
-    /// <param name="character">캐릭터 이름</param>
     public void PrintDialogue(string dialogue, string character)
     {
         fakeDialogueText.text = dialogue;
@@ -379,11 +397,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         fakeDialogue.GetComponent<CanvasGroupFader>().EnableCanvasGroup();
     }
 
-    /// <summary>
-    /// 다이얼로그 2초 늦게 실행, 진행중인 다이얼로그가 있어도 강제실행
-    /// </summary>
-    /// <param name="node"></param>
-    /// <returns></returns>
     public IEnumerator RunDialogueLate(string node, Action callback = null){
         yield return new WaitForSeconds(3f);
         this.dialogEnded = callback;
@@ -393,41 +406,27 @@ public class YarnManager : SceneSingleton<YarnManager>
         runner.Stop();
         fakeDialogue.GetComponent<CanvasGroupFader>().DisableCanvasGroup();
         contiuneButton.SetActive(true);
-        autoToggle.SetActive(true);  // 오토 진행 버튼 활성화
-        if(isAuto) lineView.autoAdvance = true;  // 오토 진행 재개
+        autoToggle.SetActive(true);  
+        if(isAuto) lineView.autoAdvance = true; 
         RunDialogue(node, dialogEnded);
         PosNegPanel.SetActive(false);
     }
     
-    /// <summary>
-    /// 이전 choice 단계를 다시 실행함 (이스터에그 다이얼로그 끝에, 다시 선택지로 돌아가야 할 경우 호출)
-    /// </summary>
     void ChoiceAgain(){
         PrintDialogue(prevChoiceDialogue, prevChoiceDialogueCharacter);
         prevChoice?.Invoke();
     }
 
-    /// <summary>
-    /// 유저 이름 반환
-    /// </summary>
-    /// <param name="text"></param>
     [YarnFunction("name")]
     public static string GetName(){
         return GameManager.Instance.data.name;
     }
 
-    /// <summary>
-    /// <see cref="statName"/>에 해당하는 스탯 수치 반환
-    /// </summary>
-    /// <param name="statName"></param>
     [YarnFunction("get")]
     public static int GetStat(string statName){
         return GameManager.Instance.data.stats[statName].value;
     }
 
-    /// <summary>
-    /// 최댓값 100기준의 현재 hp 반환
-    /// </summary>
     [YarnFunction("get_hp")]
     public static int GetHp(){
         return SemesterSceneData.Instance.hp.GetHp();
@@ -438,9 +437,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         return GameManager.Instance.data.fuckNum[Instance.GetOpponentCharacter().ToEnum<Character>()];
     }
 
-    /// <summary>
-    /// 외관 종류를 매개변수로 받아 그 값을 문자열로 반환함
-    /// </summary>
     [YarnFunction("get_appearance")]
     public static string GetAppearance(string appearence){
         if(Enum.TryParse(appearence, out Appearance app)){
@@ -452,10 +448,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
     }
 
-    /// <summary>
-    /// val만큼 현재 hp를 감소시킴
-    /// </summary>
-    /// <param name="val"></param>
     void UseHp(int val){
         if(SemesterSceneData.Instance.hp is not null){
             SemesterSceneData.Instance.hp.UseHp(val);
@@ -465,10 +457,6 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
     }
 
-    /// <summary>
-    /// val만큼 현재 hp를 증가시킴
-    /// </summary>
-    /// <param name="val"></param>
     void RecoverHp(int val){
         if(SemesterSceneData.Instance.hp is not null){
             SemesterSceneData.Instance.hp.RecoverHp(val);
@@ -478,20 +466,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
     }
 
-    /// <summary>
-    /// <see cref="statName"/>에 해당하는 스탯 수치 <see cref="val"/>만큼 조정
-    /// </summary>
-    /// <param name="statName"></param>
-    /// <param name="val"></param>
-    /// <returns></returns>
     void SetStat(string statName, int val){
         GameManager.Instance.data.stats[statName].ChangeStat(val);
     }
 
-    /// <summary>
-    /// 브이~ 인식 후 node 다이얼로그 실행
-    /// </summary>
-    /// <param name="node"></param>
     void cheese(string node){
         OpenCVController.Instance.InvokeDetector("Picture", (string s)=>{
             SoundEffect("브이_찰칵");
