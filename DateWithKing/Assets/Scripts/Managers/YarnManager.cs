@@ -79,6 +79,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     private string currentNegText;
     private string currentOpponentCharacter;
     
+    private bool choiceHasBeenMade = false;
+    
     void Start()
     {
         Init();
@@ -259,6 +261,8 @@ public class YarnManager : SceneSingleton<YarnManager>
             prevChoiceDialogueCharacter = lineView.characterNameText.text;
         }
 
+        choiceHasBeenMade = false;
+
         PosNegPanel.SetActive(true);
         if(timeLimit) TimeBarController.Instance.StartTimer();
 
@@ -295,6 +299,10 @@ public class YarnManager : SceneSingleton<YarnManager>
         // to prevent it from firing after a key is pressed. You may need to add a "Cancel" function
         // to your OpenCVController.
         // For example: OpenCVController.Instance.CancelCurrentDetection();
+
+        if (choiceHasBeenMade) return;
+
+        choiceHasBeenMade = true;
 
         BackgroundController.Instance.FinishLooking();
         TimeBarController.Instance.HideTimer();
