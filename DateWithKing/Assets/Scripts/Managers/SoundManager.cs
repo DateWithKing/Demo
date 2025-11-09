@@ -99,10 +99,7 @@ public class SoundManager : Singleton<SoundManager>
         
         if (amount < 5)
         {
-            reverb.dryLevel = 0f;
-            reverb.decayTime = 1f;
-            reverb.diffusion = 100f;
-            reverb.density = 100f;
+            reverb.room = 0f;
         }
         else if (amount < 8)
         {
