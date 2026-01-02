@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weekCycle: 0
+  cursorImage: {fileID: 0}
 --- !u!114 &6552925580777966141 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8960656742345884187, guid: ebbc6288771d2284baeab2cb127bd59f, type: 3}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class Date
 {
@@ -17,21 +18,63 @@ public class Date
     [JsonProperty]
     private int currentWeek = BeginWeek;
     [JsonProperty]
-    private Days currentDays = Days.월;
+    private Days currentDays = Days.MON;
     [JsonProperty]
     private int countPassedDate = 1; //주차가 몇 번 지났는지
     
     public string GetCurrentDate(bool enterDays = false)
     {
-        if(enterDays) return $"{currentMonth}월 {currentWeek}주차\n{currentDays.ToString()}요일";
-        return $"{currentMonth}월 {currentWeek}주차 {currentDays.ToString()}요일";
+        string format = LocalizationSettings.StringDatabase.GetLocalizedString("Days", enterDays ? "DATE_MULTILINE" : "DATE_INLINE");
+        string currentDay = LocalizationSettings.StringDatabase.GetLocalizedString("Days", $"DAYS_{currentDays.ToString()}");
+
+        string weekString;
+        if (LocalizationSettings.SelectedLocale.Identifier.Code.StartsWith("en", System.StringComparison.OrdinalIgnoreCase))
+        {
+            weekString = ToOrdinal(currentWeek);
+        }
+        else
+        {
+            weekString = currentWeek.ToString();
+        }
+        
+        return string.Format(
+            format, 
+            currentMonth,
+            weekString,
+            currentDay
+        );
+    }
+    
+    private string ToOrdinal(int number)
+    {
+        if (number <= 0) return number.ToString(); // 0이나 음수는 그대로 반환
+
+        switch (number % 100)
+        {
+            case 11:
+            case 12:
+            case 13:
+                return number + "th";
+        }
+
+        switch (number % 10)
+        {
+            case 1:
+                return number + "st";
+            case 2:
+                return number + "nd";
+            case 3:
+                return number + "rd";
+            default:
+                return number + "th";
+        }
     }
 
     public void InitDate()
     {
         currentMonth = BeginMonth;
         currentWeek = BeginWeek;
-        currentDays = Days.월;
+        currentDays = Days.MON;
         countPassedDate = 1;
     }
 
@@ -45,7 +88,7 @@ public class Date
         
         //요일 업데이트
         int days = (int)currentDays;
-        days.LimitIncrement((int)Days.금);
+        days.LimitIncrement((int)Days.FRI);
         currentDays = (Days)days;
         
         //지난 날 수 증가

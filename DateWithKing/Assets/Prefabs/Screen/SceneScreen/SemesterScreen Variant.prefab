@@ -1576,6 +1576,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7826132620908117716, guid: 485ac2ddb3091e5459ee8bcbd98d17fc, type: 3}
+      propertyPath: m_margin.x
+      value: -247.97131
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826132620908117716, guid: 485ac2ddb3091e5459ee8bcbd98d17fc, type: 3}
+      propertyPath: m_margin.z
+      value: -249.02222
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826132620908117716, guid: 485ac2ddb3091e5459ee8bcbd98d17fc, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
