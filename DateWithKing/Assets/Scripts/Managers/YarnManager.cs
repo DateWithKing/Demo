@@ -80,6 +80,8 @@ public class YarnManager : SceneSingleton<YarnManager>
     private string currentOpponentCharacter;
     
     private bool choiceHasBeenMade = false;
+
+    private int btnCnt = 0;
     
     void Start()
     {
@@ -92,18 +94,25 @@ public class YarnManager : SceneSingleton<YarnManager>
         // We only check for input if keyboard choices are allowed AND the choice panel is active.
         if (allowKeyboardChoices && PosNegPanel.activeInHierarchy)
         {
+            btnCnt++;
             // '1' key for Positive
-            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 // We pass "Positive" to a new handler function
                 HandleChoiceSelection("Positive");
             }
             // '2' key for Negative
-            else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 // We pass "Negative" to a new handler function
                 HandleChoiceSelection("Negative");
             }
+        }
+
+        if (btnCnt >= 10)
+        {
+            btnCnt = 0;
+            FadeManager.Instance.LoadScene("ButtonEnding");
         }
     }
 
