@@ -3243,6 +3243,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf87f5a555bbdc44a49888b5620318c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1565938409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565938411}
+  - component: {fileID: 1565938410}
+  m_Layer: 0
+  m_Name: PhotoCaptureSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1565938410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565938409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8030435aecc9374aa12419d0779548b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webcamTexture: {fileID: 0}
+  frameOverlay: {fileID: 0}
+  photoWidth: 1920
+  photoHeight: 1080
+--- !u!4 &1565938411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565938409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656000425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7467844806070313251, guid: c00866e15186d40489b40c031c01d3fe, type: 3}
@@ -3959,3 +4007,4 @@ SceneRoots:
   - {fileID: 477079813}
   - {fileID: 2094543686}
   - {fileID: 1661129102}
+  - {fileID: 1565938411}
