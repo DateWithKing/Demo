@@ -12,7 +12,7 @@ public class DayDialogueData : Entity
 
     public static string GetSpotIndex(string spot)
     {
-        return $"{GameManager.Instance.data.date.GetCurrentDays().ToString()}" +
+        return $"{GameManager.Instance.data.date.GetCurrentDaysInKr()}" +
                $"_{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}" +
                $"_{spot}";
     }

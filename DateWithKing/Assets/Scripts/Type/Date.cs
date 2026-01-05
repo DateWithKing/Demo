@@ -119,5 +119,23 @@ public class Date
     {
         return currentDays;
     }
+
+    public string GetCurrentDaysInKr()
+    {
+        switch (currentDays)
+        {
+            case Days.MON:
+                return "월";
+            case Days.TUE:
+                return "화";
+            case Days.WED:
+                return "수";
+            case Days.THU:
+                return "목";
+            case Days.FRI:
+                return "금";
+        }
+        return "월";
+    }
     
 }
