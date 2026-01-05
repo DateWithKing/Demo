@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo/EndingCredit.unity
     guid: e0215ed3e9326d64cb792e0c183546f4
+  - enabled: 1
+    path: Assets/Scenes/Demo/ButtonEnding.unity
+    guid: 0e66e90fff0def5498087aa976abca9a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b88e4800f391e4b42bb9393d279fcb2f, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 2259467490866774c8c3ec41d649a2b0, type: 2}

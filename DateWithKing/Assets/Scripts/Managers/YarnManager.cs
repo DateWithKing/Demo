@@ -82,6 +82,7 @@ public class YarnManager : SceneSingleton<YarnManager>
     private bool choiceHasBeenMade = false;
 
     private int btnCnt = 0;
+    private bool isPressed = false;
     
     void Start()
     {
@@ -94,18 +95,30 @@ public class YarnManager : SceneSingleton<YarnManager>
         // We only check for input if keyboard choices are allowed AND the choice panel is active.
         if (allowKeyboardChoices && PosNegPanel.activeInHierarchy)
         {
-            btnCnt++;
+            
             // '1' key for Positive
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                // We pass "Positive" to a new handler function
-                HandleChoiceSelection("Positive");
+                if (!isPressed)
+                {
+                    btnCnt++;
+                    isPressed = true;
+                    // We pass "Positive" to a new handler function
+                    HandleChoiceSelection("Positive");
+                }
+                
             }
             // '2' key for Negative
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                // We pass "Negative" to a new handler function
-                HandleChoiceSelection("Negative");
+                if (!isPressed)
+                {
+                    btnCnt++;
+                    isPressed = true;
+                    // We pass "Negative" to a new handler function
+                    HandleChoiceSelection("Negative");
+                }
+                
             }
         }
 
@@ -271,6 +284,7 @@ public class YarnManager : SceneSingleton<YarnManager>
         }
 
         choiceHasBeenMade = false;
+        isPressed = false;
 
         PosNegPanel.SetActive(true);
         if(timeLimit) TimeBarController.Instance.StartTimer();
