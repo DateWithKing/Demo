@@ -6,14 +6,12 @@ using UnityEngine.UI;
 
 public class StyleSelector : MonoBehaviour
 {
-
     [SerializeField] private List<string> attribute = new List<string>();
     [SerializeField] private Appearance attributeName;
 
     // 리스트 인덱스
     private int currentIndex = 0;
     private string currentAttribute;
-
 
     // UI요소
     public TextMeshProUGUI optionText;
