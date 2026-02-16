@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class HpBarPresenter : MonoBehaviour
 {
@@ -42,10 +44,12 @@ public class HpBarPresenter : MonoBehaviour
 
     private void DateUpdate()
     {
-        if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night)
-            lesson.text = "저녁";
-        else 
-            lesson.text = $"{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}교시";
+        if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night){
+            lesson.text = LocalizationSettings.StringDatabase.GetLocalizedString("SemesterUI", "HPBar_NIGHT");
+        }
+        else {
+            lesson.text = $"{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}{LocalizationSettings.StringDatabase.GetLocalizedString("SemesterUI", "HPBar_LESSON")}";
+        }
         date.text = GameManager.Instance.data.date.GetCurrentDate();
     }
 }

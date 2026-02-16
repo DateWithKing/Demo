@@ -705,6 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 8004485671100164083}
+  blackImage: {fileID: 0}
   targetObject: {fileID: 2009984580644564600}
   AfterFadeOut:
     m_PersistentCalls:
