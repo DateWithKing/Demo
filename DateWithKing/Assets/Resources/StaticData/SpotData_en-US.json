@@ -1,0 +1,18 @@
+{
+  "deltaStat": {
+  "식당": { "name":"Cafeteria", "comment":"The cafeteria opens from the 2nd blovk. The food is so popular that you can't eat if you go late.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "조깅하기": { "name":"Jogging", "comment":"I often want to get some fresh air after being indoors. Let's go out for a quick jog.", "hpCost":20, "hp":1, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "도서관": { "name":"Library", "comment":"There's a large library on the 2nd floor. It's quiet and easy to focus, but... you have to climb the stairs.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "강의실": { "name":"Lecture Room", "comment":"Due to lack of space, the lecture room is never empty. Someone will always be there.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "정문": { "name":"Main Gate", "comment":"This is the path I always take to get here. Sometimes I can see cat Bongwon outside the gate.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "동아리방": { "name":"Club Room", "comment":"It's the most comfortable place. Fitting for a game dev club, there are 4 gaming PCs.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "헬스하기": { "name":"Working Out", "comment":"I work out for a healthy body and mind. Lately, I've been getting interested in lifting weights.", "hpCost":20, "hp":0, "str":1, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "편의점": { "name":"Convenience Store", "comment":"It's a relatively easy job. I like this convenience store because it's not crowded.", "hpCost":30, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":50},
+  "택배": { "name":"Delivery Work", "comment":"It pays well, but it's very hard work. The fatigue will likely last until the next day...", "hpCost":50, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":-20, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":150},
+  "침대": { "name":"Bed", "comment":"This is my bed. After a good sleep, I'll be able to start tomorrow with more energy.", "hpCost":0, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":10, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "책상": { "name":"Desk", "comment":"At this rate, I might get academic probation. I need to do some studying...", "hpCost":20, "hp":0, "str":0, "wis":1, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "강아지": { "name":"Puppy", "comment":"My cute doggy Chamkkae. I'm sorry for leaving her home alone for so long. I should play with her now.", "hpCost":20, "hp":0, "str":0, "wis":0, "otk":0, "slv":1, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "태블릿": { "name":"Tablet PC", "comment":"I worked hard today, so I'll watch some anime in bed. Deciding what to watch is the hard part, though.", "hpCost":10, "hp":0, "str":0, "wis":0, "otk":1, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0},
+  "상점": { "name":"School Store", "comment":"The school store. You can buy all kinds of stuff here.", "hpCost":0, "hp":0, "str":0, "wis":0, "otk":0, "slv":0, "bonusHp":0, "lvSan":0, "lvHyun":0, "lvPyo":0, "gold":0}
+}
+}

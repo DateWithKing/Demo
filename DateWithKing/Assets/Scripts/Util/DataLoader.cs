@@ -6,9 +6,16 @@ using System.Xml;
 using UnityEngine;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
+using UnityEngine.Localization;
+using System.Globalization;
 
 public class Entity
 {
+}
+
+public class LocalizationEntity
+{
+
 }
 
 /// <summary>
@@ -38,7 +45,7 @@ public static class DataLoader
     {
         try
         {
-            TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + query);
+            TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name+query);
             T data = JsonConvert.DeserializeObject<T>(jsonData.text);
             return data;
         }
@@ -47,7 +54,22 @@ public static class DataLoader
             return default(T);
         }
     }
-    
+
+    public static T ReadLocalizationData<T>(string language) where T : LocalizationEntity
+    {
+        try
+        {
+            Debug.Log(StaticDataPath + typeof(T).Name + '_' + language);
+            TextAsset jsonData = Resources.Load<TextAsset>(StaticDataPath + typeof(T).Name + '_' + language);
+            T data = JsonConvert.DeserializeObject<T>(jsonData.text);
+            return data;
+        }
+        catch (Exception e)
+        {
+            return default(T);
+        }
+    }
+
     /// <summary>
     /// 정적 데이터를 Read하기 편하도록 데이터를 생성하는 함수 <br/>
     /// 개발 시 사용하는 것이 아닌 데이터 생성 용도로 사용하는 것

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: AssetLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: AssetLocalization
+  m_TableCollectionNameGuidString: 10e2254b8ade1d747a1911bbd7fa7d30
+  m_Entries:
+  - m_Id: 5418574172160
+    m_Key: WARNING_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5469996339200
+    m_Key: WARNING_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5528532045824
+    m_Key: TUTORIAL_DAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5563890028544
+    m_Key: TUTORIAL_NIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5595011764224
+    m_Key: TUTORIAL_AMUSEMENTPARK
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 3187790280557068292
+  m_KeyGenerator:
+    rid: 3187790280557068290
+  references:
+    version: 2
+    RefIds:
+    - rid: 3187790280557068290
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1771372343674
+    - rid: 3187790280557068292
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 5418574172160
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        - m_KeyId: 5469996339200
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        - m_KeyId: 5528532045824
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        - m_KeyId: 5563890028544
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        - m_KeyId: 5595011764224
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

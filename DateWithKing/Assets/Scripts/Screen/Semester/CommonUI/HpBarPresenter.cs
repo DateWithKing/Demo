@@ -25,6 +25,9 @@ public class HpBarPresenter : MonoBehaviour
         SemesterSceneData.Instance.clock.TimeChanged += DateUpdate;
         SemesterSceneData.Instance.hp.CurrentHpChanged -= HpUpdate;
         SemesterSceneData.Instance.hp.CurrentHpChanged += HpUpdate;
+
+        LocalizationSettings.SelectedLocaleChanged -= DateUpdate;
+        LocalizationSettings.SelectedLocaleChanged += DateUpdate;
     }
 
     private void HpUpdate()
@@ -43,6 +46,19 @@ public class HpBarPresenter : MonoBehaviour
     }
 
     private void DateUpdate()
+    {
+        if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night)
+        {
+            lesson.text = LocalizationSettings.StringDatabase.GetLocalizedString("SemesterUI", "HPBar_NIGHT");
+        }
+        else
+        {
+            lesson.text = $"{SemesterSceneData.Instance.clock.GetCurrentTimeAsPeriod()}{LocalizationSettings.StringDatabase.GetLocalizedString("SemesterUI", "HPBar_LESSON")}";
+        }
+        date.text = GameManager.Instance.data.date.GetCurrentDate();
+    }
+
+    private void DateUpdate(Locale newLocale)
     {
         if (SemesterSceneData.Instance.clock.GetCurrentWeekCycle() is WeekCycle.Night){
             lesson.text = LocalizationSettings.StringDatabase.GetLocalizedString("SemesterUI", "HPBar_NIGHT");

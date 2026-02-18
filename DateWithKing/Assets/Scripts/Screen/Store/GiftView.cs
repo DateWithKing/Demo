@@ -36,7 +36,7 @@ public class GiftView : MonoBehaviour
         this.target = target;
         characterImage.sprite = Resources.Load<Sprite>(
             "Sprites/Charactor/" 
-            + DataManager.Instance.translator[target]
+            + DataManager.Instance.GetTranslator()[target]
             + "_idle");
         giftSystemObject.SetActive(true);
         giftButton.gameObject.SetActive(true);

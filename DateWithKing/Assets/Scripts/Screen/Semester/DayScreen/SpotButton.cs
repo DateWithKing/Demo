@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 /// <summary>
@@ -20,24 +22,32 @@ public class SpotButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         spotName = name;
         button = GetComponent<ObjectButton>();
         comment = GetComponent<ButtonComment>();
+
+        LocalizationSettings.SelectedLocaleChanged -= SetComment;
+        LocalizationSettings.SelectedLocaleChanged += SetComment;
     }
     private void Start()
     {
-        //말풍선 내 대사 세팅
-        string text = "<b>";
-        foreach (var data in SemesterSceneData.Instance.spot.deltaStat[spotName].GetDeltaData())
-        {
-            text += $"{data.Key} {data.Value.ToString()} ";
-        }
-
-        text += "</b>";
-        text += $"\n{SemesterSceneData.Instance.spot.deltaStat[spotName].comment}";
-        comment.SetComment(text);
+        SetComment(LocalizationSettings.SelectedLocale);
 
         hpCost = SemesterSceneData.Instance.spot.deltaStat[spotName].hpCost;
         
         SemesterSceneData.Instance.hp.CurrentHpChanged -= EnableCheck;
         SemesterSceneData.Instance.hp.CurrentHpChanged += EnableCheck;
+    }
+
+    private void SetComment(Locale newLocale)
+    {
+        SpotData spotData = SemesterSceneData.Instance.GetSpotData(newLocale);
+        string text = "<b>";
+        foreach (var data in spotData.deltaStat[spotName].GetDeltaData())
+        {
+            text += $"{data.Key} {data.Value.ToString()} ";
+        }
+
+        text += "</b>";
+        text += $"\n{spotData.deltaStat[spotName].comment}";
+        comment.SetComment(text);
     }
 
     private void EnableCheck()
