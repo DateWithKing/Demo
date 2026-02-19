@@ -22,6 +22,8 @@ public class DataManager : Singleton<DataManager>
     };
 
     //02-18 강승연 -> 손서희 eng 번역 부탁드립니다.
+    //02-20 손서희 eng 번역: Hp(Health), Str(Strength), Int(Intelligence), Geek(Geekiness), Dep(Deopendency)
+    //이어서: Bonus HP, San Affinity, Hyun Affinity, Pyo Affinity, Gold
     private Dictionary<string, string> translator_en = new Dictionary<string, string>()
     {
         { "hpCost", "HP Cost" },
