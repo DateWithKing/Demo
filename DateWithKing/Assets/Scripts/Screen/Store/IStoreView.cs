@@ -20,4 +20,6 @@ public interface IStoreView
     /// </summary>
     public void RegisterItem(Item item);
 
+    public void UpdateItem(int index, Item item);
+
 }

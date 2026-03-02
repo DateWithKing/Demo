@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class StoreSlot : MonoBehaviour
@@ -33,7 +34,7 @@ public class StoreSlot : MonoBehaviour
         name.text = item.name;
         description.text = item.description;
         price.text = item.price.ToString();
-        image.sprite = Resources.Load<Sprite>(ItemImagePath + item.name);
+        image.sprite = Resources.Load<Sprite>(ItemImagePath + item.key);
         type.sprite = Resources.Load<Sprite>(ItemImagePath + item.type.ToString());
         if (item.type == ItemType.체력)
         {

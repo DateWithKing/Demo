@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-public class ItemData : Entity
+public class ItemData : LocalizationEntity
 {
     [JsonProperty]
     public Dictionary<int, HpItem> hpItem;

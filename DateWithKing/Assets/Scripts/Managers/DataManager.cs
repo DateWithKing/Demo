@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
 public class DataManager : Singleton<DataManager>
@@ -56,6 +57,14 @@ public class DataManager : Singleton<DataManager>
     
     public void Awake()
     {
-        itemData = DataLoader.ReadData<ItemData>().GetItems();
+        itemData = DataLoader.ReadLocalizationData<ItemData>(LocalizationSettings.SelectedLocale.Identifier.Code).GetItems();
+
+        LocalizationSettings.SelectedLocaleChanged -= UpdateItemData;
+        LocalizationSettings.SelectedLocaleChanged += UpdateItemData;
+    }
+
+    private void UpdateItemData(Locale locale)
+    {
+        itemData = DataLoader.ReadLocalizationData<ItemData>(LocalizationSettings.SelectedLocale.Identifier.Code).GetItems();
     }
 }

@@ -1,0 +1,18 @@
+{
+  "hpItem": {
+  "1": { "key":"커피", "name":"Coffee", "description":"Everyone's favorite Iced Americano. Restores a small amount of stamina when consumed.", "price":20, "type":"체력", "hp":10},
+  "2": { "key":"샌드위치", "name":"Sandwiches", "description":"A simple snack. Restores a fair amount of stamina when consumed.", "price":30, "type":"체력", "hp":20},
+  "3": { "key":"김밥", "name":"Gimbap", "description":"Our University's signature Gimbap. Restores a large amount of stamina when consumed.", "price":50, "type":"체력", "hp":50}
+},
+  "presentItem": {
+  "101": { "key":"키링", "name":"Keyring", "description":"A small rabbit-shaped keyring. I think everyone will like it as a safe choice.", "price":100, "type":"선물", "lvSan":5, "lvHyun":5, "lvPyo":5},
+  "102": { "key":"쿠키", "name":"Cookies", "description":"Cookies with chocolate chips. No one would dislike something this sweet.", "price":100, "type":"선물", "lvSan":5, "lvHyun":5, "lvPyo":5},
+  "103": { "key":"기프트카드", "name":"Gift Card", "description":"A gift certificate for buying games. To our club members, it's as good as cash.", "price":100, "type":"선물", "lvSan":5, "lvHyun":5, "lvPyo":5},
+  "104": { "key":"피크", "name":"Guitar Pick", "description":"A purple guitar pick with a skull design. At first glance, it's hard to tell what it's for.", "price":100, "type":"선물", "lvSan":10, "lvHyun":-10, "lvPyo":-10},
+  "105": { "key":"꽃", "name":"Flowers", "description":"A bouquet of yellow flowers. I'm not sure of the species, but it's beautiful.", "price":100, "type":"선물", "lvSan":-10, "lvHyun":10, "lvPyo":-10},
+  "106": { "key":"귀도리", "name":"Earmuffs", "description":"Green earmuffs. They're meant for the cold, but they're mostly a fashion accessory.", "price":100, "type":"선물", "lvSan":-10, "lvHyun":-10, "lvPyo":10},
+  "107": { "key":"객체지향 교재", "name":"OOP Textbook", "description":"A book describing Object-Oriented Programming and its four pillars. What is an 'object', anyway?", "price":100, "type":"선물", "lvSan":10, "lvHyun":-10, "lvPyo":-10},
+  "108": { "key":"케이크", "name":"Cake", "description":"A cat-shaped cake. I can't guarantee the taste, but it's definitely cute.", "price":100, "type":"선물", "lvSan":-10, "lvHyun":10, "lvPyo":-10},
+  "109": { "key":"만화책", "name":"Comic Book", "description":"A recently released comic book. It's not mainstream, but it has a dedicated cult following.", "price":100, "type":"선물", "lvSan":-10, "lvHyun":-10, "lvPyo":10}
+}
+}

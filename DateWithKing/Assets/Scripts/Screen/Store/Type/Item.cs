@@ -6,6 +6,8 @@ using UnityEngine;
 public class Item
 {
     [JsonProperty] public int id { get; private set; }= 0;
+
+    [JsonProperty] public string key { get; private set; } = "";
     [JsonProperty] public string name { get; private set; }= "";
     [JsonProperty] public string description { get; private set; }= "";
     [JsonProperty] public int price { get; private set; } = 0;

@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using static UnityEditor.Progress;
 
 public class StorePresenter : MonoBehaviour
 {
     private IStoreView view;
     private const int MaxPurchasedCount = 2;
     private int purchasedCount = 0;
+    private bool isInitialized = false;
 
     public void Awake()
     {
@@ -24,6 +30,19 @@ public class StorePresenter : MonoBehaviour
         foreach (var item in DataManager.Instance.itemData)
         {
             view.RegisterItem(item.Value);
+        }
+
+        LocalizationSettings.SelectedLocaleChanged -= UpdateItem;
+        LocalizationSettings.SelectedLocaleChanged += UpdateItem;
+
+        isInitialized = true;
+    }
+
+    private void UpdateItem(Locale locale)
+    {
+        foreach (var item in DataManager.Instance.itemData)
+        {
+            view.UpdateItem(item.Key, item.Value);
         }
     }
 

@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Icons;
 
 public class StyleSelector : MonoBehaviour
 {
@@ -31,7 +34,7 @@ public class StyleSelector : MonoBehaviour
 
     public string GetCurrentChoice()
     {
-        return attribute[currentIndex];
+        return attribute[currentIndex].Split('_')[0];
     }
 
     public Appearance GetAppearance()
@@ -64,8 +67,22 @@ public class StyleSelector : MonoBehaviour
     // UI 업데이트
     void UpdateUI()
     {
-        currentAttribute = attribute[currentIndex];
+        currentAttribute = GetLocalizedText(currentIndex);
         optionText.text = currentAttribute.ToString();
+    }
+
+    private string GetLocalizedText(int index)
+    {
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "ko-KR")
+        {
+            // 한글_영문 형식에서 한글만 추출
+            return attribute[currentIndex].Split('_')[0];
+        }
+        else
+        {
+            // 한글_영문 형식에서 영문만 추출
+            return attribute[currentIndex].Split('_')[1];
+        }
     }
 }
 
