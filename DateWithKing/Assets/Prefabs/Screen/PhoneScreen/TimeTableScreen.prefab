@@ -149,9 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 194485723136
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -324,9 +324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 163074580480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 88223031296
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -879,9 +879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 7713366016
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1093,9 +1093,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 154031661056
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1268,9 +1268,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 73480052736
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1329,8 +1329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.260315, y: 212}
-  m_SizeDelta: {x: 233.4794, y: 51.5188}
+  m_AnchoredPosition: {x: -54.481567, y: 212}
+  m_SizeDelta: {x: 331.0369, y: 51.5188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &980026536595220763
 CanvasRenderer:
@@ -1443,9 +1443,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1705995444224
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1618,9 +1618,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 223539666944
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2193,9 +2193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 88223031296
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2458,9 +2458,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 73480052736
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -2714,9 +2714,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 233832488960
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3145,9 +3145,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 154031661056
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3495,9 +3495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 233832488960
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3670,9 +3670,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 223539666944
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -3731,8 +3731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.260315, y: 211.75946}
-  m_SizeDelta: {x: 233.4794, y: 51.5188}
+  m_AnchoredPosition: {x: -54.481567, y: 211.75946}
+  m_SizeDelta: {x: 331.0369, y: 51.5188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9015702354215575850
 CanvasRenderer:
@@ -3845,9 +3845,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1762685657088
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -4235,9 +4235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 116073209856
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -4646,8 +4646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.260315, y: 211.75934}
-  m_SizeDelta: {x: 233.4794, y: 51.5188}
+  m_AnchoredPosition: {x: -54.481567, y: 211.75934}
+  m_SizeDelta: {x: 331.0369, y: 51.5188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7020293278663662145
 CanvasRenderer:
@@ -4760,9 +4760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1790762328064
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -4935,9 +4935,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:7a9b6bcbd55d45741b9de1ff16d16379
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 163074580480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

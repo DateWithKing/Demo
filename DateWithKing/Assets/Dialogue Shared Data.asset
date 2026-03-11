@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialogue Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dialogue
+  m_TableCollectionNameGuidString: 773be907b708fd04a8a342110fa4d6a6
+  m_Entries:
+  - m_Id: 5729460224
+    m_Key: GIFT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74125975552
+    m_Key: LIKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123656511488
+    m_Key: DISLIKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143734644736
+    m_Key: KARMA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5030853779456
+    m_Key: POSITIVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5063099588608
+    m_Key: NEGATIVE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170425279619072
+    m_Key: SAN_TIMELIMIT
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2137163883512856585
+  references:
+    version: 2
+    RefIds:
+    - rid: 2137163883512856585
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1773203274387

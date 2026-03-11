@@ -35,6 +35,42 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 917ca5a1511fa0d4ba87c83cb50ee8b3
+    m_Address: New Table_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60a1ed4b3a049384d97453ef74b1f024
+    m_Address: Custom_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7a4f199dd5ee304d82957f23adeddeb
+    m_Address: Dialogue_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f920c4a0fdcc19418b0f3f72eb71eb2
+    m_Address: Lectures_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 474208d59b7a95241b8d17995e6c44da
+    m_Address: Settings_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67d1fc749611eb84fbd1aa32e9b42a6e
+    m_Address: Night_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 086c7ced5202f9640a22b9854023863f, type: 2}
   m_SchemaSet:

@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: HPBar_LESSON
     m_Metadata:
       m_Items: []
+  - m_Id: 8426078808875008
+    m_Key: HPBar_TRANSITION
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

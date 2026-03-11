@@ -37,6 +37,36 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c459f6c73fd574041bfda07ffbd7b54a
+    m_Address: Assets/New Table Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70eb3114c6191464bb5a4cc7e468fdfc
+    m_Address: Assets/Custom Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 773be907b708fd04a8a342110fa4d6a6
+    m_Address: Assets/Dialogue Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a9b6bcbd55d45741b9de1ff16d16379
+    m_Address: Assets/Lectures Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0fafacc0709c8d4399de1285985a74b
+    m_Address: Assets/Settings Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebf6680d2719c2344b40f50d9b484db0
+    m_Address: Assets/Night Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 086c7ced5202f9640a22b9854023863f, type: 2}
   m_SchemaSet:

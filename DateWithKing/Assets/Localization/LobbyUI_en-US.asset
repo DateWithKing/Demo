@@ -22,6 +22,30 @@ MonoBehaviour:
     m_Localized: Start
     m_Metadata:
       m_Items: []
+  - m_Id: 21292724552507392
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21292815724093440
+    m_Localized: Gallery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21293243283054592
+    m_Localized: Setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21293325181034496
+    m_Localized: Return to Reality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21371055482380288
+    m_Localized: Save the moment?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21371102215315456
+    m_Localized: What day was it?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

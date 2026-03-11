@@ -149,9 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:b0fafacc0709c8d4399de1285985a74b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1082180804608
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -471,9 +471,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:b0fafacc0709c8d4399de1285985a74b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 977180598272
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -646,9 +646,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:b0fafacc0709c8d4399de1285985a74b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 79740564185088
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -967,9 +967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:b0fafacc0709c8d4399de1285985a74b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1287907221504
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1447,9 +1447,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:27415468badc101459a24571242b0876
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 21292724552507392
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1768,9 +1768,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:b0fafacc0709c8d4399de1285985a74b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 1193938034688
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
