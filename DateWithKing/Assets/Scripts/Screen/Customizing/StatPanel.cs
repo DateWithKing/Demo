@@ -25,7 +25,7 @@ public class StatPanel : MonoBehaviour
         }
 
         LimitStat();
-        statAmount.text = "15 남음";
+        statAmount.text = "15";
     }
 
     void LimitStat()
@@ -45,7 +45,7 @@ public class StatPanel : MonoBehaviour
             }
         }
 
-        statAmount.text = $"{LimitStatAmount - sum} 남음";
+        statAmount.text = $"{LimitStatAmount - sum}";
         
         if (sum < LimitStatAmount) return;
         

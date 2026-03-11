@@ -2037,7 +2037,43 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8487556880722940005, guid: 6f53af022e4a3e2438beb1ed37fd8a91, type: 3}
       insertIndex: -1
       addedObject: {fileID: 520147684}
+    - targetCorrespondingSourceObject: {fileID: 6852692967721523976, guid: 6f53af022e4a3e2438beb1ed37fd8a91, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 795181713}
   m_SourcePrefab: {fileID: 100100000, guid: 6f53af022e4a3e2438beb1ed37fd8a91, type: 3}
+--- !u!1 &795181712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6852692967721523976, guid: 6f53af022e4a3e2438beb1ed37fd8a91, type: 3}
+  m_PrefabInstance: {fileID: 795181711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &795181713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795181712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:f8406ad47c1317f4f8ca452cb9c1c82b
+    m_TableEntryReference:
+      m_KeyId: 44233834220265472
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &811470961
 PrefabInstance:
   m_ObjectHideFlags: 0

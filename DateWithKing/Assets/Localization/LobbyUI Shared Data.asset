@@ -19,6 +19,30 @@ MonoBehaviour:
     m_Key: START
     m_Metadata:
       m_Items: []
+  - m_Id: 21292724552507392
+    m_Key: LOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21292815724093440
+    m_Key: GALLERY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21293243283054592
+    m_Key: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21293325181034496
+    m_Key: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21371055482380288
+    m_Key: SAVE_TEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21371102215315456
+    m_Key: LOAD_TEXT
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

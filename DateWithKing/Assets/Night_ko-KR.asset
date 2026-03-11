@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Night_ko-KR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ko-KR
+  m_SharedData: {fileID: 11400000, guid: ebf6680d2719c2344b40f50d9b484db0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8216682496
+    m_Localized: "\uBC16\uC73C\uB85C \uB098\uAC00\uBCFC\uAE4C?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180170563584
+    m_Localized: "\uC870\uAE45\uD558\uAE30"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 296604442624
+    m_Localized: "\uD5EC\uC2A4\uD558\uAE30"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327399022592
+    m_Localized: "\uD3B8\uC758\uC810 \uC544\uB974\uBC14\uC774\uD2B8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379261591552
+    m_Localized: "\uD0DD\uBC30 \uC544\uB974\uBC14\uC774\uD2B8"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

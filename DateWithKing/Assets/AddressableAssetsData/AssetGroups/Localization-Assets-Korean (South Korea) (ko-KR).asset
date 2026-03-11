@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko-KR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55d215bf955da7241bf438d2247f7d91
+    m_Address: "\uD0C0\uC774\uBA38_\uBB38\uAD6C"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko-KR
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 086c7ced5202f9640a22b9854023863f, type: 2}
   m_SchemaSet:

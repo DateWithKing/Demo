@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: TUTORIAL_AMUSEMENTPARK
     m_Metadata:
       m_Items: []
+  - m_Id: 7850843575459840
+    m_Key: DIALOGUE_TIMER
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 3187790280557068292
@@ -68,6 +72,10 @@ MonoBehaviour:
           - en-US
           - ko-KR
         - m_KeyId: 5595011764224
+          m_TableCodes:
+          - en-US
+          - ko-KR
+        - m_KeyId: 7850843575459840
           m_TableCodes:
           - en-US
           - ko-KR
