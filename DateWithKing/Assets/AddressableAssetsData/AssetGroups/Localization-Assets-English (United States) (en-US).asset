@@ -23,12 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c35b3bf8ad063aa44b4c8d10325b8938
-    m_Address: "\uD29C\uD1A0\uB9AC\uC5BC_\uB180\uC774\uACF5\uC6D0_\uC601\uBB38"
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d75c7506a8bede84987039069a3d62f9
     m_Address: "\uD29C\uD1A0\uB9AC\uC5BC_\uC9D1_\uC601\uBB38"
     m_ReadOnly: 1
