@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class ThresholdScreen : MonoBehaviour
@@ -17,6 +18,15 @@ public class ThresholdScreen : MonoBehaviour
     
     private const string UncheckedText = "클릭하여 확인";
     private const string CheckedText = "확인 완료";
+    private const string PlzNodText = "고개를 끄덕여주세요";
+    private const string PlzShakeText = "고개를 저어주세요";
+
+    //0315 강승연- 영문 번역 부탁드립니다. To. 손서희
+    private const string UncheckedText_en = "클릭하여 확인";
+    private const string CheckedText_en = "확인 완료";
+    private const string PlzNodText_en = "고개를 끄덕여주세요";
+    private const string PlzShakeText_en = "고개를 저어주세요";
+
     private Color uncheckedColor;
     private Color checkingColor;
     private Color checkedColor;
@@ -54,7 +64,15 @@ public class ThresholdScreen : MonoBehaviour
 
     public void CheckPositive()
     {
-        SetChecking(positiveButton, positiveText, "고개를 끄덕여주세요");
+        if(LocalizationSettings.SelectedLocale.Identifier.Code == "en-US")
+        {
+            SetChecking(positiveButton, positiveText, PlzNodText_en);
+        }
+        else
+        {
+            SetChecking(positiveButton, positiveText, PlzNodText);
+        }
+
         OpenCVController.Instance.InvokeDetector
             ("testNod", s =>
             {
@@ -65,7 +83,14 @@ public class ThresholdScreen : MonoBehaviour
 
     public void CheckNegative()
     {
-        SetChecking(negativeButton, negativeText, "고개를 저어주세요");
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "en-US")
+        {
+            SetChecking(negativeButton, negativeText, PlzShakeText_en);
+        }
+        else
+        {
+            SetChecking(negativeButton, negativeText, PlzShakeText);
+        }
         OpenCVController.Instance.InvokeDetector
             ("testShake", s =>
             {
@@ -86,7 +111,14 @@ public class ThresholdScreen : MonoBehaviour
     private void SetChecked(Button btn, TextMeshProUGUI text)
     {
         thresholdScroll.interactable = true;
-        text.text = CheckedText;
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "en-US")
+        {
+            text.text = CheckedText_en;
+        }
+        else
+        {
+            text.text = CheckedText;
+        }
         text.fontStyle = FontStyles.Normal;
         text.color = checkedColor;
         btn.interactable = false;
@@ -95,6 +127,14 @@ public class ThresholdScreen : MonoBehaviour
     private void SetUnchecked(Button btn, TextMeshProUGUI text)
     {
         thresholdScroll.interactable = true;
+        if(LocalizationSettings.SelectedLocale.Identifier.Code == "en-US")
+        {
+            text.text = UncheckedText_en;
+        }
+        else
+        {
+            text.text = UncheckedText;
+        }
         text.text = UncheckedText;
         text.fontStyle = FontStyles.Underline;
         text.color = uncheckedColor;
