@@ -22,10 +22,10 @@ public class ThresholdScreen : MonoBehaviour
     private const string PlzShakeText = "고개를 저어주세요";
 
     //0315 강승연- 영문 번역 부탁드립니다. To. 손서희
-    private const string UncheckedText_en = "클릭하여 확인";
-    private const string CheckedText_en = "확인 완료";
-    private const string PlzNodText_en = "고개를 끄덕여주세요";
-    private const string PlzShakeText_en = "고개를 저어주세요";
+    private const string UncheckedText_en = "Click to confirm";
+    private const string CheckedText_en = "Comfirmed";
+    private const string PlzNodText_en = "Nod your head";
+    private const string PlzShakeText_en = "Shake your head";
 
     private Color uncheckedColor;
     private Color checkingColor;
