@@ -1,0 +1,369 @@
+﻿신아산_20	ASan	I'm texting you just in case.		FALSE					
+신아산_20	ASan	You do know the Blockchain Applications assignment is due tomorrow, right?		TRUE	신아산_20_0	신아산_20_1	신아산_20_2		
+신아산_20_0	ASan	Oh, so you did know?		FALSE					
+신아산_20_0	ASan	Wait a sec, it's not Assignment 3. You need to submit Assignment 4, the one posted earlier.		FALSE					
+신아산_20_0	ASan	So clumsy.		FALSE					
+신아산_20_0	ASan	I knew you'd be like that.		FALSE					
+신아산_20_1	ASan	You just found out now?		FALSE					
+신아산_20_1	ASan	So clumsy.		FALSE					
+신아산_20_1	ASan	I knew you'd be like that.		FALSE					
+신아산_20_2	ASan	You didn't know?		FALSE					
+신아산_20_2	ASan	So clumsy.		FALSE					
+신아산_20_2	ASan	I knew you'd be like that.		FALSE					
+신아산_40	ASan	I saw something funny on the internet again. You wanna hear it?		FALSE					
+신아산_40	ASan	They say if Akali becomes famous, she's 'Kalista' lol. It's so funny, I can't stop thinking about it even though I'm at work lol.		TRUE	신아산_40_0	신아산_40_1	신아산_40_2		
+신아산_40_0	ASan	Hahahahahahaha, isn't it funny??		FALSE					
+신아산_40_0	ASan	What? You're saying it's a lie?		FALSE					
+신아산_40_0	ASan	What's with that reaction?		FALSE					
+신아산_40_0	ASan	Fine, so I like dad jokes. What about it? --		FALSE					
+신아산_40_1	ASan	You find it funny too, right? Hahaha...		FALSE					
+신아산_40_1	ASan	What? You're saying it's a lie?		FALSE					
+신아산_40_1	ASan	What's with that reaction?		FALSE					
+신아산_40_1	ASan	Fine, so I like dad jokes. What about it? --		FALSE					
+신아산_40_2	ASan	Not funny????		FALSE					
+신아산_40_2	ASan	What's with that reaction?		FALSE					
+신아산_40_2	ASan	Fine, so I like dad jokes. What about it? --		FALSE					
+신아산_50	ASan	What do you think of people who do music?		FALSE					
+신아산_50	ASan	Well, some say it's just for show, while others say it's cool.		FALSE					
+신아산_50	ASan	It's nothing, just that my head's a bit messy preparing for a performance after a while...		TRUE	신아산_50_0	신아산_50_1	신아산_50_2		
+신아산_50_0	ASan	Heh, a girl playing bass can't help but be cool.		FALSE					
+신아산_50_0	ASan	So...		FALSE					
+신아산_50_0	ASan	You're saying you like it, right?		FALSE					
+신아산_50_1	ASan	A thumbs up, really?		FALSE					
+신아산_50_1	ASan	That's a pretty primal and positive reaction.		FALSE					
+신아산_50_1	ASan	So...		FALSE					
+신아산_50_1	ASan	You're saying you like it, right?		FALSE					
+신아산_50_2	ASan	Do you mean it's moving and charming?		FALSE					
+신아산_50_2	ASan	So...		FALSE					
+신아산_50_2	ASan	You're saying you like it, right?		FALSE					
+신아산_60	ASan	This is the song I'm preparing for the performance. How is it?		FALSE					
+신아산_60	ASan	It's still unfinished... I'm only letting you hear it, so keep it to yourself.		FALSE					
+신아산_60	ASan		문자_신아산_음성메시지	TRUE	신아산_60_0	신아산_60_1	신아산_60_2		
+신아산_60_0	ASan	I wanted you to be the first to hear it.		FALSE					
+신아산_60_0	ASan	Oh, you actually listened to it.		FALSE					
+신아산_60_0	ASan	Thanks for liking it. -_-		FALSE					
+신아산_60_1	ASan	I'll be looking forward to your honest review.		FALSE					
+신아산_60_1	ASan	Oh, you actually listened to it.		FALSE					
+신아산_60_1	ASan	Thanks for liking it. -_-		FALSE					
+신아산_60_2	ASan	If you don't listen within 5 minutes, I'm deleting this message.		FALSE					
+신아산_60_2	ASan	Oh, you actually listened to it.		FALSE					
+신아산_60_2	ASan	Thanks for liking it. -_-		FALSE					
+신아산_70	ASan	You know that performance I kept talking about... It's next week.		FALSE					
+신아산_70	ASan	I'm not telling you that you HAVE to come, I just had an extra ticket so I'm giving it to you.		FALSE					
+신아산_70	ASan	The seat is right in front of me, so you can come watch me play bass or whatever....		TRUE	신아산_70_0	신아산_70_1	신아산_70_2		
+신아산_70_0	ASan	Whoa!!!!!!!!!!!!!!!!!!!!		FALSE					
+신아산_70_0	ASan	I can even come pick you up.		FALSE					
+신아산_70_0	ASan	Are you really coming??????????????		TRUE	신아산_70_0_0	신아산_70_0_1	신아산_70_0_2		
+신아산_70_0_0	ASan	...........		FALSE					
+신아산_70_0_0	ASan	Thanks.		TRUE	신아산_70_0_0_0	신아산_70_0_0_1	신아산_70_0_0_2		
+신아산_70_0_0_0	ASan	Uh.....		FALSE					
+신아산_70_0_0_0	ASan	I lo...		FALSE					
+신아산_70_0_0_0	ASan	I love you.		FALSE					
+신아산_70_0_0_1	ASan	Uh.....		FALSE					
+신아산_70_0_0_1	ASan	I lo...		FALSE					
+신아산_70_0_0_1	ASan	I love you.		FALSE					
+신아산_70_0_0_2	ASan	Uh.....		FALSE					
+신아산_70_0_0_2	ASan	I lo...		FALSE					
+신아산_70_0_0_2	ASan	I love you.		FALSE					
+신아산_70_0_1	ASan	...........		FALSE					
+신아산_70_0_1	ASan	Thanks.		TRUE	신아산_70_0_1_0	신아산_70_0_1_1	신아산_70_0_1_2		
+신아산_70_0_1_0	ASan	Uh.....		FALSE					
+신아산_70_0_1_0	ASan	I lo...		FALSE					
+신아산_70_0_1_0	ASan	I love you.		FALSE					
+신아산_70_0_1_1	ASan	Uh.....		FALSE					
+신아산_70_0_1_1	ASan	I lo...		FALSE					
+신아산_70_0_1_1	ASan	I love you.		FALSE					
+신아산_70_0_1_2	ASan	Uh.....		FALSE					
+신아산_70_0_1_2	ASan	I lo...		FALSE					
+신아산_70_0_1_2	ASan	I love you.		FALSE					
+신아산_70_0_2	ASan	...........		FALSE					
+신아산_70_0_2	ASan	Thanks.		TRUE	신아산_70_0_2_0	신아산_70_0_2_1	신아산_70_0_2_2		
+신아산_70_0_2_0	ASan	Uh.....		FALSE					
+신아산_70_0_2_0	ASan	I lo...		FALSE					
+신아산_70_0_2_0	ASan	I love you.		FALSE					
+신아산_70_0_2_1	ASan	Uh.....		FALSE					
+신아산_70_0_2_1	ASan	I lo...		FALSE					
+신아산_70_0_2_1	ASan	I love you.		FALSE					
+신아산_70_0_2_2	ASan	Uh.....		FALSE					
+신아산_70_0_2_2	ASan	I lo...		FALSE					
+신아산_70_0_2_2	ASan	I love you.		FALSE					
+신아산_70_1	ASan	You like it, right?????????????		FALSE					
+신아산_70_1	ASan	Are you really coming??????????????		TRUE	신아산_70_1_0	신아산_70_1_1	신아산_70_1_2		
+신아산_70_1_0	ASan	...........		FALSE					
+신아산_70_1_0	ASan	Thanks.		TRUE	신아산_70_1_0_0	신아산_70_1_0_1	신아산_70_1_0_2		
+신아산_70_1_0_0	ASan	Uh.....		FALSE					
+신아산_70_1_0_0	ASan	I lo...		FALSE					
+신아산_70_1_0_0	ASan	I love you.		FALSE					
+신아산_70_1_0_1	ASan	Uh.....		FALSE					
+신아산_70_1_0_1	ASan	I lo...		FALSE					
+신아산_70_1_0_1	ASan	I love you.		FALSE					
+신아산_70_1_0_2	ASan	Uh.....		FALSE					
+신아산_70_1_0_2	ASan	I lo...		FALSE					
+신아산_70_1_0_2	ASan	I love you.		FALSE					
+신아산_70_1_1	ASan	...........		FALSE					
+신아산_70_1_1	ASan	Thanks.		TRUE	신아산_70_1_1_0	신아산_70_1_1_1	신아산_70_1_1_2		
+신아산_70_1_1_0	ASan	Uh.....		FALSE					
+신아산_70_1_1_0	ASan	I lo...		FALSE					
+신아산_70_1_1_0	ASan	I love you.		FALSE					
+신아산_70_1_1_1	ASan	Uh.....		FALSE					
+신아산_70_1_1_1	ASan	I lo...		FALSE					
+신아산_70_1_1_1	ASan	I love you.		FALSE					
+신아산_70_1_1_2	ASan	Uh.....		FALSE					
+신아산_70_1_1_2	ASan	I lo...		FALSE					
+신아산_70_1_1_2	ASan	I love you.		FALSE					
+신아산_70_1_2	ASan	...........		FALSE					
+신아산_70_1_2	ASan	Thanks.		TRUE	신아산_70_1_2_0	신아산_70_1_2_1	신아산_70_1_2_2		
+신아산_70_1_2_0	ASan	Uh.....		FALSE					
+신아산_70_1_2_0	ASan	I lo...		FALSE					
+신아산_70_1_2_0	ASan	I love you.		FALSE					
+신아산_70_1_2_1	ASan	Uh.....		FALSE					
+신아산_70_1_2_1	ASan	I lo...		FALSE					
+신아산_70_1_2_1	ASan	I love you.		FALSE					
+신아산_70_1_2_2	ASan	Uh.....		FALSE					
+신아산_70_1_2_2	ASan	I lo...		FALSE					
+신아산_70_1_2_2	ASan	I love you.		FALSE					
+신아산_70_2	ASan	Don't cry yet, the show hasn't even started............		FALSE					
+신아산_70_2	ASan	Are you really coming??????????????		TRUE	신아산_70_2_0	신아산_70_2_1	신아산_70_2_2		
+신아산_70_2_0	ASan	...........		FALSE					
+신아산_70_2_0	ASan	Thanks.		TRUE	신아산_70_2_0_0	신아산_70_2_0_1	신아산_70_2_0_2		
+신아산_70_2_0_0	ASan	Uh.....		FALSE					
+신아산_70_2_0_0	ASan	I lo...		FALSE					
+신아산_70_2_0_0	ASan	I love you.		FALSE					
+신아산_70_2_0_1	ASan	Uh.....		FALSE					
+신아산_70_2_0_1	ASan	I lo...		FALSE					
+신아산_70_2_0_1	ASan	I love you.		FALSE					
+신아산_70_2_0_2	ASan	Uh.....		FALSE					
+신아산_70_2_0_2	ASan	I lo...		FALSE					
+신아산_70_2_0_2	ASan	I love you.		FALSE					
+신아산_70_2_1	ASan	...........		FALSE					
+신아산_70_2_1	ASan	Thanks.		TRUE	신아산_70_2_1_0	신아산_70_2_1_1	신아산_70_2_1_2		
+신아산_70_2_1_0	ASan	Uh.....		FALSE					
+신아산_70_2_1_0	ASan	I lo...		FALSE					
+신아산_70_2_1_0	ASan	I love you.		FALSE					
+신아산_70_2_1_1	ASan	Uh.....		FALSE					
+신아산_70_2_1_1	ASan	I lo...		FALSE					
+신아산_70_2_1_1	ASan	I love you.		FALSE					
+신아산_70_2_1_2	ASan	Uh.....		FALSE					
+신아산_70_2_1_2	ASan	I lo...		FALSE					
+신아산_70_2_1_2	ASan	I love you.		FALSE					
+신아산_70_2_2	ASan	...........		FALSE					
+신아산_70_2_2	ASan	Thanks.		TRUE	신아산_70_2_2_0	신아산_70_2_2_1	신아산_70_2_2_2		
+신아산_70_2_2_0	ASan	Uh.....		FALSE					
+신아산_70_2_2_0	ASan	I lo...		FALSE					
+신아산_70_2_2_0	ASan	I love you.		FALSE					
+신아산_70_2_2_1	ASan	Uh.....		FALSE					
+신아산_70_2_2_1	ASan	I lo...		FALSE					
+신아산_70_2_2_1	ASan	I love you.		FALSE					
+신아산_70_2_2_2	ASan	Uh.....		FALSE					
+신아산_70_2_2_2	ASan	I lo...		FALSE					
+신아산_70_2_2_2	ASan	I love you.		FALSE					
+양나현_20	NaHyun	Look at this. It's a video of people shooting fireworks at each other at the beach. It's hilarious.		FALSE					
+양나현_20	NaHyun		문자_양나현_폭죽동영상	TRUE	양나현_20_0	양나현_20_1	양나현_20_2		
+양나현_20_0	NaHyun	You liked it too? lol		FALSE					
+양나현_20_0	NaHyun	I want to try it too. I wonder if it'll start a fire if I mess up...		FALSE					
+양나현_20_1	NaHyun	Right? It looks fun.		FALSE					
+양나현_20_1	NaHyun	I want to try it too. I wonder if it'll start a fire if I mess up...		FALSE					
+양나현_20_2	NaHyun	It does look dangerous...		FALSE					
+양나현_20_2	NaHyun	I want to try it too. I wonder if it'll start a fire if I mess up...		FALSE					
+양나현_40	NaHyun	Should I tie my hair up for school tomorrow or not? Which do you think is better? Help me pick.		TRUE	양나현_40_0	양나현_40_1	양나현_40_2		
+양나현_40_0	NaHyun	You like both? Hmm.		FALSE					
+양나현_40_0	NaHyun	I think leaving it down is better. I'm going to take some four-cut photos after school, and if they turn out pretty, I'll show you. <(*^U^))>		FALSE					
+양나현_40_1	NaHyun	Leave it down? Hmm.		FALSE					
+양나현_40_1	NaHyun	I think leaving it down is better. I'm going to take some four-cut photos after school, and if they turn out pretty, I'll show you. <(*^U^))>		FALSE					
+양나현_40_2	NaHyun	Tie it up? Hmm.		FALSE					
+양나현_40_2	NaHyun	I think leaving it down is better. I'm going to take some four-cut photos after school, and if they turn out pretty, I'll show you. <(*^U^))>		FALSE					
+양나현_50	NaHyun	This is a bit random... but if I could be reborn, I'd want to live as a cat.		FALSE					
+양나현_50	NaHyun	First, they're cute, flexible, and well... they're just cute.		FALSE					
+양나현_50	NaHyun	Have you ever thought about something like that?		TRUE	양나현_50_0	양나현_50_1	양나현_50_2		
+양나현_50_0	NaHyun	What? I'm cuter?		FALSE					
+양나현_50_0	NaHyun	I know, I know... ^-w-^		FALSE					
+양나현_50_0	NaHyun	Sleep tight. I want to become a cat in my dreams.		FALSE					
+양나현_50_1	NaHyun	Right?? We think alike.		FALSE					
+양나현_50_1	NaHyun	Sleep tight. I want to become a cat in my dreams.		FALSE					
+양나현_50_2	NaHyun	You haven't? Then start thinking now.		FALSE					
+양나현_50_2	NaHyun	Sleep tight. I want to become a cat in my dreams.		FALSE					
+양나현_60	NaHyun	Ah, I don't want to go to school tomorrow.		FALSE					
+양나현_60	NaHyun	But I still have to go, right..		TRUE	양나현_60_0	양나현_60_1	양나현_60_2		
+양나현_60_0	NaHyun	You're telling me to come see you? What's that supposed to mean~ But still...		FALSE					
+양나현_60_0	NaHyun	Going to school is actually kind of fun lately.		FALSE					
+양나현_60_0	NaHyun	Normally, I would've been absent at least six times by now.		FALSE					
+양나현_60_0	NaHyun	It's not exactly because of you. ~(^o^~)(~^o^)~		FALSE					
+양나현_60_0	NaHyun	See you tomorrow.		FALSE					
+양나현_60_1	NaHyun	I want to skip class and go somewhere else to play. But still...		FALSE					
+양나현_60_1	NaHyun	Going to school is actually kind of fun lately.		FALSE					
+양나현_60_1	NaHyun	Normally, I would've been absent at least six times by now.		FALSE					
+양나현_60_1	NaHyun	It's not exactly because of you. ~(^o^~)(~^o^)~		FALSE					
+양나현_60_1	NaHyun	See you tomorrow.		FALSE					
+양나현_60_2	NaHyun	You feel the same way? But still...		FALSE					
+양나현_60_2	NaHyun	Going to school is actually kind of fun lately.		FALSE					
+양나현_60_2	NaHyun	Normally, I would've been absent at least six times by now.		FALSE					
+양나현_60_2	NaHyun	It's not exactly because of you. ~(^o^~)(~^o^)~		FALSE					
+양나현_60_2	NaHyun	See you tomorrow.		FALSE					
+양나현_70	NaHyun	I've had a lot on my mind lately.		FALSE					
+양나현_70	NaHyun	But I think most of it is about you.		TRUE	양나현_70_0	양나현_70_1	양나현_70_2		
+양나현_70_0	NaHyun	You too?		FALSE					
+양나현_70_0	NaHyun	To be honest, I've only had casual flings before,		FALSE					
+양나현_70_0	NaHyun	But this feels different.		FALSE					
+양나현_70_0	NaHyun	I don't know, this is my first time feeling like this...		FALSE					
+양나현_70_0	NaHyun	I'm so embarrassed, I want to stop talking.		TRUE	양나현_70_0_0	양나현_70_0_1	양나현_70_0_2		
+양나현_70_0_0	NaHyun	Me too...		FALSE					
+양나현_70_0_0	NaHyun	I like you too.		FALSE					
+양나현_70_0_0	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_0_0	NaHyun	Want to call?		FALSE					
+양나현_70_0_1	NaHyun	Okay, I'll keep talking.		FALSE					
+양나현_70_0_1	NaHyun	I like you too.		FALSE					
+양나현_70_0_1	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_0_1	NaHyun	Want to call?		FALSE					
+양나현_70_0_2	NaHyun	Don't cry...		FALSE					
+양나현_70_0_2	NaHyun	I like you too.		FALSE					
+양나현_70_0_2	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_0_2	NaHyun	Want to call?		FALSE					
+양나현_70_1	NaHyun	Yeah, those are good thoughts.		FALSE					
+양나현_70_1	NaHyun	To be honest, I've only had casual flings before,		FALSE					
+양나현_70_1	NaHyun	But this feels different.		FALSE					
+양나현_70_1	NaHyun	I don't know, this is my first time feeling like this...		FALSE					
+양나현_70_1	NaHyun	I'm so embarrassed, I want to stop talking.		TRUE	양나현_70_1_0	양나현_70_1_1	양나현_70_1_2		
+양나현_70_1_0	NaHyun	Me too...		FALSE					
+양나현_70_1_0	NaHyun	I like you too.		FALSE					
+양나현_70_1_0	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_1_0	NaHyun	Want to call?		FALSE					
+양나현_70_1_1	NaHyun	Okay, I'll keep talking.		FALSE					
+양나현_70_1_1	NaHyun	I like you too.		FALSE					
+양나현_70_1_1	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_1_1	NaHyun	Want to call?		FALSE					
+양나현_70_1_2	NaHyun	Don't cry...		FALSE					
+양나현_70_1_2	NaHyun	I like you too.		FALSE					
+양나현_70_1_2	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_1_2	NaHyun	Want to call?		FALSE					
+양나현_70_2	NaHyun	I also think it's quite moving…		FALSE					
+양나현_70_2	NaHyun	To be honest, I've only had casual flings before,		FALSE					
+양나현_70_2	NaHyun	But this feels different.		FALSE					
+양나현_70_2	NaHyun	I don't know, this is my first time feeling like this...		FALSE					
+양나현_70_2	NaHyun	I'm so embarrassed, I want to stop talking.		TRUE	양나현_70_2_0	양나현_70_2_1	양나현_70_2_2		
+양나현_70_2_0	NaHyun	Me too...		FALSE					
+양나현_70_2_0	NaHyun	I like you too.		FALSE					
+양나현_70_2_0	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_2_0	NaHyun	Want to call?		FALSE					
+양나현_70_2_1	NaHyun	Okay, I'll keep talking.		FALSE					
+양나현_70_2_1	NaHyun	I like you too.		FALSE					
+양나현_70_2_1	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_2_1	NaHyun	Want to call?		FALSE					
+양나현_70_2_2	NaHyun	Don't cry...		FALSE					
+양나현_70_2_2	NaHyun	I like you too.		FALSE					
+양나현_70_2_2	NaHyun	I want to hear your voice.		FALSE					
+양나현_70_2_2	NaHyun	Want to call?		FALSE					
+서은표_20	EunPyo	{meName}~~ What are you doing?		TRUE	서은표_20_0	서은표_20_1	서은표_20_2		
+서은표_20_0	EunPyo	Did you wash up? Are you going to bed now?		FALSE					
+서은표_20_0	EunPyo	I just got home and showered after soccer practice... and now I'm watching anime.		FALSE					
+서은표_20_0	EunPyo	(// ^^ //)		FALSE					
+서은표_20_0	EunPyo	It's the best time of my day!!		FALSE					
+서은표_20_1	EunPyo	You finished your assignment?! You're so diligent.		FALSE					
+서은표_20_1	EunPyo	I just got home and showered after soccer practice... and now I'm watching anime.		FALSE					
+서은표_20_1	EunPyo	(// ^^ //)		FALSE					
+서은표_20_1	EunPyo	It's the best time of my day!!		FALSE					
+서은표_20_2	EunPyo	Just lying down? Lol, that's the best.		FALSE					
+서은표_20_2	EunPyo	I just got home and showered after soccer practice... and now I'm watching anime.		FALSE					
+서은표_20_2	EunPyo	(// ^^ //)		FALSE					
+서은표_20_2	EunPyo	It's the best time of my day!!		FALSE					
+서은표_40	EunPyo	{meName}, I love going to school with you lately.		TRUE	서은표_40_0	서은표_40_1	서은표_40_2		
+서은표_40_0	EunPyo	Do you miss me too?		FALSE					
+서은표_40_0	EunPyo	I miss you... (// ^^ //)		FALSE					
+서은표_40_0	EunPyo	Is it weird to say this??! I'm so embarrassed...		FALSE					
+서은표_40_0	EunPyo	But it's the truth...		FALSE					
+서은표_40_1	EunPyo	Hmph~! School life with you is the best!		FALSE					
+서은표_40_1	EunPyo	I miss you... (// ^^ //)		FALSE					
+서은표_40_1	EunPyo	Is it weird to say this??! I'm so embarrassed...		FALSE					
+서은표_40_1	EunPyo	But it's the truth...		FALSE					
+서은표_40_2	EunPyo	Hey~ If you say it like that, it's even more touching...		FALSE					
+서은표_40_2	EunPyo	I miss you... (// ^^ //)		FALSE					
+서은표_40_2	EunPyo	Is it weird to say this??! I'm so embarrassed...		FALSE					
+서은표_40_2	EunPyo	But it's the truth...		FALSE					
+서은표_50	EunPyo	{meName}, what time are you coming to school tomorrow?		TRUE	서은표_50_0	서은표_50_1	서은표_50_2		
+서은표_50_0	EunPyo	Really? I think I'll be there around then too, that's great!		FALSE					
+서은표_50_0	EunPyo	You're entering through the back gate tomorrow, right? Hehe.		TRUE	서은표_50_0_0	서은표_50_0_1	서은표_50_0_2		
+서은표_50_0_0	EunPyo	(// ^^ //) Yay~~ I want to see you soon.		FALSE					
+서은표_50_0_0	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_0_1	EunPyo	(// ^^ //) Yay~~ See you tomorrow.		FALSE					
+서은표_50_0_1	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_0_2	EunPyo	The main gate...?! What for? Got it.		FALSE					
+서은표_50_0_2	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_1	EunPyo	Really~? Our commute times are similar!		FALSE					
+서은표_50_1	EunPyo	You're entering through the back gate tomorrow, right? Hehe.		TRUE	서은표_50_1_0	서은표_50_1_1	서은표_50_1_2		
+서은표_50_1_0	EunPyo	(// ^^ //) Yay~~ I want to see you soon.		FALSE					
+서은표_50_1_0	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_1_1	EunPyo	(// ^^ //) Yay~~ See you tomorrow.		FALSE					
+서은표_50_1_1	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_1_2	EunPyo	The main gate...?! What for? Got it.		FALSE					
+서은표_50_1_2	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_2	EunPyo	8 o'clock?! Why are you going so early?		FALSE					
+서은표_50_2	EunPyo	You're entering through the back gate tomorrow, right? Hehe.		TRUE	서은표_50_2_0	서은표_50_2_1	서은표_50_2_2		
+서은표_50_2_0	EunPyo	(// ^^ //) Yay~~ I want to see you soon.		FALSE					
+서은표_50_2_0	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_2_1	EunPyo	(// ^^ //) Yay~~ See you tomorrow.		FALSE					
+서은표_50_2_1	EunPyo	Sweet Dreams!		FALSE					
+서은표_50_2_2	EunPyo	The main gate...?! What for? Got it.		FALSE					
+서은표_50_2_2	EunPyo	Sweet Dreams!		FALSE					
+서은표_60	EunPyo	{meName}, did you know you left your handkerchief at school???		FALSE					
+서은표_60	EunPyo	The white one with the little bear on it.		FALSE					
+서은표_60	EunPyo	It's yours, right? Luckily, I brought it with me.		TRUE	서은표_60_0	서은표_60_1	서은표_60_2		
+서은표_60_0	EunPyo	I knew it was {meName}'s! I've been keeping it safe.		FALSE					
+서은표_60_0	EunPyo	Should I give it back or not~ Hehe (// ^^ //)		FALSE					
+서은표_60_0	EunPyo	Your handkerchief smells like you, so it feels like we're together.		FALSE					
+서은표_60_0	EunPyo	It feels nice...		FALSE					
+서은표_60_1	EunPyo	Leave it to me! I'll keep it safe for sure! ( o . o)//bb		FALSE					
+서은표_60_1	EunPyo	Should I give it back or not~ Hehe (// ^^ //)		FALSE					
+서은표_60_1	EunPyo	Your handkerchief smells like you, so it feels like we're together.		FALSE					
+서은표_60_1	EunPyo	It feels nice...		FALSE					
+서은표_60_2	EunPyo	You were looking for it? I have your handkerchief right here.		FALSE					
+서은표_60_2	EunPyo	Should I give it back or not~ Hehe (// ^^ //)		FALSE					
+서은표_60_2	EunPyo	Your handkerchief smells like you, so it feels like we're together.		FALSE					
+서은표_60_2	EunPyo	It feels nice...		FALSE					
+서은표_70	EunPyo	{meName}, I took a short nap earlier, and you were in my dream.		TRUE	서은표_70_0	서은표_70_1	서은표_70_2		
+서은표_70_0	EunPyo	You too? Ehehe, maybe we have telepathy?		FALSE					
+서은표_70_0	EunPyo	In my dream... (// ^^ //)...		FALSE					
+서은표_70_0	EunPyo	Ah, it's a bit hard to say?!?		FALSE					
+서은표_70_0	EunPyo	I dreamed about living together with {meName}...		FALSE					
+서은표_70_0	EunPyo	While we're at it, do you want to just come live at my place?		TRUE	서은표_70_0_0	서은표_70_0_1	서은표_70_0_2		
+서은표_70_0_0	EunPyo	You'd like that? I'd love it too...		FALSE					
+서은표_70_0_0	EunPyo	Being apart from {meName} is so hard. I just want to live together... I might be a bit serious...		FALSE					
+서은표_70_0_0	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_0_0	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_0_0	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+서은표_70_0_1	EunPyo	Should we write a cohabitation contract while we're at it~?		FALSE					
+서은표_70_0_1	EunPyo	Being apart from {meName} is so hard. I just want us to live together... I might be being a bit serious...		FALSE					
+서은표_70_0_1	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_0_1	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_0_1	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+서은표_70_0_2	EunPyo	Is that a bit unrealistic, I guess ( ?'o')		FALSE					
+서은표_70_0_2	EunPyo	Being apart from {meName} is so hard. I just want us to live together... I might be being a bit serious...		FALSE					
+서은표_70_0_2	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_0_2	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_0_2	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+서은표_70_2	EunPyo	Whoa... I guess I missed you too... Seeing you even in my dreams...		FALSE					
+서은표_70_2	EunPyo	In my dream... (// ^^ //)...		FALSE					
+서은표_70_2	EunPyo	Ah, it's a bit hard to say?!?		FALSE					
+서은표_70_2	EunPyo	I dreamed about living together with {meName}...		FALSE					
+서은표_70_2	EunPyo	While we're at it, do you want to just come live at my place?		TRUE	서은표_70_2_0	서은표_70_2_1	서은표_70_2_2		
+서은표_70_2_0	EunPyo	You'd like that? I'd love it too...		FALSE					
+서은표_70_2_0	EunPyo	Being apart from {meName} is so hard. I just want us to live together... I might be being a bit serious...		FALSE					
+서은표_70_2_0	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_2_0	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_2_0	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+서은표_70_2_1	EunPyo	Should we write a cohabitation contract while we're at it~?		FALSE					
+서은표_70_2_1	EunPyo	Being apart from {meName} is so hard. I just want us to live together... I might be being a bit serious...		FALSE					
+서은표_70_2_1	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_2_1	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_2_1	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+서은표_70_2_2	EunPyo	Is that a bit unrealistic, I guess ( ?'o')		FALSE					
+서은표_70_2_2	EunPyo	Being apart from {meName} is so hard. I just want us to live together... I might be being a bit serious...		FALSE					
+서은표_70_2_2	EunPyo	I was so happy in my dream...		FALSE					
+서은표_70_2_2	EunPyo	Do you really want to live together? If you're okay with it, I'm ready anytime... I miss you.		FALSE					
+서은표_70_2_2	EunPyo	I wish tomorrow would come quickly... Hehe. I love you, {meName}.		FALSE					
+									
+									
+									
+									
+									
+									
+									
+									

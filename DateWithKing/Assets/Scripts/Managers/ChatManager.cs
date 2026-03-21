@@ -7,6 +7,7 @@ using TMPro;
 using Yarn.Unity;
 using UnityEngine.EventSystems;
 using System.Reflection;
+using UnityEngine.Localization.Settings;
 
 public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속해야함
 { 
@@ -49,7 +50,7 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
     
     private bool isPlaying = false;
 
-    private void Start()
+    private IEnumerator Start()
     {
         foreach(var sprite in profileSpriteName)
             profileImage.Add(sprite, Resources.Load<Sprite>(spritePath+sprite));
@@ -64,7 +65,24 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
 
         string meName = GameManager.Instance.data.name;
         
-        LoadChatDataFromTSV("ChatData", meName);
+        yield return LocalizationSettings.InitializationOperation;
+
+        // 3. 현재 설정된 언어 코드를 가져옵니다.
+        string languageCode = LocalizationSettings.SelectedLocale.Identifier.Code;
+        
+        if (languageCode == "ko")
+        {
+            // 한국어일 때 처리
+            LoadChatDataFromTSV("ChatData", meName); // 한국어 파일명으로 변경하세요
+            Debug.Log("한국어 채팅 데이터를 로드합니다.");
+        }
+        else if (languageCode.StartsWith("en")) // en-US, en-GB 등 모두 포함
+        {
+            // 영어일 때 처리
+            LoadChatDataFromTSV("ChatData_Eng", meName); // 영어 파일명으로 변경하세요
+            Debug.Log("영어 채팅 데이터를 로드합니다.");
+        }
+        
         //StartChat("신아산_80");
         //slideUPDown.SlideUp();
         //StartChat();
@@ -194,8 +212,19 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
     private void SetChat(string chattingTitle)
     {
         chatting = chattingDict[chattingTitle];
+        
+        string imageKey = chattingTitle.Split('_')[0]; 
 
-        proImage.sprite = profileImage[chatting.name];
+        // 💡 [수정됨] 딕셔너리에서 추출한 고유 키("신아산")로 프로필 이미지를 가져옵니다. 안전을 위해 예외 처리도 추가했습니다.
+        if (profileImage.ContainsKey(imageKey))
+        {
+            proImage.sprite = profileImage[imageKey];
+        }
+        else
+        {
+            Debug.LogWarning($"[경고] '{imageKey}'에 해당하는 프로필 이미지가 profileImage 딕셔너리에 없습니다.");
+        }
+        
         opponentName.text = chatting.name;
 
         //ChatBox_Opponent.transform.GetChild(1).GetComponent<Image>().sprite = profileImage[chatting.name];
