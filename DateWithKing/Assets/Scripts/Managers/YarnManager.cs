@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Yarn.Unity;
+using UnityEngine.Localization.Settings;
 
 public class YarnManager : SceneSingleton<YarnManager>
 {
@@ -168,10 +169,18 @@ public class YarnManager : SceneSingleton<YarnManager>
 
     public void RunDialogue(string nodeName, Action callback = null)
     {
-        if (runner == null)
+        if (runner == null) Init();
+        
+        // 영어일 때 _영문 노드로 전환
+        if (LocalizationSettings.SelectedLocale.Identifier.Code == "en-US")
         {
-            Init();
+            string englishNode = nodeName + "_영문";
+            Debug.Log($"영어 모드: {englishNode} 존재 여부: {runner.NodeExists(englishNode)}");
+            // 해당 노드가 존재하면 영문 노드 사용
+            if (runner.NodeExists(englishNode))
+                nodeName = englishNode;
         }
+
         runner.Stop();
         runner.StartDialogue(nodeName);
         dialogueScreen.ShowScreen();
