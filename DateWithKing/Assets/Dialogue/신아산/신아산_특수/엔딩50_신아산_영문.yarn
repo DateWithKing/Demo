@@ -1,0 +1,63 @@
+title: 엔딩50_신아산_영문
+---
+<<bg 낮_강의실>>
+{name()}: ...And that concludes my presentation. Thank you.
+<<play 공통_박수>>
+<<show san_shock>>
+<<play 신아산_흠>>
+ASan: Whoa, didn't you say you pulled an all-nighter preparing for this major presentation?
+ASan: You actually did a pretty decent job for someone who hasn't slept.
+{name()}: Well, I have to avoid retaking this mandatory major at all costs.
+{name()}: I seriously never want to see that professor again—not even in my dreams.
+<<show san_smile>>
+ASan: Should I go tell him you said that?
+{name()}: ..Please, anything but that..
+<<show san_idle>>
+<<play san_sound>>
+ASan: Anyway, you. I've got a job for you. Let's work on something together.
+{name()}: A job? What kind of job?
+ASan: Just follow me.
+<<bg 낮_동아리방>>
+(The place ASan led me to was none other than the club room.)
+{name()}: What’s all this?
+ASan: The draft for my Summer Break Game Dev Project.
+{name()}: Wait, what?
+ASan: Exactly what I said.
+<<show san_blush>>
+<<play 신아산_웃음>>
+ASan: The goal is to finish one game within a year, and the final step is...
+ASan: Submitting it to the NDM exhibition!!!!!!
+{name()}: Excuse me???????
+{name()}: Why are you telling ME this...
+<<show san_smile>>
+<<play 신아산_흠>>
+ASan: After observing you all semester, I've concluded that you're actually quite useful if someone teaches you right.
+ASan: Plus, you were a smooth talker during that presentation earlier.
+ASan: So, in other words, I'm "scouting" you.
+{name()}: Ha... ha... ha... ha.....
+{name()}: SorrybutI'mactuallyreallybusythissummerbreaksoI'lljustbeleavingnow—
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: Where do you think you're going?!!!!!!!!!
+ASan: Once you're in, there's no way out.
+ASan: You know our team's award history, right?
+{name()}: Yes, ma'am....
+<<if get_fuck() > 0>>
+    ASan: Even though you're a person with the personality to flip me off {get_fuck()} times, I'm S-P-E-C-I-A-L-L-Y letting you join.
+<<endif>>
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: So, it's a deal, right?
+{name()}: ..... Yes.....
+ASan: Welcome to my project.
+<<hide>>
+<<bg 신아산_일반엔딩>>
+(And so, I spent the next half a month practically kidnapped by ASan, training hard under her leadership.)
+(Thanks to her, I've reached a point where I know everything there is to know about Object-Oriented Programming—and game dev too.)
+(Oh! And the most important part! We actually got great results at the NDM.)
+(It looks like I'll probably be forced into doing my graduation project with her as well....)
+(But hey, aren't we a pretty good duo?)
+(I feel like as long as we're together, there's nothing we can't do.)
+<<wait 1>>
+<<end>>
+===

@@ -1,0 +1,47 @@
+title: 방향키엔딩_영문
+---
+Right now, I'm having a meal with NaHyun.
+I think she was telling me a story about her high school days,
+Wait... since when was it?
+It seems like NaHyun has stopped talking.
+{name()}: ...Why did you stop?
+<<show hyun_neg>>
+NaHyun: {name()}, you're not even listening to me, are you?
+{name()}: W-what? No, I'm listening...
+(NaHyun cuts me off.)
+NaHyun: You're always like this. I refuse to waste another moment dining with a silent statue.
+{name()}: ......
+(I want to make an excuse, but I feel like NaHyun might actually kill me if I open my mouth again......)
+With a chilling silence between us, we finished our meal without saying a word.
+<<hide>>
+As soon as she finished eating, NaHyun stood up and left the table.
+ASan: Oh boy. 
+<<show san_idle>>
+ASan: To think thou wouldst dare to pluck the whiskers of a sleeping cat...
+Before I knew it, ASan appeared behind me, clicking her tongue, and stood by my side.
+{name()}: Wouldn't it be a lion?
+<<show san_neg>>
+ASan: I know that!!!!! And NaHyun is a CAAAAAAT!!!!!!!!!!!!!!
+ASan: I knew this would happen. {name()}, thou must be punished.
+{name()}: What are you talking about? What did I even do wrong?
+<<show san_idle>>
+ASan: To one who cannot even reflect upon oneself, this humble servant has nothing more to say...
+ASan: I didst tell thee that one must give their utmost heart when trying to win a lady's favor...
+<<hide>>
+ASan disappeared after rambling on with those absurd words.
+EunPyo: {name()}!! Seriously, why did you do that?
+<<show pyo_idle>>
+EunPyo: {name()}, you never really listened to what we said, did you? You always just brushed us off.
+EunPyo: That's why this is happening.
+<<show pyo_neg>>
+EunPyo: We... we wanted you to truly connect with us...
+EunPyo: We wanted to see "REAL" you, but you never showed it to us.
+EunPyo: You know what I mean, right?
+//EunPyo: You brushed us off {방향키누른횟수} times...
+{name()}: ......
+<<show pyo_smile>>
+EunPyo: If there's a next time, try harder.
+EunPyo also vanishes after leaving me with those cryptic words......
+Was I too hasty......?
+<<end>>
+===

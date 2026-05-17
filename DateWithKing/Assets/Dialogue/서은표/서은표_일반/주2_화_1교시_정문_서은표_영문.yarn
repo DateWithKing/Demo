@@ -1,0 +1,127 @@
+title: 주2_화_1교시_정문_서은표_영문
+---
+(The uphill climb to school is always exhausting.)
+<<show pyo_idle>>
+(As I struggle up the stairs, I see the back of EunPyo up ahead.)
+(EunPyo is busy moving some boxes.)
+{name()}: EunPyo!
+(When I call her name, EunPyo looks back.)
+<<play pyo_sound>>
+EunPyo: Oh, {name()}!
+EunPyo: Hey.
+<<if get("str") >= 3>>
+    <<choice 주2_화_1교시_정문_서은표_긍1_영문 "Need some help?" 주2_화_1교시_정문_서은표_부1_영문 "What are you moving?">>
+    (The boxes must be heavy; beads of sweat are forming on EunPyo's forehead.)
+<<else>>
+    (The boxes must be heavy; beads of sweat are forming on EunPyo's forehead.)
+    <<jump 주2_화_1교시_정문_서은표_근력부족_영문>>
+<<endif>>
+===
+
+title: 주2_화_1교시_정문_서은표_긍1_영문
+---
+{name()}: What are you moving? Need some help?
+{name()}: Give one to me.
+<<like 서은표>>
+<<change lvPyo +10>>
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Oh, I'd really appreciate that!
+<<jump 주2_화_1교시_정문_서은표_분기1_영문>>
+===
+
+title: 주2_화_1교시_정문_서은표_부1_영문
+---
+{name()}: What are you moving?
+EunPyo: These are things for the club room.
+EunPyo: I somehow ended up being the one to move them...
+<<play 서은표_흠>>
+EunPyo: Do you think you could carry just this one for me?
+<<like 서은표>>
+<<change lvPyo +10>>
+{name()}: Uh, sure.
+<<jump 주2_화_1교시_정문_서은표_분기1_영문>>
+===
+
+title: 주2_화_1교시_정문_서은표_분기1_영문
+---
+(I took a box from EunPyo.)
+(It's heavier than I expected, but manageable.)
+{name()}: Where should I take this?
+EunPyo: Just to the club room.
+<<bg 낮_동아리방>>
+(We moved the boxes to the club room.)
+EunPyo: Thanks for coming with me.
+<<show pyo_blush>>
+EunPyo: Someone had to do it...
+EunPyo: So I volunteered since I had some free time.
+{name()}: You worked hard.
+<<show pyo_smile>>
+EunPyo: Well, it's good exercise... no big deal.
+EunPyo: I have to go let them know everything's been moved...
+EunPyo: You know we have class together next period, right?
+<<play 서은표_웃음>>
+EunPyo: See you in the lecture hall!
+(EunPyo says goodbye and leaves the club room.)
+<<end>>
+===
+
+title: 주2_화_1교시_정문_서은표_근력부족_영문
+---
+{name()}: What are you moving? Need some help?
+(EunPyo glanced at me briefly.)
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: No, it's okay. I can move them by myself!
+(She has a somewhat determined look on her face.)
+EunPyo: I'm stronger than I look, you know.
+{name()}: Where are you moving them to?
+<<choice 주2_화_1교시_정문_서은표_긍2_영문 "Sure, I was heading to the club room anyway." 주2_화_1교시_정문_서은표_부2_영문 "I actually have to go somewhere else...">>
+EunPyo: The club room. Want to go together?
+===
+
+title: 주2_화_1교시_정문_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +10>>
+{name()}: Sure, I was heading to the club room anyway.
+<<bg 낮_동아리방>>
+(We chatted as we arrived at the club room together.)
+<<play 공통_쾅>>
+(EunPyo set the box down with a heavy thud.)
+<<jump 주2_화_1교시_정문_서은표_운반후_영문>>
+===
+
+title: 주2_화_1교시_정문_서은표_부2_영문
+---
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: I actually have to go somewhere else...
+<<show pyo_neg>>
+EunPyo: Oh, really? Well then...
+EunPyo: You know we have class together next period, right?
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: See you in the lecture hall!
+(EunPyo says goodbye and disappears toward the club room.)
+<<end>>
+===
+
+title: 주2_화_1교시_정문_서은표_운반후_영문
+---
+EunPyo: Thanks for coming with me.
+<<show pyo_blush>>
+{name()}: No problem.
+{name()}: How did you end up moving this all by yourself?
+EunPyo: Someone had to do it...
+EunPyo: So I volunteered since I had some free time.
+{name()}: You worked hard.
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Well, it's good exercise... no big deal.
+EunPyo: I have to go let them know everything's been moved...
+EunPyo: You know we have class together next period, right?
+EunPyo: See you in the lecture hall!
+(EunPyo says goodbye and leaves the club room.)
+<<end>>
+===

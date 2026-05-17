@@ -1,0 +1,105 @@
+title: 밤_2_편의점_양나현_영문
+---
+<<show hyun_idle_ver2>>
+(As I arrive at the convenience store, I see NaHyun's back under a streetlight.)
+<<play hyun_sound>>
+<<show hyun_idle_ver2>>
+(NaHyun is crouching down in front of some bushes.)
+<<choice 밤_2_편의점_긍정1_영문 "NaHyun!" 밤_2_편의점_부정1_영문 "(Approach quietly)">>
+(Should I go say hi?)
+===
+
+title: 밤_2_편의점_긍정1_영문
+---
+{name()}: NaHyun!
+(As I call out her name, NaHyun flinches and shudders as if startled.)
+<<play 양나현_쉿>>
+<<show hyun_neg_ver2>>
+NaHyun: (Looking back) Shh! 
+(NaHyun puts a finger to her lips.)
+(As I get closer, I finally see the cat—Bong-won in front of her.)
+<<play 공통_야옹>>
+(Luckily, Bong-won doesn't seem to mind and is just lying there in front of NaHyun.)
+{name()}: (Whispering) Oh, sorry. I didn't know Bong-won was here.
+{name()}: I didn't expect to run into Bong-won outside of campus.
+<<show hyun_idle_ver2>>
+<<change lvHyun -5>>
+<<dislike 양나현>>
+NaHyun: Well... it's fine. Hey, {name()}.
+<<jump 밤_2_편의점_양나현_분기1_영문>>
+===
+
+title: 밤_2_편의점_부정1_영문
+---
+(I quietly approach NaHyun without making a sound.)
+(As I get closer, I see Bong-won the cat lying in front of her.)
+(I carefully crouch down next to NaHyun.)
+{name()}: (Whispering) Hey.
+NaHyun: (Whispering) Oh, hey {name()}. 
+<<show hyun_smile_ver2>>
+NaHyun: It's Bong-won. Did I introduce you two before?
+{name()}: I didn't expect to run into Bong-won outside of campus.
+NaHyun: Right? I was surprised too.
+<<play 공통_야옹>>
+<<change lvHyun +5>>
+<<like 양나현>>
+(Bong-won starts purring.)
+<<jump 밤_2_편의점_양나현_분기1_영문>>
+===
+
+title: 밤_2_편의점_양나현_분기1_영문
+---
+(Bong-won stretches, stands up, and walks toward NaHyun, rubbing his forehead against her leg.)
+<<show hyun_shock_ver2>>
+NaHyun: ...!!
+(NaHyun freezes up, looking flustered.)
+(It seems like he wants to be petted...)
+{name()}: I think he wants you to pet him.
+{name()}: Give it a try.
+<<show hyun_blush_ver2>>
+NaHyun: ...Is it... really okay?
+<<play 공통_야옹>>
+(Bong-won lets out a meow as if urging her.)
+<<choice 주2_화_밤_편의점_긍정2_영문 "(Pet Bong-won first.)" 주2_화_밤_편의점_부정2_영문 "Just watch.">>
+(NaHyun is still hesitating.)
+===
+
+title: 주2_화_밤_편의점_긍정2_영문
+---
+(I reach out first and gently stroke Bong-won's head.)
+<<show hyun_shock_ver2>>
+(Bong-won closes his eyes, looking satisfied.)
+{name()}: See? He likes it.
+(After stroking him a few times, I pull my hand away.)
+{name()}: Your turn.
+<<show hyun_idle_ver2>>
+(NaHyun carefully reaches out her hand and strokes Bong-won.)
+<<play 공통_야옹>>
+(Bong-won purrs again, seemingly content.)
+<<show hyun_smile_ver2>>
+NaHyun: !!
+(As she pets him, Bong-won licks NaHyun's hand.)
+NaHyun: !! Did you see that?
+<<play 양나현_웃음>>
+(NaHyun can't hide her excitement.)
+(Bong-won licks her hand a few more times before disappearing into the bushes.)
+NaHyun: Wow... I can't believe it.
+NaHyun: It feels like I just got a birthday present from Bong-won.
+<<change lvHyun +10>>
+<<like 양나현>>
+NaHyun: Thanks for giving me the courage. I was really debating whether to do it or not...
+(I chatted with NaHyun a bit more about Bong-won before we parted ways.)
+<<end>>
+===
+
+title: 주2_화_밤_편의점_부정2_영문
+---
+{name()}: On second thought... what if he scratches you?
+{name()}: It's probably better to just watch.
+<<show hyun_idle_ver2>>
+NaHyun: True...... I wouldn't want to make Bong-won uncomfortable by mistake.
+(I sat with NaHyun and just watched Bong-won.)
+(Bong-won hovered around for a while, then disappeared into the bushes, perhaps looking for food.)
+NaHyun: I should head home now.
+<<end>>
+===

@@ -1,0 +1,87 @@
+title: 종강총회_양나현_영문
+---
+<<show hyun_smile>>
+<<play hyun_sound>>
+NaHyun: Oh, you actually collected all the tickets?
+NaHyun: How did you even manage to get 30 of them?
+{name()}: It was a piece of cake.
+{name()}: I just really wanted to get on this ride.
+NaHyun: Do you like bumper cars?
+{name()}: Yeah.
+{name()}: I've always been a "best driver" type of guy.
+NaHyun: Well, then...
+NaHyun: Would you want to ride together?
+{name()}: Huh?
+NaHyun: I want to be in the car you're driving.
+{name()}: For real?
+NaHyun: Yeah. I'm hopeless when it comes to driving.
+{name()}: Sure, let's ride together then.
+(We chatted as we waited for our turn.)
+(When it was finally our time to enter, NaHyun grabbed my hand.)
+<<show hyun_spec>>
+NaHyun: I want to ride that red one!
+{name()}: !!
+NaHyun: Hurry up!
+{name()}: Slow down!
+(We successfully made it into the red car NaHyun wanted.)
+(We sat down and buckled our seatbelts.)
+<<show hyun_smile>>
+NaHyun: I'm looking forward to this drive.
+{name()}: You got it. Just trust the "best driver."
+(The ride started with the staff's signal.)
+{name()}: Here we go!
+(NaHyun gripped her seatbelt tightly.)
+(I stepped on the pedal and zoomed around for a lap.)
+(Right then,)
+<<play 공통_쾅>>
+...BAM!!!
+<<show hyun_shock>>
+NaHyun: Eek!!
+{name()}: !!!
+(A blue car slammed into us from behind.)
+(The car shook violently from the impact.)
+<<show hyun_neg>>
+NaHyun: Let's go after that car and get revenge.
+(I saw a spark of competitive fire in NaHyun's eyes.)
+{name()}: Alright, you got it.
+{name()}: Hold on tight.
+(With the sole mission of getting revenge on that blue car, I floored the pedal.)
+(Carefully steering to avoid other cars,)
+(Finally, the gap between us and the blue car was...)
+(10 centimeters!!!)
+<<play 공통_쾅>>
+...BAM!!!
+(I slammed into the blue car as hard as I could for revenge.)
+(At that moment,)
+(As the car jolted from the impact,)
+(NaHyun leaned her shoulder gently against mine.)
+NaHyun: That was a perfect revenge.
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+(NaHyun was laughing.)
+(She looked completely satisfied.)
+{name()}: I'm glad you liked it.
+NaHyun: Now, give me a smooth drive without any more bumping.
+{name()}: Roger that.
+(The ride didn't last very long,)
+(But for the remaining two minutes, we enjoyed a perfect drive without hitting a single car.)
+(After parking neatly, the staff announced the end of the ride.)
+(Just before unbuckling and getting out, our eyes met.)
+NaHyun: You really are a "best driver."
+NaHyun: Should we take a picture before we get out?
+NaHyun: To remember this.
+{name()}: Sounds good.
+(NaHyun pulled out her phone and switched to selfie mode.)
+NaHyun: Do a "V." Peace sign~
+<<cheese 종강총회_양나현2_영문>>
+===
+
+title: 종강총회_양나현2_영문
+---
+<<hide>>
+<<bg 양나현_종강총회>>
+NaHyun: That was fun.
+NaHyun: Let's come back here, just the two of us, next time.
+<<wait 3>>
+<<end>>
+===

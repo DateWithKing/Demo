@@ -1,0 +1,198 @@
+title: 주3_수_3교시_강의실_신아산_영문
+---
+(It's the last class before heading home.)
+(Maybe it's because the semester is at its peak, but my whole body feels heavy and exhausted.)
+<<show san_idle>>
+<<play 신아산_흠>>
+ASan: Whoa, why the long face today?
+{name()}: I think I'm just burnt out lately...
+ASan: Have you been to the doctor?
+{name()}: It's not that serious. I'm fine.
+ASan: .......
+<<show san_smile>>
+<<play san_sound>>
+ASan: That settles it. Let's ditch this class.
+{name()}: Say what????????
+{name()}: You actually know the word "ditch"?
+{name()}: Even though this is the OOP lecture?
+<<show san_neg>>
+ASan: I'm saying this because I'm worried about you! Why are you judging me?
+{name()}: Oh, sorry. My bad.
+{name()}: Then... want to skip it together?
+<<if get("lvSan") >= 20>>
+    <<jump 주3_수_3교시_강의실_신아산_특수_긍정_영문>>
+<<else>>
+    <<jump 주3_수_3교시_강의실_신아산_특수_부정_영문>>
+<<endif>>
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_긍정_영문
+---
+<<show san_idle>>
+<<play 신아산_허>>
+ASan: You mean together?
+{name()}: Yeah.
+{name()}: It's boring alone.
+<<show san_neg>>
+<<play 신아산_흠>>
+ASan: Hmm....
+<<show san_smile>>
+ASan: Well, I guess every college student needs to pull a "sign-and-run" at least once.
+ASan: Want to go to the club room and play some games?
+{name()}: The club room?
+ASan: Yeah. It’s always been on my bucket list.
+{name()}: Sure, let's go play some games.
+<<bg 낮_동아리방>>
+<<show san_idle>>
+{name()}: Any games you like?
+ASan: Yep.
+ASan: It's a multiplayer, team-based FPS where heroes team up to fight for objectives.
+ASan: Sounds fun just hearing about it, right?
+ASan: Hurry up and turn on the PC!
+<<play 공통_키보드>>
+<<wait 1>>
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: Ugh, seriously, what is up with these healers?
+ASan: Especially this 'LastGamer05' dude.
+ASan: He's just standing in the back doing absolutely nothing!
+(ASan keeps grumbling about the healers...)
+(But honestly, catching a glimpse of her screen, it didn't look like it was entirely the healer's fault.)
+<<choice 주3_수_3교시_강의실_신아산_특수_긍정1_영문 "Yeah, I think he's the one who messed up most." 주3_수_3교시_강의실_신아산_특수_부정1_영문 "Duh, it's totally the healer's fault.">>
+ASan: You think so too, right?
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_긍정1_영문
+---
+{name()}: Yeah, I think he's the one who messed up the most.
+{name()}: But I also think you were overextending a bit, so the team's synergy was a bit off.
+<<show san_neg>>
+ASan: Overextending?
+{name()}: Well, look at it this way. Your character was here, right?.....
+(I gave ASan some feedback while watching the replay.)
+(Fortunately, there wasn't much to nitpick, and though she was annoyed at first, she eventually understood.)
+<<show san_idle>>
+ASan: Wow, I guess it's because I'm Bronze 5, but I had no idea.
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: Thanks to you, I feel like I can finally make it to Silver!!!!!!!
+{name()}: That's good. Your game sense is actually pretty high, so I think you'll climb the ranks fast.
+<<show san_blush>>
+<<change lvSan 15>>
+<<like 신아산>>
+ASan: ........
+ASan: Then... want to duo with me?
+{name()}: Oh, really?
+{name()}: To be honest, I'm actually a Master in this game. I'll hop on my smurf account.
+ASan: What? So you're gonna carry me?
+{name()}: I can't guarantee anything, but....
+{name()}: Most likely?
+<<show san_smile>>
+ASan: Awesome!!!!!!!
+<<hide>>
+<<bg 신아산_특수>>
+<<play 공통_키보드>>
+(And so, I lost track of time playing games with ASan.)
+ASan: Oh my god, I hit Silver!!!!!!!!!!!
+{name()}: See? Not bad, right?
+ASan: Yeah, totally!!!
+ASan: Gaming with you is surprisingly fun.
+ASan: You'll play with me again next time, right?
+{name()}: Of course.
+{name()}: Your skills will probably be even better by then, so I'll face you on my Master account.
+ASan: Deal!
+<<end>>
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_부정1_영문
+---
+{name()}: Duh, it's totally the healer's fault.
+{name()}: What is that person even doing in the back?
+<<show san_neg2>>
+ASan: Right?? It's not my fault, is it??
+ASan: But why does that person keep blaming me in the chat?
+ASan: .....
+ASan: Are you good at arguing?
+<<if get("wis") >= 5>>
+    <<jump 주3_수_3교시_강의실_신아산_특수_긍정2_영문>>
+<<else>>
+    <<jump 주3_수_3교시_강의실_신아산_특수_부정2_영문>>
+<<endif>>
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_긍정2_영문
+---
+{name()}: Well.... I'm not bad?
+ASan: Then hurry up and type for me.
+ASan: You need to back me up in the chat right now!!!!!!!!!!!
+{name()}: Wait, what????????
+<<hide>>
+<<bg 신아산_특수>>
+(Before I knew it, I was sitting right next to ASan.)
+ASan: Go on, tell 'em.
+{name()}: Uh, uh, uh...
+ASan: Hurry!!!! We're running out of time!!!!!
+{name()}: Hey, you ****! If you play like that, no wonder...
+<<play 공통_키보드>>
+(I had no choice but to unleash a storm of insults at a total stranger on ASan's behalf.....)
+(Sorry, 'LastGamer05'...)
+<<bg 낮_동아리방>>
+<<play 신아산_웃음>>
+<<show san_smile>>
+<<like 신아산>>
+<<change lvSan 10>>
+ASan: Phew, that felt so satisfying.
+ASan: Thanks!
+ASan: You're really good with words.
+{name()}: Uh, yeah... thanks...
+ASan: Next time I play, I'm putting you on chat duty~.
+{name()}: What???? No way. You'll get perma-banned.
+ASan: Who cares?
+ASan: Hanging out with you like this is way more fun anyway.
+ASan: Let's do it again!
+(ASan left the club room with an innocent smile on her face.)
+<<end>>
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_부정2_영문
+---
+{name()}: Hmm.. I'm not sure.
+<<show san_idle>>
+ASan: Ah, that's too bad...
+ASan: If you were good at it, I was gonna ask you to win this keyboard battle for me...
+ASan: Anyway, want to duo with me after this round?
+{name()}: Oh, really?
+{name()}: To be honest, I'm actually a Master in this game. I'll hop on my smurf account.
+ASan: What? So you're gonna carry me?
+{name()}: I can't guarantee anything, but....
+{name()}: Most likely?
+<<show san_smile>>
+ASan: Cool.
+<<hide>>
+<<bg 신아산_특수>>
+<<play 공통_키보드>>
+(And so, I lost track of time playing games with ASan.)
+ASan: Whoa, Silver!
+ASan: I finally hit Silver thanks to you.
+{name()}: See? Not bad, right?
+ASan: Yeah, totally!!!
+<<change lvSan 5>>
+<<like 신아산>>
+ASan: Gaming with you is surprisingly fun.
+ASan: You'll play with me again next time, right?
+{name()}: Of course.
+{name()}: Your skills will probably be even better by then, so I'll face you on my Master account.
+ASan: Deal!
+<<end>>
+===
+
+title: 주3_수_3교시_강의실_신아산_특수_부정_영문
+---
+ASan: You want to ditch together?
+{name()}: You don't want to sit through this lecture either, do you?
+ASan: I do want to rest today, but....
+<<show san_smile>>
+ASan: I think I'll go practice for the performance instead.
+(ASan and I slipped out of the classroom and went our separate ways.)
+<<end>>
+===

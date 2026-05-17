@@ -1,0 +1,33 @@
+title: 밤_2_택배_신아산_영문
+---
+(I'm at a logistics center right now.)
+(Is this the fate of a broke college student who has nothing but physical stamina...?)
+<<show san_idle_ver2>>
+(And on the line next to me, there's a familiar face.)
+(Is this the fate of not just me, but all college students...?)
+<<play san_sound>>
+ASan: Ugh, I've lost track of how many hours it's been.
+{name()}: Tell me about it....
+{name()}: I've been standing for so long that I can't feel my legs anymore.
+<<show san_neg_ver2>>
+<<play 신아산_허>>
+ASan: *Sigh*... If it weren't for that stupid bass...
+{name()}: Bass?
+ASan: Yeah.
+ASan: I started this with the dream of buying a new bass guitar, but I didn't think it would be this hard...
+{name()}: For real...
+{name()}: The fact that we have to go to class like this tomorrow is just...
+ASan: It's unbelievable.
+(After that, we chatted for a while.)
+(Sharing funny stories even while we were exhausted made the fatigue feel a bit lighter.)
+<<show san_smile_ver2>>
+<<change lvSan 5>>
+<<like 신아산>>
+ASan: I think it's less painful thanks to you.
+ASan: I'm definitely never coming here alone again.
+{name()}: ...The way you said that makes it sound like you're planning to drag me along next time?
+ASan: Hahaha.
+ASan: Anyway, good job today.
+{name()}: You too. See you tomorrow.
+<<end>>
+===

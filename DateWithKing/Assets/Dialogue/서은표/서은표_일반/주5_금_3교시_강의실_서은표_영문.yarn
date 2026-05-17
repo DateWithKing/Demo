@@ -1,0 +1,68 @@
+title: 주5_금_3교시_강의실_서은표_영문
+---
+(Friday's 3rd period feels like the most exhausting class of the entire week.)
+(EunPyo is in the lecture hall.)
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: I really hope this class ends soon...
+{name()}: Me too. What are you doing this weekend?
+<<play 서은표_흠>>
+EunPyo: To be honest... I'm planning on staying cooped up at home all day watching anime.
+{name()}: That sounds just like you.
+<<if get("lvPyo") >= 50>> 
+    <<show pyo_blush>>
+    EunPyo: Or, maybe we could hang out together?
+    EunPyo: If you call me, I'll come out.
+<<endif>>
+(We chatted for a bit until the professor arrived.)
+(Once class started, the wave of exhaustion hit me,)
+(And I closed my eyes for a moment—no, my eyes just closed on their own.)
+(...)
+Professor: {name()}, please answer question 2-4.
+<<show pyo_neg>>
+EunPyo: (whispering) {name()}! Wake up...!
+{name()}: ……Huh?
+(Did they say 2-3?)
+<<choice 주5_금_3교시_강의실_서은표_긍1_영문 "Say anything." 주5_금_3교시_강의실_서은표_부1_영문 "Stay silent.">>
+(I don't know the answer. Should I just say something?)
+===
+
+title: 주5_금_3교시_강의실_서은표_긍1_영문
+---
+{name()}: Uh... I think it's Stockholm Syndrome...?
+(My voice got smaller and smaller as I spoke.)
+Professor: ...
+<<jump 주5_금_3교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주5_금_3교시_강의실_서은표_부1_영문
+---
+{name()}: ... ...
+Professor: {name()}? Are they not here?
+<<jump 주5_금_3교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주5_금_3교시_강의실_서은표_분기1_영문
+---
+<<show pyo_idle>>
+EunPyo: The answer is Lima Syndrome.
+{name()}: !
+Professor: Correct.
+(The professor continued the lecture with a satisfied smile at the answer.)
+{name()}: (whispering) Wow, that scared me.
+{name()}: Thanks for covering for me....
+<<if get("lvPyo") >= 60>>
+    <<show pyo_blush>>
+    <<like 서은표>>
+    <<change lvPyo +10>>
+    <<play 서은표_흠>>
+    EunPyo: If it's for you, I can always find my courage.
+    (EunPyo was visibly shy.)
+    (I could tell she really summoned her courage, especially since she usually struggles even to order food.)
+<<endif>>
+<<show pyo_smile>>
+EunPyo: If you're still tired, you can sleep a bit more.
+{name()}: No, I'm wide awake now. I should listen to the class.
+(We focused on the rest of the lecture together.)
+<<end>>
+===

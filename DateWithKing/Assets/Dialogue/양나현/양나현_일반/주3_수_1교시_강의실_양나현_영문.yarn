@@ -1,0 +1,58 @@
+title: 주3_수_1교시_강의실_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+NaHyun: Hey, {name()}.
+{name()}: Hey.
+<<show hyun_spec>>
+NaHyun: (Yawns)
+NaHyun: I should've grabbed a coffee on my way here.
+{name()}: Do you drink coffee often?
+NaHyun: Yeah. I literally can't survive without it...
+NaHyun: (Checks the time) Still got a few minutes before class starts.
+<<choice 주3_수_1교시_강의실_양나현_긍1_영문 "Go with her." 주3_수_1교시_강의실_양나현_부1_영문 "Stay in the classroom.">>
+NaHyun: Want to run to the convenience store with me?
+===
+
+title: 주3_수_1교시_강의실_양나현_긍1_영문
+---
+<<show hyun_spec>>
+{name()}: Sure, let's go.
+<<choice 주3_수_1교시_강의실_양나현_긍2_영문 "Of course I'll buy it for you!" 주3_수_1교시_강의실_양나현_부2_영문 "Why on earth should I buy you coffee?" >>
+NaHyun: (Playfully) Buy me a coffee?
+===
+
+title: 주3_수_1교시_강의실_양나현_부1_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: I'm good.
+NaHyun: Really? I'll just go by myself then.
+<<play 공통_의자>>
+(NaHyun stands up and leaves the classroom.)
+<<end>>
+===
+
+title: 주3_수_1교시_강의실_양나현_긍2_영문
+---
+<<like 양나현>>
+<<change lvHyun +10>>
+{name()}: I'll get it for you.
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: Wait, really? You don't have to.
+{name()}: No, it's on me today.
+(We went to the convenience store together, and I bought her a coffee.)
+NaHyun: Thanks.
+<<end>>
+===
+
+title: 주3_수_1교시_강의실_양나현_부2_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: No way.
+<<choice 주3_수_1교시_강의실_양나현_긍2_영문 "I'm just kidding, I'll buy it." 주3_수_1교시_강의실_양나현_부2_영문 "I'm not buying it." >>
+<<show hyun_neg>>
+NaHyun: For real?
+===

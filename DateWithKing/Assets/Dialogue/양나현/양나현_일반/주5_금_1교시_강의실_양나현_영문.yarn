@@ -1,0 +1,57 @@
+title: 주5_금_1교시_강의실_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+(It’s the last day of class before the final exams.)
+(I see NaHyun’s back.)
+{name()}: Hey, NaHyun.
+NaHyun: {name()}.
+(NaHyun waves at me.)
+{name()}: I'm surprised you actually made it to an 8 AM on the last day.
+<<show hyun_neg>>
+NaHyun: Well, it is the last day.
+<<show hyun_smile>>
+NaHyun: Plus, it’s the last time I’ll see you in this classroom, so of course I had to come.
+<<play 양나현_웃음>>
+(NaHyun laughs.)
+(...Does this mean I won't have any more chances to see her?)
+{name()}: ...How’s the studying for finals going?
+NaHyun: Hard to say. I think I really need to pay attention to today’s lecture.
+{name()}: Yeah, me too.
+<<choice 주5_금_1교시_강의실_양나현_긍정1_영문 "Yeah, I think I'll be taking one this time." 주5_금_1교시_강의실_양나현_부정1_영문 "No? Aren't summer sessions only for people who messed up?">>
+NaHyun: By any chance... are you taking any summer sessions?
+===
+
+title: 주5_금_1교시_강의실_양나현_긍정1_영문
+---
+{name()}: Yeah, I think I'll be taking one this time.
+<<change lvHyun +5>>
+<<like 양나현>>
+NaHyun: That's great. What are you taking?
+{name()}: I'll probably be in the Java Programming Lab.
+{name()}: Are you taking one too?
+<<show hyun_neg>>
+NaHyun: Uh... I'm kind of on the verge of having to retake a course.
+NaHyun: I mean, I still have the final exam left, but...
+{name()}: Wait, are you talking about this class?
+<<show hyun_idle>>
+(We chatted a bit about summer sessions.)
+<<end>>
+===
+
+title: 주5_금_1교시_강의실_양나현_부정1_영문
+---
+{name()}: I don't do summer sessions.
+{name()}: If you work hard during the regular semester, you don't have to waste money on those.
+<<show hyun_neg2>>
+<<change lvHyun -5>>
+<<dislike 양나현>>
+NaHyun: I guess that's true......
+<<play 양나현_허>>
+NaHyun: I might have to take one, though.
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(My words seemed to have hit NaHyun pretty hard.)
+(We talked more about summer sessions, but I felt uneasy the whole time.)
+<<end>>
+===

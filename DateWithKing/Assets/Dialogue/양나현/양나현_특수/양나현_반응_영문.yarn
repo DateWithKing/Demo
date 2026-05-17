@@ -1,0 +1,54 @@
+title: 양나현_엿_영문
+---
+<<show hyun_idle>>
+NaHyun: …?
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+<<show hyun_neg2>>
+<<play 양나현_허>>
+NaHyun: Are you out of your mind?
+<<show hyun_idle>>
+<<choice_again>>
+===
+
+title: 양나현_두명_영문
+---
+<<show hyun_idle>>
+NaHyun: ...Is that your friend behind you?
+<<choice_again>>
+===
+
+title: 양나현_K하트_영문
+---
+<<show hyun_smile>>
+NaHyun: Hmm... a heart?
+NaHyun: That's not how you do it.
+(NaHyun demonstrates a finger heart.)
+(With a bonus wink!)
+<<show hyun_idle>>
+<<choice_again>>
+===
+
+title: 양나현_주먹_영문
+---
+<<show hyun_shock>>
+NaHyun: AAAHHH!!!!!!
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+NaHyun: That’s domestic violence!!!!
+<<show hyun_neg>>
+(SLAP!!!)
+(NaHyun slaps you across the cheek.)
+<<show hyun_idle>>
+<<choice_again>>
+===
+
+title: 양나현_쉿_영문
+---
+<<show hyun_idle>>
+NaHyun: ...?
+<<show hyun_neg2>>
+NaHyun: It's rude to do that when someone else is talking.
+<<show hyun_idle>>
+<<choice_again>>
+===

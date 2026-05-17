@@ -1,0 +1,20 @@
+title: 종강총회_펀치머신_성공_영문
+---
+You got 5 tickets!
+<<wait 1>>
+<<end>>
+===
+
+title: 종강총회_펀치머신_시작_영문
+---
+Mash the buttons to charge your power for the punch machine within the time limit!
+<<StartPunch PunchingManager>>
+<<end>>
+===
+
+title: 종강총회_펀치머신_실패_영문
+---
+You didn't get any tickets...
+<<wait 1>>
+<<end>>
+===

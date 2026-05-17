@@ -1,0 +1,186 @@
+title: 밤_5_조깅하기_양나현_영문
+---
+<<show hyun_idle>>
+(As I step outside, I see NaHyun standing in front of the crosswalk.)
+(NaHyun waves as our eyes meet.)
+<<play hyun_sound>>
+NaHyun: {name()}!
+<<if get("lvHyun") < 50>>
+    <<jump 밤_5_조깅하기_양나현_일반_영문>>
+<<else>>
+    <<jump 밤_5_조깅하기_양나현_특수_영문>>
+<<endif>>
+===
+
+title: 밤_5_조깅하기_양나현_일반_영문
+---
+<<show hyun_smile>>
+NaHyun: You're here?
+<<choice 밤_5_조깅하기_양나현_일반_긍정1_영문 "Sure, let's go together." 밤_5_조깅하기_양나현_일반_부정1_영문 "I'm not really in the mood to study...">>
+NaHyun: Let's go to a cafe and study together~.
+===
+
+title: 밤_5_조깅하기_양나현_일반_긍정1_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+{name()}: Sure, sounds good.
+<<show hyun_idle>>
+NaHyun: I'll show you a cafe with a great vibe.
+NaHyun: Do you know where this is?
+(NaHyun shows me her phone screen.)
+(It's information about an aesthetic cafe with a nice atmosphere.)
+{name()}: Let's go study there then.
+<<show hyun_smile>>
+NaHyun: Okay!
+(I went to the cafe with NaHyun and studied until closing time.)
+<<end>>
+===
+
+title: 밤_5_조깅하기_양나현_일반_부정1_영문
+---
+{name()}: I'm not really in the mood to study right now...
+<<show hyun_idle>>
+NaHyun: Really? Then should we go for a walk instead?
+<<like 양나현>>
+<<change lvHyun +5>>
+NaHyun: Let's walk together.
+{name()}: Okay. How about that trail over there?
+(I took a walk along the stream with NaHyun and talked about various things.)
+<<end>>
+===
+
+title: 밤_5_조깅하기_양나현_특수_영문
+---
+<<show hyun_idle>>
+NaHyun: Hey, {name()}.
+NaHyun: I was originally going to ask you to study...
+NaHyun: But I really don't want to study today.
+<<choice 밤_5_조깅하기_양나현_특수_긍정1_영문 "Should we skip it?" 밤_5_조깅하기_양나현_특수_부정1_영문 "But midterms are just around the corner?">>
+NaHyun: Want to go hang out instead?
+===
+
+title: 밤_5_조깅하기_양나현_특수_긍정1_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+{name()}: That's a great idea.
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: I know, right?
+<<jump 밤_5_조깅하기_양나현_분기1_영문>>
+===
+
+title: 밤_5_조깅하기_양나현_특수_부정1_영문
+---
+<<play 양나현_허>>
+<<show hyun_neg>>
+NaHyun: Oh, come on. It'll be fine.
+<<jump 밤_5_조깅하기_양나현_분기1_영문>>
+===
+
+
+title: 밤_5_조깅하기_양나현_분기1_영문
+---
+<<show hyun_idle>>
+NaHyun: Hey, have you heard of that new movie 'The Outlaws 2'?
+{name()}: Yeah, I know it. It's really hot right now.
+NaHyun: I actually loved 'The Outlaws 1'.
+<<choice 밤_5_조깅하기_양나현_특수_긍정2_영문 "Great, let's go see it now." 밤_5_조깅하기_양나현_특수_부정2_영문 "Right now? Maybe next time.">>
+NaHyun: Want to go see it now?
+===
+
+title: 밤_5_조깅하기_양나현_특수_긍정2_영문
+---
+{name()}: I liked that movie too.
+{name()}: That sounds fun, let's go.
+<<show hyun_smile>>
+NaHyun: Great! Let's go to GGV.
+NaHyun: (Glances down at her phone) We can catch the 7 o'clock showing.
+<<jump 밤_5_조깅하기_양나현_특수_분기2_영문>>
+===
+
+title: 밤_5_조깅하기_양나현_특수_부정2_영문
+---
+<<show hyun_spec>>
+<<dislike 양나현>>
+<<change lvHyun -5>>
+NaHyun: ......
+<<choice 밤_5_조깅하기_양나현_특수_긍정2_영문 "Okay, let's go see it now." 밤_5_조깅하기_양나현_특수_부정2_영문 "Right now? Maybe next time.">>
+NaHyun: I really want to see it...
+===
+
+title: 밤_5_조깅하기_양나현_특수_분기2_영문
+---
+<<if get("gold") < 100>>
+    {name()}: (Oh, no. Since it's the end of the month, I'm short on cash.)
+    {name()}: ... ...
+    <<show hyun_idle>>
+    NaHyun: I'll just pay.
+    <<change karma +1>>
+    <<notice "You feel a pang of guilt.">>
+    {name()}: Th-thank you.
+    NaHyun: Sure.
+<<endif>>
+<<like 양나현>>
+<<change lvHyun +5>>
+<<change gold -100>>
+(Spent 100 gold to buy movie tickets.)
+<<bg 특_영화관>>
+<<play 공통_웅성>>
+(We booked tickets for the 7 o'clock show and arrived at GGV.)
+<<show hyun_smile>>
+NaHyun: I'm excited. Should we get some popcorn too?
+{name()}: Sure. What kind do you like?
+NaHyun: I like the original.
+{name()}: (To the counter staff) One large original popcorn, one Coke, and...
+<<show hyun_idle>>
+NaHyun: (In a small voice) A Sprite.
+{name()}: ...And one Sprite, please.
+<<show hyun_blush>>
+NaHyun: Thanks.
+(We picked up the popcorn and drinks and sat down in the theater 10 minutes before the movie started.)
+(We talked while the commercials were playing.)
+<<show hyun_smile>>
+(NaHyun's face was quite cute as she excitedly talked about 'The Outlaws 1'.)
+(She must really love this movie.)
+(The theater soon went dark, and 'The Outlaws 2' began.)
+Movie: 'You know who I am? I'm Jang Chen from Harbin.'
+<<play 공통_와장창>>
+Movie: '(CRASH!!)'
+(NaHyun focused so hard on the movie she even forgot to eat the popcorn.)
+(Glancing at her profile, she seemed completely absorbed.)
+(As the movie reached its climax...)
+(I picked up a piece of popcorn and carefully brought it to NaHyun's lips.)
+<<show hyun_shock>>
+NaHyun: ...!
+(NaHyun looked over at me with slightly startled eyes.)
+(Was that too sudden?)
+(NaHyun's eyes seemed to waver.)
+(I started to get nervous as well.)
+(But NaHyun soon opened her lips and took the popcorn.)
+<<show hyun_blush>>
+(She chewed it while turning her head away.)
+(It was faint because of the dim lighting, but her cheeks seemed a bit flushed.)
+NaHyun: ......
+{name()}: ......
+(NaHyun didn't eat any more popcorn after that.)
+(When the movie ended, we walked out while talking about it.)
+{name()}: That was fun, right? 
+<<show hyun_smile>>
+NaHyun: ......Yeah.
+NaHyun: I'm going to head to the subway now.
+{name()}: Okay. Get home safe.
+<<show hyun_idle>>
+NaHyun: ...About earlier......
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: ...... Never mind.
+NaHyun: Take care, see you next week.
+(NaHyun waves and heads down into the subway station.)
+(After watching her leave, I headed toward the bus stop.)
+(My phone buzzed; I checked it and saw a message from NaHyun.)
+NaHyun: Let's hang out again soon.
+NaHyun: Good night.
+<<end>>
+===

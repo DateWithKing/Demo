@@ -1,0 +1,29 @@
+title: 예외처리_상점돈부족_영문
+---
+Not enough money.
+<<end>>
+===
+
+title: 예외처리_상점2개이상구매_영문
+---
+You cannot purchase any more items today.
+<<end>>
+===
+
+title: 예외처리_아이템4개이상소지_영문
+---
+Your inventory is full.
+<<end>>
+===
+
+title: 예외처리_아이템사용불가_영문
+---
+This item cannot be used right now.
+<<end>>
+===
+
+title: 예외처리_상호작용불가_영문
+---
+Not enough stamina.
+<<end>>
+===

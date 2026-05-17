@@ -1,0 +1,10 @@
+title: 밤_책상_영문
+---
+<<use_hp 20>>
+<<change wis 1>>
+<<play 밤_공부하기>>
+Submitted with only 30 seconds left on the clock.
+This thrill... it's not half bad, is it?
+(Intelligence +1)
+<<end>>
+===

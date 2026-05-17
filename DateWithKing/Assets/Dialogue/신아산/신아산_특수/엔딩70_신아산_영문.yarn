@@ -1,0 +1,73 @@
+title: 엔딩70_신아산_영문
+---
+<<bg 검은화면>>
+(Current time: 12:30 AM.)
+(ASan calling me out this late... I wonder if something happened?)
+(I ran as fast as I could to the park she mentioned.)
+<<show san_idle>>
+(I can see ASan in the distance.)
+{name()}: ASan!
+<<play san_sound>>
+<<show san_shock>>
+<<wait 2>>
+<<show san_smile>>
+ASan: Oh, {name()}!!
+ASan: You actually came.
+ASan: You look like you ran a marathon, though. Are you okay?
+{name()}: *Phew*... Thank goodness....
+{name()}: I thought something terrible had happened to you...
+ASan: Dummy.
+<<show san_idle>>
+<<play 신아산_흠>>
+ASan: Actually... I called you because I have something to give you.
+ASan: Ta-da!
+<<hide>>
+<<bg 꼼수>>
+<<wait 1>>
+{name()}: What's this?
+ASan: It's a ticket to my show.
+<<bg 검은화면>>
+<<show san_blush>>
+ASan: ...... Just so you know, it's a front-row-center seat.
+ASan: Will you come see me?
+{name()}: Of course.
+{name()}: It's not just anyone's show—
+{name()}: It's yours, ASan. I wouldn't miss it.
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: Really???????
+ASan: Then I'll see you there!!!!
+<<hide>>
+(And so, holding the precious ticket ASan gave me, I went to see her perform.)
+{name()}: 402-22 Seogyo-dong, Mapo-gu, Seoul...
+{name()}: This is the place.
+(I showed my ticket at the box office and headed inside.)
+<<wait 1>>
+<<bg 특_공연장>>
+<<bgm_stop>>
+(It really is the first row.)
+(Right in front of where the bass amp is set up.)
+Staff: Alright, the show is about to begin!!
+Staff: Please give a big hand for...
+Staff: 『My Mechanical Romance』!!!!!!!!
+(The curtain rose to the sharp cry of an electric guitar.)
+<<play 일렉기타>>
+<<bg 신아산_진엔딩>>
+(She looked a bit nervous, but there was ASan, beaming with a bright smile while clutching her bass.)
+(She was always talking about studies and acting like a total eccentric, but...)
+(Today, she feels completely different.)
+(The black piercings and that lightning-shaped scar...)
+(Shining under the stage lights, ASan is a total rock star.)
+{name()}: GO ASan! YOU GOT THIS!!!!!!!
+(Our eyes met.)
+(I could see her mouthing the words to me...)
+(Th...ank... you...)
+(I... love... you...)
+ASan: ~ Casting those distant days far away ~
+ASan: ~ Flying toward the brilliant light ~
+<<play 공통_환호>>
+(And in that moment, under the roaring cheers, ASan and I were no longer just friends.)
+(Our hearts had finally synchronized.)
+<<wait 1>>
+<<end>>
+===

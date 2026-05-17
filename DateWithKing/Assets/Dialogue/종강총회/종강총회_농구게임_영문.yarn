@@ -1,0 +1,19 @@
+﻿title: 종강총회_농구게임_시작_영문
+---
+Score 2 baskets within the time limit!
+Click and hold the mouse to charge your power!
+<<PlayBasketball BasketballManager>>
+<<end>>
+===
+title: 종강총회_농구게임_성공_영문
+---
+You got 5 tickets!
+<<wait 1>>
+<<end>>
+===
+title: 종강총회_농구게임_실패_영문
+---
+You didn't get any tickets...
+<<wait 1>>
+<<end>>
+===

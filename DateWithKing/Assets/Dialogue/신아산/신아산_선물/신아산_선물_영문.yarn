@@ -1,0 +1,118 @@
+title: 신아산_객체지향교재_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_smile>>
+ASan: Oh, OBJECTS?????
+ASan: How did you know about this book?! The one that describes Object-Oriented Programming and its four main pillars to help you write clean and beautiful code?!!
+<<show san_idle>>
+ASan: .............
+ASan: I've been wanting to buy this, anyway.
+ASan: T-th...
+<<like 신아산>>
+<<change lvSan +10>>
+<<show san_blush>>
+ASan: I said THANK YOU!!!!
+<<end>>
+===
+
+title: 신아산_귀도리_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_neg>>
+<<dislike 신아산>>
+<<change lvSan -10>>
+ASan: Earmuffs... they're cute, I guess, but they don't suit someone like me.
+<<end>>
+===
+
+title: 신아산_기프트카드_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_smile>>
+ASan: You...
+ASan: Don't think you can win my heart with a mere scrap of paper like this!!!!
+<<like 신아산>>
+<<change lvSan +5>>
+(Despite her words, ASan carefully tucked it into her pocket as if it were precious.)
+<<end>>
+===
+
+title: 신아산_꽃_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_neg>>
+<<dislike 신아산>>
+<<change lvSan -10>>
+ASan: Flowers... they're romantic, but they don't suit someone as exalted as me.
+<<end>>
+===
+
+title: 신아산_만화책_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+ASan: But the title... 『There’s No Way I Can Have a Lover! (※Wait, maybe there is?!)』???
+<<dislike 신아산>>
+<<change lvSan -10>>
+<<show san_neg>>
+ASan: You pervert!!!!!!!!!!!!!!!!!!!!!!!!!!!
+{name()}: (I messed up...)
+<<end>>
+===
+
+title: 신아산_케이크_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_neg>>
+<<dislike 신아산>>
+<<change lvSan -10>>
+ASan: Cake... it looks delicious, but I'm currently on a diet.
+(As she says this, ASan hastily hides the cookie she was eating behind her back.)
+<<end>>
+===
+
+title: 신아산_쿠키_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_smile>>
+(ASan sniffs the cookies.)
+<<like 신아산>>
+<<change lvSan +5>>
+ASan: It looks... edible, at least.
+<<end>>
+===
+
+title: 신아산_키링_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me?
+<<show san_smile>>
+ASan: It looks a bit cheap... but fine, I'll take it.
+<<like 신아산>>
+<<change lvSan +5>>
+(Despite her grumbling, ASan immediately attaches the keychain to her bag.)
+<<end>>
+===
+
+title: 신아산_피크_영문
+---
+<<show san_idle>>
+ASan: What? Is this a gift for me? A guitar pick?
+<<show san_neg>>
+ASan: Don't you know bassists don't usually use picks?! This is literally covered in the first lecture of "World History Through K-Bands"! You must have fallen asleep in class again!!!!
+ASan: ... ... ...
+<<show san_smile>>
+ASan: But... well...
+ASan: I do like the combination of purple and skulls.
+<<like 신아산>>
+<<change lvSan +10>>
+<<show san_blush>>
+ASan: I won't actually use it to play, but I'll turn it into a necklace and wear it!!!!
+<<end>>
+===

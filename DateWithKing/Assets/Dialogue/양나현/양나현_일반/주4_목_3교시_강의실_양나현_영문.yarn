@@ -1,0 +1,45 @@
+title: 주4_목_3교시_강의실_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+As I arrive at the classroom, I see NaHyun standing by the door.
+{name()}: What are you doing? Aren't you going in?
+<<show hyun_idle>>
+NaHyun: {name()}.
+NaHyun: I'm so exhausted today. By any chance...
+<<choice 주4_목_3교시_강의실_양나현_긍1_영문 "Sure, I'll text it to you." 주4_목_3교시_강의실_양나현_부1_영문 "Are you seriously asking me for that right now?">>
+NaHyun: Could you send me the attendance code later?
+===
+
+title: 주4_목_3교시_강의실_양나현_긍1_영문
+---
+<<like 양나현>>
+<<change lvHyun +15>>
+{name()}: You look really tired. Are you okay?
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: I pulled an all-nighter working on that Data Structures assignment...
+NaHyun: Thanks. If you ever want to skip, let me know.
+NaHyun: I'll return the favor and send you the code.
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+{name()}: Don't worry about it. Just go get some rest.
+(NaHyun looks happy. She waves and disappears in the blink of an eye.)
+<<end>>
+===
+
+title: 주4_목_3교시_강의실_양나현_부1_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: You're planning to "roll-call-and-run," aren't you?
+{name()}: Since you're already here, let's just go in and sit through it together.
+<<show hyun_neg2>>
+NaHyun: ......
+<<play 양나현_허>>
+NaHyun: I guess skipping is a bit unethical.
+<<show hyun_spec>>
+NaHyun: But I'm seriously so sleepy right now......
+<<choice 주4_목_3교시_강의실_양나현_긍1_영문 "You really do look exhausted." 주4_목_3교시_강의실_양나현_부1_영문 "Still, the answer is no.">>
+(NaHyun's face darkens.)
+===

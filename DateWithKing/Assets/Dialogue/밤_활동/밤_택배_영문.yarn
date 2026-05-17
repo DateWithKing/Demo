@@ -1,0 +1,11 @@
+title: 밤_택배_영문
+---
+<<use_hp 50>>
+<<change gold 150>>
+<<change bonusHp -20>>
+Making money is tough.
+I'm just glad I could make it back home.
+<<play 공통_스탯>>
+(Gold +150)<br>(Starting HP for tomorrow -20)
+<<end>>
+===

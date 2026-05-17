@@ -1,0 +1,51 @@
+title: 엔딩납치_서은표_영문
+---
+<<bg 검은화면>>
+<<bgm_stop>>
+(......)
+(I was... definitely at school just a moment ago.)
+(It's not like I blacked out, but I have no memory of what just happened.)
+(And now that I've opened my eyes...)
+(I'm sitting in total darkness...)
+(Are my arms and legs tied?)
+(I can't move. Or maybe I just can't summon any strength.)
+(I can barely even turn my head.)
+(What on earth is this......)
+(My mind is hazy with a mix of dread and exhaustion.)
+(As I sit there dazed for a moment,)
+(I hear the sound of footsteps... thud... thud...)
+(......)
+(Have I been kidnapped?)
+(From the sound of it, someone is approaching, but I can't even see a silhouette.)
+???: ......
+???: Finally... you're staying still.
+(This voice...)
+<<show pyo_horror>>
+EunPyo: {name()}......
+{name()}: ??!
+{name()}: EunPyo? What is the meaning of this...
+(Perhaps because my mouth has been shut for so long, my voice comes out cracked.)
+EunPyo: Why did you... have to do that?
+EunPyo: It would have been so nice if you had just stayed with me.
+<<show pyo_blush>>
+EunPyo: Now, I can be with {name()} forever.
+(I have no idea what any of this means.)
+(I feel EunPyo's hand grip my chin.)
+(I have no strength to resist.)
+EunPyo: It was so hard watching you be with other people...
+EunPyo: Don't go anywhere, okay?
+<<hide>>
+(My chin trembles uncontrollably. No words will come out.)
+<<play 서은표_웃음>>
+(I hear the faint sound of EunPyo's laughter.)
+(Because she's so close, I can feel the heat radiating from her...)
+<<bg 서은표_납치엔딩>>
+EunPyo: I love you.
+EunPyo: {name()}...
+EunPyo: I
+EunPyo: Love
+EunPyo: You
+ILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOU
+ILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOUILOVEYOU
+<<end>>
+===

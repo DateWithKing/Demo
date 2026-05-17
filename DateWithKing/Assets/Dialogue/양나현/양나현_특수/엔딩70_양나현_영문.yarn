@@ -1,0 +1,72 @@
+title: 엔딩70_양나현_영문
+---
+<<bg 검은화면>>
+(Time passed, and...)
+(During our third date, I finally confessed to NaHyun.)
+{name()}: NaHyun, I really like you.
+{name()}: Will you be my girlfriend?
+<<show hyun_blush>>
+<<play hyun_sound>>
+NaHyun: {name()}... I like you too.
+<<play 양나현_웃음>>
+NaHyun: Yes, I'd love to.
+(NaHyun smiled shyly and took my hand.)
+(And just like that, we...)
+(Became the school's most notorious "lovey-dovey" couple.)
+Classmate: Ugh, those two are glued together on the folding bed again. Let's get out of here.
+(The club room basically became our honeymoon home.)
+(I felt a bit bad for the other club members, but nothing could stop our love.)
+<<show hyun_neg>>
+NaHyun: {name()}, you were actually awake back then, weren't you?
+(Of course, our relationship wasn't always smooth sailing.)
+{name()}: Hey, why are you even digging through my game logs?
+NaHyun: Is that what's important right now? You lied to me and played games behind my back.
+{name()}: ......
+{name()}: I'm sorry. I just wanted to give you a surprise gift,
+{name()}: So I spent the whole night farming in 'WapleStory'......
+NaHyun: ......
+<<show hyun_idle>>
+<<play 양나현_허>>
+NaHyun: Hmph.
+NaHyun: Just words?
+{name()}: Oh, come on.
+(I gave NaHyun a kiss and acted cute to melt her heart.)
+(We fought often, but each fight only made us closer.)
+(And as more time slipped by...)
+NaHyun: Hey, {name()}.
+NaHyun: Are you going to marry me?
+{name()}: *Pfft!*
+(I accidentally spat out the water I was drinking.)
+<<show hyun_spec>>
+NaHyun: ...
+{name()}: Of course. Want to go get married right now, since you brought it up?
+<<show hyun_blush>>
+NaHyun: ... Really?
+{name()}: I never go back on my word. That's my motto.
+NaHyun: I'd like that...
+(And those words, spoken so casually,)
+(Actually. Came. True.)
+<<play 공통_웅성>>
+Officiant:  Bride and Groom, please enter!
+<<play 공통_축하>>
+Friends: WHOOOO!!!!
+(A storm of applause follows.)
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: Let's go.
+<<hide>>
+<<bg 양나현_진엔딩>>
+(As I walked down the aisle with NaHyun,)
+(I received more congratulations than I ever had in my entire life.)
+(With my wrist tightly bound by the red thread of fate she held.)
+(From now on, I belong to her forever.)
+(And she, too, will be my woman for the rest of our lives.)
+(Visualizing a happy future together.)
+<<bg 양나현_진엔딩2>>
+<<wait 1>>
+NaHyun: Let's be happy together forever, okay~?
+<<wait 1>>
+<<bg 양나현_진엔딩>>
+<<wait 1>>
+<<end>>
+===

@@ -1,0 +1,45 @@
+title: 엔딩50_서은표_영문
+---
+<<bg 검은화면>>
+(After becoming quite close with EunPyo...)
+(At her suggestion,)
+(I ended up joining the soccer club.)
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: You're here, {name()}? Let's start our warm-up together~
+(To be honest, I don't think I have much talent for soccer,)
+(But I like it because EunPyo seems so happy to have me there.)
+(EunPyo is surprisingly professional when she's with the soccer club.)
+(She's not the captain, but she definitely feels like one...)
+(It's fun seeing so many new sides of her.)
+{name()}: What are we practicing today?
+<<show pyo_idle>>
+EunPyo: First, we'll do some warming up~ and then I think we're doing shooting drills?
+{name()}: Right. I'm definitely going to score a goal today.
+<<show pyo_smile>>
+EunPyo: Yeah! Give it your best shot.
+(So far, I haven't managed to score a single goal against EunPyo during shooting drills.)
+(EunPyo promised to grant me one wish if I ever score.)
+(If that actually happens...)
+(My wish would probably be.)
+<<play 서은표_흠>>
+<<show pyo_idle>>
+EunPyo: What are you thinking about?
+{name()}: Hmm. I was just thinking about what to wish for.
+<<show pyo_neg>>
+EunPyo: What do you want to wish for?
+{name()}: I don't know.
+{name()}: I wonder if you'd say yes if I asked you to go out with me...
+<<hide>>
+<<bg 서은표_일반엔딩>>
+(When I blurted it out playfully, EunPyo's face turned beet red.)
+EunPyo: What on earth...!!!
+EunPyo: Who says things like that while doing jumping jacks...
+{name()}: Hehe.
+(I'm out of breath after chatting and warming up at the same time.)
+(I wonder when I'll finally be able to score that goal?)
+(I'll have to practice hard.)
+(Maybe, just maybe, EunPyo might go easy on me today.)
+<<wait 1>>
+<<end>>
+===

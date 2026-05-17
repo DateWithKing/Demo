@@ -1,0 +1,9 @@
+title: 밤_강아지_영문
+---
+<<use_hp 20>>
+<<change slv 1>>
+<<play 밤_강아지산책>>
+Cham-kkae, let's live together for a long, long time~
+(Dependency +1)
+<<end>>
+===

@@ -1,0 +1,79 @@
+title: 주4_목_2교시_강의실_서은표_영문
+---
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: Hey. You're here, {name()}?
+EunPyo: I saved a seat for you.
+(EunPyo moves her bag from the seat next to her.)
+(I sat down beside her.)
+<<show pyo_neg>>
+EunPyo: Midterms are next week. Have you been studying much?
+{name()}: No... I don't know why I've been so busy lately.
+<<choice 주4_목_2교시_강의실_서은표_긍정1_영문 "Yeah, you should take a break." 주4_목_2교시_강의실_서은표_부정1_영문 "But the team can't afford to lose their ace." >>
+<<play 서은표_흠>>
+<<show pyo_neg2>>
+EunPyo: Me too... I’m thinking about taking a break from the soccer club.
+===
+
+title: 주4_목_2교시_강의실_서은표_긍정1_영문
+---
+{name()}: Right, aren't you working too hard?
+{name()}: Oh, I saw that you went to a tournament last weekend.
+{name()}: It popped up on Star-gram.
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_blush>>
+EunPyo: Oh, that's right.
+EunPyo: You remember...
+{name()}: I saw the photo of you smiling with the trophy. You looked cute.
+<<jump 주4_목_2교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주4_목_2교시_강의실_서은표_부정1_영문
+---
+{name()}: But the team can't afford to lose their ace.
+{name()}: I heard you're the absolute star of the team. The rumors are everywhere.
+<<like 서은표>>
+<<jump 주4_목_2교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주4_목_2교시_강의실_서은표_분기1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_blush>>
+<<play 서은표_허>>
+EunPyo: I'm not that good...
+(EunPyo's face turns visibly red.)
+EunPyo: ......
+EunPyo: This is embarrassing.
+(EunPyo leans her head on my shoulder.)
+<<choice 주4_목_2교시_강의실_서은표_긍정2_영문 "Stay still." 주4_목_2교시_강의실_서은표_부정2_영문 "Gently move so EunPyo pulls away." >>
+(I can almost feel her warmth.)
+===
+
+title: 주4_목_2교시_강의실_서은표_긍정2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+(I stay still so EunPyo can keep leaning on me.)
+EunPyo: ...
+EunPyo: You smell really nice. Is it perfume...?
+{name()}: I'm not wearing any, though.
+{name()}: Maybe it's my fabric softener...?
+<<show pyo_smile>>
+EunPyo: Maybe it's just your natural scent.
+(We stayed like that for a moment until the professor walked in and class began.) 
+<<end>>
+
+===
+
+title: 주4_목_2교시_강의실_서은표_부정2_영문
+---
+(I felt a bit uncomfortable with her leaning on me, so I moved slightly to make her pull away.)
+<<show pyo_idle>>
+EunPyo: ...
+EunPyo: I should go to the restroom.
+(Not long after EunPyo left, the professor walked in.)
+<<end>>
+===

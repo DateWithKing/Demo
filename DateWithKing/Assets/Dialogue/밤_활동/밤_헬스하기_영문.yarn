@@ -1,0 +1,9 @@
+title: 밤_헬스하기_영문
+---
+<<use_hp 20>>
+<<change str 1>>
+Workout done.<br>I think I’m looking a bit sexier now?
+<<play 공통_알바>>
+(Strength stat increased by 1)
+<<end>>
+===

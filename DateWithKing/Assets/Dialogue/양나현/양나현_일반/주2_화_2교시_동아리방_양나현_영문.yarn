@@ -1,0 +1,69 @@
+title: 주2_화_2교시_동아리방_양나현_영문
+---
+<<show hyun_neg>>
+<<play hyun_sound>>
+(As I enter the club room, I see NaHyun sitting in front of the club computer.)
+(She seems incredibly focused on something.)
+<<play 공통_키보드>>
+(Getting closer, I see she’s playing a game.)
+<<show hyun_idle>>
+NaHyun: (Glancing at me) Oh, hey.
+{name()}: Hey. Are you playing WapleStory?
+<<show hyun_neg>>
+NaHyun: Yeah. I'm taking down a boss monster right now, so...
+(NaHyun seems to be struggling with multitasking.)
+(I stood behind her and watched her flashy play.)
+(She barely clears it and lets out a laugh.)
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: Phew. I thought I was a goner for a second.
+{name()}: You're pretty good.
+NaHyun: Of course I am.
+<<choice 주2_화_2교시_동아리방_양나현_긍1_영문 "Of course!" 주2_화_2교시_동아리방_양나현_부1_영문 "Do I look like the type of person who plays that?">>
+NaHyun: Do you play WapleStory too?
+===
+
+title: 주2_화_2교시_동아리방_양나현_긍1_영문
+---
+<<like 양나현>>
+<<change lvHyun +10>>
+{name()}: I was actually playing it right before I went to bed last night.
+<<show hyun_spec>>
+NaHyun: For real? What server are you on?
+(NaHyun’s eyes sparkle.)
+(I sat next to her, turned on the computer, and added her as a friend in the game.)
+(I played WapleStory with NaHyun until the next period started.)
+<<end>>
+===
+
+title: 주2_화_2교시_동아리방_양나현_부1_영문
+---
+<<show hyun_idle>>
+{name()}: No. I know what it is, though.
+NaHyun: Ah... I see.
+<<choice 주2_화_2교시_동아리방_양나현_긍2_영문 "If you're recommending it, then..." 주2_화_2교시_동아리방_양나현_부2_영문 "Why would I?">>
+NaHyun: Are you interested in giving it a try?
+===
+
+title: 주2_화_2교시_동아리방_양나현_긍2_영문
+---
+<<like 양나현>>
+<<change lvHyun +15>>
+{name()}: Sure. Since we're on the subject, should I start right now?
+<<show hyun_smile>>
+NaHyun: If you start, I'll help you out.
+(I sat next to her, turned on the computer, and signed up for an account.)
+(I played WapleStory with NaHyun until the next period started.)
+<<end>>
+===
+
+title: 주2_화_2교시_동아리방_양나현_부2_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: Nah, those kinds of games aren't really my thing.
+<<show hyun_neg2>>
+NaHyun: Why would you even say something like that?
+<<choice 주2_화_2교시_동아리방_양나현_긍2_영문 "I-I'm just kidding. If you're recommending it, I'll try." 주2_화_2교시_동아리방_양나현_부2_영문 "Why would I?">>
+(NaHyun stares straight into your eyes.)
+===

@@ -1,0 +1,9 @@
+title: 밤_조깅하기_영문
+---
+<<use_hp 20>>
+<<change hp 1>>
+Went for a night jog for the first time in a while.
+<<play 공통_스탯>>
+(Stamina stat increased by 1)
+<<end>>
+===

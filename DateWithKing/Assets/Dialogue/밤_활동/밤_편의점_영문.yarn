@@ -1,0 +1,9 @@
+title: 밤_편의점_영문
+---
+<<use_hp 30>>
+<<change gold 50>>
+Just as I was thinking how nice it is that it's not busy, I got slammed with work...
+<<play 공통_알바>>
+(Gold +50)
+<<end>>
+===

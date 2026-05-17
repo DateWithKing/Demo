@@ -1,0 +1,159 @@
+title: 주3_수_2교시_강의실_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+NaHyun: (Yawns.)
+NaHyun: Oh, hey {name()}.
+(NaHyun is standing in front of the classroom.)
+(As usual, her face says she really doesn't want to go in.)
+<<show hyun_neg>>
+NaHyun: I'm so exhausted today. I can't believe how many assignments they're piling on us...
+{name()}: Tell me about it. I'm hitting my limit too.
+{name()}: I feel like I could sleep for a week.
+<<show hyun_idle>>
+NaHyun: Same here.
+<<if get("lvHyun") < 35>>
+    <<jump 주3_수_2교시_강의실_양나현_일반_영문>>
+<<else>>
+    <<jump 주3_수_2교시_강의실_양나현_특수_영문>>
+<<endif>>
+===
+
+title: 주3_수_2교시_강의실_양나현_일반_영문
+---
+NaHyun: Still, I guess I should show up for class.
+{name()}: Really?
+{name()}: Not even going to pull a "roll-call-and-run"?
+NaHyun: Well... finals are coming up soon.
+<<show hyun_smile>>
+NaHyun: I'm trying to be a bit more responsible now.
+{name()}: That's a good attitude. I'll try to focus too, then.
+NaHyun: I'll probably pass out if I just sit there, though. Should we grab coffee?
+{name()}: Sure. Convenience store?
+NaHyun: (Checks the time) We still have some time. Want to go to a real cafe?
+<<show hyun_blush>>
+NaHyun: ... It's on me today.
+{name()}: Oh, for real?
+<<choice 주3_수_2교시_강의실_양나현_일반_긍정1_영문 "I'm not gonna say no to that~" 주3_수_2교시_강의실_양나현_일반_부정1_영문 "No, it's okay.">>
+NaHyun: You helped me out with the attendance numbers before, and the semester is almost over anyway.
+===
+
+title: 주3_수_2교시_강의실_양나현_일반_긍정1_영문
+---
+{name()}: Thanks! I'll enjoy it then.
+<<show hyun_smile>>
+(We went to a cafe and grabbed some take-out coffee.)
+(We headed back and sat through the lecture together.)
+(I was tired, but I felt productive knowing I was working hard.)
+<<end>>
+===
+
+title: 주3_수_2교시_강의실_양나현_일반_부정1_영문
+---
+{name()}: That's okay, keep your money.
+<<show hyun_shock>>
+NaHyun: No, I'm buying.
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: I've been meaning to thank you for everything this semester.
+NaHyun: Let's go to that Star-bucks near the back gate.
+(We went to the cafe and grabbed some take-out coffee.)
+(We headed back and sat through the lecture together.)
+(I was tired, but I felt productive knowing I was working hard.)
+<<end>>
+===
+
+title: 주3_수_2교시_강의실_양나현_특수_영문
+---
+NaHyun: … Should we ditch class?
+{name()}: You want me to send you the attendance code later?
+<<show hyun_idle>>
+NaHyun: …
+(NaHyun locks eyes with me.)
+NaHyun: Why don't you skip with me?
+NaHyun: You're tired too.
+<<choice 주3_수_2교시_강의실_양나현_특수_긍정1_영문 "When you look at me like that, I don't really have a choice." 주3_수_2교시_강의실_양나현_특수_부정1_영문 "But we really should attend the lecture.">>
+{name()}: ... ...
+===
+
+title: 주3_수_2교시_강의실_양나현_특수_부정1_영문
+---
+{name()}: I mean, finals are just around the corner...
+<<show hyun_neg2>>
+NaHyun: ... ...
+NaHyun: ... ... ... ...
+<<choice 주3_수_2교시_강의실_양나현_특수_긍정1_영문 "Alright, let's just slack off today." 주3_수_2교시_강의실_양나현_특수_부정1_영문 "But we really should attend the lecture.">>
+{name()}: (I am pretty tired. Should I just skip?)
+===
+
+title: 주3_수_2교시_강의실_양나현_특수_긍정1_영문
+---
+{name()}: ...Fine.
+{name()}: Where should we go if we skip?
+NaHyun: Want to go to the club room?
+NaHyun: I really need a nap......
+{name()}: Okay, let's head to the club room.
+<<play 공통_발소리>>
+<<bg 낮_동아리방>>
+(Maybe because classes were in session, but the club room was empty.)
+(The 'Rakku-Rakku' folding bed, which is usually occupied, was actually free.)
+(NaHyun fixes her gaze on the bed.)
+{name()}: Lucky us. Go ahead and get some sleep.
+NaHyun: What about you?
+{name()}: Me? I'll just... play some games on the computer.
+<<show hyun_blush>>
+NaHyun: You're going to stay here, right?
+{name()}: Won't it be too noisy?
+NaHyun: ... It's fine.
+{name()}: Alright then, I'll stay.
+(I turned on the club computer opposite the bed and sat down.)
+<<show hyun_idle>>
+(Looking back, I saw NaHyun set down her things and lie on the bed.)
+(I launched WapleStory on the computer.)
+(It's NaHyun's favorite game.)
+(Checking the friend list, I saw she had been playing even 2 hours ago.)
+(I wonder when she even finds the time.)
+(Soon, I heard the soft sound of her steady breathing.)
+(When I looked back, I saw NaHyun asleep on her side, tucked under a blanket.)
+<<choice 주3_수_2교시_강의실_양나현_특수_긍정2_영문 "What is this feeling?" 주3_수_2교시_강의실_양나현_특수_부정2_영문 "(Ignore the strange feeling.)">>
+{name()}: ... ...
+===
+
+title: 주3_수_2교시_강의실_양나현_특수_긍정2_영문
+---
+(I closed the game and got up from the chair.)
+(I carefully laid down next to NaHyun.)
+(The bed felt much narrower than it looked.)
+(I ended up lying there, facing her directly.)
+(I watched her sleeping face for a moment.)
+(Soon, drowsiness washed over me, and I closed my eyes.)
+NaHyun: ......
+<<hide>>
+<<bg 양나현_특수>>
+(When I woke up, NaHyun was already awake.)
+(We were still lying there, face to face.)
+{name()}: ......
+(Just as I was thinking about how close we were, I felt something on my arm.)
+(We were sharing the same blanket.)
+(When did she cover me with it...?)
+NaHyun: ... Did you sleep well?
+{name()}: Yeah... When did you wake up?
+NaHyun: Just now?
+(The playful way she smiled made me think she was lying.)
+{name()}: I slept longer than I thought... I should probably get up.
+NaHyun: Yeah. We both have things to do...
+(I got up with NaHyun and we tidied up the bed and the blanket.)
+(We said our goodbyes in front of the club room.)
+NaHyun: You're actually pretty cute when you're asleep.
+NaHyun: See you tomorrow.
+(With a laugh, NaHyun turned and walked away.)
+<<end>>
+===
+                
+title: 주3_수_2교시_강의실_양나현_특수_부정2_영문
+---
+(I feel a sudden impulse.)
+(But maybe I'm just tired...)
+(I leaned back in the chair and took a nap there.)
+<<end>>
+===

@@ -1,0 +1,85 @@
+title: 주4_목_1교시_강의실_신아산_영문
+---
+{name()}: *Huff... puff...*
+(I overslept again...)
+(Attending a first-period class is seriously the hardest thing ever...)
+<<play 공통_웅성>>
+Prof: Alright, let's take attendance.
+Prof: Student number three hundred, forty, two.
+{name()}: 3..4...2....
+(After gasping for air while typing in my attendance code, I finally noticed the person slumped over the desk next to me.)
+(It was ASan.)
+<<show san_idle>>
+<<play san_sound>>
+{name()}: You okay? You look exhausted today.
+ASan: .....
+ASan: Wh-what?
+ASan: Oh..... I guess I stayed up too late studying last night...
+(With that, ASan buried her face back into the desk.)
+<<choice 주4_목_1교시_강의실_신아산_긍정1_영문 "I'll buy you something." 주4_목_1교시_강의실_신아산_부정1_영문 "I'm broke.">>
+(Should I use some Gold to buy her something from the convenience store?)
+===
+
+title: 주4_목_1교시_강의실_신아산_긍정1_영문
+---
+<<if get("gold") >= 20>>
+    <<jump 주4_목_1교시_강의실_신아산_커피o_영문>>
+<<else>>
+    <<jump 주4_목_1교시_강의실_신아산_커피x_영문>>
+<<endif>>
+===
+
+title: 주4_목_1교시_강의실_신아산_부정1_영문
+---
+<<jump 주4_목_1교시_강의실_신아산_커피x_영문>>
+===
+
+title: 주4_목_1교시_강의실_신아산_커피o_영문
+---
+(Since I happen to have some cash on me, I should go buy her a coffee.)
+<<change gold -20>>
+<<play 공통_의자>>
+<<wait 2>>
+{name()}: Here.
+<<play 공통_컵>>
+<<play 신아산_흠>>
+<<show san_shock>>
+ASan: .....?
+(ASan looks around with eyes as wide as a rabbit's.)
+ASan: Wait, are you actually giving this... to me....?
+{name()}: Yeah.
+{name()}: You looked totally wiped out, so I picked it up for you.
+<<show san_blush>>
+ASan: Seriously? You're really giving it to me?
+{name()}: Oh... do you not drink coffee?
+ASan: N-no, it's not that!!!!!!!!!!!
+ASan: That's not what I meant.
+ASan: ..........
+ASan: It's just... I've never really had anyone do this for me before.....
+<<show san_smile>>
+<<change lvSan 15>>
+<<like 신아산>>
+{name()}: It's no big deal. Drink up and good luck with your studies!
+ASan: ..........
+{name()}: You look cool when you're focused, you know.
+ASan: Thank you.... really...
+<<play 신아산_웃음>>
+ASan: Next time you're sleepy, just tell me.
+ASan: I'll slap a bass solo right in your ear to wake you up!!!!!!!
+(After cracking a ridiculous joke, ASan sipped her coffee and faced forward.)
+(It's my first time seeing her smile so brightly.)
+(...I should buy her stuff more often.)
+<<end>>
+===
+
+title: 주4_목_1교시_강의실_신아산_커피x_영문
+---
+(................)
+(I'm out of money.....)
+(I look over at her to try and wake her up, but she looks truly exhausted..)
+{name()}: I'll record the lecture and send it to you later.
+{name()}: Don't worry about it and just get some sleep.
+ASan: ... Thanks....
+(The class ended like that, and ASan headed to the club room, saying she needed a bit more sleep.)
+<<end>>
+===

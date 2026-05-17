@@ -1,0 +1,118 @@
+title: 주3_수_3교시_동아리방_서은표_영문
+---
+(When I opened the door to the club room, a few club members were sitting inside.)
+<<show pyo_smile>>
+<<play pyo_sound>>
+(In one corner, I saw EunPyo quietly smiling while looking at her laptop.)
+{name()}: EunPyo, what are you doing?
+(Startled, EunPyo quickly closed her laptop screen.)
+<<show pyo_shock>>
+<<play 서은표_허>>
+EunPyo: Oh?! Uh, it's nothing!
+{name()}: You looked really focused just now. What were you watching?
+<<show pyo_blush>>
+EunPyo: ...I was just booking tickets for the new 'Dol-Se-Ah-Ttae' movie.
+<<if get("otk") >= 4>>
+    <<jump 주3_수_3교시_동아리방_서은표_씹덕력4이상_영문>>
+<<else>>
+    <<jump 주3_수_3교시_동아리방_서은표_씹덕력4미만_영문>>
+<<endif>>
+===
+
+title: 주3_수_3교시_동아리방_서은표_씹덕력4이상_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Oh, I saw the trailer for that.
+{name()}: I actually cried watching the ending of Season 2.
+<<show pyo_shock>>
+EunPyo: R-really? 
+EunPyo: I loved Season 2 so much too...
+<<show pyo_blush>>
+EunPyo: So I'm planning to see the movie. 
+<<choice 주3_수_3교시_동아리방_서은표_긍정1_영문 "Sounds good." 주3_수_3교시_동아리방_서은표_부정1_영문 "How can you watch something like that in a theater??">>
+EunPyo: Uh... would you... like to go see it with me?
+===
+
+title: 주3_수_3교시_동아리방_서은표_긍정1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Sounds good.
+{name()}: When are you free? When were you booking it for? Let me see.
+<<play 서은표_흠>>
+EunPyo: Okay. Hang on a sec...
+(EunPyo opened her laptop again.)
+(We coordinated our schedules and booked seats next to each other.)
+<<jump 주3_수_3교시_동아리방_서은표_분기1_영문>>
+===
+
+title: 주3_수_3교시_동아리방_서은표_부정1_영문
+---
+{name()}: How can you watch something like that in a theater??
+{name()}: You're pretty brave.
+<<dislike 서은표>>
+<<change lvPyo -5>>
+<<show pyo_neg2>>
+<<play 서은표_흠>>
+EunPyo: Oh... I see...
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+EunPyo: Okay...
+<<end>>
+===
+
+title: 주3_수_3교시_동아리방_서은표_분기1_영문
+---
+<<show pyo_smile>>
+EunPyo: I hope we can get the exclusive theater gifts.
+{name()}: Whose gift do you want to get?
+(We spent some time talking about 'Dol-Se-Ah-Ttae'.)
+<<end>>
+===
+
+title: 주3_수_3교시_동아리방_서은표_씹덕력4미만_영문
+---
+{name()}: 'Dol-Se-Ah-Ttae'? What's that?
+<<show pyo_neg>>
+EunPyo: Oh... it's an anime. 
+EunPyo: I guess you don't really know much about this stuff.
+{name()}: Yeah, I don't really know.
+<<choice 주3_수_3교시_동아리방_서은표_긍정2_영문 "Should I try watching something you like?" 주3_수_3교시_동아리방_서은표_부정2_영문 "I don't know. I don't think I'd spend time watching that.">>
+EunPyo: If you're ever interested in watching it, let me know... I'll give you a recommendation.
+===
+
+title: 주3_수_3교시_동아리방_서은표_긍정2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Should I try watching something you like?
+<<show pyo_blush>>
+<<play 서은표_허>>
+EunPyo: Whoa!! Really? That would be amazing!!
+EunPyo: Do you have a Watflix account?? You can watch it there...
+EunPyo: The genre is romance, and the three characters are...
+EunPyo: Actually, let's watch it together right now!!
+(EunPyo's eyes are sparkling.)
+{name()}: Sure. Why not.
+(I watched episodes 1 and 2 of 'Dol-Se-Ah-Ttae' with EunPyo.)
+(It actually seems pretty interesting...?!) 
+<<end>>
+===
+
+title: 주3_수_3교시_동아리방_서은표_부정2_영문
+---
+{name()}: I don't know. I don't think I'd spend time watching that.
+{name()}: Honestly, I'm not really into anime.
+<<dislike 서은표>>
+<<change lvPyo -5>>
+<<show pyo_neg2>>
+EunPyo: Oh...... is that so?
+<<show pyo_neg>>
+EunPyo: That's a shame...
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(EunPyo's voice trailed off.)
+(I said goodbye and left so EunPyo could get back to what she was doing.)
+<<end>>
+===

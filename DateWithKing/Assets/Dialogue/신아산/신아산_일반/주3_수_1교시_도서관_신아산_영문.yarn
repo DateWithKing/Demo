@@ -1,0 +1,141 @@
+title: 주3_수_1교시_도서관_신아산_영문
+---
+<<show san_idle>>
+(As soon as I arrive at the library, I see ASan furiously typing away at a computer.)
+{name()}: Oh? Hey, ASan!
+ASan: ...........
+{name()}: Whatcha doin'?
+<<play san_sound>>
+<<show san_shock>>
+ASan: GAH! You scared me!!!!!!!!
+ASan: Professor Young-Jun Kim's assignment is due today.
+ASan: So, I already submitted it four days ago, but I've been reopening the code every day just in case there's an error—
+{name()}: ...Wait, what?
+ASan: I said, I'm checking my code.
+{name()}: No, not that...
+{name()}: You said the deadline is TODAY?????
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: You're just finding that out NOW?!!!!!!!!!!!!!!!!
+{name()}: I, I need to get my laptop out first.
+ASan: Geez. You really are something else....
+<<choice 주3_수_1교시_도서관_신아산_긍정1_영문 "Yes... please help me..." 주3_수_1교시_도서관_신아산_부정1_영문 "Psh~ I can totally finish this starting now.">>
+ASan: Well, want me to help?
+===
+
+title: 주3_수_1교시_도서관_신아산_긍정1_영문
+---
+{name()}: Yes... please help me...
+ASan: Fine.. I shall show you some mercy this once.
+ASan: You at least know Linear Algebra, right?
+{name()}: Linear Algebra? Is that like... drawing lines in a math book?
+<<show san_neg2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: ARE YOU INSANE???? IT'S NOT ABOUT DRAWING LINES!!!! It's about vectors and matrices!
+(The assignment session, which started with ASan's scolding, barely finished with a successful submission with only 59 seconds left on the clock.)
+<<show san_idle>>
+ASan: Phew...
+ASan: We somehow got it done.
+ASan: Helping you with your work completely drained my soul.
+ASan: .....
+<<show san_neg2>>
+ASan: I'm going to have to get something out of you for this!!!!!!!
+<<show san_idle>>
+<<choice 주3_수_1교시_도서관_신아산_긍정2_영문 "O-of course, I'm ready to pay you back." 주3_수_1교시_도서관_신아산_부정2_영문 "Wait, what?????" true>>
+ASan: You're ready for the consequences, right????????
+===
+
+title: 주3_수_1교시_도서관_신아산_부정1_영문
+---
+{name()}: Psh~ I can totally finish this starting now.
+<<play 신아산_흠>>
+ASan: Really?
+ASan: I don't really buy that....
+ASan: Then tell me, what are the four pillars of Object-Oriented Programming?
+<<if get("wis") >= 5>>
+    <<jump 주3_수_1교시_도서관_신아산_지능_영문>>
+<<else>>
+    <<jump 주3_수_1교시_도서관_신아산_분기_영문>>
+<<endif>>
+===
+
+title: 주3_수_1교시_도서관_신아산_분기_영문
+---
+{name()}: Inheritance... Polymorphism..?
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: YOU LITERALLY KNOW NOTHING!!!!!!
+ASan: You want help or not?
+<<jump 주3_수_1교시_도서관_신아산_긍정1_영문>>
+===
+
+title: 주3_수_1교시_도서관_신아산_지능_영문
+---
+{name()}: Inheritance, Polymorphism, Encapsulation, and Abstraction.
+<<show san_blush>>
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Whoa, I've never seen anyone get all of them right before.
+ASan: Then have you read that book "Objects"? I picked it up from a recommendation here in the library—
+ASan: ItmadeeverythingIlearnedinshoolfinallymakesenseandmylifeisdividedintoa'beforeandafter'readingthisbook—
+{name()}: S-stop!!!!!!!!!!!!
+{name()}: I really need to start this assignment now.
+<<show san_idle>>
+(So I started the assignment on my own.)
+(And I barely managed to submit it with 59 seconds left.)
+ASan: Congrats on the submission.
+ASan: Well, since you succeeded thanks to me~
+ASan: It's not like I'm specifically asking for a reward.
+ASan: But still, as a human being~~.
+ASan: .....
+<<choice 주3_수_1교시_도서관_신아산_긍정2_영문 "O-of course, I'm ready to pay you back." 주3_수_1교시_도서관_신아산_부정2_영문 "Wait, what?????" true>>
+<<show san_idle>>
+<<play 신아산_흠>>
+ASan: If you have any conscience at all, you've got something prepared, right????
+===
+
+title: 주3_수_1교시_도서관_신아산_긍정2_영문
+---
+{name()}: O-of course, I'm ready to pay you back.
+<<change lvSan 5>>
+<<like 신아산>>
+<<show san_smile>>
+<<play 신아산_웃음>>
+{name()}: What should we eat?
+{name()}: Let's have whatever you like, ASan.
+<<show san_blush>>
+{name()}: ......
+{name()}: ......?
+{name()}: Are your cheeks turning red?
+ASan: Wh-what are you talking about????????
+ASan: No, they're not.
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: I said they're not!
+<<show san_blush>>
+ASan: Wh-what should we eat...
+ASan: Anything is f-f-f-fine with me.
+(Because ASan said anything was fine, it took us an hour just to pick a menu.)
+(While eating together, I felt like I had become one step closer to her.)
+<<end>>
+===
+
+title: 주3_수_1교시_도서관_신아산_부정2_영문
+---
+{name()}: Wait, what?????
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: Ah....
+ASan: You weren't even listening to me.
+{name()}: Huh? No, it's not that.
+ASan: Forget it. Never mind.
+ASan: I'm leaving.
+(Before I could stop her, ASan packed her bags and left.)
+<<end>>
+===

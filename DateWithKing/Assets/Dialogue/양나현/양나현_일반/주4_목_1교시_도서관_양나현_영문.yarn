@@ -1,0 +1,69 @@
+title: 주4_목_2교시_도서관_양나현_영문
+---
+<<show hyun_idle>>
+(As I enter the library, I see NaHyun and take a seat next to her.)
+{name()}: Hey, NaHyun.
+NaHyun: Hey.
+(NaHyun is watching a video on her phone.)
+(It looks like a cat video.)
+{name()}: You really do love cats, don't you?
+NaHyun: Yeah. They're cute, and...
+NaHyun: Sometimes they have a bit of an attitude...
+NaHyun: I think the way you can never quite tell what they're thinking is charming.
+{name()}: They say cats are the ones who choose their owners, right?
+NaHyun: Exactly. That's why people call themselves "butlers"...
+(Listening to her, I feel like she reminds me of a certain someone...)
+<<choice 주4_목_2교시_도서관_양나현_긍정1_영문 "Well, if I ever get the chance...?" 주4_목_2교시_도서관_부정1_영문 "Hmm... I haven't really thought about it.">>
+NaHyun: Would you ever want to raise a cat?
+===
+
+title: 주4_목_2교시_도서관_양나현_긍정1_영문
+---
+<<show hyun_smile>>
+<<change lvHyun +5>>
+<<like 양나현>>
+{name()}: I'm just not sure if a cat would ever choose me.
+<<if get("lvHyun") >= 70>>
+    <<jump 주4_목_2교시_도서관_호감도_영문>>
+<<else>>
+    NaHyun: Why? Have some confidence.
+    NaHyun: Maybe cats like humans who are obedient...
+    <<play 양나현_웃음>>
+    <<jump 주4_목_2교시_도서관_분기1_영문>>
+<<endif>>
+===
+
+title: 주4_목_2교시_도서관_부정1_영문
+---
+{name()}: Hmm... I don't know.
+{name()}: I'm not sure I'm up for it. I don't know if a cat would ever pick me.
+<<if get("lvHyun") >= 70>>
+    <<jump 주4_목_2교시_도서관_호감도_영문>>
+<<else>>
+    NaHyun: Why? Have some confidence.
+    NaHyun: Maybe cats like humans who are obedient...
+    <<play 양나현_웃음>>
+    <<jump 주4_목_2교시_도서관_분기1_영문>>
+<<endif>>
+===
+
+title: 주4_목_2교시_도서관_호감도_영문
+---
+NaHyun: Why not?
+<<show hyun_blush>>
+NaHyun: Look around you.
+NaHyun: You might have been chosen already...
+<<play 양나현_웃음>>
+<<jump 주4_목_2교시_도서관_분기1_영문>>
+===
+
+title: 주4_목_2교시_도서관_분기1_영문
+---
+NaHyun: There's a story that cats are the only animals that devils actually like.
+{name()}: Oh... really?
+NaHyun: I saw it on TubeTube.
+NaHyun: Believe it or not, of course.
+{name()}: I guess they do fit the devilish vibe. Especially black cats.
+(We chatted a bit more about cats.)
+<<end>>
+===

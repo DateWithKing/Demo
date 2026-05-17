@@ -1,0 +1,119 @@
+title: 밤_4_조깅하기_신아산_영문
+---
+(I went out to a nearby park for a jog after a long time.)
+(After doing a lap around the park, I spotted a familiar figure.)
+<<show san_idle_ver2>>
+{name()}: Oh, ASan Shin?
+<<play san_sound>>
+ASan: Oh, {name()}?
+(ASan was also dressed in comfortable clothes, looking like she came out to exercise.)
+{name()}: Did you come out to work out too?
+<<show san_smile_ver2>>
+<<play 신아산_웃음>>
+ASan: Yep.
+<<show san_idle>>
+ASan: Stamina is crucial if you want to study properly, after all.
+{name()}: True. But.....
+{name()}: It looks like you need a lot of it.
+<<show san_neg_ver2>>
+<<play 신아산_허>>
+ASan: What did you say?????????
+ASan: I don't think you look like much of a runner yourself, though?????
+ASan: You, want to have a jogging race with me?
+{name()}: Sure. But the one who gets exhausted and gives up first has to buy drinks.
+<<show san_idle_ver2>>
+<<play 신아산_흠>>
+ASan: Fine.
+ASan: Then, right now......
+ASan: START!!!!!!!!!!!
+(As soon as she finished talking, ASan started sprinting.)
+(I ran right after her.)
+(Contrary to her confidence, ASan's stamina wasn't that great, and she started lagging behind.)
+<<choice 밤_4_조깅하기_신아산_긍정1_영문 "Yes" 밤_4_조깅하기_신아산_부정1_영문 "No">>
+(Should I slow down on purpose?)
+===
+
+title: 밤_4_조깅하기_신아산_긍정1_영문
+---
+(I should slow down on purpose.)
+(Since ASan has a lot of pride.)
+<<show san_smile_ver2>>
+<<play 신아산_웃음>>
+ASan: Whoo!!!!!!! I won!!!!!!!
+ASan: I knew it.
+ASan: I'm a better runner, right?
+{name()}: Yeah, you're fast. You went so quick in the middle there that I almost couldn't catch up.
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Really??????
+ASan: I guess jogging around the park once a week really helped improve my stamina.
+(Once a week? That's way too little for a workout!!!!!!)
+ASan: Since I'm in a good mood after winning~ I'll buy this time.
+<<show san_idle_ver2>>
+ASan: Don't get the wrong idea, it's not like I'm doing this because I like you or anything.
+<<show san_smile_ver2>>
+<<play 신아산_웃음>>
+ASan: Let's go!!!!!!
+<<end>>
+===
+
+title: 밤_4_조깅하기_신아산_부정1_영문
+---
+{name()}: See ya later~!!!!!!!!
+<<show san_neg_ver2>>
+ASan: Hey!!!!!!!!!
+(I beat ASan easily.)
+ASan: You... how are you so fast...
+ASan: Even though I've been jogging around the park once a week, I still couldn't win!!!!!!!!!!
+{name()}: Once a week is way too little, don't you think?
+{name()}: Does that even count as exercise?
+<<show san_neg2_ver2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: Whatever.
+ASan: Fine, you've got great stamina.
+{name()}: Are you sulking?
+ASan: No.
+<<if get("gold") >= 10>>
+    <<jump 밤_4_조깅하기_신아산_물o_영문>>
+<<else>>
+    <<jump 밤_4_조깅하기_신아산_물x_영문>>
+<<endif>>
+===
+
+title: 밤_4_조깅하기_신아산_물o_영문
+---
+{name()}: You're totally sulking, aren't you?
+<<play 신아산_허>>
+ASan: I. SAID. NO.
+{name()}: Since I won, I'll buy the drinks.
+{name()}: Let's go.
+<<show san_blush_ver2>>
+ASan: You're so mean...
+ASan: I'm going to pick the most expensive thing there.
+<<change gold -10>>
+<<change lvSan 5>>
+<<like 신아산>>
+(Spent 10 gold to buy ASan a drink.)
+(Holding our drinks, ASan and I headed back to our respective homes.)
+<<end>>
+===
+
+title: 밤_4_조깅하기_신아산_물x_영문
+---
+{name()}: Well, then I suggest you exercise more often~.
+ASan: .........
+<<show san_neg_ver2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: Stop teasing me.
+{name()}: Why? I'm just telling the truth.
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+ASan: Whatever.
+ASan: I'm going home.
+<<end>>
+===

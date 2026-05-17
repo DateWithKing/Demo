@@ -1,0 +1,79 @@
+title: 밤_1_조깅하기_서은표_영문
+---
+(I sat on a bench to take a quick break while jogging.)
+(While catching my breath on the bench, I see a familiar face across the way.)
+EunPyo: Oh~?!  
+<<play 공통_조깅>>
+(EunPyo, who also seems to be jogging, runs toward me.)
+<<show pyo_smile_ver2>>
+<<play pyo_sound>>
+EunPyo: Is that you, {name()}?
+(EunPyo waves her hand to say hi.)
+{name()}: Hey. Are you out for a jog?
+<<show pyo_idle_ver2>>
+EunPyo: Yeah. Are you too, {name()}?
+{name()}: Yeah. The weather is nice, so I thought I'd get some exercise.
+(Beads of sweat are forming on EunPyo's forehead.)
+<<choice 주1_월_밤_조깅하기_서은표_긍1_영문 "Want some water?" 주1_월_밤_조깅하기_서은표_부1_영문 "(Don't ask)">>
+(Should I offer her some water? I've already had some of it, though...)
+===
+
+title: 주1_월_밤_조깅하기_서은표_긍1_영문
+---
+{name()}: Want some water?
+{name()}: I've already drank some, but...
+(I held up the water bottle to show her.)
+<<like 서은표>>
+<<change lvPyo +10>>
+<<show pyo_shock_ver2>>
+<<play 서은표_웃음>>
+EunPyo: Really?!  
+<<show pyo_smile_ver2>>
+EunPyo: Then I'd love some!
+{name()}: Here.
+(I handed her the water bottle.)
+(EunPyo took a drink of the water.)
+<<show pyo_idle_ver2>>
+EunPyo: Thanks. I feel alive again. I forgot to bring my own bottle today.
+<<jump 주1_월_밤_조깅하기_서은표_분기1_영문>>
+===
+
+title: 주1_월_밤_조깅하기_서은표_부1_영문
+---
+(Since I've already drank from it, it might be a bit awkward.)
+(I didn't ask.)
+<<jump 주1_월_밤_조깅하기_서은표_분기1_영문>>
+===
+
+title: 주1_월_밤_조깅하기_서은표_분기1_영문
+---
+<<show pyo_idle_ver2>>
+EunPyo: Do you mind if I sit here for a second?
+{name()}: Not at all.
+EunPyo: Do you jog often?
+EunPyo: I come out every day.
+{name()}: Every day?? That’s impressive.
+<<show pyo_neg_ver2>>
+<<play 서은표_흠>>
+EunPyo: I don't have much of a choice. Since I'm in the soccer club...
+(EunPyo gave a shy smile.)
+EunPyo: It's part of my training.
+{name()}: The soccer club? That sounds cool.
+(We chatted about the soccer club for a while.)
+<<show pyo_smile_ver2>>
+(EunPyo says she's a goalkeeper. She looks shy, but she gives off the vibe of a pro.)
+<<if get("lvPyo") >= 10>>
+    <<show pyo_blush_ver2>>
+    EunPyo: If we have a match next time, do you want to come watch?
+    EunPyo: Our team is pretty good, so it should be fun to watch...
+<<endif>>
+<<show pyo_neg2_ver2>>
+EunPyo: Ah, I didn't realize it had gotten so late already.
+EunPyo: I should get back to my run.
+<<show pyo_smile_ver2>>
+EunPyo: See you at school, {name()}!
+{name()}: Yeah, have a safe workout.
+<<play 공통_조깅>>
+(EunPyo jogged away and disappeared into the distance.)
+<<end>>
+===

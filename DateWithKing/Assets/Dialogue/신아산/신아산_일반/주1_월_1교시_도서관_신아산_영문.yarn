@@ -1,0 +1,97 @@
+title: 주1_월_1교시_도서관_신아산_영문
+---
+<<show san_idle>>
+(I see ASan stuck in the library, buried in books since the very first week of the semester.)
+(Applied Blockchain...)
+(It looks like she's already prepping for the class in the next period.)
+{name()}: Whatcha doin'?
+ASan: .......
+{name()}: Hello? Anyone home?
+<<show san_shock>>
+<<play san_sound>>
+ASan: Whoa! You scared the daylight out of me!!!!
+{name()}: It's only the first week. You're studying already?
+<<show san_idle>>
+ASan: Duh, obviously.
+ASan: Learning is short, but life is long.
+ASan: And learning is just a continuation of life.
+{name()}: Wait, that sounds a bit... off.
+<<choice 주1_월_1교시_도서관_신아산_긍정1_영문 "Isn't it 'Life is short, art is long'?" 주1_월_1교시_도서관_신아산_부정1_영문 "True, you've got a point.">>
+(Should I correct her or not?)
+===
+
+title: 주1_월_1교시_도서관_신아산_긍정1_영문
+---
+{name()}: Isn't it "Life is short, and learning is long"?
+{name()}: And I think it's supposed to be "Life is a continuous process of learning."
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: Wh-what????
+ASan: I knew that!
+ASan: It was just a slip of the tongue.
+ASan: You totally think I'm an idiot right now, don't you?! I knew it!
+{name()}: No, not really.
+{name()}: I just...
+{name()}: I think the way you react to your own mistakes is kind of cute.
+<<show san_blush>>
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_허>>
+ASan: C-cu...
+ASan: C-c-c-c-cute?
+ASan: .....
+ASan: Fine.
+ASan: I, I get it. Th-thanks.
+ASan: ............
+ASan: I-I have to g-go to class now!
+ASan: It was n-nice seeing you!
+(Before I could even say a word, ASan packs her things at lightning speed.)
+(She bolted for the classroom a whole hour before the lecture starts.)
+<<end>>
+===
+
+title: 주1_월_1교시_도서관_신아산_부정1_영문
+---
+{name()}: True, you've got a point.
+<<show san_blush>>
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: It's been a while since I met someone who sees eye-to-eye with me!
+ASan: I knew there was something special about you since the freshman orientation.
+<<choice 주1_월_1교시_도서관_신아산_긍정2_영문 "Oh, maybe a little?" 주1_월_1교시_도서관_신아산_부정2_영문 "Well, I wouldn't call it 'interest'...">>
+ASan: Are you into studying, too?
+===
+
+title: 주1_월_1교시_도서관_신아산_긍정2_영문
+---
+(I don't care about studying at all, but if I want to get her attention, I should probably tell a little white lie, right?)
+{name()}: Oh, maybe a little...?
+{name()}: I'm the type who likes to look things up if I don't know them.
+<<change lvSan 5>>
+<<like 신아산>>
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: Really??
+ASan: Let's have another one of these academic discussions next time.
+(ASan disappeared.)
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(My conscience feels a bit uneasy...)
+<<end>>
+===
+
+title: 주1_월_1교시_도서관_신아산_부정2_영문
+---
+{name()}: Well, I wouldn't call it "interest"...
+{name()}: I just picked this college because my grades fit.
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<show san_neg2>>
+<<play 신아산_허>>
+ASan: ......
+ASan: Oh, really?
+ASan: If you're not that into studying, I guess I'm not that into you either.
+ASan: Looks like we don't have much of a common denominator.
+<<end>>
+===

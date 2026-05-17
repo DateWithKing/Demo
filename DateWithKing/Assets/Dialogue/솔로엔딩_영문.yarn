@@ -1,0 +1,57 @@
+title: 솔로엔딩_영문
+---
+And just like that, the semester came to an end.
+I tried to win everyone's heart, but all I got in return was a lukewarm response from everyone.
+I showed up whenever they asked, and I poured my soul into giving them the answers they wanted... how could they do this to me?
+{name()}: Argh, at this rate, I'm going to spend another year solo.
+<<wait 1>>
+{name()}: This won't do.
+I took out my phone and sent the exact same text to all three of them at once.
+{name()}: I've liked you since the first club meeting.
+{name()}: Let's go out. I'll treat you really well.
+{name()}: Well, this should be enough, right?
+With that careless thought, I closed my phone and got lost in playing games.
+<<wait 1>>
+<<play 띠롱띠롱>>
+<<wait 1>>
+<<play 띠롱띠롱>>
+<<wait 1>>
+<<play 띠롱띠롱>>
+{name()}: What? Why is my phone going off so much?
+<<show san_idle>>
+ASan: This is... quite flustering.
+ASan: Did I ever give you any mixed signals???????
+ASan: Sorry... ;;;;;;;;
+<<hide>>
+<<show pyo_idle>>
+EunPyo: I'm sorry.. ㅠㅠ
+<<hide>>
+<<show hyun_idle>>
+NaHyun: You'll treat me well? LOL, doing what?
+NaHyun: Focus on yourself first, sweetie~
+<<hide>>
+{name()}: *Sigh*...
+{name()}: Are you kidding me!!!!!!!!!!
+Infuriated, I threw my phone onto the bed.
+How could every single one of them reject me?
+<<play 띠롱띠롱>>
+<<play 띠롱띠롱>>
+{name()}: Now what?
+It was a barrage of KakaoTalk messages in the department group chat with a mysterious EveryClass link, asking if the post was about me.
+With a sinking feeling, I clicked the link and saw a post that was already viral.
+{name()}: Isn't launching a "confession attack" on three girls in the same major a bit much...?
+{name()}: {name()}, Class of '22, Software Department...?
+{name()}: How could you even think about sending the exact same confession via mass text...?????
+{name()}: No effort, no common sense... I'm. so. em. bar. rassed. to go to the same school as someone like you...???????
+<<play 띠롱띠롱>>
+<<play 띠롱띠롱>>
+{name()}: AAAAAAAAAAAARRRRRRRGH!!!!!!!!!!!!!!!!!!!!!!!
+Because the post was on EveryClass with my real name, and I was exposed in the group chat,
+I became the infamous "Confession Attack Machine" of the campus....
+Everywhere I went, people whispered about me...
+Everywhere I went, no one would talk to me...
+<<wait 1>>
+{name()}: I... I'm taking a leave of absence.
+And so, still very much a solo, I had no choice but to submit my leave of absence form...
+<<end>>
+===

@@ -1,0 +1,66 @@
+title: 주1_월_3교시_동아리방_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+As I enter the club room, I see NaHyun practically lounging in her chair.
+She has scrolled through her phone.
+{name()}: Hey, NaHyun. Are you on a break?
+NaHyun: (Looking up from her phone) Yeah.
+NaHyun: I was just trying to figure out what to have for lunch.
+{name()}: Are you going to order delivery?
+<<choice 주1_월_3교시_동아리방_양나현_긍1_영문 "I'm hungry too." 주1_월_3교시_동아리방_양나현_부1_영문 "I'm still okay for now.">>
+NaHyun: Yeah. Want to eat together?
+===
+
+title: 주1_월_3교시_동아리방_양나현_긍1_영문
+---
+{name()}: Sure, let's eat together.
+<<like 양나현>>
+<<change lvHyun +10>>
+<<show hyun_neg>>
+NaHyun: And why should I?
+{name()}: ...
+<<show hyun_smile>>
+NaHyun: (Laughing) I'm just kidding. What do you want to eat?
+<<if get("slv") < 3>>
+    <<jump 주1_월_3교시_동아리방_양나현_의존성_영문>>
+<<else>>
+    <<jump 주1_월_3교시_동아리방_양나현_일반_영문>>
+<<endif>>
+===
+
+title: 주1_월_3교시_동아리방_양나현_의존성_영문
+---
+<<show hyun_smile>>
+{name()}: Whatever you're in the mood for.
+NaHyun: How about Chinese food, then?
+NaHyun: I actually know a really good place...
+{name()}: Where is it? Tell me more.
+(I spent some time chatting with NaHyun while we had lunch.)
+(I feel like we've gotten a bit closer.)
+<<end>>
+===
+
+title: 주1_월_3교시_동아리방_양나현_일반_영문
+---
+<<show hyun_smile>>
+{name()}: I'm actually craving Chinese food.
+NaHyun: Shall we go with that then?
+NaHyun: I actually know a really good place...
+{name()}: Where is it? Tell me more.
+(I spent some time chatting with NaHyun while we had lunch.)
+(I feel like we've gotten a bit closer.)
+<<end>>
+===
+
+title: 주1_월_3교시_동아리방_양나현_부1_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: I'm not that hungry yet, so I'll probably eat a bit later.
+NaHyun: Oh, really? Suit yourself, then.
+<<show hyun_neg>>
+<<play 양나현_흠>>
+(NaHyun turns her attention back to her phone.)
+<<end>>
+===

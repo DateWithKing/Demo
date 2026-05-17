@@ -1,0 +1,135 @@
+title: 주5_금_2교시_강의실_서은표_영문
+---
+<<if get("lvPyo") >= 50>>
+    (I'm heading toward the lecture hall.)
+    <<play 공통_발소리>>
+    (I was walking while listening to music with my earphones in, when I suddenly felt someone behind me.)
+    (The chilling presence lingering behind me made me take out my earphones and look back.)
+    (There's no one there.)
+    <<like 서은표>>
+    <<change lvPyo +5>>
+    (Should I look around?)
+    <<choice 주5_금_2교시_강의실_서은표_긍1_영문 "Look around the area." 주5_금_2교시_강의실_서은표_부1_영문 "Just go to the lecture hall.">>
+<<else>>
+    <<jump 주5_금_2교시_강의실_서은표_호감도_50미만_영문>>
+<<endif>>
+===
+
+title: 주5_금_2교시_강의실_서은표_긍1_영문
+---
+(Something is definitely strange.)
+<<play 공통_발소리>>
+(There's still time before the lecture starts, and I can't shake this lingering unease, so I decided to look around.)
+(I scanned the path I just walked...)
+(And even checked the lecture halls where the lights were off.)
+(No matter how much I look, it's suspiciously empty.)
+(Was it just my imagination...?)
+(It feels like the presence has disappeared.)
+(!)
+(Just then, a soccer ball-shaped badge lying on the hallway floor caught my eye.)
+(It has a familiar logo on the ball.)
+(Is this... the soccer club badge?)
+(I picked up the badge for now.)
+(Unable to find anything else, I headed to the lecture hall.)
+(When I entered the room, EunPyo was there.)
+<<show pyo_blush>>
+<<play pyo_sound>>
+EunPyo: Hey, {name()}.
+{name()}: Hey.
+EunPyo: You're a bit late?
+{name()}: Yeah. I was looking for something...
+{name()}: Oh, by any chance, isn't this your club badge?
+(I showed her the badge I just picked up.)
+<<bgm_stop>>
+<<show pyo_horror>>
+<<wait 2>>
+<<bgm_resume>>
+<<show pyo_idle>>
+EunPyo: Ah...
+<<show pyo_neg2>>
+<<play 서은표_흠>>
+EunPyo: You're right.
+{name()}: It's not yours, right? Check yours. I picked this up in the hallway earlier.
+<<show pyo_neg>>
+EunPyo: Uh... mine should be at home. Probably.
+{name()}: Maybe it belongs to one of your soccer club friends? If anyone says they lost it, let them know.
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Okay. I'll find the owner and give it to them.
+(EunPyo puts the badge into her bag pocket.)
+<<end>>
+===
+
+title: 주5_금_2교시_강의실_서은표_부1_영문
+---
+(It felt uncomfortable, but I decided to just keep going.)
+(When I entered the lecture hall, I saw the back of EunPyo's head.)
+<<show pyo_blush>>
+<<play pyo_sound>>
+EunPyo: Hey, {name()}.
+{name()}: Hey.
+EunPyo: You're a bit late?
+{name()}: Am I? The traffic was a bit heavy today.
+EunPyo: Hurry up and sit down.
+<<choice 주5_금_2교시_강의실_서은표_긍2_영문 "Sit in the seat next to her." 주5_금_2교시_강의실_서은표_부2_영문 "I want to sit separately today.">>
+(EunPyo moved her bag from the seat next to her to clear a spot.)
+===
+
+title: 주5_금_2교시_강의실_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+(I sat down next to EunPyo.)
+<<show pyo_smile>>
+EunPyo: You smell really nice again today.
+{name()}: Really? Maybe it's the detergent...
+(We chatted until the lecture started.)
+<<end>>
+===
+
+title: 주5_금_2교시_강의실_서은표_부2_영문
+---
+
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: I want to sit separately today.
+<<show pyo_horror>>
+EunPyo: Why?
+<<wait 2>>
+<<show pyo_neg2>>
+EunPyo: There are no other seats. Just sit here.
+<<jump 주5_금_2교시_강의실_서은표_긍2_영문>>
+===
+
+title: 주5_금_2교시_강의실_서은표_호감도_50미만_영문
+---
+(On my way to the lecture hall, I see something glittering on the floor.)
+(A soccer ball-shaped badge lying on the hallway floor caught my eye.)
+(It has a familiar logo on the ball.)
+(Is this... the soccer club badge?)
+(I picked up the badge for now.)
+(I thought of EunPyo, who is in the soccer club.)
+(EunPyo will probably be in the lecture hall.)
+<<show pyo_idle>>
+EunPyo: Hey, {name()}.
+{name()}: Hey.
+{name()}: I picked up this badge on my way here. Is it yours by any chance?
+<<show pyo_smile>>
+<<play 서은표_흠>>
+EunPyo: Oh, it's a soccer club badge!
+(EunPyo leans down to check her bag.)
+<<show pyo_shock>>
+EunPyo: Oh! It must be mine.
+EunPyo: I originally had it pinned here on the front, but it's gone.
+{name()}: Really? What are the odds that I'd be the one to find it.
+{name()}: I'm glad I found the owner.
+<<show pyo_blush>>
+EunPyo: I know, I didn't even realize it was missing.
+<<show pyo_smile>>
+<<like 서은표>>
+<<change lvPyo +5>>
+EunPyo: Thanks for finding it. Want to sit next to me?
+{name()}: Sure.
+(We attended the lecture together.)
+<<end>>
+===

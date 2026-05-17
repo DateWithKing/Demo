@@ -1,0 +1,73 @@
+title: 서은표_엿_영문
+---
+<<show pyo_shock>>
+<<play 서은표_흠>>
+EunPyo: …?!
+<<show pyo_neg>>
+EunPyo: {name()}, that's a bad thing to do.
+<<show pyo_idle>>
+<<choice_again>>
+===
+
+title: 서은표_두명_영문
+---
+<<show pyo_idle>>
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+EunPyo: ...
+<<bgm_stop>>
+<<show pyo_horror>>
+EunPyo: Who's that behind you?
+<<wait 2>>
+<<bgm_resume>>
+<<show pyo_neg>>
+EunPyo: I'd prefer it if it were just the two of us talking.
+<<show pyo_idle>>
+<<choice_again>>
+===
+
+title: 서은표_K하트_영문
+---
+<<show pyo_idle>>
+EunPyo: ??
+EunPyo: Oh...
+EunPyo: ... ...
+<<show pyo_neg>>
+(Wait, her reaction is...)
+<<show pyo_blush>>
+<<wait 1>>
+<<show pyo_neg>>
+<<wait 1>>
+<<show pyo_blush>>
+EunPyo: I l-like you too!
+(She shouted it out loud and then looked around, seemingly startled by her own outburst.)
+(She looks very embarrassed.)
+<<show pyo_idle>>
+<<choice_again>>
+===
+
+title: 서은표_주먹_영문
+---
+<<show pyo_idle>>
+EunPyo: !!
+<<show pyo_neg2>>
+EunPyo: Ah... did I do something wrong?
+EunPyo: I'm sorry, for now.
+(She says that, but deep down...)
+(She seems to be thinking, "I'm probably stronger though...")
+(It seems better not to provoke her further.)
+<<show pyo_idle>>
+<<choice_again>>
+===
+
+title: 서은표_쉿_영문
+---
+<<show pyo_shock>>
+EunPyo: !
+<<show pyo_neg>>
+EunPyo: Was I talking too much?
+EunPyo: It's just that I feel so comfortable around you...
+EunPyo: Can't you listen to me just a bit more?
+<<show pyo_idle>>
+<<choice_again>>
+===

@@ -1,0 +1,72 @@
+title: 주5_금_2교시_도서관_신아산_영문
+---
+<<show san_idle>>
+(Exams are right around the corner, so I’d better head to the library to study.)
+(If I can just survive this week, it's finally the end of the semester....)
+{name()}: Oh? ASan?
+<<play san_sound>>
+<<show san_shock>>
+ASan: Huh?
+ASan: Since when did you actually know how to study?
+(Has it ever crossed your mind that I might be a total study bug too?!?!?!!?)
+<<play 신아산_흠>>
+<<show san_neg>>
+ASan: Just so you know, I don't have any past exam papers to give you.
+{name()}: Wasn't expecting any.
+<<show san_shock>>
+ASan: Seriously?
+ASan: I do have the lecture summaries, though.
+<<show san_idle>>
+ASan: Well...
+ASan: I might give them to you if we study together.
+<<choice 주5_금_2교시_도서관_신아산_긍정1_영문 "Of course." 주5_금_2교시_도서관_신아산_부정1_영문 "I've got my own lecture summaries, so I don't need to." true>>
+ASan: Want to join me?
+===
+
+title: 주5_금_2교시_도서관_신아산_긍정1_영문
+---
+{name()}: Of course.
+{name()}: I desperately need your help if I want to avoid taking Applied Blockchain for the third time.
+<<change lvSan 5>>
+<<like 신아산>>
+<<show san_smile>>
+ASan: Good.
+ASan: I reserved a group study room, so let's head over there.
+{name()}: Sure, sounds good.
+{name()}: Since you're helping me out, I'll buy you dinner later.
+<<show san_blush>>
+ASan: Whoa.
+ASan: I wasn't really planning on helping, but I guess I have to now if I'm getting a free meal.
+ASan: Well, alright.
+ASan: It's not like you actually know anything anyway.
+{name()}: Yes, ma'am... I'm in your hands.
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: I'm counting on you too!
+(And so, ASan and I stayed cooped up in the study room all day.)
+(Thanks to her, I think I might actually avoid taking this class a third time.)
+<<end>>
+===
+
+title: 주5_금_2교시_도서관_신아산_부정1_영문
+---
+{name()}: I've got my own lecture summaries, so I don't really need them.
+<<play 신아산_흠>>
+ASan: ..... Oh, really?
+ASan: Do you even know the specific topics the professor highlighted?
+ASan: You were knocked out asleep during that part last time.
+ASan: ........
+ASan: I could tell you what they are.
+{name()}: You mean the ones from the very last lecture?
+{name()}: I already have those, so I'm good.
+<<play 신아산_허>>
+<<show san_neg2>>
+ASan: Is that so?
+ASan: Well, good luck studying, then.
+ASan: I've got a group study room reserved for myself.
+<<change lvSan -5>>
+<<dislike 신아산>>
+(As ASan said that, she had a strangely disappointed look on her face.)
+(Maybe I should have just studied with her...)
+<<end>>
+===

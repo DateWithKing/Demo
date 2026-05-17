@@ -1,0 +1,144 @@
+title: 주1_월_2교시_강의실_신아산_영문
+---
+(I managed to resist the urge to skip class in the first week and made it to the classroom.)
+<<show san_smile>>
+<<play san_sound>>
+(As expected, ASan is already there, earlier than everyone else.)
+(She's usually buried in a book, but today she's staring at her phone and giggling.)
+{name()}: What are you looking at that's making you laugh like that?
+<<show san_idle>> 
+ASan: Oh, it's nothing.
+ASan: ......
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: Pfft....
+{name()}: Come on, tell me. Share the fun.
+ASan: Okay, so I'm watching this comedy compilation on YouTube Shorts...
+ASan: Hey, what do you call a fly with no wings?
+<<wait 1>>
+ASan: A walk!
+<<play 신아산_웃음>>
+(?)
+(........?)
+(I have never once in my life pondered what to call a wingless fly...)
+(And "a walk"? Really...?)
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: What's with that look?
+<<choice 주1_월_2교시_강의실_신아산_긍정1_영문 "Yeah." 주1_월_2교시_강의실_신아산_부정1_영문 "No, it's not that." true>>
+ASan: Was it not funny?
+===
+
+title: 주1_월_2교시_강의실_신아산_긍정1_영문
+---
+{name()}: Setting aside whether it was funny or not...
+{name()}: I think your YouTube algorithm is seriously broken.
+{name()}: What on earth do you usually watch?
+<<show san_neg2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: Hey!
+ASan: I know it wasn't exactly a masterpiece, okay?!
+ASan: I only told you because YOU asked first!
+{name()}: I can't help it if it's not funny.
+ASan: Hmph.
+ASan: Whatever. I'm just going to study for the pop quiz.
+{name()}: Pop quiz?
+ASan: Yeah. The prof said they’re using a pop quiz to check attendance today.
+{name()}: Wait, what?!
+<<show san_idle>>
+ASan: Figures you wouldn't know.
+ASan: Want the study guide?
+{name()}: Yes, please...
+<<show san_smile>>
+<<play 신아산_흠>>
+ASan: Now, let's see... who was it that said my joke was unfunny?
+ASan: Who was the one roasting my YouTube algorithm? Hmm?
+(This is bad.)
+(I'm retaking this class, so I absolutely need a perfect score...)
+ASan: Maybe if you say, "I'm sorry, Noona~," I'll consider giving it to you.
+(........)
+<<choice 주1_월_2교시_강의실_신아산_긍정2_영문 "I'm sorry, Noona." 주1_월_2교시_강의실_신아산_부정2_영문 "What?? Me? To you?" true>>
+(What should I do?)
+===
+
+title: 주1_월_2교시_강의실_신아산_부정1_영문
+---
+{name()}: No way.
+{name()}: How could that possibly not be funny?
+{name()}: Ha. Ha. Ha.
+<<show san_neg2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: .........
+ASan: I'm going to destroy you.
+{name()}: Hey, I'm just kidding, obviously!
+{name()}: It's just... I've never heard a joke like that in my life, so I didn't know how to react.
+ASan: .........
+ASan: Fine. I'm going back to studying for the pop quiz.
+{name()}: Pop quiz?
+ASan: Yeah. The prof said they're using a pop quiz to check attendance today.
+{name()}: What? This is the first I'm hearing of this!
+<<show san_idle>>
+ASan: Figures you wouldn't know.
+ASan: Want the study guide?
+{name()}: Yes, please...
+<<show san_smile>>
+<<play 신아산_흠>>
+ASan: Now, who was it that gave me that robotic reaction earlier...?
+ASan: I think their name was {name()}, maybe?
+(This is bad.)
+(I'm retaking this class, so I absolutely need a perfect score...)
+ASan: Maybe if you say, "I'm sorry, Noona~," I'll consider giving it to you.
+(........)
+<<choice 주1_월_2교시_강의실_신아산_긍정2_영문 "I'm sorry, Noona." 주1_월_2교시_강의실_신아산_부정2_영문 "What?? Me? To you?" true>>
+(What should I do?)
+===
+
+title: 주1_월_2교시_강의실_신아산_긍정2_영문
+---
+{name()}: ........
+(I have no choice.)
+{name()}: Noona....
+{name()}: I'm... so...
+<<show san_blush>>
+{name()}: I'm sorry...
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Good boy!
+{name()}: Happy now?
+{name()}: Now give me the study guide.
+ASan: "Give me"?
+ASan: That's not very polite, is it?
+{name()}: ...............
+ASan: Ahaha, sorry! Your reaction was just so funny I couldn't help teasing you.
+ASan: Here you go.
+ASan: You've only got 5 minutes until class starts, so you'd better memorize these fast!
+ASan: Your "Noona" is going to start studying now, too.
+{name()}: ........
+{name()}: Yes, Noona....
+(ASan let out a little chuckle and turned away.)
+(I, {name()}, will never forget this day....)
+<<end>>
+===
+
+title: 주1_월_2교시_강의실_신아산_부정2_영문
+---
+{name()}: WHAT?!
+{name()}: My birthday is earlier than yours, and you want me to call you Noona?!
+{name()}: No way. Absolutely not.
+{name()}: I'd rather take a zero on the quiz.
+<<show san_idle>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: Booo. You're no fun.
+ASan: Well, enjoy your third time taking this class then. I'm going to study.
+ASan: Bye-bye.
+(ASan heartlessly walked away.)
+(I'm not really going to have to take this a third time... right?)
+<<end>>
+===

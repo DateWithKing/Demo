@@ -1,0 +1,100 @@
+title: 주2_화_3교시_정문_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+(As I’m about to head down the main gate stairs, I see a familiar back.)
+(NaHyun is crouching in front of some bushes.)
+{name()}: NaHyun, what are you doing?
+<<show hyun_spec>>
+<<play 양나현_쉿>>
+NaHyun: (Putting her index finger to her lips) Shh!
+<<if get("slv") > 1>>
+    <<jump 주2_화_3교시_정문_양나현_의존성_영문>>
+<<else>>
+    <<jump 주2_화_3교시_정문_양나현_일반_영문>>
+<<endif>>
+===
+
+title: 주2_화_3교시_정문_양나현_의존성_영문
+---
+(I quickly shut my mouth and look down at where she’s staring. There’s a cat.)
+(NaHyun is intently watching the cat.)
+<<show hyun_smile>>
+NaHyun: (Whispering) This cat lives here at the Engineering Building.
+NaHyun: His name is Bong-won. You can run into him if you come around here sometimes.
+{name()}: (Whispering) So this was the cat I kept seeing around.
+<<choice 주2_화_3교시_아산공학관_정문_양나현_긍1_영문 "Of course I do." 주2_화_3교시_아산공학관_정문_양나현_부1_영문 "I'm not really a cat person.">>
+NaHyun: Do you like cats?
+===
+
+title: 주2_화_3교시_정문_양나현_일반_영문
+---
+{name()}: What's wrong?
+<<play 양나현_허>>
+<<show hyun_neg>>
+NaHyun: (Quietly) I told you to be quiet!
+NaHyun: (Whispering) This cat lives at the Engineering Building.
+<<show hyun_smile>>
+NaHyun: His name is Bong-won. You can run into him if you come around here sometimes.
+{name()}: (Whispering) So this was the cat I kept seeing around.
+<<choice 주2_화_3교시_아산공학관_정문_양나현_긍1_영문 "Of course I do." 주2_화_3교시_아산공학관_정문_양나현_부1_영문 "I'm not really a cat person.">>
+NaHyun: Do you like cats?
+===
+
+title: 주2_화_3교시_아산공학관_정문_양나현_긍1_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+{name()}: He's way too cute.
+<<show hyun_blush>>
+NaHyun: Me too. Out of all animals, cats are my favorite.
+<<choice 주2_화_3교시_아산공학관_정문_양나현_긍2_영문 "Honestly, the naming sense is... not great." 주2_화_3교시_아산공학관_정문_양나현_부2_영문 "No, I think it's actually pretty cute.">>
+NaHyun: Bong-won. Isn't that name hilarious?
+===
+
+title: 주2_화_3교시_아산공학관_정문_양나현_부1_영문
+---
+{name()}: I don't like them that much.
+NaHyun: Oh, I see...
+<<show hyun_idle>>
+NaHyun: Cats are my absolute favorite animal.
+(NaHyun seems to have her full attention on the cat.)
+<<end>>
+===
+
+title: 주2_화_3교시_아산공학관_정문_양나현_긍2_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -10>>
+{name()}: I'm a bit curious who named him.
+{name()}: I mean, how do you end up naming a cat 'Bong-won'?
+<<show hyun_neg>>
+NaHyun: Actually, I named him.
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+{name()}: Oh......
+(A moment of awkward silence follows.)
+<<show hyun_idle>>
+<<play 공통_야옹>>
+(Bong-won soon stands up and disappears into the bushes.)
+NaHyun: I'm going to head back inside now.
+(NaHyun stands up and walks back into the Engineering Building.)
+<<end>>
+===
+
+title: 주2_화_3교시_아산공학관_정문_양나현_부2_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+{name()}: It suits him well.
+<<play 양나현_웃음>>
+<<show hyun_smile>>
+NaHyun: Really? Actually, I named him.
+NaHyun: I thought the name Bong-won really fit him.
+<<play 공통_야옹>>
+(Bong-won soon stands up and disappears into the bushes.)
+(We talked a little more about Bong-won.)
+NaHyun: Come by the main gate every now and then. Let's visit Bong-won together.
+{name()}: Sure.
+<<end>>
+===

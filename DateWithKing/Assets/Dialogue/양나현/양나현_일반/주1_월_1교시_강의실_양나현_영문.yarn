@@ -1,0 +1,68 @@
+title: 주1_월_1교시_강의실_양나현_영문
+---
+<<wait 1>>
+<<show hyun_idle>>
+As I enter the classroom, I see NaHyun sitting alone in the very back row.
+Her gaze turns toward me.
+Our eyes meet.
+<<choice 주1_월_1교시_강의실_양나현_긍1_영문 "Hey, NaHyun." 주1_월_1교시_강의실_양나현_부1_영문 "(Say nothing)">>
+Should I say hi?
+===
+
+title: 주1_월_1교시_강의실_양나현_긍1_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+<<play hyun_sound>>
+NaHyun: Hey, {name()}.
+NaHyun: Are you taking this class too?
+{name()}: (Grimacing) Yeah. Right from the first period on a Monday...
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: This professor is the worst. (NaHyun whispers with a playful laugh.)
+<<jump 주1_월_1교시_강의실_양나현_분기1_영문>>
+===
+
+title: 주1_월_1교시_강의실_양나현_부1_영문
+---
+NaHyun: ... ...
+NaHyun: Hey. You don't look so good.
+{name()}: Just a bit tired...
+<<jump 주1_월_1교시_강의실_양나현_분기1_영문>>
+===
+
+title: 주1_월_1교시_강의실_양나현_분기1_영문
+---
+<<show hyun_idle>>
+NaHyun: Monday first period is definitely a struggle.
+NaHyun: Are you here with any friends?
+{name()}: No, I'm taking it alone.
+<<choice 주1_월_1교시_강의실_양나현_긍2_영문 "Sure!" 주1_월_1교시_강의실_양나현_부2_영문 "But I'm planning on studying hard?">>
+NaHyun: Want to sit together?
+===
+
+title: 주1_월_1교시_강의실_양나현_긍2_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+NaHyun: (She moves her bag from the seat next to her.)
+<<jump 주1_월_1교시_강의실_양나현_분기2_영문>>
+===
+
+title: 주1_월_1교시_강의실_양나현_부2_영문
+---
+<<dislike 양나현>>
+<<change lvHyun -5>>
+{name()}: I think I'll sit closer to the front.
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+NaHyun: ...Okay.
+<<jump 주1_월_1교시_강의실_양나현_분기2_영문>>
+===
+
+title: 주1_월_1교시_강의실_양나현_분기2_영문
+---
+As I take a seat, the professor soon enters the room.
+The lecture begins.
+<<end>>
+===

@@ -1,0 +1,89 @@
+title: 종강총회_서은표_영문
+---
+<<show pyo_smile>>
+<<play pyo_sound>>
+EunPyo: Wow, {name()}, you actually collected all the tickets?
+<<play 서은표_웃음>>
+EunPyo: That's amazing. So, are we really going into the Haunted House...?
+{name()}: I'm a bit scared too... Should we just ride something else?
+<<show pyo_neg2>>
+EunPyo: I'm scared as well, but...
+<<show pyo_blush>>
+EunPyo: I feel like if I'm with {name()}, it might be okay...
+{name()}: I guess if we don't go now, we never will...
+{name()}: Alright then, let's go while we still have the nerve.
+(Guided by the staff, we entered the Haunted House.)
+Staff: Watch your step, and please follow the arrows on the floor~
+(It's pitch black inside; I can't see a thing.)
+{name()}: Ugh... I can't see anything.
+<<show pyo_shock>>
+EunPyo: Eek!!!!!!
+(EunPyo, who was standing behind me, screamed and buried her face in my shoulder.)
+(Suddenly, a prop of a severed hand dropped from above.)
+{name()}: G-gah!!!
+(EunPyo's hands are gripping my shoulders tight.)
+(she seems completely terrified.)
+(Determined to keep my head straight, I took one step at a time.)
+<<show pyo_neg2>>
+<<play 서은표_웃음>>
+EunPyo: (With a tearful voice) I... I can't open my eyes...
+{name()}: There's nothing in front of us right now, but...
+{name()}: ...Just trust me and follow me!! 
+(A sudden surge of responsibility made me raise my voice.)
+(We faced many scares with every step...)
+(And we moved forward, stuck closely together...)
+<<show pyo_idle>>
+<<play 서은표_웃음>>
+EunPyo: {name()}, thanks for leading the way...
+<<show pyo_shock>>
+EunPyo: It's so much better because I'm with you...
+{name()}: It's nothing... Are you that scared?
+{name()}: (Gosh... when is this going to end...)
+(The Haunted House felt endless.)
+(Just as I let my guard down, wondering when the exit would appear—)
+{name()}: AAAAGH!!!!!!!
+<<show pyo_shock>>
+EunPyo: AAAHHH~~~!!!!
+(A staff member dressed as a ghost suddenly jumped out with a scream.)
+(Instinctively, I spun around.)
+(And then, I made eye contact with EunPyo.)
+<<show pyo_idle>>
+<<play 서은표_흠>>
+EunPyo: (With a deadpan expression) Aaah~~~ {name()}, I'm so scared!!!
+EunPyo: Oops.
+{name()}: ......
+(How awkward......)
+Staff dressed as a ghost: ......
+EunPyo: *Ahem.*
+(EunPyo tried to ignore the gaze and turned me back around to face forward.)
+(Then she buried her face in my shoulder again.)
+(I feel like I've been played, but since we need to get out of here first—)
+The staff member, sensing the vibe: ...... KYYAAAAGH!!!!
+{name()}: Waaaaagh!!!!
+<<show pyo_shock>>
+<<play 서은표_흠>>
+EunPyo: G-go away~~~!!!!
+(Fortunately, the exit wasn't far.)
+(After running out of the exit, looking at ourselves in the bright light was hilarious.)
+{name()}: ...You, I knew it. You tricked me.
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Tricked you? What do you mean?
+(EunPyo looks incredibly happy.)
+EunPyo: {name()}, you were so reliable and brave.
+EunPyo: I love being with you~~~ Thanks, {name()}.
+{name()}: Fine, as long as you had fun...
+EunPyo: Let's take a picture.
+<<print "Give me a V. Say cheese~" EunPyo>>
+<<cheese 종강총회_서은표2_영문>>
+===
+
+title: 종강총회_서은표2_영문
+---
+<<hide>>
+<<bg 서은표_종강총회>>
+(We took a selfie together with our hair all messed up.)
+(I think this will be an unforgettable memory.)
+<<wait 3>>
+<<end>>
+===

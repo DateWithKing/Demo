@@ -1,0 +1,74 @@
+title: 종강총회_신아산_영문
+---
+<<show san_idle>>
+ASan: I really want to ride the carousel...
+ASan: But I guess it wouldn't be much fun riding it alone...
+{name()}: ASan!
+<<play san_sound>>
+<<show san_shock>>
+ASan: Oh, {name()}?
+ASan: Wait, did you actually collect all the tickets?
+{name()}: Yep.
+{name()}: Because I wanted to ride it with you.
+<<play 신아산_웃음>>
+<<show san_blush>>
+ASan: !!!!!!!!!!
+<<like 신아산>>
+<<change lvSan +10>>
+<<play 신아산_흠>>
+ASan: Well, it's not like I had anyone else to ride with, so I guess you'll do.
+ASan: Hmph.
+{name()}: Your face says otherwise, though.
+ASan: NO, IT DOESN'T!!!!!!
+<<show san_smile>>
+ASan: Anyway, let's hurry up and get in line.
+(We chatted as we waited for our turn.)
+(As soon as it was our time to enter, ASan grabbed my hand and started sprinting.)
+{name()}: Whoa, where are we going?
+ASan: No time to explain! Just get on, NOW!!!!!!!!
+(After being dragged along, I found myself forced into...)
+(A 'carriage' being pulled by a majestic-looking horse.)
+{name()}: A carriage?
+ASan: Yep! And I'll be the one driving it!
+ASan: Just sit back and witness my elite driving skills, okay?
+(ASan looked at me with an innocent grin and flashed a peace sign.)
+*Toot-toot!*
+<<play 신아산_웃음>>
+ASan: Ahahaha!!!!!!!!!!!!!
+ASan: Run, my noble steed!!!!!!!!!
+(The carousel began to rotate slowly.)
+(Even though the horse was only moving up and down, ASan moved as if she were)
+(actually steering and controlling the ride.)
+(Soon, she turned her head to look at me.)
+ASan: How is the ride quality, passenger?
+{name()}: It's the best!
+ASan: Excellent! Then I shall increase our speed immediately~!!
+<<wait 2>>
+*Tooooooot!*
+(The horn blew, signaling the end of the ride.)
+<<play 신아산_웃음>>
+ASan: Ah, that was seriously so much fun.
+ASan: I kept looking back to check on my passenger, though...
+ASan: I thought my neck was gonna snap, haha!
+{name()}: Haha, thanks to you, I had a safe trip~
+{name()}: To be honest, I was worried if a carousel would actually be fun.
+{name()}: But I had a blast because of you.
+ASan: .....Me too.
+ASan: It's my favorite ride, but this is the first time I've ever ridden it with someone else.
+ASan: I was worried I went a bit overboard because I was so excited...
+ASan: But thank you so much for enjoying it with me!
+ASan: Shall we take a photo before we get off?
+ASan: Do a peace sign! Peace~
+<<cheese 종강총회_신아산2_영문>>
+===
+
+title: 종강총회_신아산2_영문
+---
+<<hide>>
+<<bg 신아산_종강총회>>
+ASan: You'll ride with me again next time, right?
+{name()}: Of course. Next time, I'll be the one driving.
+ASan: Pfft, I'm counting on you then!
+<<wait 3>>
+<<end>>
+===

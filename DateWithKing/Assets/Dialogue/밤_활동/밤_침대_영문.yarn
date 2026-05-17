@@ -1,0 +1,8 @@
+title: 밤_침대_영문
+---
+<<change bonusHp +10>>
+<<play 밤_잠자기>>
+I slept soundly in my cozy bed. I feel refreshed!
+(Starting HP for tomorrow +10)
+<<end>>
+===

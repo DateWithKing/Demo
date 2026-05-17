@@ -1,0 +1,82 @@
+title: 주1_월_2교시_식당_서은표_영문
+---
+<<play 공통_웅성>>
+(The cafeteria is incredibly crowded during lunch hour.)
+(Amidst the noise, I found an empty seat and put my bag down.)
+(While I was debating what to eat in front of the menu...)
+???: Wait, isn't that {name()}?
+<<show pyo_smile>>
+(I hear my name and turn around to see EunPyo.)
+<<choice 주1_월_2교시_식당_서은표_긍1_영문 "Of course I remember you. Hey, EunPyo." 주1_월_2교시_식당_서은표_부1_영문 "Uh... did we meet at the kick-off party?">>
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: It IS you! Hey. Do you remember me?
+===
+
+title: 주1_월_2교시_식당_서은표_긍1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Of course I remember you. Hey, EunPyo.
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Wow, you actually remember! I saw you from afar and wondered if it was you, and I was right.
+<<jump 주1_월_2교시_식당_서은표_분기1_영문>>
+===
+
+title: 주1_월_2교시_식당_서은표_부1_영문
+---
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: Uh... did we meet at the kick-off party?
+{name()}: Sorry. I'm not very good at remembering names.
+<<show pyo_neg>>
+<<play 서은표_흠>>
+EunPyo: Oh... right. That happens.
+EunPyo: We introduced ourselves at the semester kick-off party.
+<<show pyo_smile>>
+EunPyo: I'm EunPyo Seo. Nice to meet you!
+<<jump 주1_월_2교시_식당_서은표_분기1_영문>>
+===
+
+title: 주1_월_2교시_식당_서은표_분기1_영문
+---
+EunPyo: Are you here to eat alone?
+{name()}: Yeah. I have a break between classes right now.
+<<show pyo_idle>>
+EunPyo: Me too! That worked out great.
+<<choice 주1_월_2교시_식당_서은표_긍2_영문 "Sure, that'd be nice." 주1_월_2교시_식당_서은표_부2_영문 "Nah, I have to eat quickly and head out.">>
+EunPyo: If you're okay with it, do you want to eat together?
+===
+
+title: 주1_월_2교시_식당_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Sure, that'd be nice.
+{name()}: Did you find a spot? I put my bag over there, so you can leave yours next to mine.
+<<show pyo_smile>>
+EunPyo: Got it! I'll be right back.
+EunPyo: Think about what you want to eat.
+(EunPyo quickly placed her bag in the seat next to me.)
+(We talked while eating together.)
+(She's a cheerful guy. I feel like we've gotten a bit closer.)
+<<end>>
+===
+
+title: 주1_월_2교시_식당_서은표_부2_영문
+---
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: Nah, I have to eat quickly and head out.
+{name()}: I have something I need to take care of. Sorry.
+<<show pyo_neg>>
+<<play 서은표_흠>>
+EunPyo: Oh... that's too bad.
+EunPyo: Let's eat together next time, then.
+(EunPyo looks quite disappointed.)
+{name()}: Have you decided what to eat yet?
+(We chatted for a bit while standing in the order line together.)
+(She seems like a cheerful guy. After ordering, I said goodbye. EunPyo disappeared into the crowd.)
+<<end>>
+===

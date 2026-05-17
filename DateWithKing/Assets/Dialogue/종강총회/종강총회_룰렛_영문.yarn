@@ -1,0 +1,21 @@
+title: 종강총회_룰렛_시작_영문
+---
+Welcome to the Lucky Roulette!
+Spin the wheel and get your chance to win Triple Tickets!
+<<StartRoulette PlayingRoulette>>
+<<end>>
+===
+
+title: 종강총회_룰렛_성공_영문
+---
+You hit the Jackpot!!
+<<wait 1>>
+<<end>>
+===
+
+title: 종강총회_룰렛_실패_영문
+---
+You lost your tickets...
+<<wait 1>>
+<<end>>
+===

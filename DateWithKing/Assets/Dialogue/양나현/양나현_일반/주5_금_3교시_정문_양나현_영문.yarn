@@ -1,0 +1,115 @@
+title: 주5_금_3교시_정문_양나현_영문
+---
+<<show hyun_idle>>
+<<play hyun_sound>>
+(As I walk out of the main gate, I see a familiar back.)
+{name()}: NaHyun.
+<<show hyun_shock>>
+NaHyun: {name()}! Perfect timing.
+{name()}: Is something up?
+NaHyun: Help me find Bong-won.
+{name()}: Bong-won? Sure.
+<<show hyun_idle>>
+<<play 공통_부스럭>>
+(At NaHyun's request, I thoroughly searched through the bushes to find Bong-won.)
+(But the cat is nowhere to be seen.)
+NaHyun: That's weird. Where could he be?
+(Exhausted, we sat down on the ground for a moment.)
+<<play 공통_야옹>>
+Bong-won: Meow~
+(I hear Bong-won's meow.)
+(He wasn't in the bushes we searched; he was sitting on a window sill right above where we were looking.)
+(Bong-won lightly jumped down and landed perfectly right in front of us.)
+<<play 양나현_허>>
+<<show hyun_shock>>
+NaHyun: We were looking in the completely wrong place.
+{name()}: Tell me about it. It didn't occur to me to look up...
+{name()}: Why were you looking for him anyway?
+<<show hyun_smile>>
+NaHyun: I bought this for him.
+(NaHyun rummages through her bag and pulls out a cat treat.)
+NaHyun: Since I won't be able to see him for a while once the semester ends...
+NaHyun: I heard cats absolutely love these.
+(NaHyun tears open the treat and offers it to Bong-won.)
+Bong-won: !!
+(Bong-won starts licking the treat enthusiastically.)
+NaHyun: He must like it. He's devouring it.
+NaHyun: So cute.
+{name()}: He really is.
+(We sat in front of Bong-won and watched him enjoy his meal.)
+<<choice 주5_금_3교시_정문_양나현_긍정1_영문 "Sure. Just stay like that for a second." 주5_금_3교시_정문_양나현_부정1_영문 "My hands are full right now...">>
+NaHyun: Can you take a picture of me with Bong-won?
+===
+
+title: 주5_금_3교시_정문_양나현_긍정1_영문
+---
+{name()}: Sure. Just stay like that for a second.
+<<jump 주5_금_3교시_정문_양나현_분기1_영문>>
+===
+
+title: 주5_금_3교시_정문_양나현_부정1_영문
+---
+{name()}: My hands are full right now...
+<<show hyun_neg>>
+NaHyun: How about setting your things down on the ground for a moment?
+<<change lvHyun -5>>
+<<dislike 양나현>>
+{name()}: Oh, r-right.
+<<jump 주5_금_3교시_정문_양나현_분기1_영문>>
+===
+
+title: 주5_금_3교시_정문_양나현_분기1_영문
+---
+<<play 공통_셔터>>
+(I captured NaHyun holding the treat with Bong-won in a single shot.)
+(Bong-won looked toward the camera with his ears perked up, as if he knew he was being photographed.)
+(I think I got the money shot.)
+{name()}: How's this?
+(I show the photos to NaHyun.)
+<<show hyun_smile>>
+NaHyun: Thanks! This came out so well.
+<<choice 주5_금_3교시_정문_양나현_긍정2_영문 "Sure. I just hold it like this, right?" 주5_금_3교시_정문_양나현_부정2_영문 "I'm good, thanks.">>
+NaHyun: Do you want to try feeding him too?
+===
+
+title: 주5_금_3교시_정문_양나현_긍정2_영문
+---
+{name()}: Sure. I just hold it like this, right?
+(I take the treat from NaHyun.)
+NaHyun: Yeah. He's eating it so well.
+(As I held out the treat, Bong-won licked it up eagerly.)
+<<show hyun_blush>>
+NaHyun: How cute. Can I take a picture of you?
+{name()}: Uh, sure.
+<<play 공통_셔터>>
+(NaHyun pulled out her phone and snapped a photo.)
+<<if get("lvHyun") >= 70>>
+    <<jump 주5_금_3교시_정문_양나현_분기2_영문>>
+<<else>>
+    <<end>>
+<<endif>>
+===
+
+title: 주5_금_3교시_정문_양나현_부정2_영문
+---
+{name()}: I'm good, thanks.
+<<change lvHyun -5>>
+<<dislike 양나현>>
+<<show hyun_idle>>
+NaHyun: Oh, okay then...
+<<play 공통_야옹>>
+(Bong-won finished the treat and let out a satisfied meow.)
+NaHyun: He must be full.
+NaHyun: Should we head out?
+<<end>>
+===
+
+title: 주5_금_3교시_정문_양나현_분기2_영문
+---
+<<play 양나현_웃음>>
+(NaHyun looks at the photo and laughs.)
+<<show hyun_smile>>
+NaHyun: You both look so adorable.
+NaHyun: I'm going to treasure this photo.
+<<end>>
+===

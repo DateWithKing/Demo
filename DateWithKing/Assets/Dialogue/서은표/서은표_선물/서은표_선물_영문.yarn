@@ -1,0 +1,106 @@
+title: 서은표_키링_영문
+---
+<<show pyo_blush>>
+EunPyo: Woah! What's this?
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: A bunny keychain? It's so cute! I'll cherish it forever.
+<<end>>
+===
+
+title: 서은표_쿠키_영문
+---
+<<show pyo_idle>>
+EunPyo: Is this for me?
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Looks delicious! Let’s eat them together right now. Thanks!
+<<end>>
+===
+
+title: 서은표_기프트카드_영문
+---
+<<show pyo_idle>>
+EunPyo: Oh my gosh, a present? (mumbles quietly) I actually really wanted to buy that new costume...
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Thank you so much! I'll make good use of it.
+<<end>>
+===
+
+title: 서은표_피크_영문
+---
+<<show pyo_idle>>
+EunPyo: Oh, isn't this for playing guitar?
+<<dislike 서은표>>
+<<change lvPyo -10>>
+<<play 서은표_흠>>
+EunPyo: This is for me? I don't really know how to play guitar, but... thanks... I'll keep it!
+<<end>>
+===
+
+title: 서은표_꽃_영문
+---
+<<show pyo_shock>>
+EunPyo: Flowers? Is it a special occasion today?
+<<dislike 서은표>>
+<<change lvPyo -10>>
+<<play 서은표_흠>>
+EunPyo: Oh, you're giving these to me?? I don't really have a green thumb, but... thanks...!
+<<end>>
+===
+
+title: 서은표_귀도리_영문
+---
+<<show pyo_smile>>
+EunPyo: Oh my gosh, earmuffs?? I love earmuffs! I almost have a collection of every color.
+<<show pyo_blush>>
+<<like 서은표>>
+<<change lvPyo +10>>
+<<play 서은표_웃음>>
+EunPyo: I'm definitely wearing these this winter. Thank you!!
+<<end>>
+===
+
+title: 서은표_객체지향_영문
+---
+<<show pyo_idle>>
+EunPyo: Object-Oriented Programming...?!
+<<show pyo_neg>>
+<<dislike 서은표>>
+<<change lvPyo -10>>
+<<play 서은표_흠>>
+EunPyo: Woah... our professor would really love this.
+EunPyo: Thanks... I'll try to... read it...
+<<end>>
+===
+
+title: 서은표_케이크_영문
+---
+<<show pyo_idle>>
+EunPyo: Oh, it's a cat-shaped cake...?!
+<<show pyo_neg>>
+<<dislike 서은표>>
+<<change lvPyo -10>>
+EunPyo: Honestly, I'm not big on sweets, so I should probably share this with my family. Thanks.
+<<end>>
+===
+
+title: 서은표_만화책_영문
+---
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Wait?!!!! It's the new volume of 'Dol-Se-Ah-Ttae'!!!!!
+<<show pyo_blush>>
+<<like 서은표>>
+<<change lvPyo +10>>
+EunPyo: I was actually planning to buy this~~~ Thank you so much!! You're the best, {name()}.
+EunPyo: I'm gonna read it right now!!
+<<end>>
+===

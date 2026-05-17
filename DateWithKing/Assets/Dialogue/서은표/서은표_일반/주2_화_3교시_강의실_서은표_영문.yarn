@@ -1,0 +1,196 @@
+title: 주2_화_3교시_강의실_서은표_영문
+---
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: Hey! {name()}.
+(I ran into EunPyo in front of the lecture hall.)
+<<if get("lvPyo") >= 30 && get("otk") >= 3>>
+    <<jump 주2_화_3교시_강의실_서은표_호감도30_덕력3_영문>>
+<<else>>
+    <<jump 주2_화_3교시_강의실_서은표_호감도30미만_덕력3미만_영문>>
+<<endif>>
+===
+
+title: 주2_화_3교시_강의실_서은표_호감도30_덕력3_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Hey.
+{name()}: Ugh, I really don't feel like being in class today.
+{name()}: Want to ditch class with me?
+<<show pyo_smile>>
+EunPyo: Hmm. I'd love to. 
+EunPyo: Actually, I was thinking about asking you the same thing.
+<<show pyo_blush>>
+<<play 서은표_흠>>
+EunPyo: Are we on the same wavelength?
+{name()}: Looks like it.
+{name()}: I guess we were destined not to attend class today.
+<<show pyo_smile>>
+EunPyo: Want to head to the club room?
+{name()}: The club room? Sounds good.
+EunPyo: There's this game I started playing recently...
+<<show pyo_blush>>
+EunPyo: It's called <B@ng$tar>, and it has so many cute anime girls...
+{name()}: Oh? I've heard of that. It's pretty popular these days, right?
+{name()}: Should we play it at the club room? I've been wanting to try it.
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Awesome!! I'll show you how to play.
+<<bg 낮_동아리방>>
+(We moved to the club room.)
+(There was no one there.)
+(We settled in, unpacked our things, and turned on the computer.)
+(EunPyo is downloading <B@ng$tar> with a happy expression.)
+{name()}: The character designs in this game are really well done.
+{name()}: Who's the best character?
+<<show pyo_blush>>
+EunPyo: For me...
+<<play 서은표_흠>>
+EunPyo: Guse-go has been my favorite since the previous series.
+EunPyo: I've always liked the {get_appearance("인상")} type......
+{name()}: So that's your type.
+(I've heard people say I have a {get_appearance("인상")} several times before...)
+(Am I just overthinking it?)
+(We both logged into <B@ng$tar>.)
+{name()}: Tell me your nickname, I'll add you as a friend.
+EunPyo: Mine is... 'Sego-Sego-Pyo-Jjang.'
+{name()}: Oh... that's quite a name.
+<<show pyo_neg2>>
+EunPyo: Hey! Look who's talking. What's yours?
+{name()}: I haven't made one yet.
+{name()}: Want to pick one for me?
+<<show pyo_smile>>
+EunPyo: Hmm...
+(EunPyo had a playful look on her face.)
+<<choice 주2_화_3교시_강의실_서은표_닉네임1_영문 "Sure, why not." 주2_화_3교시_강의실_서은표_닉네임2_영문 "That's a bit much...">>
+EunPyo: Let's match. Go with '{name()}{name()}-Jjang.'
+===
+
+title: 주2_화_3교시_강의실_서은표_닉네임1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Sure, why not.
+{name()}: Matching couple nicknames, nice.
+<<play 서은표_흠>>
+<<show pyo_blush>>
+EunPyo: 'Couple'... you're making me blush...
+<<jump 주2_화_3교시_강의실_서은표_게임끝_영문>>
+===
+
+title: 주2_화_3교시_강의실_서은표_닉네임2_영문
+---
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: That's a bit much, don't you think?
+<<show pyo_neg2>>
+<<play 서은표_흠>>
+EunPyo: Well... if you don't like it, fine...
+{name()}: Hmm.
+(I couldn't think of a better name anyway,)
+(And looking at her, EunPyo's lips are pouting like crazy.)
+(I set my name to {name()}{name()}-Jjang and sent a friend request to EunPyo.)
+{name()}: I sent the request. I just went with what you said.
+EunPyo: Oh, wait a second...
+<<show pyo_smile>>
+EunPyo: Wait, what! You actually did what I told you?
+{name()}: Might as well match since we're playing together.
+<<jump 주2_화_3교시_강의실_서은표_게임끝_영문>>
+===
+
+title: 주2_화_3교시_강의실_서은표_게임끝_영문
+---
+<<show pyo_idle>>
+EunPyo: Let's play in co-op mode.
+<<play 공통_키보드>>
+(We played <B@ng$tar> together.)
+(Compared to me, a total beginner, EunPyo was a pro.)
+(I kept losing hearts and was about to get eliminated, but EunPyo hard-carried me and kept me alive.)
+{name()}: This is harder than it looks...
+<<show pyo_neg>>
+EunPyo: Hmm... maybe it's because the settings aren't right? Let me make it a bit more comfortable for you.
+{name()}: Okay.
+(Just as I was about to hand the mouse over to EunPyo,)
+(She leaned toward me, and we became noticeably close.)
+(Because I froze, my hand on the mouse and EunPyo's hand reaching for it overlapped.)
+(She definitely touched my hand.)
+<<show pyo_shock>>
+<<play 서은표_허>>
+EunPyo: Oh...
+<<show pyo_blush>>
+EunPyo: S-sorry!!
+(After a moment of silence, EunPyo quickly pulled her hand away.)
+{name()}: No, it's fine.
+(EunPyo's face turned noticeably red.)
+EunPyo: Oh man...
+EunPyo: ...Give me the mouse, and I'll adjust the settings...
+(I handed the mouse to EunPyo.)
+(After finishing the settings, EunPyo fanned her face with her hand.)
+(We spent the rest of the time enjoying the game.)
+<<show pyo_smile>>
+EunPyo: Let's play again sometime. It's way more fun playing together.
+EunPyo: I have to head to my next class now... See ya.
+<<end>>
+===
+
+title: 주2_화_3교시_강의실_서은표_호감도30미만_덕력3미만_영문
+---
+EunPyo: I really don't feel like being in class today.
+{name()}: Me neither. I'm especially tired today.
+{name()}: Should I skip...
+<<show pyo_neg2>>
+EunPyo: Oh, but do you know there's an assignment due by the end of today's class?
+{name()}: ...Wait, what?!
+{name()}: Seriously??!??
+{name()}: I had no idea.
+<<show pyo_neg>>
+EunPyo: What? I'm so glad I mentioned it just in case.
+EunPyo: Hurry up and do it now.
+EunPyo: I'm not exactly an expert, but... I'll help as much as I can.
+{name()}: Yeah... thanks for letting me know.
+{name()}: I might have actually had to retake this course if it weren't for you.
+<<show pyo_smile>>
+EunPyo: Don't mention it. Hurry up and open your laptop.
+(I sat down, opened my laptop, and opened the assignment PDF.)
+<<choice 주2_화_3교시_강의실_서은표_과제2_긍_영문 "This is harder than I thought... how do I do this?" 주2_화_3교시_강의실_서은표_과제2_부정_영문 "Let me try it on my own first.">>
+(It looked tricky, but EunPyo rolled up her sleeves and stepped in to help.)
+===
+
+title: 주2_화_3교시_강의실_서은표_과제2_긍_영문
+---
+{name()}: This is harder than I thought... how do I do this?
+(I blanked out for a moment at the unexpectedly difficult assignment.)
+<<jump 주2_화_3교시_강의실_서은표_과제끝_영문>>
+===
+
+title: 주2_화_3교시_강의실_서은표_과제2_부정_영문
+---
+{name()}: Let me try it on my own first.
+{name()}: I should listen to the lecture... and I feel bad asking.
+<<show pyo_idle>>
+EunPyo: Why? No way. It's totally fine. I want to help.
+(As soon as I checked the PDF, I blanked out for a moment at the unexpectedly difficult assignment.)
+<<jump 주2_화_3교시_강의실_서은표_과제끝_영문>>
+===
+
+title: 주2_화_3교시_강의실_서은표_과제끝_영문
+---
+EunPyo: Hold on, I'll show you what I did.
+{name()}: Thank you so much.
+(I looked at EunPyo's work and focused on the assignment throughout the lecture.)
+(EunPyo quietly helped me whenever I got stuck, so I was able to finish on time.)
+<<show pyo_smile>>
+EunPyo: (whispering) Submission complete. That's a relief.
+{name()}: I really would've cried if it weren't for you......
+<<show pyo_blush>>
+<<play 서은표_웃음>>
+<<like 서은표>>
+<<change lvPyo +5>>
+EunPyo: I'm actually curious to see you cry, though?
+{name()}: Stop joking.
+{name()}: I'll buy you dinner next time.
+<<show pyo_smile>>
+EunPyo: Sounds like a plan.
+<<end>>
+===

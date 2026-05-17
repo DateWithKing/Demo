@@ -1,0 +1,97 @@
+title: 주1_월_3교시_강의실_서은표_영문
+---
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: Oh, it's {name()}!
+(As I entered the lecture hall, I ran into EunPyo.)
+{name()}: Hey.
+<<show pyo_smile>>
+EunPyo: Are you here with anyone? Want to sit next to me?
+(The seat next to EunPyo is empty.)
+{name()}: Sure, sounds good.
+(I sat next to EunPyo and took out my laptop.)
+(EunPyo is also opening her laptop.)
+EunPyo: You know, I really like this professor. She's so kind.
+<<show pyo_idle>>
+EunPyo: I took one of her classes last semester, and she was so good at explaining things I didn't get...
+<<choice 주1_월_3교시_강의실_서은표_긍1_영문 "I like this professor too." 주1_월_3교시_강의실_서은표_부1_영문 "Really? Honestly, I'm not a fan...">>
+(EunPyo continues to praise the professor.)
+===
+
+title: 주1_월_3교시_강의실_서은표_긍1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_smile>>
+{name()}: I like this professor too.
+{name()}: She gives good grades and doesn't give too many assignments...
+<<play 서은표_웃음>>
+EunPyo: Right? I almost want to start a fan club for her.
+(EunPyo seems to be in a good mood.)
+<<jump 주1_월_3교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주1_월_3교시_강의실_서은표_부1_영문
+---
+<<dislike 서은표>>
+<<change lvPyo -5>>
+{name()}: Really? Honestly, I'm not a fan...
+{name()}: I took her class before and ended up having to retake it.
+{name()}: I don't have very good memories...
+<<show pyo_shock>>
+<<play 서은표_흠>>
+EunPyo: Whaaat?
+EunPyo: No way.
+<<show pyo_neg2>>
+EunPyo: Well, it's a good thing we're taking it together this time. I'll help you change those memories.
+{name()}: I'm a bit worried, but... okay, I guess...
+<<jump 주1_월_3교시_강의실_서은표_분기1_영문>>
+===
+
+title: 주1_월_3교시_강의실_서은표_분기1_영문
+---
+<<show pyo_smile>>
+EunPyo: It's nice having a friend to take class with.  
+<<show pyo_neg>>
+EunPyo: Taking classes alone can get a bit lonely.
+{name()}: Same here.
+(Just then, EunPyo's laptop screen catches my eye.)
+(Her wallpaper is quite striking. It's a drawing of three 2D girls.)
+<<if get("otk") >= 2>>
+    (They are the main characters from the anime 'Dol-Se-Ah-Ttae'.)
+<<endif>>
+<<choice 주1_월_3교시_강의실_서은표_긍2_영문 "What's that wallpaper? You into this kind of stuff?" 주1_월_3교시_강의실_서은표_부2_영문 "(Don't ask)">>
+(Should I ask if she likes anime?)
+===
+
+title: 주1_월_3교시_강의실_서은표_긍2_영문
+---
+{name()}: What's with the wallpaper? Are you into this kind of stuff?
+<<show pyo_shock>>
+EunPyo: Oh, uh, well...
+<<play 서은표_흠>>
+<<show pyo_blush>>
+EunPyo: I just... really like Japanese anime.
+EunPyo: I totally forgot I had that set. It's a bit embarrassing.
+{name()}: Why? It's fine.
+
+<<if get("otk") >= 2>>
+{name()}: I watch some from time to time, too.
+{name()}: That's 'Dol-Se-Ah-Ttae', right? I enjoyed that one.
+<<like 서은표>>
+<<change lvPyo +5>>
+<<show pyo_shock>>
+EunPyo: No way! {name()}, you know 'Dol-Se-Ah-Ttae'??
+<<endif>>
+<<show pyo_smile>>
+(We spent some time talking about anime.)
+(EunPyo seems to be quite a hardcore fan.)
+<<end>>
+===
+
+title: 주1_월_3교시_강의실_서은표_부2_영문
+---
+(I decided not to ask, thinking it might be a private matter.)
+(We chatted until the lecture began.)
+<<end>>
+===

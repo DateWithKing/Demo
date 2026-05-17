@@ -1,0 +1,65 @@
+title: 밤_5_헬스하기_신아산_영문
+---
+(I think I've been eating too well lately; I feel like I've gained some weight.)
+(Should I hit the gym for a change?)
+<<show san_idle_ver2>>
+(I see ASan over there, working hard on some forearm exercises with dumbbells.)
+<<play san_sound>>
+{name()}: You go to this gym too?
+ASan: Yep.
+ASan: If I want to keep playing the bass standing up for our next performance, working out is a must.
+(As she spoke, she continued struggling and straining to lift the dumbbells.)
+{name()}: Want me to spot you?
+<<if get("lvSan") >= 50>>
+    <<jump 밤_5_헬스하기_신아산_호감도o_영문>>
+<<else>>
+    <<jump 밤_5_헬스하기_신아산_호감도x_영문>>
+<<endif>>
+===
+
+title: 밤_5_헬스하기_신아산_호감도o_영문
+---
+<<play 신아산_흠>>
+ASan: Huh?
+ASan: You're going to help me?
+{name()}: I've been watching you from the side, and you look like you're struggling. I'll just spot you.
+{name()}: Is that okay?
+<<show san_blush_ver2>>
+ASan: ........
+ASan: If you're going to spot me....
+ASan: I'd be glad, of course.
+{name()}: Then why don't you come over here?
+ASan: .....Okay.
+<<change lvSan 5>>
+<<like 신아산>>
+<<show san_idle_ver2>>
+ASan: I'm thankful and all, but it's absolutely NOT because I like you or anything that I'm asking for help!!!!!
+<<show san_blush_ver2>>
+<<play 신아산_흠>>
+ASan: .... Just so you know.
+(And so, we worked out together.)
+<<end>>
+===
+
+title: 밤_5_헬스하기_신아산_호감도x_영문
+---
+<<show san_neg_ver2>>
+<<play 신아산_허>>
+ASan: No.
+ASan: I'm concentrating really hard on my workout right now, so please refrain from talking to me.
+{name()}: Whoa, watch out!!!!!!
+(ASan almost got hit by someone else's gym equipment nearby.)
+{name()}: Are you okay?
+<<show san_blush_ver2>>
+ASan: Uh......
+ASan: That could have been bad if it wasn't for you....
+<<play 신아산_웃음>>
+ASan: Thanks.
+<<change lvSan 5>>
+<<like 신아산>>
+{name()}: Then let me help you with your workout.
+<<show san_smile>>
+ASan: .........Fine.
+(And so, we worked out together.)
+<<end>>
+===

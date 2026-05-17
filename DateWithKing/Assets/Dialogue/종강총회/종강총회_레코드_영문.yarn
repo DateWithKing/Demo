@@ -1,0 +1,20 @@
+title: 종강총회_레코드_시작_영문
+---
+Hit the beat 3 times in a row within the time limit!
+<<StartLP PlayingLP>>
+<<end>>
+===
+
+title: 종강총회_레코드_성공_영문
+---
+You got 5 tickets!
+<<wait 1>>
+<<end>>
+===
+
+title: 종강총회_레코드_실패_영문
+---
+You didn't get any tickets...
+<<wait 1>>
+<<end>>
+===

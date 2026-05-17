@@ -1,0 +1,133 @@
+title: 주5_금_1교시_정문_신아산_영문
+---
+{name()}: *Huff... puff...*
+(I feel this every time I come to school, but the location of the Engineering Building is absolutely brutal.)
+(How can it be at the very top of the mountain..?)
+<<show san_smile>>
+ASan: Bong-won, come here~.
+ASan: Bong-won!!!
+<<play 공통_야옹>>
+(Despite ASan's desperate calls, Bong-won leaves without even a backward glance.)
+<<play san_sound>>
+<<show san_neg>>
+ASan: He plays so well with the other kids. I guess Bong-won just hates me...
+<<choice 주5_금_1교시_정문_신아산_긍정1_영문 "Maybe he likes you a bit less than the others?" 주5_금_1교시_정문_신아산_부정1_영문 "No way.">>
+ASan: Do you really think so too?
+===
+
+title: 주5_금_1교시_정문_신아산_긍정1_영문
+---
+{name()}: Maybe he likes you a bit less than the others?
+<<change lvSan -10>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+<<show san_shock>>
+ASan: Excuse me?
+{name()}: Huh..? 
+{name()}: Oh, I'm not insulting you! It's just that he seems to cuddle with NaHyun or EunPyo more often!!!!!
+ASan: ...........
+(Uh oh. This is bad.)
+(ASan looks like she's in a bad mood.)
+{name()}: Ah, well, I think it's because those two always carry Churu treats with them.
+{name()}: Bong-won is a total foodie, you know?
+ASan: ...I should start carrying those from now on.
+(ASan looks pretty discouraged.)
+<<choice 주5_금_1교시_정문_신아산_긍정2_영문 "Should we go buy some Churu and feed Bong-won together?" 주5_금_1교시_정문_신아산_부정2_영문 "Wait, I left my wallet at home....">>
+(Should I buy some Churu at the convenience store and feed Bong-won with her?)
+===
+
+title: 주5_금_1교시_정문_신아산_부정1_영문
+---
+{name()}: No way.
+{name()}: It's not like that. In my opinion, Bong-won is just...
+(I quietly and carefully reach my hand out toward Bong-won.)
+<<wait 1>>
+<<play 공통_야옹>>
+<<show san_smile>>
+ASan: Whoa!
+ASan: Bong-won actually walked up to you on his own...
+{name()}: See? If you just reach out quietly, he comes to you.
+{name()}: Why would Bong-won ever hate you? Don't be silly.
+<<show san_blush>>
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Well, I guess I *am* pretty likable, right?
+ASan: I'll try it that way next time I see him!
+ASan: Thanks for the tip.
+(ASan and I spent some time chatting while petting Bong-won.)
+<<end>>
+===
+
+title: 주5_금_1교시_정문_신아산_긍정2_영문
+---
+{name()}: Should we go buy some Churu and feed Bong-won together?
+<<show san_smile>>
+ASan: Should we?
+<<if get("gold") >= 30>>
+    <<jump 주5_금_1교시_정문_신아산_츄르o_영문>>
+<<else>>
+    <<jump 주5_금_1교시_정문_신아산_츄르x_영문>>
+<<endif>>
+===
+
+title: 주5_금_1교시_정문_신아산_부정2_영문
+---
+(Wait, I left my wallet at home....)
+(.... What should I do....)
+{name()}: Let's try that next time we see him.
+<<play 신아산_흠>>
+ASan: Yeah, I guess that's best...
+<<show san_idle>>
+ASan: I should get going now.
+ASan: See you later.
+<<end>>
+===
+
+title: 주5_금_1교시_정문_신아산_츄르o_영문
+---
+{name()}: Yeah, let's go get some together.
+<<play 공통_발소리>>
+<<wait 2>>
+<<change gold -30>>
+<<show san_smile>>
+<<change lvSan 15>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Alright, now that we've got the Churu, let's see if Bong-won likes it!
+(She looks hilarious holding the Churu up high with a big grin.)
+{name()}: Pfft, you're so simple.
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: Hey, was that an insult?
+{name()}: No, no.
+{name()}: I meant you're cute.
+<<show san_blush>>
+ASan: ...........
+ASan: ..............
+ASan: Wh-whatever!
+ASan: Let's just go feed Bong-won!
+<<play 공통_야옹>>
+(And so, ASan and I fed Bong-won together.)
+(I thought to myself that her blushing side profile as she fed him was actually pretty cute...)
+<<end>>
+===
+
+title: 주5_금_1교시_정문_신아산_츄르x_영문
+---
+{name()}: .......?
+ASan: What's wrong?
+{name()}: I left my wallet at home....
+<<show san_neg2>>
+<<play 신아산_허>>
+ASan: You WHAT?????????
+ASan: Fine, I'll just go by myself.
+<<change lvSan -5>>
+<<dislike 신아산>>
+{name()}: Wa-wait up!!!!!!
+(Turning away coldly, ASan ran toward the convenience store faster than anyone.)
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(......I should've brought my wallet......)
+<<end>>
+===

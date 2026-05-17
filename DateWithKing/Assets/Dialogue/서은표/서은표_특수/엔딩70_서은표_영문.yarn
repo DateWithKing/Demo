@@ -1,0 +1,54 @@
+title: 엔딩70_서은표_영문
+---
+<<bg 검은화면>>
+(After becoming very close with EunPyo...)
+(Naturally, I started visiting her studio apartment quite often.)
+<<show pyo_smile>>
+<<play pyo_sound>>
+EunPyo: You're here?
+(EunPyo opens the door with a bright smile.)
+(EunPyo seems to truly love me.)
+(It feels like she doesn't want to be apart from me for even a single moment.)
+(And I don't mind that feeling at all.)
+(We officially started dating during summer break,)
+(And before we knew it, we're approaching our 100th day anniversary.)
+{name()}: What should we watch today?
+<<show pyo_idle>>
+EunPyo: Well, we finished the latest episodes of 'Dol-Se-Ah-Ttae' the day before yesterday...
+EunPyo: Oh, there's a new trendy anime out.
+<<show pyo_shock>>
+EunPyo: 'Wait! Beautiful Girls Love Me Even After Seeing My "Real Face"?' This is it.
+{name()}: That title is incredibly long.
+<<show pyo_smile>>
+EunPyo: Yeah. People usually just call it by a shortened name.
+(We often go on dates at her place.)
+(Now, sitting glued together on the sofa watching anime has become a natural part of our routine.)
+(On one side of the shelf, there are tons of photos of me and photos we took together.)
+(And my belongings are scattered all over the house.)
+(At this rate, I thought, wouldn't it be better if we just actually lived together...?)
+(After watching anime for quite a while, I noticed EunPyo nodding off.)
+{name()}: EunPyo. Want to go inside and sleep?
+<<show pyo_blush>>
+EunPyo: Mm-hmm. Let's go together...
+{name()}: Okay.
+(Just as I was about to stand up, EunPyo mumbled while leaning into my arms.)
+EunPyo: {name()}...
+<<play 서은표_흠>>
+EunPyo: Do you just... want to live with me?
+EunPyo: I don't want to be apart from you even for a second.
+{name()}: ......
+{name()}: I was actually just thinking the same thing.
+<<show pyo_smile>>
+EunPyo: Does that mean yes?
+{name()}: Yeah. I'll go bring all my stuff over right now.
+(EunPyo giggles.)
+EunPyo: No way, do that tomorrow.
+<<hide>>
+<<bg 서은표_진엔딩>>
+EunPyo: For now, let's just sleep together...
+(And so, we officially began living together.)
+(Even though we spent 24 hours a day together, we never had a single fight.)
+(I don't think I'll ever find anyone else who loves me as much as EunPyo does.)
+<<wait 1>>
+<<end>>
+===

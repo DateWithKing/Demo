@@ -1,0 +1,110 @@
+title: 양나현_키링_영문
+---
+<<show hyun_shock>>
+NaHyun: Oh my, is this a bunny keychain?
+<<like 양나현>>
+<<change lvHyun +5>>
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: It's so cute! Thank you. I'm going to hang it on my bag right now.
+<<end>>
+===
+
+title: 양나현_쿠키_영문
+---
+<<show hyun_shock>>
+NaHyun: Oh! I actually really love these cookies.
+<<like 양나현>>
+<<change lvHyun +5>>
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: Thanks, I’ll enjoy them!
+<<end>>
+===
+
+title: 양나현_기프트카드_영문
+---
+<<show hyun_shock>>
+NaHyun: Oh... Can I use this in WapleStory too?
+<<like 양나현>>
+<<change lvHyun +5>>
+<<show hyun_smile>>
+<<play 양나현_웃음>>
+NaHyun: Thank you. I'll put it to good use.
+<<end>>
+===
+
+title: 양나현_피크_영문
+---
+<<show hyun_shock>>
+NaHyun: What's this?
+<<dislike 양나현>>
+<<change lvHyun -10>>
+<<play 양나현_흠>>
+<<show hyun_neg>>
+NaHyun: What is it for... Is it a decoration? Well, thanks anyway...
+<<end>>
+===
+
+title: 양나현_꽃_영문
+---
+<<show hyun_shock>>
+NaHyun: Are these for me?
+<<show hyun_blush>>
+<<like 양나현>>
+<<change lvHyun +10>>
+<<play 양나현_웃음>>
+NaHyun: Out of the blue? Thank you... I love flowers. I'm so touched. I'll take these home and repot them.
+<<end>>
+===
+
+title: 양나현_귀도리_영문
+---
+<<show hyun_shock>>
+NaHyun: Ear muffs? Is this a present for me?
+<<dislike 양나현>>
+<<change lvHyun -10>>
+<<play 양나현_흠>>
+<<show hyun_idle>>
+NaHyun: I feel like they'll mess up my hair if I wear them... but thanks.
+<<end>>
+===
+
+title: 양나현_객체지향교재_영문
+---
+<<show hyun_idle>>
+NaHyun: ...?
+NaHyun: Are you giving this to me to... read?
+<<play 양나현_허>>
+<<show hyun_neg>>
+<<dislike 양나현>>
+<<change lvHyun -10>>
+NaHyun: Are you for real?
+<<show hyun_idle>>
+NaHyun: Well, okay then...
+<<end>>
+===
+
+title: 양나현_케이크_영문
+---
+<<show hyun_smile>>
+NaHyun: Whoa, what’s this? It’s shaped like a cat!
+<<show hyun_blush>>
+<<like 양나현>>
+<<change lvHyun +10>>
+<<play 양나현_웃음>>
+NaHyun: This is for me...?! I need to take a picture and post this on Insta.
+NaHyun: It's way too cute to eat... Thank you so much. It's adorable.
+<<end>>
+===
+
+title: 양나현_만화책_영문
+---
+<<show hyun_shock>>
+NaHyun: A comic book? Oh, you're giving this to me?
+<<dislike 양나현>>
+<<change lvHyun -10>>
+<<play 양나현_흠>>
+NaHyun: I don't really read these... but since you gave it to me, I'll give it a try. Thanks.
+<<end>>
+===

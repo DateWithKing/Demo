@@ -1,0 +1,60 @@
+title: 엔딩50_양나현_영문
+---
+<<bg 검은화면>>
+(There’s a missed call from NaHyun.)
+(I tried calling her back, but...)
+<<play 공통_수화음>>
+(The dial tone just rings endlessly.)
+{name()}: Why isn't she picking up?
+<<play 공통_긴웅성>>
+(Today is supposed to be my third date with NaHyun.)
+(I even got all dressed up, thinking, "Today's the day I finally confess!")
+(There are only 5 minutes left until our meeting time, but NaHyun has gone completely dark.)
+(I stayed at our meeting spot and kept waiting for her.)
+(After about 10 minutes of waiting...)
+(I hear NaHyun’s voice faintly in the distance.)
+NaHyun: ...
+(I couldn't quite make out what she was saying because of the distance.)
+(I started walking toward the sound of her voice.)
+{name()}: ...?
+(I froze in confusion.)
+<<hide>>
+<<bg 양나현_일반엔딩>>
+(NaHyun was walking, hand-in-hand with another guy, wearing the brightest smile I've ever seen on her.)
+(Only then could I hear their conversation.)
+<<play 양나현_웃음>>
+NaHyun: Oh, [Other Guy's Name]! 
+NaHyun: Thank you so much for telling me how you feel.
+Other Guy: Of course.
+Other Guy: Today is our third date, after all.
+Other Guy: I knew I had to ask you out properly today.
+NaHyun: To be honest, I was planning on confessing to you today, too.
+Other Guy: NaHyun...
+Other Guy: That means so much to me. I can't believe we were feeling the exact same way.
+NaHyun: [Other Guy's Name]...
+Other Guy: NaHyun...
+(Unable to believe the scene before my eyes, I turned around and bolted.)
+(How long had I been running?)
+<<play 공통_벨소리>>
+(My phone starts ringing.)
+(It's a call from NaHyun.)
+(With trembling hands, I answered the phone.)
+{name()}: ...... Hello?
+NaHyun: {name()}, where are you?
+{name()}: ... I, uh... I suddenly feel really sick. I don't think I can make it today.
+NaHyun: Oh... really?
+NaHyun: Actually, I was just about to call and say I couldn't meet because I'm not feeling great either.
+{name()}: ...... I see.
+NaHyun: Don't push yourself, and get some rest today.
+{name()}: ...Yeah. You too.
+(After that day, I was never able to reach NaHyun again.)
+(It turns out I was just another slow-moving fish in her crowded fish tank.)
+(At first, I was furious. But once I realized the truth and accepted it...)
+(I started to feel a bit better, thinking I'd dodged a bullet.)
+(I heard that NaHyun and that guy are still happily dating.)
+(......)
+(If only I had captured her heart a little more...)
+(Could I have been the one standing there...?)
+<<wait 1>>
+<<end>>
+===

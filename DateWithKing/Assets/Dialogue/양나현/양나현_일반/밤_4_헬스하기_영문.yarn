@@ -1,0 +1,81 @@
+title: 밤_4_헬스하기_양나현_영문
+---
+<<show hyun_idle_ver2>>
+(As I finished my workout and headed out, I saw NaHyun sitting on a bench, looking at her phone.)
+(She seemed deeply focused on something.)
+(Getting closer, I realized she was watching a performance video of a girl group.)
+{name()}: Hey. What are you watching?
+<<play hyun_sound>>
+NaHyun: Oh, hey {name()}. I was just taking a break from my workout.
+NaHyun: This is my favorite idol group.
+<<show hyun_smile_ver2>>
+NaHyun: Aren't they gorgeous?
+NaHyun: This member is my absolute favorite.
+(NaHyun points at the screen.)
+(One member in particular catches my eye.)
+<<choice 밤_4_헬스하기_긍정1_영문 "This member... she actually looks a bit like you." 밤_4_헬스하기_부정1_영문 "...Yeah, she's pretty.">>
+(At a quick glance, she really does resemble NaHyun...)
+===
+
+title: 밤_4_헬스하기_긍정1_영문
+---
+{name()}: This member... she actually looks a bit like you.
+<<show hyun_blush_ver2>>
+<<change lvHyun +5>>
+<<like 양나현>>
+<<play 양나현_웃음>>
+NaHyun: ...Huh? Really?
+NaHyun: You think we look alike too?
+<<show hyun_smile_ver2>>
+(NaHyun tries to keep a straight face, but she clearly looks happy.)
+(The corners of her mouth are practically touching the sky.)
+<<jump 밤_4_헬스하기_양나현_분기1_영문>>
+===
+
+title: 밤_4_헬스하기_부정1_영문
+---
+{name()}: ...Yeah, she's pretty.
+<<show hyun_idle_ver2>>
+<<change lvHyun -5>>
+<<dislike 양나현>>
+NaHyun: ...Right.
+<<jump 밤_4_헬스하기_양나현_분기1_영문>>
+===
+
+title: 밤_4_헬스하기_양나현_분기1_영문
+---
+<<choice 밤_4_헬스하기_긍정2_영문 "Yeah. I think you could totally pull it off." 밤_4_헬스하기_부정2_영문 "I think you look best exactly as you are now.">>
+NaHyun: Should I try dyeing my hair burgundy like her?
+===
+
+title: 밤_4_헬스하기_긍정2_영문
+---
+{name()}: Yeah. I think you could totally pull it off.
+{name()}: You should go for it.
+<<show hyun_smile_ver2>>
+<<play 양나현_흠>>
+NaHyun: Nice. I'll head to the salon once the semester is over.
+NaHyun: I was starting to get a bit bored with the blonde anyway...
+(I sat with NaHyun and watched a few more performance videos.)
+<<end>>
+===
+
+title: 밤_4_헬스하기_부정2_영문
+---
+{name()}: Hmm...
+(I looked at NaHyun's face and tried to picture it.)
+(I think the blonde looks better on her.)
+<<show hyun_idle_ver2>>
+NaHyun: Not a fan of the idea?
+NaHyun: Maybe I'll just get a root touch-up then.
+{name()}: I think you look best exactly as you are now.
+(NaHyun wore a subtle expression.)
+(She seemed to be in a good mood, though...)
+<<change lvHyun +5>>
+<<like 양나현>>
+NaHyun: ...
+<<show hyun_smile_ver2>>
+NaHyun: In that case, want to see some photos of me before I dyed my hair?
+(NaHyun showed me some photos of herself from her high school days.)
+<<end>>
+===

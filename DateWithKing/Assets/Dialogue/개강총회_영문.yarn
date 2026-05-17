@@ -1,0 +1,65 @@
+title: 개강총회_영문
+---
+<<bg 개강총회>>
+(Today is the first day of the spring semester...)
+(Since I recently joined the game development club this semester,)
+(I attended the club's general meeting after all my classes were over.)
+(After a brief round of introductions and a presentation of the club's schedule,)
+(We moved to a place for the welcome party.)
+(I introduced myself to the three girls sitting at my table.)
+<<show hyun_idle>>
+NaHyun: Hi, I'm NaHyun Yang, Class of '24.
+<<show pyo_idle>>
+EunPyo: I'm EunPyo Seo, Class of '24!
+<<show san_idle>>
+ASan: Oh, h-hello. I'm ASan Shin, Class of '22.
+<<hide>>
+I'm also from the Class of '22.
+(We shared a conversation.)
+(As we talked, we became somewhat close and decided to speak more comfortably to each other.)
+<<show hyun_idle>>
+NaHyun: Do you live alone near campus?
+(I do live alone. To say yes, let's nod.)
+<<choice 개강총회_긍정_영문 "Yeah" 개강총회_긍정_영문 "Yeah">>
+===
+
+title: 개강총회_긍정_영문
+---
+<<show pyo_idle>>
+EunPyo: Oh, me too. Are you living near the *** Officetel area?
+(I don't live near there. To say no, let's shake our head.)
+<<choice 개강총회_부정_영문 "No" 개강총회_부정_영문 "No">>
+===
+
+title: 개강총회_부정_영문
+---
+<<show san_idle>>
+ASan: I'm quite envious that you live by yourself...
+<<show pyo_neg>>
+EunPyo: Hey, we agreed to speak comfortably~
+<<show san_neg>>
+ASan: Ah, right... I'm so sor— sorry...
+<<hide>>
+(We talked much more than I expected.)
+(All three of them seem like charming and cute friends in their own unique ways.)
+<<show san_idle>>
+ASan: I think I'll have to take a leave of absence next semester because I have to work as an intern.
+<<show pyo_smile>>
+EunPyo: An internship? That's so cool!
+<<show hyun_idle>>
+NaHyun: I'm going on an exchange program next semester too.
+<<show pyo_idle>>
+EunPyo: Actually, next semester, I... I'm...
+<<show pyo_blush>>
+EunPyo: (Blushing)... Never mind.
+<<show san_idle>>
+ASan: What?! Now I'm curious.
+<<show pyo_idle>>
+EunPyo: Oh, stop it... It's a secret... Anyway, I'm planning to take a break from school too...
+<<hide>>
+(It seems like everyone won't be around next semester.)
+(Does that mean I only have this one semester to spend time with them?!)
+(The welcome party wound down,)
+(And we added each other on the EveryClass timetable app, promising to say hi if we ran into each other on campus.)
+<<end>>
+===

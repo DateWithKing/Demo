@@ -1,0 +1,44 @@
+title: 밤_5_택배_서은표_영문
+---
+(I decided to take a job loading and unloading parcels to make some quick cash.)
+(I put on my gloves and worked hard moving boxes.)
+(My back is starting to ache.)
+(After working hard, I took a short break to slack off for a bit.)
+(As I turned my head, I saw a familiar figure near the next conveyor belt.)
+(Tall, bobbed hair... is that EunPyo?!)
+<<show pyo_neg_ver2>>
+<<play pyo_sound>>
+(EunPyo is working hard.)
+(Soon, it was break time.)
+(I approached EunPyo.)
+{name()}: EunPyo?
+<<play 서은표_흠>>
+<<show pyo_shock_ver2>>
+EunPyo: !!
+<<show pyo_blush_ver2>>
+EunPyo: Uh... {name()}.
+{name()}: I didn't expect to see you in a place like this.
+EunPyo: Y-yeah, me neither...
+<<like 서은표>>
+<<change lvPyo +10>>
+EunPyo: I didn't think you'd recognize me...
+{name()}: How did you end up working here?
+<<show pyo_neg2_ver2>>
+EunPyo: Well... I guess I needed some quick cash?
+{name()}: Same here.
+(EunPyo... was she really in a situation where she needed quick cash?)
+(I thought she lived in a nice apartment and never seemed to lack anything.)
+(Well, she must have her reasons. I brushed the thought aside.)
+{name()}: Isn't it exhausted? I feel like I would've collapsed if it weren't for the snacks.
+<<show pyo_neg_ver2>>
+EunPyo: Tell me about it. I'm just pushing through by treating it like a strength workout.
+<<if get("lvPyo") >= 60>> 
+    <<show pyo_blush_ver2>>
+    EunPyo: Still, it's nice to see you outside of school......
+    EunPyo: You still smell so good...
+<<endif>>
+<<show pyo_idle_ver2>>
+EunPyo: Let's hang in there and finish the shift.
+{name()}: Yeah. Good luck to you too.
+<<end>>
+===

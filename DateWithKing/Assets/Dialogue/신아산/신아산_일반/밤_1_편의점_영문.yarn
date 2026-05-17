@@ -1,0 +1,64 @@
+title: 밤_1_편의점_신아산_영문
+---
+(I'm working a shift at a convenience store as a substitute for a friend.)
+(They clearly said this location doesn't get many people and it would be even quieter at night...)
+(But for some reason, I'm getting swamped with work today.)
+<<play 편의점_문>>
+{name()}: Yes, welcome.
+<<show san_idle_ver2>>
+ASan: Do you have Pukimon Bread h—
+{name()}: Oh, ASan Shin?
+<<show san_shock_ver2>>
+<<play san_sound>>
+ASan: What? It's {name()}?
+ASan: Since when did you start working part-time here?
+{name()}: Oh, I'm not a regular. A friend asked me to cover their shift.
+<<show san_neg_ver2>>
+<<play 신아산_흠>>
+ASan: Hmph. Got my hopes up for nothing.
+ASan: I was going to ask you to hide one for me when the Pukimon Bread comes in.
+{name()}: Pukimon Bread..?
+ASan: You don't know it? It's so famous lately that it's sold out everywhere.
+ASan: I really wanted to try it.......
+(Hearing ASan's story reminded me of something.)
+<<choice 밤_1_편의점_신아산_긍정1_영문 "Wait, we actually have some in stock." 밤_1_편의점_신아산_부정1_영문 "Unfortunately, our store is all sold out too." true>>
+(My friend said they hid a famous bread behind the counter... should I give it to ASan?)
+===
+
+title: 밤_1_편의점_신아산_긍정1_영문
+---
+{name()}: Wait, we actually have some in stock.
+<<show san_smile_ver2>>
+<<play 신아산_웃음>>
+ASan: Really???????
+ASan: I've been to ten different convenience stores all day looking for that....
+{name()}: That's a relief. 
+{name()}: Actually, it belongs to my friend, but... well, I guess it's okay to give it to you.
+<<show san_idle_ver2>>
+ASan: What did you say??????
+ASan: Is it really okay to give it to me?
+{name()}: Yeah.
+{name()}: Anyway, that friend doesn't even like Pukimon.
+<<show san_smile_ver2>>
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: I'd be more than grateful.
+ASan: I'll pay for it then.
+{name()}: Sure. That'll be 4,800 won.
+(Once the payment was finished, ASan left the store with the bread and a child-like smile.)
+(I hope she gets the character she likes from the collectible sticker inside.)
+<<end>>
+===
+
+title: 밤_1_편의점_신아산_부정1_영문
+---
+{name()}: Unfortunately, our store is all sold out too.
+<<show san_idle_ver2>>
+ASan: As expected....
+ASan: I've been to ten different convenience stores all day looking for that....
+ASan: I should just give up.
+ASan: Thanks for letting me know.
+ASan: See you at school tomorrow.
+<<end>>
+===

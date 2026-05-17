@@ -1,0 +1,272 @@
+title: 밤_3_무관_영문
+---
+<<bg 검은화면>>
+(Just as I was about to head out, I got a notification.)
+<<play 띠롱띠롱>>
+<<wait 1>>
+ASan: (B1, 11-gil 4, Dosan-daero, Gangnam-gu)
+ASan: (Come if you’ve got nothing better to do.)
+ASan: (I’m leaving if you’re not here in 10 mins.)
+<<play 띠롱띠롱>>
+<<wait 1>>
+(Then, another message came in.)
+NaHyun: (What’s up? You’re not sleeping already, are you?)
+NaHyun: (Did you finish the assignment? If not, let’s hit a cafe and study together.)
+<<play 띠롱띠롱>>
+<<wait 1>>
+(And yet another one.)
+EunPyo: ({name()}~ What are you up to??)
+EunPyo: (If you’re not busy, wanna come out for a bit? I’m at Mulbit Park.)
+Who should I go meet?
+-> ASan
+    <<jump 밤_3_무관_신아산_영문>>
+-> NaHyun
+    <<jump 밤_3_무관_양나현_영문>>
+-> EunPyo
+    <<jump 밤_3_무관_서은표_영문>>
+===
+
+title: 밤_3_무관_양나현_영문
+---
+<<bg 특_카페>>
+(After getting NaHyun’s text, I arrived in front of the cafe.)
+<<show hyun_idle_ver2>>
+<<play hyun_sound>>
+(After a short wait, NaHyun approached me.)
+NaHyun: Hey, {name()}.
+{name()}: NaHyun.
+{name()}: What’s the occasion? You asking me to study together?
+<<show hyun_neg_ver2>>
+NaHyun: What do you mean "what’s the occasion"?
+NaHyun: I do study when I have to.
+<<show hyun_idle_ver2>>
+NaHyun: Let’s head in.
+(We went inside, ordered drinks, and found a spot near an outlet.)
+(I sat down and pulled out my laptop alongside NaHyun.)
+NaHyun: (Staring at her screen) You know that assignment due today.
+{name()}: Right. Did you get much done?
+NaHyun: Nope, haven’t even started.
+NaHyun: I'm starting... now.
+<<choice 밤_3_무관_양나현_긍정1_영문 "Yeah, finished it yesterday." 밤_3_무관_양나현_부정1_영문 "Nah, I haven't started either.">>
+NaHyun: How about you?
+===
+
+title: 밤_3_무관_양나현_긍정1_영문
+---
+{name()}: Yeah, finished it yesterday.
+{name()}: It’s always better to get it over with early.
+<<choice 밤_3_무관_양나현_긍정2_영문 "Sure. I'll help you." 밤_3_무관_양나현_부정2_영문 "Try doing it on your own.">>
+NaHyun: Really? Then... could you maybe help me out a bit?
+===
+
+title: 밤_3_무관_양나현_긍정2_영문
+---
+<<change lvHyun +5>>
+<<like 양나현>>
+{name()}: Sure, I'll help you.
+{name()}: It shouldn't be that hard.
+(I worked on the assignment with NaHyun.)
+(With the two of us working together, we finished it in no time.)
+<<jump 밤_3_무관_양나현_분기1_영문>>
+===
+
+title: 밤_3_무관_양나현_부정2_영문
+---
+{name()}: Nah, try doing it yourself.
+{name()}: I think this might be on the exam.
+<<choice 밤_3_무관_양나현_긍정2_영문 "Alright, fine." 밤_3_무관_양나현_부정2_영문 "No way.">>
+NaHyun: But still... can't you help just a little?
+===
+
+title: 밤_3_무관_양나현_부정1_영문
+---
+{name()}: Nah, I haven't even started yet.
+NaHyun: Let’s do it together then.
+{name()}: Sounds good to me.
+(I worked on the assignment with NaHyun.)
+(With the two of us working together, we finished it in no time.)
+<<jump 밤_3_무관_양나현_분기1_영문>>
+===
+
+title: 밤_3_무관_양나현_분기1_영문
+---
+<<show hyun_idle_ver2>>
+NaHyun: I don't even remember the last time I turned something in on time.
+{name()}: Feels good to be done, though, right?
+NaHyun: Yeah. But after using my brain this much, I really don't want to go to class tomorrow.
+{name()}: Thinking of pulling a "dip after attendance"?
+NaHyun: I'll think about it when I wake up.
+(Time flew by while we worked, and the staff announced they were closing.)
+NaHyun: Let's head home now.
+{name()}: Sure.
+(After tidying up, I said goodbye to NaHyun and we parted ways.)
+<<end>>
+===
+
+title: 밤_3_무관_신아산_영문
+---
+<<bg 특_노래방>>
+(I arrived at the address ASan abruptly sent me.)
+{name()}: B1, 11-gil 4, Dosan-daero, Gangnam-gu... Byeol-Byeol-Byeol Karaoke?
+<<show san_smile_ver2>>
+<<play san_sound>>
+ASan: Oh, {name()}!!!!!
+(ASan seems to be in an exceptionally good mood today.)
+{name()}: You seem really happy today. Did something good happen?
+<<if get("lvSan") >= 35>>
+    <<jump 밤_3_무관_신아산_특수_영문>>
+<<else>>
+    <<jump 밤_3_무관_신아산_일반_영문>>
+<<endif>>
+===
+
+title: 밤_3_무관_신아산_특수_영문
+---
+ASan: Yep~~
+ASan: I'm just in a good mood because it's been a while since I've been to karaoke.
+ASan: Wanna sing with me?
+{name()}: Sure.
+(We went into the karaoke room together.)
+(ASan and I are sitting side by side in the cramped room.)
+<<show san_blush_ver2>>
+(Breaking the silence, ASan spoke first.)
+ASan: I'm going first.
+ASan: You never know when I'll be the lead vocal at a gig, so I need to practice singing too!!!!
+ASan: Along with my bass!
+{name()}: You even brought your bass?
+ASan: Yeah!
+ASan: Just wait and see.
+<<show san_smile_ver2>>
+ASan: Congratulations, you're so amazing~~~~~~~~~~~
+ASan: Congratulations, how could you do that~~~~~~~~~~~
+<<wait 1>>
+<<show san_blush_ver2>>
+ASan: How was it?
+ASan: Honestly, I'm still practicing the vocals, and, uh, that vibrato part—
+{name()}: You're actually really good.
+{name()}: You could totally switch to lead vocal.
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Re-really?
+ASan: You're... you're not lying, right?
+{name()}: Why would I lie about something like that?
+{name()}: That was great.
+ASan: ......
+ASan: I'll let you hear it again next time.
+ASan: ......
+ASan: If I have time, I mean!!!!
+(And so, the two of us enjoyed our karaoke "date" (?).)
+<<end>>
+===
+
+title: 밤_3_무관_신아산_일반_영문
+---
+ASan: Yep~~
+ASan: I'm just in a good mood because it's been a while since I've been to karaoke.
+ASan: Wanna sing with me?
+{name()}: Sure.
+(What should I pick... Since we're together, a duet would be nice, right?)
+(I selected "Love Day" by Yang Yoseop and Jung Eunji.)
+{name()}: Do you know this one?
+<<show san_blush_ver2>>
+<<play 신아산_허>>
+ASan: .....
+ASan: Did you seriously just pick a duet?! How embarrassing!!!
+ASan: Cancel, cancel, cancel!!!!!
+(ASan canceled the song before the first note even played.)
+(With a bright red face, ASan picked a metal song instead...)
+(I spent the next hour watching ASan's solo concert.)
+<<show san_idle_ver2>>
+ASan: Phew...
+ASan: I think I went a bit too hard.
+{name()}: Seemed like it. Especially during that first song, you looked like a total rockstar.
+<<show san_blush_ver2>>
+ASan: What?
+ASan: Well, I do hear that quite often... Hmph.
+ASan: I'll let you hear it again if there's another chance.
+(Since it was late, we said our goodbyes and headed to our respective homes.)
+<<end>>
+===
+
+title: 밤_3_무관_서은표_영문
+---
+<<bg 밤_산책로>>
+(I see EunPyo standing under a streetlight in the distance.)
+<<show pyo_idle_ver2>>
+<<play pyo_sound>>
+(As I approach, she notices me and waves.)
+EunPyo: {name()}! You actually came.
+{name()}: Of course, I had to since you called.
+<<show pyo_blush_ver2>>
+EunPyo: Thanks for coming out.
+{name()}: What did you call me for?
+<<show pyo_neg_ver2>>
+EunPyo: Just because. I have to practice soccer, but I felt lonely by myself...
+<<if get("lvPyo") >= 40>>
+    <<show pyo_blush_ver2>>
+    EunPyo: And I kind of missed you...
+<<endif>>
+<<choice 주3_수_밤_무관_서은표_긍정1_영문 "Sounds good, but is it okay if I join?" 주3_수_밤_무관_서은표_부정1_영문 "Nah, I just want to watch you practice." >>
+<<show pyo_smile_ver2>>
+EunPyo: I'm gonna kick the ball around. Wanna join?
+===
+
+title: 주3_수_밤_무관_서은표_긍정1_영문
+---
+{name()}: Sounds good, but is it okay if I join?
+{name()}: I mean, playing with a pro... isn't the skill gap too big?
+<<show pyo_neg_ver2>>
+EunPyo: No way. It’s not like we’re competing...
+<<show pyo_idle_ver2>>
+EunPyo: I’ll play goalie, so could you take some shots for me?
+{name()}: That’s easy.
+{name()}: People used to call me a "soccer prodigy" back in the day.
+<<jump 주3_수_밤_무관_서은표_분기1_영문>>
+===
+
+title: 주3_수_밤_무관_서은표_부정1_영문
+---
+{name()}: Nah, I just want to watch you practice.
+<<show pyo_neg_ver2>>
+EunPyo: Well, if you say so.
+EunPyo: But let me know if you get bored.
+<<show pyo_idle_ver2>>
+(EunPyo started practicing by dribbling the ball.)
+(I sat on the bench and watched her blankly.)
+(Did she say she was a goalkeeper?)
+(Maybe I should give it a kick?)
+(Watching her move so hard makes me want to join in too.)
+{name()}: Hey, let me try a shot.
+<<show pyo_smile_ver2>>
+EunPyo: Oh, nice!
+<<jump 주3_수_밤_무관_서은표_분기1_영문>>
+
+===
+
+title: 주3_수_밤_무관_서은표_분기1_영문
+---
+(I placed the soccer ball on the ground and kicked it with all my might.)
+(Luckily, the ball flew toward EunPyo in a decent arc.)
+<<show pyo_shock_ver2>>
+EunPyo: Whoa!
+(EunPyo moved swiftly and caught the ball with her hands.)
+<<show pyo_smile_ver2>>
+EunPyo: Too easy!
+(Seeing EunPyo's teasing face fired up my competitive spirit.)
+{name()}: Do I get a prize if I score even once?
+EunPyo: That sounds fun.
+<<show pyo_idle_ver2>>
+EunPyo: If you score, I’ll buy you a drink.
+{name()}: Okay. It’s a deal!
+(Moving around made me feel great, so I kept kicking the ball excitedly.)
+<<show pyo_smile_ver2>>
+(EunPyo seemed to be having quite a lot of fun, too.)
+(After a while, we both ended up slumped on the ground, exhausted.)
+EunPyo: Ah, that was fun.
+<<show pyo_idle_ver2>>
+EunPyo: Why don't you join the soccer club?
+{name()}: As a benchwarmer?
+(We talked a bit more before heading home as it got late.)
+<<end>>
+===

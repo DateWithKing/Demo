@@ -1,0 +1,68 @@
+title: 신아산_엿_영문
+---
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+<<show san_neg>>
+ASan: Did you just... flip me off????
+ASan: You think I don't know how to do that too????
+(ASan flips you off right back.)
+<<show san_smile>>
+ASan: Suck it, lol.
+<<show san_idle>>
+<<choice_again>>
+===
+
+title: 신아산_두명_영문
+---
+<<show san_idle>>
+ASan: Who's that behind you?
+ASan: Is that some kind of pet you're keeping?
+<<choice_again>>
+===
+
+title: 신아산_느려_영문
+---
+<<show san_idle>>
+ASan: You're being too slow to answer.
+{name()}: Oh...
+(ASan stopped paying attention to anything I had to say.)
+<<end>>
+
+===
+title: 신아산_k하트_영문
+---
+<<show san_blush>>
+ASan: ...?
+ASan: Are you... challenging me to an "Extreme Heart-Fingers Battle" right now??????
+{name()}: Why would I do that?!!!!!!!!
+<<show san_smile>>
+ASan: I won't back down..
+ASan: Witness my "Heart-Fingers Flash Transcendence: Cry, O Void, Style 4"!!!!!!!!!!!!
+{name()}: What the heck are you even talking about?!!!!!
+<<show san_idle>>
+<<choice_again>>
+===
+
+title: 신아산_주먹_영문
+---
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+<<show san_neg>>
+ASan: HEY!!!!!!!!!!!
+ASan: Did you... did you just try to throw a straight punch at a lady?
+ASan: You...
+ASan: You're freaking insane!!!!!!
+<<show san_idle>>
+<<choice_again>>
+===
+
+title: 신아산_쉿_영문
+---
+<<show san_idle>>
+ASan: Are you telling me to stop talking?
+<<show san_neg>>
+ASan: They say you have to listen to a person until the very end for good luck to come your way.
+ASan: ...I read that in a book.
+<<show san_idle>>
+<<choice_again>>
+===

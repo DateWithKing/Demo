@@ -1,0 +1,126 @@
+title: 주4_목_3교시_동아리방_신아산_영문
+---
+(I've been at school for four hours now, and I'm beyond exhausted.)
+(Maybe I should hit the club room...)
+<<wait 2>>
+{name()}: Oh, ASan?
+<<play san_sound>>
+<<show san_spec>>
+(Usually, the other kids are here. She's an unexpected face to see in the club room.)
+(And she's actually playing the bass.)
+<<play 공통_노크>>
+<<wait 2>>
+{name()}: What are you up to?
+ASan: Oh, I'm practicing for the show next week.
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: So, how do I look? My bass-playing pose, I mean.
+ASan: Even from 200 meters away, I look pretty iconic, don't I?
+ASan: Want me to give you an autograph while I'm still reachable?
+{name()}: ...I don't need an autograph!!!!
+ASan: Don't be shy~~
+ASan: For you, I'll S-P-E-C-I-A-L-L-Y include a personalized message~
+{name()}: I'm good, thanks!!!!!!!!!
+<<play 신아산_흠>>
+ASan: By the way, you've never actually heard me play, have you?
+ASan: Want a listen?
+<<wait 1>>
+<<show san_idle>>
+<<choice 주4_목_3교시_동아리방_신아산_긍정1_영문 "Sure, let's hear it." 주4_목_3교시_동아리방_신아산_부정1_영문 "Honestly, I'm just so tired..." true>>
+ASan: Just so you know, I'm debuting this song at next week's show, so I can only give you about a 5-second teaser.
+===
+
+title: 주4_목_3교시_동아리방_신아산_긍정1_영문
+---
+(She looks so excited, I can't really say no.)
+{name()}: Sure, let's hear it.
+<<show san_blush>>
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Awesome!
+<<show san_spec>>
+<<play 베이스_소리>>
+<<wait 3>>
+<<show san_blush>>
+ASan: Well? What do you think?
+(Maybe because it's a bass, it mostly just sounded like a bunch of rhythmic 'clack-clack' noises...)
+ASan: How was it?!??!???!?!?!?!?!?
+{name()}: Whoa, it's got a really cool vibe.
+{name()}: Uh... I mean, I think it's going to be a huge hit at the show next week, and...
+<<show san_smile>>
+ASan: Thanks.
+{name()}: ....Huh?
+<<show san_neg2>>
+ASan: I said thanks! Okay?!!!! Don't make me say it twice.
+{name()}: Oh, okay... got it...
+(After that, ASan kept bugging me and ruined my nap by offering to play all sorts of songs on her guitar.)
+(I don't know if she realized I was sleepy, but it was kind of cute how she kept insisting on playing me a "lullaby.")
+(...Now I'm actually curious about her show.)
+<<end>>
+===
+
+title: 주4_목_3교시_동아리방_신아산_부정1_영문
+---
+(I didn't show it to ASan, but I'm actually really drained..)
+(If I listen to her play now, I might not be able to give her a proper reaction, which could be awkward..)
+{name()}: Honestly, I'm just so tired...
+<<show san_neg2>>
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: Oh. Fine.
+ASan: It's not like I really wanted to play for you anyway.
+(ASan starts grumpily packing her gig bag, muttering to herself just loud enough for me to hear.)
+ASan: Says he doesn't need my autograph.
+ASan: Says he doesn't want to hear my music.........
+ASan: .......
+<<change lvSan -5>>
+<<dislike 신아산>>
+<<show san_neg>>
+ASan: Fine. I'm leaving.
+ASan: Get. Some. Rest.
+ASan: For. Ever.
+(ASan slams the door shut as she leaves.)
+<<choice 주4_목_3교시_동아리방_신아산_긍정2_영문 "Go after her." 주4_목_3교시_동아리방_신아산_부정2_영문 "Don't go after her.">>
+(Should I go out and try to cheer her up?)
+===
+
+title: 주4_목_3교시_동아리방_신아산_긍정2_영문
+---
+(She's so upset, I can't just let her go like this.)
+(I burst out the door and caught up with ASan as she was turning the corner.)
+{name()}: ASan!!!!!!!
+<<show san_neg>>
+ASan: What.
+(She sounds cold, but her eyes are red.)
+(It looks like she was crying.)
+{name()}: ......I'm sorry.
+{name()}: It's not that I didn't want to hear you play. I was just up all night doing assignments and I'm exhausted.
+{name()}: ......
+{name()}: I know I'm being shameless, but... could you play for me some other time?
+<<play 신아산_허>>
+ASan: .....
+ASan: I'll think about it.
+ASan: Now, can you get out of my way?
+(ASan left me standing all alone in the hallway.)
+(I think I really messed up this time....)
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+<<end>>
+===
+
+title: 주4_목_3교시_동아리방_신아산_부정2_영문
+---
+(......)
+(It can't be helped.)
+(Sleep comes first.)
+<<change lvSan -5>>
+<<dislike 신아산>>
+(And so, I fell asleep, leaving ASan to herself.)
+<<wait 1>>
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(Not even knowing that ASan was crying in the hallway.)
+<<end>>
+===

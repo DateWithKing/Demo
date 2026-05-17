@@ -1,0 +1,104 @@
+title: 주4_목_1교시_정문_서은표_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+<<wait 1>>
+(As I head to school and climb the stairs in front of the main gate, I see EunPyo sitting on a bench.)
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: Hey, {name()}!
+{name()}: Oh, hey.
+{name()}: You don't have a class right now, do you?
+{name()}: You're here really early.
+EunPyo: I just woke up early today...
+<<show pyo_smile>>
+EunPyo: Since I was already up, I just came straight to school.
+{name()}: That's not easy to do.
+{name()}: Personally, I want to spend as little time at school as possible.
+<<show pyo_blush>>
+EunPyo: Actually, I’ve been enjoying coming to school lately.
+{name()}: Really? Why?
+<<play 서은표_웃음>>
+EunPyo: Well... because {name()} is here when I come?
+(EunPyo smiled shyly.)
+{name()}: What's with that? You're making me blush.
+<<if get("lvPyo") >= 50>>
+    EunPyo: Don't you feel good seeing me too?
+    EunPyo: Even last night, I couldn't sleep properly because I wanted to see you so soon......
+<<endif>>
+(The morning breeze is especially cold today.)
+<<choice 주4_목_1교시_정문_서은표_긍1_영문 "Let's go in together." 주4_목_1교시_정문_서은표_부1_영문 "I'll head in first." >>
+(Should I ask her to go in together?)
+===
+
+title: 주4_목_1교시_정문_서은표_긍1_영문
+---
+{name()}: Have you been sitting here this whole time?
+{name()}: Aren't you cold? Let's go in together.
+<<show pyo_smile>>
+EunPyo: Yeah, I'd love to. 
+<<jump 주4_목_1교시_정문_서은표_분기1_영문>>
+===
+
+title: 주4_목_1교시_정문_서은표_부1_영문
+---
+{name()}: Have you been sitting here this whole time?
+{name()}: I'm going to head in first.
+<<show pyo_idle>>
+EunPyo: Oh, no.
+EunPyo: Let's go in together.
+<<jump 주4_목_1교시_정문_서은표_분기1_영문>>
+===
+
+title: 주4_목_1교시_정문_서은표_분기1_영문
+---
+(EunPyo stands up from the bench and follows me.)
+(As she stands next to me, I feel a chill radiating from her.)
+(Just how long has she been sitting out here?)
+(EunPyo links her arm with mine.)
+EunPyo: You have class next period, right?
+<<choice 주4_목_1교시_정문_서은표_긍2_영문 "Yeah, I need to stop by the 3rd-floor lab for a bit." 주4_목_1교시_정문_서은표_부2_영문 "No, I'm just killing time." >>
+EunPyo: Do you have any plans right now?
+===
+
+title: 주4_목_1교시_정문_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Yeah, I need to stop by the 3rd-floor lab for a bit.
+{name()}: How about you?
+EunPyo: I don't have anything.
+EunPyo: I'll walk you to the 3rd floor.
+<<show pyo_smile>>
+{name()}: I'd like that, then.
+<<bg 낮_강의실>>
+(We walked up to the 3rd floor together.)
+<<show pyo_idle>>
+EunPyo: See you in the lecture hall in a bit.
+<<if get("lvPyo") >= 50>>
+    <<show pyo_blush>>
+    EunPyo: I'll save a seat for you...
+<<endif>>
+<<end>>
+===
+
+title: 주4_목_1교시_정문_서은표_부2_영문
+---
+{name()}: No, I'm just killing time.
+<<play 서은표_흠>>
+<<show pyo_smile>>
+EunPyo: Perfect. Want to relax in the club room together?
+{name()}: Sure. Let's head to the club room.
+<<like 서은표>>
+<<change lvPyo +5>>
+<<bg 낮_동아리방>>
+<<show pyo_idle>>
+(We moved to the club room.)
+(We spent some time watching anime clips together.)
+EunPyo: See you in the lecture hall in a bit.
+<<if get("lvPyo") >= 50>>
+    <<show pyo_blush>>
+    EunPyo: I'll save a seat for you...
+<<endif>>
+<<end>>
+===

@@ -1,0 +1,132 @@
+title: 주2_화_2교시_강의실_신아산_영문
+---
+<<play 공통_웅성>>
+Prof: That's all for today's lecture.
+{name()}: Ugh... finally over.
+(I turn my head and see ASan packing her bags faster than anyone else.)
+<<play san_sound>>
+<<show san_idle>>
+{name()}: Heading home already?
+{name()}: Wait, what's that?
+{name()}: ...Is that a guitar?
+ASan: This?
+ASan: Oh, did I not tell you?
+<<show san_blush>>
+<<play 신아산_흠>>
+ASan: I happen to be a lady of the bass..
+<<show san_spec>>
+<<wait 2>>
+<<choice 주2_화_2교시_강의실_신아산_긍정1_영문 "It's my first time seeing a bass in person. It looks so cool." 주2_화_2교시_강의실_신아산_부정1_영문 "Don't people usually play electric guitar?" true>>
+<<show san_idle>>
+ASan: Well? Pretty awesome, right?
+===
+
+title: 주2_화_2교시_강의실_신아산_긍정1_영문
+---
+{name()}: Whoa....
+{name()}: It's my first time seeing a bass in person. It looks so cool.
+<<show san_blush>>
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Right? Forget electric guitars or pianos, the bass is where the real soul is.
+ASan: You actually have some taste, after all!
+{name()}: Haha....
+<<show san_idle>>
+ASan: That's exactly why I signed up for this class.
+<<choice 주2_화_2교시_강의실_신아산_긍정2_영문 "Yeah. A song popped into my head as soon as I heard the assignment details." 주2_화_2교시_강의실_신아산_부정2_영문 "Not yet...">>
+ASan: The assignment is to submit a song review. Have you thought of a track yet?
+===
+
+title: 주2_화_2교시_강의실_신아산_부정1_영문
+---
+{name()}: The bass?
+{name()}: Don't people usually play electric guitar instead?
+<<show san_neg2>>
+<<change lvSan -10>>
+<<dislike 신아산>>
+<<play 신아산_허>>
+ASan: ELECTRIC GUITAR????????
+ASan: Who plays something that tacky these days?????
+ASan: Besides, the reason I play the bass is...
+ASan: .....
+ASan: Because my mom said I look the coolest when I'm playing it, okay!!!!!!!!!!!
+(ASan huffs, swings her gig bag over her shoulder, and storms off into the distance.)
+(I think I might have seen her eyes welling up with tears...)
+<<notice "You feel a pang of guilt.">>
+<<change karma +1>>
+(What have I done...)
+<<end>>
+===
+
+title: 주2_화_2교시_강의실_신아산_긍정2_영문
+---
+{name()}: Yeah. A song popped into my head as soon as I heard the assignment details.
+ASan: What is it?
+{name()}: "You Were Handsome" by Day-Five.
+<<show san_smile>>
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+ASan: Seriously???????
+ASan: I am obsessed with Day-Five!
+ASan: I've been a fan since their debut. I've been to their fan-signings, and I even have their vinyl records at home.
+<<if get("lvSan") >= 30>>
+    <<jump 주2_화_2교시_강의실_신아산_호감도_업_영문>>
+<<else>>
+    <<jump 주2_화_2교시_강의실_신아산_호감도_다운_영문>>
+<<endif>>
+===
+
+title: 주2_화_2교시_강의실_신아산_부정2_영문
+---
+{name()}: Not yet...
+{name()}: I like so many songs that I don't know which one to pick.
+{name()}: ...Maybe I'll go with a Day-Five song.
+<<if get("lvSan") >= 30>>
+    <<jump 주2_화_2교시_강의실_신아산_호감도_업_영문>>
+<<else>>
+    <<jump 주2_화_2교시_강의실_신아산_호감도_다운_영문>>
+<<endif>>
+===
+
+title: 주2_화_2교시_강의실_신아산_호감도_업_영문
+---
+<<show san_blush>>
+<<play 신아산_흠>>
+ASan: Well, in that case... I can bring my Day-Five albums from home. Want to do the assignment together?
+ASan: I mean, if you d-don't want to, you can say no.
+ASan: ...................
+<<show san_neg>>
+<<play 신아산_허>>
+ASan: You hate the idea, don't you?!!!!!!!
+{name()}: Wh- No!!!!!!!!
+{name()}: It's just my first time doing an assignment with someone else, so I was a bit caught off guard.
+{name()}: Especially with a girl.
+<<show san_shock>>
+<<wait 1>>
+<<show san_blush>>
+<<change lvSan 5>>
+<<like 신아산>>
+<<play 신아산_웃음>>
+{name()}: Anyway, I'd love to. Let's pick a day and work on it together.
+ASan: Awesome!
+ASan: S-s-so, see you then!!!!!
+(ASan hurries off somewhere.)
+(Was it just my imagination, or did she look incredibly happy as she rushed away?)
+<<end>>
+===
+
+title: 주2_화_2교시_강의실_신아산_호감도_다운_영문
+---
+<<show san_smile>>
+ASan: Anyway, Day-Five has so many good tracks.
+ASan: Let me know if you need any recommendations~.
+<<show san_idle>>
+ASan: Oh shoot, my library books are due tomorrow!
+ASan: I better get to the library and return them fast.
+ASan: {name()}, see you tomorrow.
+ASan: And don't you dare forget to do your assignment!!!!!!!!!!
+(ASan hurries off somewhere.)
+<<end>>
+===

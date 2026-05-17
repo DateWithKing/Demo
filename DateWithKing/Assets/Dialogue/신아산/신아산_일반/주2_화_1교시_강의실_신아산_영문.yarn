@@ -1,0 +1,90 @@
+title: 주2_화_1교시_강의실_신아산_영문
+---
+{name()}: *Huff... puff...*
+(I overslept and ended up being late to class...)
+{name()}: Sorry... Excuse me... Sorry...
+(Ignoring the professor's glaring gaze, I managed to squeeze through the narrow gaps in the classroom and snag a seat in the very front row.)
+<<show san_blush>>
+(As luck would have it, ASan was sitting right next to me, her eyes sparkling with focus.)
+{name()}: I should try talking to her later.
+<<play 공통_웅성>>
+<<wait 2>>
+(Finally, it's break time.)
+{name()}: You're taking this class too?
+<<play san_sound>>
+<<show san_idle>>
+ASan: Yep. I'm actually really into bands.
+ASan: That's why I prioritized this elective, even though registering for my major classes was a bloodbath with an 8-to-1 ratio.
+(Wait, if your major is 8 to 1, shouldn't you have prioritized THAT instead?!)
+<<show san_neg>>
+<<play 신아산_흠>>
+ASan: Because you were late and making a scene, I missed the 12 minute and 30 second mark of the lecture!
+ASan: What if that part is on the exam?! Well?! Tell me!!!
+(ASan looks pretty annoyed...)
+<<choice 주2_화_1교시_강의실_신아산_긍정1_영문 "By the way, do you have a favorite band?" 주2_화_1교시_강의실_신아산_부정1_영문 "I'm sorry." true>>
+(Should I try to change the subject to something she's interested in?)
+===
+
+title: 주2_화_1교시_강의실_신아산_긍정1_영문
+---
+ASan: Because of you—
+{name()}: By the way, do you have a favorite band?
+<<show san_idle>>
+ASan: ...My favorite band?
+ASan: I used to love Day-Five. Oh, so Day-Five is like, a group formed by some members from an audition program, and wait, the audition pro—
+{name()}: Oh! I know Day-Five!
+{name()}: I listen to them pretty often too. Especially that song, "You Were Handsome."
+<<show san_shock>>
+<<change lvSan 5>>
+<<like 신아산>>
+ASan: You actually know that song?
+<<show san_smile>>
+ASan: Wow... you've actually got some taste, don't you?
+ASan: That band is actually the reason I started playing an instrument.
+{name()}: Which instrument?
+<<show san_spec>>
+ASan: The bass.
+<<play 신아산_웃음>>
+ASan: Well? Pretty cool, right?
+Prof: Class is starting.
+<<show san_idle>>
+(Break time ended before I could even react.)
+(Visualizing her holding a bass... she might actually look kind of cool.)
+<<end>>
+===
+
+title: 주2_화_1교시_강의실_신아산_부정1_영문
+---
+ASan: BECAUSE OF YOU!!!!!!!!!
+{name()}: ......I'm sorry.
+<<show san_idle>>
+ASan: ....
+ASan: What did you say?
+{name()}: I was up late finishing some stuff and I just overslept..
+{name()}: I'm sorry for being loud and distracting.
+<<show san_blush>>
+{name()}: I'll find out what happened at the 12:30 mark, no matter what.
+{name()}: Sorry again.
+ASan: ........
+<<change lvSan 10>>
+<<like 신아산>>
+<<play 신아산_흠>>
+ASan: Ah... I mean, it's not like I was demanding an apology or anything..
+ASan: I'm recording the lecture anyway, so you don't have to go that far.
+ASan: ....
+ASan: Sorry for snapping at you.
+{name()}: No, it was my fault.
+<<show san_smile>>
+<<play 신아산_웃음>>
+ASan: If you're really sorry, come listen to me play the bass sometime.
+{name()}: The bass?
+{name()}: You know how to play?
+ASan: Of course. Every lady should naturally possess a certain level of mastery over the bass guitar.
+(Where does she even get these ideas?!)
+<<show san_idle>>
+ASan: Just so you know, I don't play for just anyone.
+Prof: Class is starting.
+(Break time ended before I could respond.)
+(The image of her eyes sparkling while talking about the bass lingered in my mind.)
+<<end>>
+===

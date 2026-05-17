@@ -1,0 +1,109 @@
+title: 밤_1_헬스하기_양나현_영문
+---
+(I arrived at the gym, did some warm-ups, and sat on a stationary bike for some cardio.)
+(As I was catching my breath and wiping off the sweat, someone tapped me on the shoulder.)
+(I turned around.)
+<<show hyun_idle_ver2>>
+<<play hyun_sound>>
+NaHyun: Hey.
+{name()}: Oh, hey!
+{name()}: I didn't know you worked out at this gym too.
+NaHyun: I do.
+NaHyun: I have to work out at least three times a week to keep my figure in shape.
+<<choice 밤_1_헬스하기_긍1_영문 "Same here. I'm practically here every day." 밤_1_헬스하기_부1_영문 "I signed up, but I barely show up once or twice a month.">>
+NaHyun: How about you?
+===
+
+title: 밤_1_헬스하기_긍1_영문
+---
+<<like 양나현>>
+<<change lvHyun +3>>
+<<show hyun_neg_ver2>>
+NaHyun: Really? You're lying.
+NaHyun: This is the first time I've ever run into you at the gym, though...
+<<play 양나현_흠>>
+<<show hyun_smile_ver2>>
+(She looks somewhat suspicious.)
+<<jump 밤_1_헬스하기_양나현_분기1_영문>>
+===
+
+title: 밤_1_헬스하기_부1_영문
+---
+<<like 양나현>>
+<<change lvHyun +5>>
+<<show hyun_smile_ver2>>
+NaHyun: I knew it. No wonder I never saw you here.
+<<play 양나현_웃음>>
+(NaHyun lets out a laugh.)
+<<if get("lvHyun") >= 10>>
+    <<jump 밤_1_헬스하기_호감도_영문>>
+<<else>>
+    <<jump 밤_1_헬스하기_양나현_분기1_영문>>
+<<endif>>
+===
+
+title: 밤_1_헬스하기_호감도_영문
+---
+NaHyun: Well, now that you have a gym buddy, you'd better work hard.
+<<show hyun_blush_ver2>>
+NaHyun: I've always liked people who take their fitness seriously.
+<<jump 밤_1_헬스하기_양나현_분기1_영문>>
+===
+
+title: 밤_1_헬스하기_양나현_분기1_영문
+---
+<<show hyun_idle_ver2>>
+<<if get("str") >= 3>>
+    <<jump 밤_1_헬스하기_양나현_근력_영문>>
+<<else>>
+    <<end>>
+<<endif>>
+===
+
+title: 밤_1_헬스하기_양나현_근력_영문
+---
+NaHyun: {name()}. 
+<<show hyun_smile_ver2>>
+NaHyun: By any chance... do you know how to use this machine?
+(NaHyun places her hand on the strength training equipment next to her.)
+(It doesn't require massive strength, but you need proper form to see any results.)
+<<choice 밤_1_헬스하기_긍2_영문 "Of course. Have a seat." 밤_1_헬스하기_부2_영문 "I'm not really sure about this one...">>
+NaHyun: Can you help me out?
+===
+
+title: 밤_1_헬스하기_긍2_영문
+---
+<<change lvHyun +5>>
+<<like 양나현>>
+<<show hyun_idle_ver2>>
+NaHyun: Like this?
+{name()}: Yeah. Grab here and pull your arms back like this.
+(NaHyun exerts force and pulls the machine's handles.)
+<<play 공통_덜그럭>>
+(Her form looks pretty good.)
+{name()}: Not bad! It’d be even better if you drop your shoulders just a bit more.
+{name()}: Feel the squeeze in your back as you pull.
+<<show hyun_blush_ver2>>
+NaHyun: How is it now?
+(NaHyun’s back muscles are clearly visible.)
+(Her back is well-toned. It seems she wasn't kidding about working out frequently.)
+{name()}: Perfect. Give me ten reps just like that.
+(I helped her out while checking her posture.)
+<<show hyun_smile_ver2>>
+NaHyun: Thanks. 
+NaHyun: Let's work out together again if we run into each other next time.
+<<end>>
+===
+
+title: 밤_1_헬스하기_부2_영문
+---
+<<change lvHyun -5>>
+<<dislike 양나현>>
+<<show hyun_idle_ver2>>
+NaHyun: Ah... I see.
+NaHyun: Well, nothing I can do then... I'll just have to look up a tutorial video.
+NaHyun: Have a good workout.
+<<play 공통_발소리>>
+(NaHyun waves goodbye and walks over to the machines on the opposite side.)
+<<end>>
+===

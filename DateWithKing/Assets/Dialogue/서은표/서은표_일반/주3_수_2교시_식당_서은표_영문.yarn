@@ -1,0 +1,114 @@
+title: 주3_수_2교시_식당_서은표_영문
+---
+<<play 공통_웅성>>
+(The cafeteria is crowded today as well.)
+<<show pyo_idle>>
+<<play pyo_sound>>
+(I see EunPyo standing in front of the menu, looking indecisive.)
+{name()}: Hey.
+<<show pyo_shock>>
+(EunPyo jumps in surprise.)
+EunPyo: Oh, {name()}!
+EunPyo: Are you here for lunch?
+{name()}: Yeah. Want to eat together?
+<<show pyo_neg>>
+<<play 서은표_흠>>
+EunPyo: I'd love to. I'm actually struggling to decide what to eat...
+{name()}: I'm going to have the Spicy Pork Bowl.
+<<show pyo_idle>>
+EunPyo: Hmm... then I'll go with the Udon.
+{name()}: Udon sounds good too. Want to share when the food comes out?
+<<show pyo_smile>>
+EunPyo: Sure. I like Spicy Pork Bowl too.
+(We finished ordering and sat down.)
+(After a brief chat, the food arrived.)
+<<show pyo_neg>>
+EunPyo: Uh...
+(When we got our food, EunPyo's eyes went wide, and she looked completely flustered.)
+(Looking down at the tray, there's Shrimp Fried Rice instead of Udon.)
+{name()}: Wait a second. This isn't Udon.
+<<show pyo_neg2>>
+<<play 서은표_허>>
+EunPyo: You're right... they must have given me the wrong order.
+EunPyo: The thing is, I can't eat shrimp.
+{name()}: Oh... really? Of all things, it had to be shrimp. What should we do?
+<<choice 주3_수_2교시_식당_서은표_긍1_영문 "Right. Let's go tell them and get it swapped." 주3_수_2교시_식당_서은표_부1_영문 "Hmm... do you want to just have mine?">>
+EunPyo: Should I go tell them?
+===
+
+title: 주3_수_2교시_식당_서은표_긍1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Right. Let's go tell them and get it swapped.
+<<show pyo_idle>>
+EunPyo: Yeah...
+(EunPyo seems to be hesitating.)
+EunPyo: Honestly, I'm not very good at speaking up about things like this...
+<<choice 주3_수_2교시_식당_서은표_긍2_영문 "Well, it's not that hard." 주3_수_2교시_식당_서은표_부2_영문 "I'm not great at it either, but...">>
+EunPyo: Could you... maybe speak for me...?
+===
+
+title: 주3_수_2교시_식당_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Well, it's not that hard.
+{name()}: Okay. I'll go.
+(I took the Shrimp Fried Rice and explained the situation to the staff.)
+(Fortunately, the issue was resolved quickly.)
+(I successfully got the Udon.)
+<<show pyo_smile>>
+EunPyo: Thank you, seriously...
+<<show pyo_blush>>
+<<play 서은표_흠>>
+EunPyo: I'm so bad at speaking up, so someone who can do that for me is totally my type.
+{name()}: Really? Then I guess I pass.
+EunPyo: Oh, stop it~~ Is that how it works?
+(We chatted while enjoying our meal.)
+<<end>>
+===
+
+title: 주3_수_2교시_식당_서은표_부2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: I'm not great at it either, but...
+<<show pyo_spec>>
+EunPyo: ...
+<<play 서은표_흠>>
+<<show pyo_neg2>>
+EunPyo: Should I just... eat it anyway...?
+(She looks incredibly timid.)
+{name()}: Well, if it's like that, I'll go speak for you.
+(I took the Shrimp Fried Rice and explained the situation to the staff.)
+(Fortunately, the issue was resolved quickly.)
+(I successfully got the Udon.)
+<<show pyo_smile>>
+EunPyo: Thank you, seriously...
+<<show pyo_blush>>
+<<play 서은표_흠>>
+EunPyo: I'm so bad at speaking up, so someone who can do that for me is totally my type.
+{name()}: Really? Then I guess I pass.
+EunPyo: Oh, stop it~~ Is that how it works?
+(We chatted while enjoying our meal.)
+<<end>>
+===
+
+title: 주3_수_2교시_식당_서은표_부1_영문
+---
+<<like 서은표>>
+<<change lvPyo +10>>
+{name()}: Hmm... do you want to just have mine?
+{name()}: If you're okay with the Spicy Pork Bowl, take this.
+<<show pyo_neg>>
+EunPyo: Really? I mean, I'm okay with it, but...
+{name()}: Yeah. Let's swap. I like shrimp anyway.
+<<show pyo_blush>>
+<<play 서은표_흠>>
+EunPyo: Thank you... then let's swap.
+<<show pyo_smile>>
+EunPyo: I'll buy you a drink after we finish.
+(We chatted while enjoying our meal.)
+<<end>>
+===

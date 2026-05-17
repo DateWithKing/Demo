@@ -1,0 +1,110 @@
+title: 밤_2_조깅하기_서은표_영문
+---
+(I went out for a jog.)
+(After running for about 10 minutes, I stopped for a moment to catch my breath.)
+<<show pyo_idle_ver2>>
+<<play pyo_sound>>
+EunPyo: Oh! {name()}~
+<<play 공통_조깅>>
+(I looked back and saw EunPyo running toward me.)
+<<show pyo_neg_ver2>>
+(EunPyo stood next to me and caught her breath as well.)
+<<show pyo_smile_ver2>>
+EunPyo: Are you out for a run?
+{name()}: Yeah. I think I've been running for about 10 minutes now...
+<<choice 주2_화_밤_조깅하기_서은표_긍1_영문 "Sure. Let's run together." 주2_화_밤_조깅하기_서은표_부1_영문 "30 minutes might be a bit tough..." >>
+EunPyo: Me too. My goal for today is to run for 30 minutes. Wanna join me?
+===
+
+title: 주2_화_밤_조깅하기_서은표_긍1_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: Sure. Let's run together.
+<<jump 주2_화_밤_조깅하기_서은표_분기1_영문>>
+===
+
+title: 주2_화_밤_조깅하기_서은표_부1_영문
+---
+{name()}: 30 minutes? That might be a bit tough...
+{name()}: I'm not sure if I have the stamina for that.  
+<<jump 주2_화_밤_조깅하기_서은표_분기1_영문>>
+===
+
+title: 주2_화_밤_조깅하기_서은표_분기1_영문
+---
+<<show pyo_idle_ver2>>
+EunPyo: I'll match your pace.
+<<show pyo_smile_ver2>>
+EunPyo: Let's just run as much as we can!
+<<like 서은표>>
+<<change lvPyo +5>>
+<<play 공통_조깅>>
+<<show pyo_idle_ver2>>
+(We started running together, matching our pace.)
+(I could feel EunPyo running with plenty of energy to spare.)
+(But despite her consideration...)
+(After about another 10 minutes, I reached my limit.)
+(EunPyo still looks totally fresh.)
+<<choice 주2_화_밤_조깅하기_서은표_긍2_영문 "Should we take a break for a second?" 주2_화_밤_조깅하기_서은표_부2_영문 "(Try to push through as much as possible.)">>
+(Should I ask her to take a break?)
+===
+
+title: 주2_화_밤_조깅하기_서은표_긍2_영문
+---
+<<like 서은표>>
+<<change lvPyo +5>>
+{name()}: *Huff*... *puff*...
+{name()}: *Huff*... EunPyo... should we... take a break?
+<<show pyo_neg2_ver2>>
+<<play 서은표_흠>>
+EunPyo: Oh?! Sorry. Was I running too fast?
+(EunPyo, who was slightly ahead, stopped and looked back at me.)
+<<jump 주2_화_밤_조깅하기_서은표_쉬는중_영문>>
+===
+
+title: 주2_화_밤_조깅하기_서은표_부2_영문
+---
+(I've got my pride. Let's try to keep going as much as I can.)
+(...)
+{name()}: *Huff*... *gasp*... *wheeze*...
+<<play 서은표_흠>>
+<<show pyo_neg2_ver2>>
+EunPyo: {name()}. Are you okay?
+(I couldn't hold out any longer and ended up collapsing onto the ground.)
+<<jump 주2_화_밤_조깅하기_서은표_쉬는중_영문>>
+===
+
+title: 주2_화_밤_조깅하기_서은표_쉬는중_영문
+---
+<<show pyo_neg_ver2>>
+EunPyo: Are you really tired? Well, we did run for quite a while.
+{name()}: *Pant*... how long did we run?
+<<play 서은표_흠>>
+EunPyo: About 10 minutes?
+EunPyo: Here, sit on the bench and rest for a bit.
+{name()}: Thanks...
+<<show pyo_idle_ver2>>
+(As I lowered my head while sitting on the bench, EunPyo wrapped a sports towel around my neck.)
+EunPyo: Stay here for a second.
+(While EunPyo was away for a moment, I closed my eyes and caught my breath.)
+(Man, was I always this out of shape...?)
+(It really hits me again how amazing the soccer club members are.)
+EunPyo: Here, drink this.
+(EunPyo handed me an ionic drink.)
+<<show pyo_smile_ver2>>
+EunPyo: I got it from the vending machine over there.
+{name()}: Thanks...
+<<play 서은표_웃음>>
+EunPyo: You're actually a better runner than I thought! I think you could even join the soccer club.
+<<like 서은표>>
+<<change lvPyo +5>>
+(I drank the drink. Now that my thirst is gone, I feel much better.)
+<<show pyo_neg_ver2>>
+EunPyo: You should head in and rest for today. I have to finish my run...
+{name()}: Okay. Thanks for looking out for me...
+<<show pyo_smile_ver2>>
+EunPyo: No problem. It's a bummer we can't hang out longer, though.
+EunPyo: See you at school.
+<<end>>
+===

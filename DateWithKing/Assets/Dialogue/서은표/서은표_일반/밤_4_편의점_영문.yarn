@@ -1,0 +1,186 @@
+title: 밤_4_편의점_서은표_영문
+---
+(It was the middle of the night when I finished my shift at the convenience store.)
+(I was fixing my shoes to head home when someone suddenly approached me.)
+<<show pyo_idle>>
+<<play pyo_sound>>
+EunPyo: It's {name()}! What are you doing up so late?
+{name()}: Oh, hey. I just finished my part-time job.
+<<show pyo_neg>>
+EunPyo: Whaaat~? You must be exhausted.
+EunPyo: Heading home now?
+{name()}: Yeah. I need to get some rest.
+<<show pyo_idle>>
+EunPyo: Any plans for tomorrow?
+{name()}: Hmm... nothing in particular.
+{name()}: I should enjoy tonight while it lasts.
+<<if get("lvPyo") >= 50 && get("otk") >= 3>>
+    <<jump 주4_목_밤_편의점_서은표_호감도60이상_영문>>
+<<else>>
+    <<jump 주4_목_밤_편의점_서은표_호감도60미만_영문>>
+<<endif>>
+===
+
+title: 주4_목_밤_편의점_서은표_호감도60이상_영문
+---
+<<show pyo_blush>>
+EunPyo: If... if you don't have anything to do right now,
+EunPyo: Do you want to come over to my place and hang out?
+{name()}: Your place?
+{name()}: Is it really okay for me to go this late?
+<<show pyo_smile>>
+<<play 서은표_웃음>>
+EunPyo: Yeah, I live alone, so it's fine.
+<<show pyo_blush>>
+<<choice 주4_목_밤_편의점_서은표_긍정1_영문 "Sounds good." 주4_목_밤_편의점_서은표_부정1_영문 "But at this hour..." >>
+EunPyo: It's nearby, and... I have a spare bed, so you can just relax and head out whenever...
+===
+
+title: 주4_목_밤_편의점_서은표_긍정1_영문
+---
+{name()}: Sounds good.
+{name()}: If you're okay with it, I'd love to.
+<<jump 주4_목_밤_편의점_서은표_분기1_영문>>
+===
+
+title: 주4_목_밤_편의점_서은표_부정1_영문
+---
+{name()}: But at this hour, it might be a bit...
+<<show pyo_spec>>
+<<play 서은표_허>>
+EunPyo: I have a beam projector... snacks... and even a body pillow...
+(EunPyo's eyes are sparkling.)
+(It's obvious she really wants me to come over.)
+{name()}: If you insist... alright.
+{name()}: I'll take you up on that.
+<<jump 주4_목_밤_편의점_서은표_분기1_영문>>
+===
+
+title: 주4_목_밤_편의점_서은표_분기1_영문
+---
+<<like 서은표>>
+<<change lvPyo +10>>
+<<show pyo_smile>>
+(An excited EunPyo led the way.)
+(Her place was indeed very close.)
+<<bg 특_자취방>>
+<<show pyo_idle>>
+(We entered a clean studio apartment. Her place was a very neat two-room suite.)
+(I was impressed by how nice it was for a student apartment.)
+{name()}: I’d believe you if you said this was a hotel.
+<<show pyo_blush>>
+<<play 서은표_웃음>>
+EunPyo: Oh, stop. It's not that great.
+EunPyo: Make yourself at home.
+<<show pyo_smile>>
+EunPyo: Want to watch the new episode of 'Dol-Se-Ah-Ttae' Season 3?
+{name()}: Oh, I'd love to. I've been wanting to see that.
+(EunPyo set up the beam projector.)
+(With the video playing and the lights off, it felt just like a movie theater.)
+(We sat comfortably on beanbags and watched the screen.)
+{name()}: Wow, do you watch anime like this every time?
+<<show pyo_blush>>
+<<play 서은표_웃음>>
+EunPyo: Yeah... it makes me never want to leave the house.
+(How much time had passed while we watched 'Dol-Se-Ah-Ttae' and shared our thoughts?)
+(As we adjusted our positions on the beanbags, we had grown quite close.)
+<<hide>>
+<<bg 서은표_특수>>
+EunPyo: ...
+{name()}: ...
+<<play 공통_애니>>
+(While the ending song of 'Dol-Se-Ah-Ttae' played, we stopped talking and just looked at each other.)
+(............)
+<<like 서은표>>
+<<change lvPyo +10>>
+(Wait, this vibe... could it be...?)
+(It was that exact moment, just a second away from a kiss.)
+<<bg 특_자취방>>
+(I saw something under the beanbag across from EunPyo.)
+(Those are... printed photos.)
+(And they were clearly photos from my Star-gram.)
+(From my profile picture to my most recent posts. They were blurry, but the composition and colors were undeniably mine.)
+<<choice 주4_목_밤_편의점_서은표_긍정2_영문 "Wait, what's that under the beanbag?" 주4_목_밤_편의점_서은표_부정2_영문 "(Don't ask about the photos.)" >>
+(Should I ask about the photos?)
+===
+
+title: 주4_목_밤_편의점_서은표_긍정2_영문
+---
+{name()}: Wait, what's that under the beanbag?
+(I stopped what I was doing and pointed under the beanbag.)
+<<show pyo_neg2>>
+EunPyo: Huh...?
+(I stood up and walked over. They were definitely photos of me.)
+(I picked them up and looked through them.)
+(It wasn't just one or two. There were group photos, too...)
+{name()}: What is all this? Why are these here?
+<<bgm_stop>>
+<<show pyo_horror>>
+<<wait 2>>
+<<bgm_resume>>
+<<show pyo_idle>>
+<<play 서은표_흠>>
+EunPyo: What do you mean? They're photos of you.
+EunPyo: Why don't you recognize them~?
+{name()}: I mean, why are they *here*?
+<<show pyo_neg>>
+EunPyo: Why? Don't you like the photos?
+{name()}: No... I mean, why do you *have* them?
+<<show pyo_neg2>>
+EunPyo: I thought they turned out well, so I had them printed.
+<<show pyo_smile>>
+<<play 서은표_허>>
+EunPyo: Should I print out some others that you like better??
+{name()}: ... ...
+<<notice "You feel the atmosphere turn cold.">>
+<<change karma +2>>
+(It feels like there's no point in asking further.)
+{name()}: Never mind... let's just keep watching the anime.
+EunPyo: Okay.
+(EunPyo seems a bit disappointed.)
+(I wanted to press her more, but I lost all my will looking at that innocent smile.)
+<<jump 주4_목_밤_편의점_서은표_분기2_영문>>
+===
+
+title: 주4_목_밤_편의점_서은표_부정2_영문
+---
+(It's probably best not to pry.)
+{name()}: ...I'm going to use the restroom for a second.
+(I stood up amidst the awkward atmosphere.)
+(After coming back, I sat down on the beanbag again, keeping more distance than before.)
+(Nothing much happened after that.)
+<<jump 주4_목_밤_편의점_서은표_분기2_영문>>
+===
+
+title: 주4_목_밤_편의점_서은표_분기2_영문
+---
+(We finished the anime and talked about it.)
+{name()}: It's getting really late... I should head out now.
+<<show pyo_blush>>
+<<play 서은표_흠>>
+EunPyo: I told you you could stay the night...
+{name()}: No, it's fine. Get some rest.
+{name()}: See ya.
+(I went home with a lingering question that remained unanswered.)
+<<end>>
+===
+
+title: 주4_목_밤_편의점_서은표_호감도60미만_영문
+---
+(Should I grab a late-night snack at the convenience store?)
+<<show pyo_idle>>
+EunPyo: If you've got nothing to do, want to grab a snack at the convenience store together?
+EunPyo: You must be hungry after working.
+{name()}: Oh, sounds good!
+{name()}: Should we get cup noodles?
+<<play 서은표_웃음>>
+<<show pyo_smile>>
+<<like 서은표>>
+<<change lvPyo +10>>
+EunPyo: I'd love that.
+EunPyo: I was just heading to the convenience store for a snack myself.
+(We took a seat at the outdoor table of the convenience store.)
+(We ate cup noodles while talking about school.)
+(It tastes even better after finishing a shift.)
+<<end>>
+===

@@ -1,0 +1,13 @@
+title: 종강총회_두더지잡기_시작_영문
+---
+Catch 15 moles within the time limit!
+<<StartMoleHole GameMoleHole>>
+<<end>>
+===
+
+title: 종강총회_두더지잡기_성공_영문
+---
+You got 5 tickets!
+<<wait 1>>
+<<end>>
+===
