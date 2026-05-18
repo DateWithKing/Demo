@@ -70,13 +70,13 @@ public class ChatManager : SceneSingleton<ChatManager> // ToDo: 싱글톤 상속
         // 3. 현재 설정된 언어 코드를 가져옵니다.
         string languageCode = LocalizationSettings.SelectedLocale.Identifier.Code;
         
-        if (languageCode == "ko")
+        if (languageCode == "ko-KR")
         {
             // 한국어일 때 처리
             LoadChatDataFromTSV("ChatData", meName); // 한국어 파일명으로 변경하세요
             Debug.Log("한국어 채팅 데이터를 로드합니다.");
         }
-        else if (languageCode.StartsWith("en")) // en-US, en-GB 등 모두 포함
+        else if (languageCode.StartsWith("en-US")) // en-US, en-GB 등 모두 포함
         {
             // 영어일 때 처리
             LoadChatDataFromTSV("ChatData_Eng", meName); // 영어 파일명으로 변경하세요
